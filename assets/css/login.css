@@ -1,0 +1,140 @@
+body{
+    background-image: url(../images/fundo.svg);
+    background-size: cover;     
+    /* overflow: hidden; para tirar a barra de rolagem caso aparecer */
+    overflow: hidden;
+}
+
+main {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.area__login{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(300,200,120,0.6);    
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+    margin: auto;    
+}
+
+fieldset{
+    border: 3px solid  #FFF6C3;
+    padding: 20px;
+    width: 93%;
+    
+}
+
+fieldset  {
+    margin: auto;    
+}
+
+
+.login input{
+    width: 100%;
+    margin-top: 10px;
+    color: #000000c0;
+    margin: 8px 0;
+    padding: 8px 16px; 
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.212);
+    font-size: 14px; 
+   
+}
+
+input [placeholder]{
+    font-family: 'Montserrat';
+
+}
+
+.login input:focus-visible {
+    outline: none
+}
+
+.login label{
+    display: none;
+}
+
+
+.login img{    
+    width: 70%;    
+    margin-top: 10px; 
+    margin-bottom: 20px; 
+    margin-left: 10px;    
+}
+
+.form__entrar button{
+    width: 100%;    
+    border: none;
+    background-color:#FFF6C3;     
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;    
+}
+
+.form__entrar button:hover{
+    background-color: #c40008;    
+}
+
+.form__entrar button a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color:  #000000;
+}
+
+.form__entrar button a:hover{
+    color:#fff;    
+}
+
+.login__criar{
+    font-size: 15px;
+    font-weight:600 ;
+    padding: 15px ;    
+    color: #000000c0;
+    text-align: center;
+    
+}
+
+.login__criar a{
+    color: #c40008;
+    text-decoration: none;
+    /* margin-left: 10px; */
+    margin-bottom: 100px;
+}
+
+
+@media screen and (max-width: 450px){
+    .login__criar, .login__criar a{           
+        font-size: 13px;              
+    }
+
+    .form__entrar button a {
+        font-size: 14px;
+    }
+}
+
+
+ 
+
