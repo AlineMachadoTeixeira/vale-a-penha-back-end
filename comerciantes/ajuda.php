@@ -66,17 +66,23 @@
                     <form id="form" action="https://formspree.io/f/mvonybwj" method="post">
 
 
-                        <div class="login__for">                         
+                        <div class="login__for">
+                            
+                           <!-- E-meil -->
+                           <div class="login__campos">
+                           <label for="email">Email:
+                               <input type="email" name="email" id="email" placeholder="E-mail" required>
+                            </label>                             
+                       
+                            </div>  
 
                             <!-- Mensagem Ajuda -->
                             <div class="login__campos">
                                 <label for="mensagem">Mensagem:
                                     <textarea rows="10" cols="33" name="mensagem" id="mensagem" required></textarea>
                                 </label>                             
-                        </label>
-                            </div>  
-
-                            
+                       
+                            </div>                         
 
 
 
