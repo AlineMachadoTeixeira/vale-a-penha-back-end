@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/comerciante.css">
+    <link rel="stylesheet" href="../assets/css/comert.css">
 
 
 
@@ -61,7 +61,7 @@
 
                     </div>
 
-                    <p class="form__paragrafo">Não fique de fora, divulgue conosco!</p>
+                    <p class="form__paragrafo">Caso tenha alguma dúvida, nos envie uma mensagem e aguarde a resposta em seu email. O tempo de resposta é de até 48 horas.</p>
 
                     <form id="form" action="https://formspree.io/f/mvonybwj" method="post">
 
