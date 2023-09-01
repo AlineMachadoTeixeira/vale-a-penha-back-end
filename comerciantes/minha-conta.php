@@ -28,19 +28,19 @@
                     <ul class="login__lista">
 
                         <li>
-                            <a href="minha-conta.php">Minha Conta</a>
+                            <a class="clicando" href="minha-conta.php">Minha Conta</a>
                         </li>
 
                         <li>
-                            <a href="cadastrar-comercio.php">Cadastrar Comércio</a>
+                            <a class="clicando" href="cadastrar-comercio.php">Cadastrar Comércio</a>
                         </li>
                         
                         <li>
-                            <a href="">Gerenciar Comércio</a>
+                            <a class="clicando" href="">Gerenciar Comércio</a>
                         </li>
 
                         <li>
-                            <a href="ajuda.php">Ajuda</a>
+                            <a class="clicando" href="ajuda.php">Ajuda</a>
                         </li>
 
                     </ul>
