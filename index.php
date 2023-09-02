@@ -54,7 +54,7 @@
                             alt=""></a>
                     <!-- pesquisa -->
                     <input type="search" class="menu__pesquisa" placeholder="O que você procura?">                    
-                    <a  class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-menu.teste.png" alt="Ícone login"></a>
+                    <a  class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone" alt="Ícone login"></a>
                 </h4>
             </nav>
 
