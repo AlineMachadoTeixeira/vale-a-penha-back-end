@@ -1,0 +1,152 @@
+.camada {
+    display: flex;
+    justify-content: center;
+    background-color:#F4EBD0;        
+}
+
+a{
+    margin: 0;
+    padding: 0;
+}
+
+.menu__camada {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;        
+    width: 80%;   
+    margin-bottom: 20px;
+    margin-top: 30px;         
+}
+
+.menu__camada__um {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly; 
+    gap: 10px;        
+    position: sticky;
+    top: 0;         
+} 
+
+li{
+    font-size: 16px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;        
+} 
+
+nav h3 {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {       
+    color: #c40008;
+    text-decoration: none;
+    display: flex;
+    align-items: center;    
+    font-weight: 600;
+    height: 30px;    
+    font-size: 0.9rem;    
+}
+
+/* Logo menu */
+.logo__principal  {        
+    width: 80%;
+    min-width: 35%;        
+}
+
+/* Icone menu */
+.icone__menu  {        
+    width: 50%;        
+    margin-left: 20px;             
+}
+
+.icone__menu__login{
+    justify-content: flex-end; 
+} 
+
+a.icone__menu__login{
+    padding-left: 0;
+    background-color: aqua; 
+    
+}
+
+nav a:hover,
+nav a:focus {
+    color: #000000c0;
+}
+
+.menu-aberto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    width: auto;    
+}
+
+.menu-aberto a {
+    font-size: 14px;        
+}
+
+/* Pesquisa */
+.menu__pesquisa {
+    background-color: transparent; 
+    border: 2px solid #c40008;
+    border-radius: 24px;
+    padding: 5px 20px;
+    width: 50%;       
+}
+
+ /* Icone */
+ .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 500,
+    'GRAD' 0,
+    'opsz' 48;
+    color:#c40008;    
+}
+
+.menu__camada__um input:focus-visible {
+    outline: none
+}
+
+.menu__camada__um input:hover {
+    outline: 1.5px solid #000000c0;
+}
+
+
+
+/*   @media screen do menu */
+@media screen and (min-width: 769px) {
+    nav h3 {
+        display: none;
+    }
+
+    .menu__camada__dois {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    
+    
+}
+
+@media screen and (max-width: 769px) {
+
+    .menu__camada {               
+        margin-top:10px;    
+        margin-bottom: 0px; 
+    }      
+    
+    .camada {
+         
+        padding-top: 0px; 
+            
+    }
+
+}

@@ -9,7 +9,11 @@
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/menu-dois.css">
+
+    <!-- para icones  -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
 
 <body>
@@ -53,8 +57,10 @@
                     <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg"
                             alt=""></a>
                     <!-- pesquisa -->
-                    <input type="search" class="menu__pesquisa" placeholder="O que você procura?">                    
-                    <a  class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone" alt="Ícone login"></a>
+                    <input type="search" class="menu__pesquisa" placeholder="O que você procura?">       
+                    <i class="material-symbols-outlined">search</i>
+
+                    <a  class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login"></a>
                 </h4>
             </nav>
 

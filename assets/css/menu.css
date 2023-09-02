@@ -61,22 +61,20 @@
     .logo__principal img {        
         width: 100%;
         min-width: 35%;
-        /* margin: 0;   
-        padding: 0;      */
+
+        
     }
 
     /* Icone menu */
     .icone__menu  {        
-        width: 20%;
-        /* min-width: 20%;  */
-        margin-left: 20px;   
-         
+        width: 50%;        
+        margin-left: 20px; 
+        background-color: aqua;         
     }
 
     .icone__menu__login{
         justify-content: flex-end;
-        margin: 0; 
-           
+        margin: 0;        
 
     }
 
