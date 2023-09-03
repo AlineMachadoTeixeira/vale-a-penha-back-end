@@ -55,8 +55,8 @@ nav a {
 
 /* Logo menu */
 .logo__principal  {        
-    width: 80%;
-    min-width: 35%;        
+    width: 70%;
+           
 }
 
 /* Icone menu */
@@ -71,7 +71,7 @@ nav a {
 
 a.icone__menu__login{
     padding-left: 0;
-    background-color: aqua; 
+    /* background-color: aqua;  */
     
 }
 
@@ -99,6 +99,47 @@ nav a:focus {
     padding: 5px 20px;
     width: 50%;       
 }
+
+/* Pesquisa Novo */
+.pesquisa__lupa{
+    background-color: #c40008;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.pesquisa__input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 0;    
+    line-height:40px;
+    color: #FFF;      
+}
+
+.pesquisa__link{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #c40008;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ /* Trocar a cor do placeholder */
+ ::-webkit-input-placeholder{
+    color: #FFF;
+ }
+
+
+/* Fim  Pesquisa Novo */
+
+
 
  /* Icone */
  .material-symbols-outlined {
@@ -145,10 +186,48 @@ nav a:focus {
         margin-bottom: 0px; 
     }      
     
-    .camada {
-         
-        padding-top: 0px; 
-            
+    .camada {         
+        padding-top: 0px;             
     }
 
+    .logo__principal  {        
+        width: 60%;
+               
+    }
+    
+    /* Icone menu */
+    .icone__menu  {        
+        width: 40%;        
+                    
+    }
+
+
+    /* Começo pesquisa novo */
+    .pesquisa__input{   
+        width: 0;
+        transition: 0.5s;
+    }
+
+    .pesquisa__link{           
+        transition: 0.5s;
+    }
+
+    /* O sinal de > é para mudar o hover .pesquisa__link */
+    .pesquisa__lupa:hover > .pesquisa__input{
+        width: 150px;
+        padding: 0 6px;
+
+    }
+
+    .pesquisa__lupa:hover > .pesquisa__link{
+        background-color: black;
+
+    }
+
+   
+
+
+
+    /* Fim pesquisa novo */    
 }
+
