@@ -1,5 +1,6 @@
-const links = document.querySelectorAll(".clicando");
+document.getElementById("clicando__vermelho").addEventListener("click", function(){
+    document.querySelector(".clicando").SetAttribute("class", "clicando");
+})
 
-link.addEventListener("click");
 
 

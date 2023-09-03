@@ -8,7 +8,9 @@
     <link rel="shortcut icon" href="../assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/comert.css">   
+    <link rel="stylesheet" href="../assets/css/comert.css">
+    <link rel="stylesheet" href="../assets/css/javascript.css">   
+    
 
 
 </head>
@@ -28,19 +30,23 @@
                     <ul class="login__lista">
 
                         <li>
-                            <a class="clicando" href="minha-conta.php">Minha Conta</a>
+                            <a class="clicando" id="clicando__vermelho"
+                             href="minha-conta.php">Minha Conta</a>
                         </li>
 
                         <li>
-                            <a class="clicando" href="cadastrar-comercio.php">Cadastrar Comércio</a>
+                            <a class="clicando" id="clicando__vermelho" 
+                            href="cadastrar-comercio.php">Cadastrar Comércio</a>
                         </li>
                         
                         <li>
-                            <a class="clicando" href="">Gerenciar Comércio</a>
+                            <a class="clicando" id="clicando__vermelho"
+                            href="">Gerenciar Comércio</a>
                         </li>
 
                         <li>
-                            <a class="clicando" href="ajuda.php">Ajuda</a>
+                            <a class="clicando" id="clicando__vermelho"
+                            href="ajuda.php">Ajuda</a>
                         </li>
 
                     </ul>
@@ -133,7 +139,7 @@
 
 
 
-
+<script src="../assets/js/clicando.js"></script>
 
 </body>
 
