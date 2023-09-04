@@ -64,6 +64,10 @@ body{
      cursor: pointer;         
  }
 
+ .login__lista a.active-link{
+    background-color:#FFF6C3;
+ }
+
  .login__for__sobrenome{
     display: flex; 
     align-items: center; 
@@ -140,7 +144,7 @@ body{
  .login__for{
      display: flex;
      flex-direction: column;
-     padding: 10px 30px;
+     padding: 10px 30px;     
  }
  
  .login__campos{

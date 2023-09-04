@@ -8,9 +8,7 @@
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/comert.css">
-    
-    
+    <link rel="stylesheet" href="../assets/css/comert.css">  
 
 
 
@@ -30,22 +28,28 @@
 
                     <a href="index.php"><img src="../assets/images/logo-Vale-a-Penha.svg" alt="Logo Vale a Penha"> </a>
                     <ul class="login__lista">
-                        <li><a href="minha-conta.php">Minha Conta</a>
 
-                        </li>
                         <li>
-                            <a href="cadastrar-comercio.php">Cadastrar Comércio</a>
+                            <a  id="clicando"
+                            href="minha-conta.php">Minha Conta</a>
                         </li>
+
                         <li>
-                            <a href="">Gerenciar Comércio</a>
+                            <a  id="clicando" 
+                            href="cadastrar-comercio.php"  class="active-link">Cadastrar Comércio</a>
                         </li>
+
                         <li>
-                            <a href="ajuda.php">Ajuda</a>
+                            <a id="clicando"
+                            href="">Gerenciar Comércio</a>
                         </li>
 
-                    </ul>
+                        <li>
+                            <a  id="clicando"
+                            href="ajuda.php">Ajuda</a>
+                        </li>
 
-
+                        </ul>
 
                 </div>
 
@@ -139,5 +143,6 @@
 
 
 </body>
+<script src="../assets/js/clicando.js"></script>
 
 </html

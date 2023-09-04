@@ -30,22 +30,22 @@
                     <ul class="login__lista">
 
                         <li>
-                            <a class="clicando" id="clicando__vermelho"
-                             href="minha-conta.php">Minha Conta</a>
+                            <a  id="clicando"
+                             href="minha-conta.php" class="active-link">Minha Conta</a>
                         </li>
 
                         <li>
-                            <a class="clicando" id="clicando__vermelho" 
+                            <a  id="clicando" 
                             href="cadastrar-comercio.php">Cadastrar Comércio</a>
                         </li>
                         
                         <li>
-                            <a class="clicando" id="clicando__vermelho"
+                            <a id="clicando"
                             href="">Gerenciar Comércio</a>
                         </li>
 
                         <li>
-                            <a class="clicando" id="clicando__vermelho"
+                            <a  id="clicando"
                             href="ajuda.php">Ajuda</a>
                         </li>
 
@@ -55,7 +55,7 @@
 
                 </div>
 
-                <div class="login_for">
+                <div class="login_minha__conta page active">
 
                     <!-- Cadastre-se e Voltar site botão -->
                     <div class="form__titulo">
@@ -123,6 +123,7 @@
                             <div class="login__entrar">
                                 <button type="submit" name="contaconfirmar"><a href="">Confirmar</a> </button>
                             </div>
+                        </div>    
 
                     </form>
 

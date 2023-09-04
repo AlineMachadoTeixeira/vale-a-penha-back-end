@@ -28,21 +28,28 @@
 
                     <a href="index.php"><img src="../assets/images/logo-Vale-a-Penha.svg" alt="Logo Vale a Penha"> </a>
                     <ul class="login__lista">
-                        <li><a href="minha-conta.php">Minha Conta</a>
 
-                        </li>
                         <li>
-                            <a href="cadastrar-comercio.php">Cadastrar Comércio</a>
-                        </li>
-                        <li>
-                            <a href="">Gerenciar Comércio</a>
-                        </li>
-                        <li>
-                            <a href="ajuda.php">Ajuda</a>
+                            <a  id="clicando"
+                            href="minha-conta.php">Minha Conta</a>
                         </li>
 
-                    </ul>
+                        <li>
+                            <a  id="clicando" 
+                            href="cadastrar-comercio.php">Cadastrar Comércio</a>
+                        </li>
 
+                        <li>
+                            <a id="clicando"
+                            href="">Gerenciar Comércio</a>
+                        </li>
+
+                        <li>
+                            <a  id="clicando"
+                            href="ajuda.php"  class="active-link">Ajuda</a>
+                        </li>
+
+                        </ul>
 
 
                 </div>
@@ -110,6 +117,8 @@
 
 
 <script src="../assets/js/contato.js"></script>
+<script src="../assets/js/clicando.js"></script>
+
     
 
 </body>

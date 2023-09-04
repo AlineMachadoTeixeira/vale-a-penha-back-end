@@ -62,7 +62,7 @@
 
                     <!-- teste barra de pesquisa -->
                     <div class="pesquisa__lupa">
-                        <input class="pesquisa__input" type="text" placeholder="Pesquisa">
+                        <input class="pesquisa__input" type="search" placeholder="Pesquisa">
                         <a class="pesquisa__link" href="">
                             <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
                         </a>
