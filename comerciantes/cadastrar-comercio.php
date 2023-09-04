@@ -26,26 +26,22 @@
                     <ul class="login__lista">
 
                         <li>
-                            <a  id="clicando"
-                            href="minha-conta.php">Minha Conta</a>
+                            <a id="clicando" href="minha-conta.php">Minha Conta</a>
                         </li>
 
                         <li>
-                            <a  id="clicando" 
-                            href="cadastrar-comercio.php"  class="active-link">Cadastrar Comércio</a>
+                            <a id="clicando" href="cadastrar-comercio.php" class="active-link">Cadastrar Comércio</a>
                         </li>
 
                         <li>
-                            <a id="clicando"
-                            href="">Gerenciar Comércio</a>
+                            <a id="clicando" href="">Gerenciar Comércio</a>
                         </li>
 
                         <li>
-                            <a  id="clicando"
-                            href="ajuda.php">Ajuda</a>
+                            <a id="clicando" href="ajuda.php">Ajuda</a>
                         </li>
 
-                        </ul>
+                    </ul>
 
                 </div>
 
@@ -71,8 +67,9 @@
                         <div class="login__for">
 
                             <!-- Foto  -->
-                            <div class="login__campos">
-                                <label for="fotocomercio">Adicionar foto:</label>
+                                        <!-- class="login__campos" -->
+                            <div class="">
+                                <!-- <label for="fotocomercio">Adicionar foto:</label> -->
                                 <!-- <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome" required> -->
 
                                 <!-- <img /> -->
@@ -81,21 +78,31 @@
 
                                 <!-- <input type=button class=hide value="Adicionar outro"> -->
 
-                                <input type=file>
+                                <!-- <input type=file>                            
 
                         
-                                <img  /> 
+                                <img  />  -->
+
+
+                                <label class="comerciante__foto" for="foto" tabIndex="0"> 
+                                    <input type="file" name="foto" id="foto" >
+                                    <span class="comerciante__foto__image">Imagem</span>
+                                </label>
+
                                 
-                                
-                                
-                                
+
+                                <!-- <input type="file" name="picture__input" id="picture__input"> -->
+
+
+
+
 
                             </div>
 
                             <!--Título-->
                             <div class="login__campos">
                                 <label class="titulo" for="titulo">Título:
-                                    <textarea rows="1" cols="33" name="titulo" id="titulo" required> </textarea  >
+                                    <textarea rows="1" cols="33" name="titulo" id="titulo" required> </textarea>
                                 </label>
                             </div>
 
@@ -107,15 +114,15 @@
                             </div>
 
                             <!-- Link Instagram -->
-                            <div class="login__campos"> 
+                            <div class="login__campos">
                                 <label for="instagram">Link Instagram:</label>
                                 <input id="instagram" type="text" name="instagram" placeholder="Link do seu Instagram" required>
                             </div>
 
 
-                           
 
-                            
+
+
 
 
 
@@ -130,7 +137,7 @@
                     <p class="dicasp">Dicas</p>
 
                     <ul class="dicas">
-                        
+
                         <li>É permitido um anúncio por usuário/CPF. </li>
                         <li>Limite de 1 foto.</li>
                         <li>Tamanho: 580 pixels(mínimo) a 1080 pixels(máximo). </li>
@@ -150,13 +157,12 @@
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="../assets/js/clicando.js"></script>
-<script src="../assets/js/adicionar-foto-comerciante.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../assets/js/clicando.js"></script>
+    <script src="../assets/js/adicionar-foto-comerciante.js"></script>
 
 
 </body>
 
 
 </html
-

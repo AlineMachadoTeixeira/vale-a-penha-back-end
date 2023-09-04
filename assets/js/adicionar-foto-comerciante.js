@@ -1,33 +1,28 @@
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function (e) {
-        $(input).next()
-        .attr('src', e.target.result)
-    };
-    reader.readAsDataURL(input.files[0]);
-    }
-    else {
-        var img = input.value;
-        $(input).next().attr('src',img);
-    }
-} 
+const inputFile = document.querySelector("#foto");
+const imageProduto = document.querySelector(".comerciante__foto__image");
+const imageProdutoTxt = "Escolha a image";
+imageProduto.innerHTML = imageProdutoTxt;
 
-function verificaMostraBotao(){
-    $('input[type=file]').each(function(index){
-        if ($('input[type=file]').eq(index).val() != ""){
-            readURL(this);
-            $('.hide').show();
-        }
+inputFile.addEventListener("change", function (e) {
+  const inputTarget = e.target;
+  const file = inputTarget.files[0];
+
+  if (file) {
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function (e) {
+      const readerTarget = e.target;
+
+      const img = document.createElement("img");
+      img.src = readerTarget.result;
+      img.classList.add("picture__img");
+
+      imageProduto.innerHTML = "";
+      imageProduto.appendChild(img);
     });
-}
 
-$('input[type=file]').on("change", function(){
-  verificaMostraBotao();
-});
-
-$('.hide').on("click", function(){
-    $(document.body).append($('<input />', {type: "file" }).change(verificaMostraBotao));
-    $(document.body).append($('<img />'));
-    $('.hide').hide();
+    reader.readAsDataURL(file);
+  } else {
+    pictureImage.innerHTML = pictureImageTxt;
+  }
 });
