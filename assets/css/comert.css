@@ -4,8 +4,7 @@ body{
     background-size: cover; 
     /* background-color: rgba(300,200,120,0.6); */
     /* overflow: hidden; para tirar a barra de rolagem caso aparecer */
-    /* overflow: hidden; */
-   
+    /* overflow: hidden; */   
  }
  
   main {
@@ -20,27 +19,25 @@ body{
  } 
  
  .login{    
-     background-color: white;     
-     border-radius: 20px;     
-     /* overflow: hidden; tudo que tiver fora da borda vai ficar escondido */
-     overflow: hidden; 
-     box-shadow:0px 0px 10px rgba(0, 0, 0, 0.212);  
-     width: 100%;       
-     height: 120vh;    
+    background-color: white;    
+    border-radius: 20px;     
+    /* overflow: hidden; tudo que tiver fora da borda vai ficar escondido */
+    overflow: hidden; 
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.212);  
+    width: 100%;  
+     /* height: 120vh;   */
      overflow-y: scroll;    
  }
  
  .login__imagem{
      display: flex;   
-     align-items: center;  
-     /* justify-content: center; */
+     align-items: center;       
      flex-direction: column;        
      background-color: rgba(300,200,120,0.6);    
      padding-top: 30px;
      padding-right: 10px;
-     padding-left: 10px;
-    
-    
+     padding-left: 10px;    
+     height: 200px; 
  }
  
  .login__imagem a{
@@ -59,10 +56,9 @@ body{
  
  .login__lista a{
      text-decoration: none; 
-     font-size: 18px;
+     font-size: 16px;
      font-weight:600 ;       
-     color: #000000c0;
-     /* text-align: center; */
+     color: #000000c0;     
      cursor: pointer;         
  }
 
@@ -91,7 +87,7 @@ body{
      margin-right: 10px;
      display: flex;
      justify-content: space-between;
-     font-size: 13px;
+     font-size: 12px;
      padding: 0 30px;   
      position: relative;         
  }
@@ -208,9 +204,7 @@ input[type=file] {
      margin-bottom: 0px;   
  }
 
- /* textarea{
-
- } */
+ 
  
  .login__entrar {
     display: flex;
@@ -271,16 +265,13 @@ input[type=file] {
  .dicas{
     font-size: 14px;            
      color: #000000c0;
-     padding-bottom: 10px;
-     
-    
+     padding-bottom: 10px;  
 
  }
  .dicasp{
     font-weight:600 ;
     color: #c40008;
-    padding-bottom: 0;
-    /* text-align: center; */
+    padding-bottom: 0;    
     margin-bottom: 0;
     margin-top: 30px;
 
@@ -288,92 +279,56 @@ input[type=file] {
 
 
  
- @media screen and (max-width: 767px) {
- 
-     main{
-         padding: 10px;
-     }
+@media screen and (max-width: 767px) {
 
-     .login__for__sobrenome {         
+    main{
+        padding: 10px;
+    }
+    .login__for__sobrenome {         
         flex-direction: column
-
+    }
  }
- }
- 
- 
- @media screen and (min-width: 768px) {
- 
-     .login__container{
-         margin-top:50px;
-         margin-bottom:50px;
-         
-     }
-     main{
-         padding: 10px;
- 
-     }
- 
-     .login{
-         width: 70%;        
-         
-     }      
-    
-     .login__imagem{
-         float: left;         
-         width: 30%;
-         height: 100%;       
-         
-     }     
- 
-     .form__subtitulo h2:after {       
-         width: 90px;
-         height: 8px;        
-               
-     }
- 
-     .form__voltar button a, .form__paragrafo, .login__campos label{  
-         font-size: 25px;              
-     } 
 
-     .login__for{        
-        gap: 20px;  
+
+ @media screen and (min-width: 768px){
+
+    .login__container{
+        margin-top:50px;
+        margin-bottom:50px;
+      }  
+
+
+    .login{
+        width: 950px;
+        height: 900px;
     }
 
-     
- 
-  }
- 
- 
-  @media screen and (min-width: 992px){
- 
-     .login__container{
-         margin-top:50px;
-         margin-bottom:50px;
-       }  
- 
- 
-     
- 
-     .login__imagem{
-         float: left;
-         width: 30%;
-         height: 100%; 
-     }
-     
-     .form__titulo{        
-         font-size: 18px;          
-     }
- 
-     .form__subtitulo h2:after {       
-         width: 100px;
-         height: 8px;               
-     }
- 
-     .form__voltar button a, .form__paragrafo, .login__campos label{      
-         font-size: 17px;           
-     }    
+    .login__imagem{
+        float: left;
+        width: 35%;
+        height: 100%; 
+    }
 
-     
-   
-}
- 
+    .login_for{
+        float: left;
+        float: right; 
+        width: 65%;   
+    } 
+
+    .form__titulo{        
+        font-size: 18px;        
+        
+    }
+
+    .form__subtitulo h2:after {       
+        width: 100px;
+        height: 8px; 
+              
+    }
+
+    .form__voltar button a, .form__paragrafo, .login__campos label{      
+        font-size: 17px;        
+        
+    }    
+
+ }
