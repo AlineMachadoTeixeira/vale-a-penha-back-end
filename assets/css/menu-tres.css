@@ -46,8 +46,7 @@ nav h3 {
 nav a {       
     color: #c40008;
     text-decoration: none;
-    display: flex;
-    
+    display: flex;    
     font-weight: 600;
     height: 30px;    
     font-size: 0.9rem;    
@@ -55,7 +54,7 @@ nav a {
 
 /* Logo menu */
 .logo__principal  {        
-    width: 70%;
+    width: 100%;    
            
 }
 
@@ -92,23 +91,25 @@ nav a:focus {
 }
 
 /* Pesquisa */
-.menu__pesquisa {
+/* .menu__pesquisa {
     background-color: transparent; 
     border: 2px solid #c40008;
     border-radius: 24px;
     padding: 5px 20px;
     width: 50%;       
-}
+} */
 
 /* Pesquisa Novo */
 .pesquisa__lupa{
-    background-color: #c40008;
+    background-color: transparent;
+    border: 2px solid #c40008;
     height: 40px;
     padding: 10px;
     border-radius: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     
 }
 
@@ -118,12 +119,13 @@ nav a:focus {
     outline: none;
     padding: 0;    
     line-height:40px;
-    color: #FFF;      
+    /* color: #FFF; */
+    width: 500px;     
 }
 
 .pesquisa__link{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #c40008;
     display: flex;
@@ -133,7 +135,7 @@ nav a:focus {
 
  /* Trocar a cor do placeholder */
  ::-webkit-input-placeholder{
-    color: #FFF;
+    color: #000000c0;
  }
 
 
@@ -174,6 +176,12 @@ nav a:focus {
         flex-direction: row;
         justify-content: space-around;
     }
+
+   
+    
+
+  
+    
     
     
     
@@ -214,7 +222,7 @@ nav a:focus {
 
     /* O sinal de > é para mudar o hover .pesquisa__link */
     .pesquisa__lupa:hover > .pesquisa__input{
-        width: 150px;
+        width: 100px;
         padding: 0 6px;
 
     }
@@ -223,6 +231,10 @@ nav a:focus {
         background-color: black;
 
     }
+
+    
+
+   
 
    
 
