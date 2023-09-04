@@ -8,11 +8,7 @@
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/comert.css">  
-
-
-
-
+    <link rel="stylesheet" href="../assets/css/comert.css">
 </head>
 
 <body>
@@ -79,7 +75,21 @@
                                 <label for="fotocomercio">Adicionar foto:</label>
                                 <!-- <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome" required> -->
 
-                                <input type="file" name="fotocomercio" id="fotocomercio">
+                                <!-- <img /> -->
+
+                                <!-- <input type="file" name="foto" id="foto">  -->
+
+                                <!-- <input type=button class=hide value="Adicionar outro"> -->
+
+                                <input type=file>
+
+                        
+                                <img  /> 
+                                
+                                
+                                
+                                
+
                             </div>
 
                             <!--Título-->
@@ -140,9 +150,13 @@
 
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../assets/js/clicando.js"></script>
+<script src="../assets/js/adicionar-foto-comerciante.js"></script> 
 
 
 </body>
-<script src="../assets/js/clicando.js"></script>
+
 
 </html
+

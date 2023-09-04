@@ -92,13 +92,12 @@
                             <div class="login__for__sobrenome">
                                 <!-- Confirmação CPF -->
                                 <div class="login__campos">
-                                    <label for="cpf">CPF<i class="obrigatorio">*</i> :</label>
-                                    <i>
+                                    <label for="cpf">CPF<i class="obrigatorio">*</i> :</label>                                    
                                     <input id="cpf" type="number" name="cpf" placeholder="Digite seu CPF" required>
                                 </div>
                                 <!--Telefone-->
                                 <div class="login__campos">
-                                    <label for="tel">Celular<i class="obrigatorio">*</i> :</label>
+                                    <label for="tel">Celular <i class="obrigatorio">*</i> :</label>
                                     <input id="tel" type="tel" name="tel" placeholder="(xx) xxxx-xxxx" required>
                                 </div>
                             </div>
