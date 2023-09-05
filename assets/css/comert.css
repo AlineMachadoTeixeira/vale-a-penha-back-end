@@ -323,7 +323,8 @@ body{
         padding: 10px;
     }
     .login__for__sobrenome {         
-        flex-direction: column
+        flex-direction: column;
+        
     }
  }
 
@@ -336,8 +337,9 @@ body{
 
     .login {        
         display: flex;
-        width: 100%;                
-     }
+        width: 100%; 
+                      
+     }    
 
 
  }
