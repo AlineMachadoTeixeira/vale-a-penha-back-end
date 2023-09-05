@@ -6,9 +6,6 @@ rgba(300,200,120,0.6)
   #000000c0
  */
 
-
-
-
 body{
     /* background-color: #FFF6C3; */
    background-image: url(../images/fundo.svg);
@@ -18,12 +15,15 @@ body{
   
 }
 
-main{
-    
+.comerciante__container{
+  margin: auto;    
+}
+
+
+main{    
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 .comerciante__caixa{    
@@ -241,10 +241,6 @@ main{
 
 
 
-
-
-
-
 /* CSS Para a foto do cadastrar comercio  */
 
 #foto {
@@ -300,19 +296,12 @@ main{
 
     .comerciante__caixa{
         display: flex;
-        flex-direction: row;
-        
+        flex-direction: row;        
     }
 
-    .comerciante__imagem{               
-         background-color: aqua;  
+    .comerciante__imagem{         
          width: 40%;        
-    }
-
-    /* .comerciante_for{
-        width: 100%; 
-
-    } */
+    }    
 
     .navegacao a{        
         font-size: 18px;        
@@ -322,11 +311,10 @@ main{
         font-size: 25px;
     }
 
-    .comerciante__titulo h1:after {
-        
-           
+    .comerciante__titulo h1:after {           
         width: 8%;
     }
+
     .comerciante__paragrafo{
         font-size: 16px;
     }
@@ -340,8 +328,7 @@ main{
     }
 
     .paragrafo__acessar{
-        font-size: 16px;
-         
+        font-size: 16px;         
      }
 
 }
