@@ -8,7 +8,7 @@
     <title>Cultura / Vale a Penha</title>
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/menu.css">    
+    <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/container.css">
     <style>
         .header {
@@ -22,7 +22,7 @@
 <body>
 
     <!-- Começo do Integrando a uma Página com VLibras  -->
-    
+
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -34,16 +34,20 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    
+
     <!-- Fim do Integrando a uma Página com VLibras  -->
 
-       <!-- começo menu  -->
-       <div class="camada">
+    <!-- começo menu  -->
+    <div class="camada">
         <div class="menu__camada">
             <nav>
                 <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
 
                 <ul class="menu__camada__dois">
+                    <li>
+                        <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
+                        </a>
+                    </li>
                     <li><a href="index.php">Início</a></li>
                     <li><a href="gastronomia.php">Gastronomia</a></li>
                     <li><a href="lazer.php">Lazer</a></li>
@@ -52,22 +56,28 @@
                     <li><a href="historia.php">História</a></li>
                     <li><a href="educacao.php">Educação</a></li>
                     <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                    <li>
+                        <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <nav>
-                <h4 class="menu__camada__um">
-                    <a href="index.html"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg"
-                            alt=""></a>
-                    <!-- pesquisa -->
-                    <input type="search" class="menu__pesquisa" placeholder="O que você procura?">
-                    <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-menu.teste.png" alt="Ícone login"></a>
-                </h4>
+
+                <div class="pesquisa__lupa">
+                    <input class="pesquisa__input" type="search" placeholder="Pesquisa">
+                    <a class="pesquisa__link" href="">
+                        <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
+                    </a>
+
+
+                </div>
             </nav>
 
         </div>
     </div>
     <!-- fim menu -->
-    
+
     <header>
         <div class="header">
             <img src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale A Penha">
@@ -83,8 +93,8 @@
                 <div class="section-texto">
                     <h4>Centro Cultural da Penha</h4>
                     <p>O <b>Centro Cultural da Penha</b> é um equipamento público voltado à divulgação da cultura
-                    brasileira, propagação do conhecimento e valorização da história do bairro da Penha, onde está
-                    localizado. O espaço é ligado ao <b>Coordenação de Centros Culturais e Teatros, da Secretaria Municipal de Cultura da Prefeitura da cidade de São Paulo</b>.</p>
+                        brasileira, propagação do conhecimento e valorização da história do bairro da Penha, onde está
+                        localizado. O espaço é ligado ao <b>Coordenação de Centros Culturais e Teatros, da Secretaria Municipal de Cultura da Prefeitura da cidade de São Paulo</b>.</p>
                     <p>É composto pelo Espaço Cultural Mário Zan, da Biblioteca José Paulo Paes, do Teatro Martins Pena, do FabLab, estúdio de gravação Itamar Assumpção e salas de estudos em todos os andares do prédio.</p>
                     <a href="https://linktr.ee/ccpenha" target="_blank">Saiba Mais</a>
                 </div>
@@ -140,7 +150,7 @@
     </footer>
     <script src="assets/js/menu-novo.js"></script>
 
-    
+
 
 </body>
 

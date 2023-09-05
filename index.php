@@ -9,31 +9,27 @@
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/css/menu-tres.css">
-
-    <!-- para icones  -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+    <link rel="stylesheet" href="assets/css/menu.css">
 </head>
 
 <body>
 
-<!-- Começo do Integrando a uma Página com VLibras  -->
+    <!-- Começo do Integrando a uma Página com VLibras  -->
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js">    
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js">
     </script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    
-    <!-- Fim do Integrando a uma Página com VLibras  -->  
-    
+
+    <!-- Fim do Integrando a uma Página com VLibras  -->
+
 
     <!-- começo menu  -->
     <div class="camada">
@@ -42,6 +38,10 @@
                 <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
 
                 <ul class="menu__camada__dois">
+                    <li>
+                        <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
+                        </a>
+                    </li>
                     <li><a href="index.php">Início</a></li>
                     <li><a href="gastronomia.php">Gastronomia</a></li>
                     <li><a href="lazer.php">Lazer</a></li>
@@ -50,30 +50,22 @@
                     <li><a href="historia.php">História</a></li>
                     <li><a href="educacao.php">Educação</a></li>
                     <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                    <li>
+                        <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <nav>
-                <h4 class="menu__camada__um">
-                    <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg"
-                            alt=""></a>
-                    <!-- pesquisa -->
-                    <!-- <input type="search" class="menu__pesquisa" placeholder="O que você procura?">       
-                    <i class="material-symbols-outlined">search</i> -->
 
-                    <!-- teste barra de pesquisa -->
-                    <div class="pesquisa__lupa">
-                        <input class="pesquisa__input" type="search" placeholder="Pesquisa">
-                        <a class="pesquisa__link" href="">
-                            <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
-                        </a>
+                <div class="pesquisa__lupa">
+                    <input class="pesquisa__input" type="search" placeholder="Pesquisa">
+                    <a class="pesquisa__link" href="">
+                        <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
+                    </a>
 
 
-                    </div>
-
-
-
-                    <a  class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login"></a>
-                </h4>
+                </div>
             </nav>
 
         </div>
@@ -83,7 +75,7 @@
 
     <header>
         <div class="header">
-            <img src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale A Penha"> 
+            <img src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale A Penha">
             <h1>Conhecer o nosso bairro!</h1>
             <h2>Início</h2>
         </div>
@@ -117,12 +109,12 @@
                 </div>
 
                 <!-- Temperatura -->
-                 <!-- <div id="cont_75a30a07297347aa5c03ac660365ea73"><script type="text/javascript" async src="https://www.tempo.com/wid_loader/75a30a07297347aa5c03ac660365ea73"></script></div>  -->
+                <!-- <div id="cont_75a30a07297347aa5c03ac660365ea73"><script type="text/javascript" async src="https://www.tempo.com/wid_loader/75a30a07297347aa5c03ac660365ea73"></script></div>  -->
 
-                 <!-- <iframe scrolling="no" frameborder="0" marginwidth="0" marginheight="0" width="100" height="100" src="https://selos.climatempo.com.br/selos/MostraSelo120.php?CODCIDADE=558&SKIN=padrao"></iframe>  -->
+                <!-- <iframe scrolling="no" frameborder="0" marginwidth="0" marginheight="0" width="100" height="100" src="https://selos.climatempo.com.br/selos/MostraSelo120.php?CODCIDADE=558&SKIN=padrao"></iframe>  -->
 
-                <!-- <div id="c_446802e85341fdd9132f0c741d7a899c" class="mini"></div><script type="text/javascript" src="https://pt.eltiempo.es/widget/widget_loader/446802e85341fdd9132f0c741d7a899c"></script> -->         
-                
+                <!-- <div id="c_446802e85341fdd9132f0c741d7a899c" class="mini"></div><script type="text/javascript" src="https://pt.eltiempo.es/widget/widget_loader/446802e85341fdd9132f0c741d7a899c"></script> -->
+
 
 
                 <section class="video">
@@ -146,12 +138,12 @@
                         </a>
                     </article>
 
-                    <article class="inicio__section"> 
+                    <article class="inicio__section">
                         <a href="lazer.php">
                             <div class="inicio__caixa__botao">
                                 <img class="inicio__img" src="assets/images/inicio-lazer.png" alt="menina andando de bicicleta">
                                 <button class="inicio__botao">Lazer</button>
-                            </div>                           
+                            </div>
                         </a>
                     </article>
 
@@ -160,7 +152,7 @@
                             <div class="inicio__caixa__botao">
                                 <img class="inicio__img" src="assets/images/inicio-comercio.png" alt=" sacolas de compras">
                                 <button class="inicio__botao">Comércio Local</button>
-                            </div>                            
+                            </div>
                         </a>
                     </article>
 
@@ -169,7 +161,7 @@
                             <div class="inicio__caixa__botao">
                                 <img class="inicio__img" src="assets/images/inicio-educacao.png" alt="sala de aula">
                                 <button class="inicio__botao">Educação</button>
-                            </div>                          
+                            </div>
                         </a>
                     </article>
 
@@ -186,20 +178,17 @@
                         <a href="historia.php">
                             <div class="inicio__caixa__botao">
                                 <img class="inicio__img" src="assets/images/inicio-historia.png" alt="igreja matriz de nossa Senhora da Penha foto antiga">
-                                <button class="inicio__botao">História</button> 
-                            </div>                           
-                         </a>
-                            
+                                <button class="inicio__botao">História</button>
+                            </div>
+                        </a>
+
                     </article>
                 </div>
 
             </section>
             <article class="inicio__mapa">
 
-                <iframe class="inicio__mapa__mapa"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12216.285669617992!2d-46.554524587318525!3d-23.52380233446841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e51b4d72683%3A0x5a7009ad0acffd39!2sPenha%20de%20Fran%C3%A7a%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1683919195226!5m2!1spt-BR!2sbr"
-                    width="1000" height="" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe class="inicio__mapa__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12216.285669617992!2d-46.554524587318525!3d-23.52380233446841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e51b4d72683%3A0x5a7009ad0acffd39!2sPenha%20de%20Fran%C3%A7a%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1683919195226!5m2!1spt-BR!2sbr" width="1000" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 <div>
                     <h3>Localização</h3>

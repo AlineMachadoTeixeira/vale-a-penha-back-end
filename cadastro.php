@@ -24,6 +24,10 @@
                 <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
 
                 <ul class="menu__camada__dois">
+                    <li>
+                        <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
+                        </a>
+                    </li>
                     <li><a href="index.php">Início</a></li>
                     <li><a href="gastronomia.php">Gastronomia</a></li>
                     <li><a href="lazer.php">Lazer</a></li>
@@ -32,17 +36,23 @@
                     <li><a href="historia.php">História</a></li>
                     <li><a href="educacao.php">Educação</a></li>
                     <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                    <li>
+                        <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <nav>
-                <h4 class="menu__camada__um">
-                    <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg" alt="">
-                    </a>
-                    <!-- pesquisa -->
-                    <input type="search" class="menu__pesquisa" placeholder="O que você procura?">
-                    <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-menu.teste.png" alt="Ìcone de login">
+
+                <div class="pesquisa__lupa">
+                    <input class="pesquisa__input" type="search" placeholder="Pesquisa">
+                    <a class="pesquisa__link" href="">
+                        <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
                     </a>
 
+
+                </div>
+            </nav>
 
         </div>
     </div>

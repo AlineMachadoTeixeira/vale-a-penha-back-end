@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <title>Lazer / Vale a Penha</title>
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/menu.css">    
+    <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/container.css">
     <style>
         .header {
@@ -17,10 +18,11 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Começo do Integrando a uma Página com VLibras  -->
-    
+
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -32,7 +34,7 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    
+
     <!-- Fim do Integrando a uma Página com VLibras  -->
 
     <!-- começo menu  -->
@@ -42,6 +44,10 @@
                 <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
 
                 <ul class="menu__camada__dois">
+                    <li>
+                        <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
+                        </a>
+                    </li>
                     <li><a href="index.php">Início</a></li>
                     <li><a href="gastronomia.php">Gastronomia</a></li>
                     <li><a href="lazer.php">Lazer</a></li>
@@ -50,35 +56,40 @@
                     <li><a href="historia.php">História</a></li>
                     <li><a href="educacao.php">Educação</a></li>
                     <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                    <li>
+                        <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <nav>
-                <h4 class="menu__camada__um">
-                    <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg"
-                            alt=""></a>
-                    <!-- pesquisa -->
-                    <input type="search" class="menu__pesquisa" placeholder="O que você procura?">                    
-                    <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-menu.teste.png" alt="Ícone login"></a>
 
-                </h4>
+                <div class="pesquisa__lupa">
+                    <input class="pesquisa__input" type="search" placeholder="Pesquisa">
+                    <a class="pesquisa__link" href="">
+                        <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
+                    </a>
+
+
+                </div>
             </nav>
 
         </div>
     </div>
-    <!-- fim menu -->    
-    
+    <!-- fim menu -->
+
     <header>
         <div class="header">
             <img src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale A Penha">
             <h1>Conhecer o nosso bairro!</h1>
             <h2>Educação</h2>
         </div>
-    </header> 
-    <main>        
+    </header>
+    <main>
         <p class="descricao">Quando o assunto é educação, existem diversas escolas no bairro. São instituições das redes pública e privada, de educação infantil, de ensinos fundamental, médio, técnico e superior. O bairro, inclusive, tem uma das maiores taxas de crianças inscritas em creches. São mais de 100 escolas na região da Penha.</p>
 
         <!-- Nossa senhora -->
-        <article class="container">    
+        <article class="container">
             <section class="section-direita">
                 <img class="section-img" src="assets/images/nossa-senhora-da-penha.jpg" alt="Foto Escola Nossa Senhora">
                 <div class="section-texto">
@@ -88,14 +99,14 @@
                 </div>
             </section>
 
-            
+
 
             <!-- Santos Dummont -->
             <section class="section-esquerda">
                 <img class="section-img" src="assets/images/santos-dummont.jpg" alt="Foto Escola Santos Dummont ">
                 <div class="section-texto">
                     <h4>Santos Dummont</h4>
-                    <p> Inaugurada em 1913, o Santos Dummont foi a primeira escola do bairro da Penha. É uma escola pública voltada ao ensino fundamental. 
+                    <p> Inaugurada em 1913, o Santos Dummont foi a primeira escola do bairro da Penha. É uma escola pública voltada ao ensino fundamental.
                     </p>
                     <address><a target="_blank" href="https://www.google.com/maps/place/EE+Santos+Dumont/@-23.523897,-46.5487677,15z/data=!4m6!3m5!1s0x94ce5e5140e5556d:0x4780e33fced3eb8d!8m2!3d-23.523897!4d-46.5487677!16s%2Fg%2F1td2cgjw">Endereço: Praça Oito de Setembro, 73 - Penha de França, São Paulo - SP, 03603-030</a> </address>
                 </div>
@@ -109,14 +120,14 @@
                     <h4>EE Barão de Ramalho</h4>
                     <p>É uma escola da rede pública voltada ao ensino fundamental e médio.</p>
                     <address><a target="_blank" href="https://www.google.com/maps/place/EE+Barão+de+Ramalho/@-23.52219,-46.5386695,15z/data=!4m2!3m1!1s0x0:0xee258f8380f498c3?sa=X&ved=2ahUKEwi3tKyPl_f-AhVECtQKHYCgCmMQ_BJ6BAg8EAg"> Endereço: Av. Amador Bueno da Veiga, 604 - Penha de França, São Paulo - SP, 03636-000</a></address>
-                    
+
                 </div>
             </section>
 
             <!-- São Vicente de Paulo -->
             <section class="section-esquerda">
                 <img class="section-img" src="assets/images/sao-vicnte-de-paulo-penha.jpg" alt="Foto Colégio São Vicente de Paulo">
-                
+
                 <div class="section-texto">
                     <h4>Colégio São Vicente de Paulo</h4>
                     <p>O Colégio São Vicente de Paulo, fundado em 1918, é o mais antigo da Rede Educacional Vicentina e é tombado como patrimônio histórico e cultural.É uma escola da rede privada.</p>
@@ -127,7 +138,7 @@
             <!-- Fereguetti -->
             <section class="section-direita">
                 <img class="section-img" src="assets/images/colegio-fereguetti.jpg" alt="Foto Colégio Fereguetti">
-                
+
                 <div class="section-texto">
                     <h4>Colégio Fereguetti</h4>
                     <p>Referência na zona leste, atende os alunos desde o berçário até o ensino médio. É uma escola da rede privada </p>
@@ -146,19 +157,19 @@
                 </div>
             </section>
 
-            
+
 
             <!-- Etec Professor Aprígio Gonzaga-->
             <section class="section-direita">
                 <img class="section-img" src="assets/images/etec.jpg" alt="Foto Etec Professor Aprígio Gonzaga">
-                
+
                 <div class="section-texto">
                     <h4>Etec Professor Aprígio Gonzaga</h4>
                     <p> A Etec é uma instituição pública que oferece diversos cursos de ensino técnico e integrados ao ensino médio.</p>
                     <address><a target="_blank" href="https://www.google.com/maps/place/ETEC+Professor+Aprígio+Gonzaga/@-23.5310274,-46.5391507,15z/data=!4m6!3m5!1s0x99703f1761823b:0x2f60790fa01b84cd!8m2!3d-23.5310274!4d-46.5391507!16s%2Fg%2F1tz96zf8"> Endereço: Av. Dr. Orêncio Vidigal, 212 - Vila Carlos de Campos, São Paulo - SP, 03640-010</a></address>
                 </div>
             </section>
-            
+
         </article>
     </main>
     <footer>
@@ -190,12 +201,13 @@
         <p>Vale a Penha 2023. Alguns direitos reservados &copy;</p>
     </footer>
     <script src="assets/js/menu-novo.js"></script>
-   
 
-           
-    
 
-    
-    
+
+
+
+
+
 </body>
+
 </html>

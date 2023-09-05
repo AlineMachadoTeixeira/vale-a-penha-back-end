@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <title>Lazer / Vale a Penha</title>
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/menu.css">   
+    <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/container.css">
     <style>
         .header {
@@ -17,10 +18,11 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Começo do Integrando a uma Página com VLibras  -->
-    
+
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -32,9 +34,9 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    
+
     <!-- Fim do Integrando a uma Página com VLibras  -->
-    
+
     <!-- começo menu  -->
     <div class="camada">
         <div class="menu__camada">
@@ -42,6 +44,10 @@
                 <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
 
                 <ul class="menu__camada__dois">
+                    <li>
+                        <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
+                        </a>
+                    </li>
                     <li><a href="index.php">Início</a></li>
                     <li><a href="gastronomia.php">Gastronomia</a></li>
                     <li><a href="lazer.php">Lazer</a></li>
@@ -50,32 +56,38 @@
                     <li><a href="historia.php">História</a></li>
                     <li><a href="educacao.php">Educação</a></li>
                     <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                    <li>
+                        <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <nav>
-                <h4 class="menu__camada__um">
-                    <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg"
-                            alt=""></a>
-                    <!-- pesquisa -->
-                    <input type="search" class="menu__pesquisa" placeholder="O que você procura?">                    
-                    <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-menu.teste.png" alt=""></a>
-                </h4>
+
+                <div class="pesquisa__lupa">
+                    <input class="pesquisa__input" type="search" placeholder="Pesquisa">
+                    <a class="pesquisa__link" href="">
+                        <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
+                    </a>
+
+
+                </div>
             </nav>
 
         </div>
     </div>
     <!-- fim menu -->
-    
+
     <header>
         <div class="header">
             <img src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale A Penha">
             <h1>Conhecer o nosso bairro!</h1>
             <h2>Lazer</h2>
         </div>
-    </header> 
-    <main>        
+    </header>
+    <main>
         <p class="descricao">Não importa qual é o seu estilo, o bairro da Penha certamente tem aquilo que você precisa para se divertir e relaxar!</p>
-        <article class="container">    
+        <article class="container">
             <section class="section-direita">
                 <img class="section-img" src="assets/images/parque-linear-tiquatira.jpg" alt="Pessoa correndo no Parque Linear Tiquatira">
                 <div class="section-texto">
@@ -106,7 +118,7 @@
 
             <section class="section-esquerda">
                 <img class="section-img" src="assets/images/igreja-matriz-de-nossa-senhora-da-penha.jpg" alt="Entrada da Igreja Matriz de Nossa Senhora da Penha">
-                
+
                 <div class="section-texto">
                     <h4>Igreja Matriz de Nossa Senhora da Penha</h4>
                     <p>Outra construção interessante é a igreja que fica em uma das colinas mais altas da região. Ela se destaca no meio de outras construções e pode ser vista de diversos outros bairros. Inclusive, podemos vê-la por meio das janelinhas da linha vermelha do metrô. Esta é sem dúvida uma das principais igrejas da Penha e foi construída no século XVII. Além de visitar a bela arquitetura você pode fazer um passeio guiado pela torre mais alta da igreja.</p>
@@ -115,7 +127,7 @@
 
             <section class="section-direita">
                 <img class="section-img" src="assets/images/basilica-de-nossa-senhora-da-penha.jpg" alt="Foto da Basílica de Nossa Senhora da Penha">
-                
+
                 <div class="section-texto">
                     <h4>A Basílica de Nossa Senhora da Penha</h4>
                     <p>A Basílica de Nossa Senhora da Penha é uma das maiores e mais belas igrejas da cidade de São Paulo, que se destaca na parte mais alta da colina do bairro da Penha de França.</p>
@@ -133,13 +145,13 @@
 
             <section class="section-direita">
                 <img class="section-img" src="assets/images/esportivo-da-penha.jpg" alt="Foto Clube Esportivo da Penha">
-                
+
                 <div class="section-texto">
                     <h4>Clube Esportivo da Penha</h4>
                     <p>Clube Esportivo da Penha é um clube particular fundado em 1º de janeiro de 1930 às margens do Rio Tietê, no bairro da Penha, em São Paulo. O clube possui parque aquático com cinco piscinas, campo de futebol, quadra de tênis, parque infantil, academia e espaço de eventos e festa.</p>
                 </div>
             </section>
-            
+
         </article>
     </main>
     <footer>
@@ -170,10 +182,11 @@
         </div>
         <p>Vale a Penha 2023. Alguns direitos reservados &copy;</p>
     </footer>
-    <script src="assets/js/menu-novo.js"></script>      
-    
+    <script src="assets/js/menu-novo.js"></script>
 
-    
-    
+
+
+
 </body>
+
 </html>
