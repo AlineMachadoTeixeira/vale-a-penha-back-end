@@ -1,5 +1,6 @@
 body{
     background-image: url(../images/fundo.svg);
+    background-image: url(../images/fundo-login.svg);
     background-size: cover;     
     /* overflow: hidden; para tirar a barra de rolagem caso aparecer */
     overflow: hidden;
