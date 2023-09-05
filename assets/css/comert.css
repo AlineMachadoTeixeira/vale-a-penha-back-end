@@ -4,7 +4,7 @@ body{
     background-size: cover; 
     /* background-color: rgba(300,200,120,0.6); */
     /* overflow: hidden; para tirar a barra de rolagem caso aparecer */
-    /* overflow: hidden; */   
+    overflow: hidden;  
  }
  
   main {
@@ -107,7 +107,7 @@ body{
  .form__paragrafo{
      font-size: 14px;
      font-weight:600 ;
-     padding: 20px ;    
+     padding: 10px ;    
      color: #000000c0;
      text-align: center;    
  }
@@ -197,7 +197,7 @@ body{
 
 
 #foto {
-    display: none;
+    display: none;    
   }
   
   .comerciante__foto {
@@ -208,14 +208,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #c40008;
+    color: #000000c0;
     border: 2px dashed currentcolor;
     cursor: pointer;    
     transition: color 300ms ease-in-out, background 300ms ease-in-out;
     outline: none;
     overflow: hidden;
     margin: auto;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: bold;    
   }
   
   .comerciante__foto:hover {
@@ -223,18 +224,12 @@ body{
     background: #ccc;
   }
   
-  .comerciante__foto:active {
-    /* border-color: turquoise;
-    color: turquoise;
-    background: #eee; */
+  .comerciante__foto:active {    
     border-color:#fff;
     color: #fff;
-
-
   }
   
-  .comerciante__foto:focus {
-    
+  .comerciante__foto:focus {    
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
   

@@ -1,7 +1,12 @@
 .camada {
     display: flex;
     justify-content: center;
-    background-color:#F4EBD0;        
+    background-color:#F4EBD0; 
+    /* position: fixed;     */
+    top:0;
+    position: sticky;  
+    z-index: 10; 
+    
 }
 
 a{
@@ -13,17 +18,20 @@ a{
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;        
-    width: 80%;   
+    width: 90%;   
     margin-bottom: 20px;
-    margin-top: 30px;         
+    margin-top: 30px;
+   
+   
+   
+          
 }
 
 .menu__camada__um {
     display: flex;
     align-items: center;
     justify-content: space-evenly; 
-    gap: 10px;        
-    position: sticky;
+    gap: 10px;       
     top: 0;         
 } 
 
@@ -69,8 +77,7 @@ nav a {
 } 
 
 a.icone__menu__login{
-    padding-left: 0;
-    /* background-color: aqua;  */
+    padding-left: 0;   
     
 }
 
@@ -101,7 +108,7 @@ nav a:focus {
 
 /* Pesquisa Novo */
 .pesquisa__lupa{
-    background-color: transparent;
+    background-color: transparent; 
     border: 2px solid #c40008;
     height: 40px;
     padding: 10px;
@@ -109,6 +116,7 @@ nav a:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    outline: none;
     
     
 }
@@ -116,11 +124,25 @@ nav a:focus {
 .pesquisa__input{
     border: none;
     background-color: transparent;
-    outline: none;
+    outline: none; 
     padding: 0;    
     line-height:40px;
     /* color: #FFF; */
     width: 500px;     
+}
+
+.pesquisa__lupa input:hover, .pesquisa__lupa :focus-visible {
+    outline: none;
+    
+   
+}
+
+.pesquisa__input input:focus-visible {
+    outline: none
+}
+
+.pesquisa__input input:focus-visible {
+    outline: none
 }
 
 .pesquisa__link{
@@ -153,13 +175,13 @@ nav a:focus {
     color:#c40008;    
 }
 
-.menu__camada__um input:focus-visible {
+/* .menu__camada__um input:focus-visible {
     outline: none
 }
 
 .menu__camada__um input:hover {
     outline: 1.5px solid #000000c0;
-}
+} */
 
 
 
