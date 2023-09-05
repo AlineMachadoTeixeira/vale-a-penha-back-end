@@ -1,0 +1,347 @@
+/* 
+rgba(300,200,120,0.6)
+
+ #c40008
+
+  #000000c0
+ */
+
+
+
+
+body{
+    /* background-color: #FFF6C3; */
+   background-image: url(../images/fundo.svg);
+   background-size: cover;
+    /* overflow: hidden; para tirar a barra de rolagem caso aparecer */
+    /* overflow: hidden;  */
+  
+}
+
+main{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.comerciante__caixa{    
+    display: flex;
+    flex-direction: column;    
+    width: 80%;
+    margin: auto;    
+}
+
+.comerciante__imagem{    
+    display: flex;   
+     align-items: center;       
+     flex-direction: column;        
+     background-color: rgba(300,200,120,0.6);    
+     padding-top: 30px;
+     padding-right: 10px;
+     padding-left: 10px;   
+}
+
+.comerciante_for{
+    display: flex;  
+    flex-direction: column;        
+    background-color: #fff;    
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;  
+    overflow-y: scroll;
+}
+
+/* Navegação do MInha conta a ajuda */
+.navegacao{
+    display: flex;
+    flex-direction: column;   
+    gap:20px ;
+    list-style: none;     
+    padding: 0;   
+    padding-right: 10px;   
+}
+
+.navegacao a{
+    text-decoration: none; 
+    font-size: 16px;
+    font-weight:600 ;       
+    color: #000000c0;     
+    cursor: pointer;
+}
+
+/* Para o JS do navegação */
+.navegacao a.active-link{
+    background-color:#FFF6C3;
+    padding: 10px;
+    border-radius: 40px; 
+ }
+
+ .comerciante__titulo {
+    margin-bottom: 8px;
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-between;    
+    padding: 0 30px;   
+    position: relative;         
+}
+.comerciante__titulo h1{
+    font-size: 20px;
+}
+
+.comerciante__titulo h1:after {
+    /* content: ''; colocar um traço em baixo da palavra cadastre-se */
+    content: '';
+    display: block;    
+    width: 10%;
+    height: 8px; 
+    background-color:rgba(300,200,120,0.6);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px; 
+}
+
+.comerciante__paragrafo{
+    font-size: 14px;
+    font-weight:600 ;
+    padding: 10px ;    
+    color: #000000c0;
+    text-align: center;      
+}
+
+.botao__sair {
+    display: flex;
+    align-items: center; 
+}
+
+.botao__sair button{
+     border:none;
+     background-color:rgba(300,200,120,0.6);   
+     padding: 8px 15px;
+     border-radius: 5px;
+     cursor: pointer;
+     color: #FFF;  
+}
+
+.botao__sair button:hover {
+    background-color: #c40008;   
+    cursor: pointer;
+}
+
+.botao__sair button a{
+    text-decoration: none;    
+    color: #000000;
+    font-size: 14px;
+    font-weight: 700;   
+}
+
+.botao__sair button a:hover{
+    color: #FFF;      
+}
+
+.comerciante__campos{
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.comerciante__input{
+    display: flex;
+    flex-direction: column;    
+    gap: 10px;
+    margin-bottom: 8px;  
+    width: 100%;   
+}
+
+.comerciante__input input, textarea{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.212);
+    font-size: 14px;  
+    width: 100%;         
+}
+
+.comerciante__input input:hover{
+    outline: 1px solid #c40008;
+}
+
+.comerciante__input textarea:hover{
+   outline: 1px solid #c40008;
+}
+
+.comerciante__input input:focus-visible {
+    outline: none
+}
+
+.comerciante__input textarea:focus-visible {
+   outline: none
+}
+
+.comerciante__input label{    
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000c0;
+    margin-bottom: 0px;   
+}
+
+.botao__enviar {
+    display: flex;
+    justify-content: center;
+ }
+ 
+ 
+ .botao__enviar button{
+     width: 60%; 
+     border: none;
+     background-color:rgba(300,200,120,0.6);     
+     padding: 10px;
+     border-radius: 5px;
+     cursor: pointer;   
+     margin-top: 15px;
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: 700;
+     color:  #000000;
+ }
+ 
+ .botao__enviar button a {
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: 700;
+     color:  #000000; 
+ }
+ 
+ .botao__enviar button:hover{
+     background-color: #c40008;   
+ }
+ 
+ .botao__enviar a:hover{    
+     color: #fff;
+ }
+
+ .paragrafo__acessar{
+    font-size: 15px;
+     font-weight:600 ;
+     padding: 15px ;    
+     color: #000000c0;
+     text-align: center;
+ }
+
+ .paragrafo__acessar a{
+    color: #c40008;
+     text-decoration: none;
+     margin-left: 10px;
+ }
+
+
+
+
+
+
+
+/* CSS Para a foto do cadastrar comercio  */
+
+#foto {
+    display: none;    
+  }
+  
+  .comerciante__foto {
+    width: 200px;
+    /* aspect-ratio: 16/9; */
+    aspect-ratio: 9/9;
+    background: rgba(300,200,120,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000c0;
+    border: 2px dashed currentcolor;
+    cursor: pointer;    
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+    margin: auto;
+    font-size: 14px;
+    font-weight: bold;    
+  }
+  
+  .comerciante__foto:hover {
+    color: #777;
+    background: #ccc;
+  }
+  
+  .comerciante__foto:active {    
+    border-color:#fff;
+    color: #fff;
+  }
+  
+  .comerciante__foto:focus {    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .comerciante__foto__img {
+    max-width: 100%;
+  }
+  
+
+/* Fim  CSS Para a foto do cadastrar comercio  */
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+
+    .comerciante__caixa{
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .comerciante__imagem{               
+         background-color: aqua;  
+         width: 40%;        
+    }
+
+    /* .comerciante_for{
+        width: 100%; 
+
+    } */
+
+    .navegacao a{        
+        font-size: 18px;        
+    }
+
+    .comerciante__titulo h1{
+        font-size: 25px;
+    }
+
+    .comerciante__titulo h1:after {
+        
+           
+        width: 8%;
+    }
+    .comerciante__paragrafo{
+        font-size: 16px;
+    }
+
+    .botao__sair button a{      
+        font-size: 18px;         
+    }  
+
+    .comerciante__input label{    
+        font-size: 18px;          
+    }
+
+    .paragrafo__acessar{
+        font-size: 16px;
+         
+     }
+
+}
