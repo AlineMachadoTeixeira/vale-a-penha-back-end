@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajuda</title>
-    <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/comerciante.css">
@@ -51,37 +51,32 @@
                         </div>
                     </div>
                     <p class="comerciante__paragrafo">Caso tenha alguma dúvida, nos envie uma mensagem e aguarde a resposta em seu email. O tempo de resposta é de até 48 horas.</p>
-                    <form id="form" action="https://formspree.io/f/mvonybwj" method="post">
-                        <div class="comerciante__campos">
-                            <!-- E-meil -->
-                            <div class="comerciante__input">
-                                <label for="email">Email:
-                                    <input type="email" name="email" id="email" placeholder="E-mail" required>
-                                </label>
-                            </div>
-                            <!-- Mensagem Ajuda -->
-                            <div class="comerciante__input">
-                                <label for="mensagem">Mensagem:
-                                    <textarea rows="10" cols="33" name="mensagem" id="mensagem" required></textarea>
-                                </label>
-                            </div>
-                            <div class="botao__enviar">
-                                <button type="submit" id="submit">Enviar</button>
-                                <p id="status"></p>
-                            </div>
-                            <!-- <button type="submit" id="submit">Enviar</button>
-                        <p id="status"></p> -->
+
+                    <form class="comerciante__formulario"  id="form" action="https://formspree.io/f/mvonybwj" method="post">
+
+                        <!-- E-meil -->
+                        <div class="comerciante__input">
+                            <label for="email">Email:
+                                <input type="email" name="email" id="email" placeholder="E-mail" required>
+                            </label>
+                        </div>
+                        <!-- Mensagem Ajuda -->
+                        <div class="comerciante__input">
+                            <label for="mensagem">Mensagem:
+                                <textarea rows="10" cols="33" name="mensagem" id="mensagem" required></textarea>
+                            </label>
+                        </div>
+                        <div class="botao__enviar">
+                            <button type="submit" id="submit">Enviar</button>
+                            <p id="status"></p>
+                        </div>
+
                     </form>
                     <p class="paragrafo__acessar">Já possui uma conta? <a href="login.php">Acessar</a></p>
                 </div>
             </section>
         </main>
     </div>
-
-
-
-
-
 
     <script src="../assets/js/contato.js"></script>
     <script src="../assets/js/clicando.js"></script>
