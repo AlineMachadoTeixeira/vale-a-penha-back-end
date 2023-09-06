@@ -64,7 +64,7 @@
             <section class="login">
                 <div class="login__imagem">
                     <!-- Aqui vai a imagem -->
-                    <a href="index.php"><img src="assets/images/carrinho-de-compra-logo.svg" alt="Logo Vale a Penha"> </a>
+                    <a href="index.php"><img src="assets/images/tela-de-cadastro.svg" alt="Logo Vale a Penha"> </a>
 
                 </div>
 

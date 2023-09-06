@@ -1,51 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/login.css">
+    <
+</head>
 
-    
-   
 <body>
 
-    <main>
 
-        <section class="area__login">
 
-            <div class="login">
+    <div class="login__container">
+        <main>
+            <section class="login__caixa">
+                
+                    
+                   
+                <div class="comerciante_for">
 
-                <fieldset>
-                    <div>
-                        <!-- Aqui vai a imagem -->
-                        <a href="index.php"><img src="assets/images/logo-Vale-a-Penha.svg" alt="Logo Vale a Penha"></a>
-                    </div>
+                  <p class="login__img"><a  href="index.php"><img src="assets/images/icone-sao-paulo.svg" alt="Logo Vale a Penha"> </a> </p>                      
 
-                    <form action="" method="post">
+                   
 
-                        <input type="email" id="loginemail" name="loginemail" placeholder="Seu email" required>
-                        <label for="loginemail">Login</label>
+                    <form class="comerciante__formulario" action="" method="post">
 
-                        <input type="password" id="loginsenha" name="loginsenha" placeholder="Sua senha" required>
-                        <label for="loginsenha">Senha</label>
+                       <!-- Aqui vai a imagem -->
 
-                        <div class="form__entrar">
-                            <button  type="submit" name="loginentrar"><a href="">Entrar</a> 
-                            </button>
-                        </div>
+                        
+
+                            <!-- E-mail -->
+                            <div class="login__input">
+                                <label for="email">E-mail:</label>
+                                <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                            </div>
+
+                            <!-- Senha -->
+                            <div class="login__input">
+                                <label for="senha">Senha:</label>
+                                <input  type="password" name="senha" id="senha" placeholder="Digite sua Data de Nascimento" required>
+                            </div>                       
+
+
+
+
+                            <div class="botao__enviar">
+                                <button type="submit" id="submit">Entrar </button>
+                            </div>
 
                     </form>
+                    <p class="login__criar">Ainda não tem uma conta? <a href="cadastro.php">Criar</a></p>
 
-                    <p class="login__criar">Ainda não tem uma conta? <a href="cadastro.php">Criar conta</a></p>
-                </fieldset>
-            </div>
+                </div>
+            </section>
+        </main>
+    </div>
 
-        </section>
+    <script src="../assets/js/contato.js"></script>
+    <script src="../assets/js/clicando.js"></script>
 
-    </main>
+
 
 </body>
-</html>
+
+</html
