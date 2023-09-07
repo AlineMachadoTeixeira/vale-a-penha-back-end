@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/login.css">
-    <
+    
 </head>
 
 <body>
@@ -24,7 +24,10 @@
                    
                 <div class="comerciante_for">
 
-                  <p class="login__img"><a  href="index.php"><img src="assets/images/icone-sao-paulo.svg" alt="Logo Vale a Penha"> </a> </p>                      
+                  <!-- <p class="login__img"><a  href="index.php"><img src="assets/images/icone-sao-paulo.svg" alt="Logo Vale a Penha"> </a> </p>                       -->
+
+                  
+                  <p class="login__img"><a  href="index.php"><img src="assets/images/icone-login-vermelho.svg" alt="Logo Vale a Penha"> </a> </p>   
 
                    
 
@@ -37,20 +40,20 @@
                             <!-- E-mail -->
                             <div class="login__input">
                                 <label for="email">E-mail:</label>
-                                <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                                <input id="email" type="email" name="email" placeholder="E-mail" required>
                             </div>
 
                             <!-- Senha -->
                             <div class="login__input">
                                 <label for="senha">Senha:</label>
-                                <input  type="password" name="senha" id="senha" placeholder="Digite sua Data de Nascimento" required>
+                                <input  type="password" name="senha" id="senha" placeholder="Senha" required>
                             </div>                       
 
 
 
 
                             <div class="botao__enviar">
-                                <button type="submit" id="submit">Entrar </button>
+                                <button type="submit" id="submit">Login </button>
                             </div>
 
                     </form>

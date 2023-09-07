@@ -8,8 +8,9 @@ body{
 .login__container{
     display: flex;
     justify-content: center;
-    width: 100%;
-    margin-top: 100px; 
+    /* width: 100%; */
+    margin-top: 10%;  
+    align-items: center;
 
     
 }
@@ -34,16 +35,17 @@ body{
 
 .login__img {
     margin: auto;
-    width: 50%;
+    width: 30%;
     padding-bottom: 20px;
-    color: #c40008;
+    
 }
  
 .login__input{
     display: flex;
     flex-direction: column;    
     gap: 2px;   
-    width: 100%;   
+    width: 100%;  
+    
 }
 
 .login__input input{
@@ -58,7 +60,7 @@ body{
 }
 
 .login__input input:hover{
-    outline: 1px solid #000000c0;
+    outline: 1px solid #c40008;
 }
 
 
@@ -99,20 +101,13 @@ body{
      color:  #fff;
  }
  
- .botao__enviar button a {
-     text-decoration: none;
-     font-size: 16px;
-     font-weight: 700;
-     color:  #000000; 
- }
+
  
  .botao__enviar button:hover{
-     background-color: #c40008;   
+     background-color: #FFF6C3;  
+     color: #000000c0 ; 
  }
- 
- .botao__enviar a:hover{    
-     color: #fff;
- }
+
 
 
  .login__criar{
