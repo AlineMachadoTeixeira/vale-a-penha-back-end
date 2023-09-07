@@ -75,10 +75,21 @@
                                 <textarea rows="5" cols="33" name="descricao" id="descricao" required></textarea>
                             </label>
                         </div>
+
+                        <!-- Instagram Link -->
+                        <div class="comerciante__input">
+                                <label for="nome">Instagram:</label>
+                                <input type="url" name="instagram" id="instagram" placeholder="Link do instagram" required>
+                                
+                            </div>
                         <div class="botao__enviar">
                             <button type="submit" id="submit">Finalizar Cadastro </button>
 
                         </div>
+
+                        
+                       
+
 
                     </form>
                     <!-- <p class="paragrafo__acessar">Já possui uma conta? <a href="login.php">Acessar</a></p> -->
@@ -102,6 +113,7 @@
 
     <script src="../assets/js/contato.js"></script>
     <script src="../assets/js/clicando.js"></script>
+    <script src="../assets/js/adicionar-foto-comerciante.js"></script>
 
 
 
