@@ -350,6 +350,7 @@ main{
     .comerciante__paragrafo{
         font-size: 15px;
     }
+    
     .navegacao a{
         font-size: 16px;
     }
@@ -365,7 +366,8 @@ main{
     .paragrafo__acessar{
         font-size: 15px;         
      }
-}
+   }     
+
 
 @media screen and (min-width: 990px) {
 

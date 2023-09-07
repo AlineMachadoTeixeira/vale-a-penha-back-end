@@ -4,7 +4,8 @@
     background-color:#F4EBD0;     
     top:0;
     position: sticky;  
-    z-index: 10;     
+    z-index: 10;    
+    
 }
 
 .menu__camada {    
@@ -12,8 +13,9 @@
     flex-direction: column;
     justify-content: space-between;        
     width: 80%;   
-    margin-bottom: 20px;
-    margin-top: 30px;       
+    margin-bottom: 10px;
+    margin-top: 40px; 
+
 }
 
 .menu__camada__dois{    
@@ -38,14 +40,15 @@ nav a {
     display: flex;    
     font-weight: 600;
     height: 30px;    
-    font-size: 0.8rem;    
+    font-size: 0.9rem;  
+    
 }
 
+
 /* Logo menu */
-.logo__principal  {        
-    width: 100%;  
-           
-} 
+nav  .logo__principal{    
+    width: 100%;   
+}
 
 /* Icone menu */
 .icone__menu  {        
@@ -106,7 +109,7 @@ nav a:focus {
  /* Trocar a cor do placeholder */
  ::-webkit-input-placeholder{
     /* color: #000000c0; */
-    color:  #c40008;
+    /* color:  #c40008; */
     padding-left: 10px;
  }
 /* Fim  Pesquisa  */
@@ -127,15 +130,17 @@ nav a:focus {
     }    
 }
 
-@media screen and (max-width: 769px) {
-    .menu__camada {               
-        margin-top:10px;    
-        margin-bottom: 0px; 
-    } 
+@media screen and (max-width: 769px) {         
 
     .pesquisa__lupa{       
-        width: 90%;        
+        width: 80%;        
     }
+
+    nav a {          
+        font-size: 1rem;  
+        
+    }
+
     
 }
 

@@ -1,70 +1,100 @@
-
 body{
     /* background-color: #FFF6C3; */
    background-image: url(../images/fundo.svg);
    background-size: cover;
-  
+    /* overflow: hidden; para tirar a barra de rolagem caso aparecer */
+    /* overflow: hidden;  */      
 }
 
- main {
-     width: 100%;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+main{    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin: auto;
+    padding: 50px 5px; 
+       
+}
+
+.comerciante__caixa{    
+    display: flex;
+    flex-direction: column;     
+    width: 90%;
+    border-radius: 20px;
+    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.212);
+    /* overflow: hidden; tudo que tiver fora da borda vai ficar escondido */
+    overflow: hidden;
+        
+}
+
+.comerciante__imagem {    
+    background-color:rgba(300,200,120,0.6);    
+    background-size: cover;    
+    padding: 10px;    
+}
+.comerciante_for{
+    display: flex;  
+    flex-direction: column;        
+    background-color: #fff;    
+    padding-top: 30px;
+    padding-right: 10px;
+    padding-left: 10px;  
+    overflow-y: scroll;
+}
+
+.comerciante__imagem img{    
+    width: 40%;
+    margin: auto;
+    display: flex;
+}
+
+/* Navegação do MInha conta a ajuda */
+.navegacao{
+    display: flex;
+    flex-direction: column;   
+    gap:20px ;
+    list-style: none;     
+    padding: 0;   
+    padding-right: 10px;   
+}
+
+.navegacao a{
+    text-decoration: none; 
+    font-size: 14px;
+    font-weight:600 ;       
+    color: #000000c0;     
+    cursor: pointer;
+}
+
+/* Para o JS do navegação */
+.navegacao a.active-link{
+    background-color:#FFF6C3; 
+    border:none;     
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
  }
 
-
-.login__container{ 
-    width: 100%;
-    margin-top: 50px;  
-    margin-bottom: 50px;    
-} 
-
-.login{    
-    background-color: white;    
-    border-radius: 20px;     
-    /* overflow: hidden; tudo que tiver fora da borda vai ficar escondido */
-    overflow: hidden; 
-    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.212);  
-    width: 100%;     
-}
-
-.login__imagem{
-    display: flex;   
-    padding: 16px;   
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(300,200,120,0.6);
-    height: 200px;   
-    
-     
-}
-
-.login__imagem img{
-    width: 100%;
-    width: auto;
-    
-} 
-
-
-
-
-.form__titulo {
+ .comerciante__titulo {
     margin-bottom: 8px;
     margin-left: 10px;
     margin-top: 15px;
     margin-right: 10px;
     display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    padding: 0 30px;       
+    justify-content: space-between;    
+    padding: 0 30px;   
+    position: relative;    
+     
+}
+.comerciante__titulo h1{
+    font-size: 20px;
+    width: 100%;
 }
 
-.form__subtitulo h2:after {
+.comerciante__titulo h1:after {
     /* content: ''; colocar um traço em baixo da palavra cadastre-se */
     content: '';
     display: block;    
-    width: 80px;
+    width: 10%;
     height: 8px; 
     background-color:rgba(300,200,120,0.6);
     margin: 0 auto;
@@ -72,67 +102,58 @@ body{
     border-radius: 10px; 
 }
 
-.form__paragrafo{
+.comerciante__paragrafo {
     font-size: 14px;
     font-weight:600 ;
-    padding: 15px ;    
+    padding: 10px ;    
     color: #000000c0;
-    text-align: center;    
-}
+    text-align: center;  
+    /* display: none;    */
+} 
 
-.login__for__sobrenome{
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between;
-    gap: 10px;
-    margin: 0;    
- }
-
-.form__voltar {
+.botao__sair {
     display: flex;
-    align-items: center;    
+    align-items: center; 
 }
 
-.form__voltar button {
-    border: none;
-    background-color:rgba(300,200,120,0.6);   
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    color: #FFF;   
+.botao__sair button{
+     border:none;
+     background-color:rgba(300,200,120,0.6);   
+     padding: 8px 15px;
+     border-radius: 5px;
+     cursor: pointer;
+     color: #FFF;  
 }
 
-.form__voltar button:hover {
+.botao__sair button:hover {
     background-color: #c40008;   
     cursor: pointer;
 }
 
-.form__voltar button a{
+.botao__sair button a{
     text-decoration: none;    
     color: #000000;
     font-size: 14px;
     font-weight: 700;   
 }
 
-.form__voltar button a:hover{
+.botao__sair button a:hover{
     color: #FFF;      
 }
 
-.login__for{
-    display: flex;
-    flex-direction: column;
-    padding: 10px 30px;
+.comerciante__formulario{    
+    padding: 0 20px;
 }
 
-.login__campos{
+.comerciante__input{
     display: flex;
     flex-direction: column;    
     gap: 10px;
-    margin-bottom: 8px; 
-    width: 100%;        
+    margin-bottom: 8px;  
+    width: 100%;   
 }
 
-.login__campos input{
+.comerciante__input textarea{
     margin-top: 0px;
     margin-bottom: 20px;
     padding: 8px 16px;
@@ -140,186 +161,265 @@ body{
     border-radius: 10px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.212);
     font-size: 14px;  
-    width: 95%;         
+    width: 100%;         
 }
 
-.login__campos input:hover{
+.comerciante__input input{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.212);
+    font-size: 14px;  
+    width: 100%;         
+}
+
+.comerciante__input input:hover{
     outline: 1px solid #c40008;
 }
 
-.login__campos input:focus-visible {
+.comerciante__input textarea:hover{
+   outline: 1px solid #c40008;
+}
+
+.comerciante__input input:focus-visible {
     outline: none
 }
 
-.login__campos label{    
+.comerciante__input textarea:focus-visible {
+   outline: none
+}
+
+.comerciante__input label{    
     font-size: 14px;
     font-weight: 600;
     color: #000000c0;
     margin-bottom: 0px;   
 }
 
-.login__entrar {
-   display: flex;
-   justify-content: center;
-}
-
-
-.login__entrar button{
-    width: 60%; 
-    border: none;
-    background-color:rgba(300,200,120,0.6);     
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;   
-    margin-top: 15px;
-}
-
-.login__entrar button a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
-    color:  #000000; 
-}
-
-.login__entrar button:hover{
-    background-color: #c40008;   
-}
-
-.login__entrar a:hover{    
-    color: #fff;
-}
-
-
-.login__voltar__index a:hover{    
-    color: #fff;
-}
-
-.login__voltar__index:hover{
-    background-color: #c40008;        
-}
-
-.login__criar{
-    font-size: 15px;
-    font-weight:600 ;
-    padding: 15px ;    
-    color: #000000c0;
-    text-align: center;
-}
-
-.login__criar a{
-    color: #c40008;
-    text-decoration: none;
-    margin-left: 10px;
-}
-
-
-@media screen and (max-width: 767px) {
-
-    main{
-        padding: 10px;
-    }
-    .login__for__sobrenome {         
-        flex-direction: column
-    }
+.botao__enviar {
+    display: flex;
+    justify-content: center;
  }
+ 
+ 
+ .botao__enviar button{
+     width: 60%; 
+     border: none;
+     background-color:rgba(300,200,120,0.6);     
+     padding: 10px;
+     border-radius: 5px;
+     cursor: pointer;   
+     margin-top: 15px;
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: 700;
+     color:  #000000;
+ }
+ 
+ .botao__enviar button a {
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: 700;
+     color:  #000000; 
+ }
+ 
+ .botao__enviar button:hover{
+     background-color: #c40008;   
+ }
+ 
+ .botao__enviar a:hover{    
+     color: #fff;
+ }
+
+ .paragrafo__acessar{
+    font-size: 15px;
+     font-weight:600 ;
+     padding: 15px ;    
+     color: #000000c0;
+     text-align: center;
+ }
+
+ .paragrafo__acessar a{
+    color: #c40008;
+     text-decoration: none;
+     margin-left: 10px;
+ }
+
+ .comerciante__sobrenome{
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+    gap: 10px;
+    margin: 0;
+ }
+
+ .ul__dicas{
+    font-size: 15px;            
+     color: #000000c0;
+     padding-bottom: 10px;  
+     margin-top: 0;
+     padding-top: 0;
+
+ }
+ .paragrafo__dicas{
+    font-size: 16px;
+    font-weight:600 ;
+    color: #c40008;
+    padding-bottom: 0;    
+    margin-bottom: 0;
+    margin-top: 30px;
+   padding-left: 20px;
+ }
+
+
+
+/* CSS Para a foto do cadastrar comercio  */
+
+#foto {
+    display: none;    
+  }
+
+  .foto__margem{
+    margin-bottom: 25px;
+  }
+  
+  .comerciante__foto {
+    width: 200px;
+    /* aspect-ratio: 16/9; */
+    aspect-ratio: 9/9;
+    background: rgba(300,200,120,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000c0;
+    border: 2px dashed currentcolor;
+    cursor: pointer;    
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    outline: none;
+    overflow: hidden;
+    margin: auto;
+    font-size: 14px;
+    font-weight: bold;   
+    
+  }
+  
+  .comerciante__foto:hover {
+    color: #777;
+    background: #ccc;
+  }
+  
+  .comerciante__foto:active {    
+    border-color:#fff;
+    color: #fff;
+  }
+  
+  .comerciante__foto:focus {    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .comerciante__foto__img {
+    max-width: 100%;
+  }
+/* Fim  CSS Para a foto do cadastrar comercio  */
 
 
 @media screen and (min-width: 768px) {
 
-    .login__container{
-        margin-top:50px;
-        margin-bottom:50px;
-        
+    .comerciante__imagem {    
+        background-image: url(../images/tela-de-cadastro-vertical.svg);  
+        background-size: cover;
+        /* background-position: left bottom;  */
+    /* -->  é  para posicionar a imagem onde queremos. nesse cado a esquerda em baixo  */  
+       background-position: top ;         
     }
-    main{
-        padding: 10px;
-
-    }
-
-    .login{
-        width: 950px;
-        height: 900px;
-    }
-
-    .login__imagem{
-        float: left;
-        width: 30%;
-        height: 100%;
-    }
-
-    .login_for{
-        float: left;
-        float: right; 
-        width: 70%;   
-    }    
-   
-
-    .form__subtitulo h2:after {       
-        width: 90px;
-        height: 8px;        
-              
-    }
-
     
-
-    .form__titulo{        
-        font-size: 18px;        
-        
+    
+    .comerciante__imagem img{       
+        display: none;
     }
 
-    .form__subtitulo h2:after {       
-        width: 100px;
-        height: 8px; 
-              
+    .comerciante__caixa{
+        display: flex;
+        flex-direction: row;        
     }
 
-    .form__voltar button a, .form__paragrafo, .login__campos label{      
-        font-size: 17px;        
-        
+    .comerciante__imagem{         
+        width: 25%;        
+   }    
+   .comerciante_for{
+       width: 75%;
+   }
+
+    .comerciante__sobrenome{
+        flex-direction: row;
+     }
+
+     .comerciante__titulo h1{
+        font-size: 21px;
     }    
 
- }
-
-
- @media screen and (min-width: 992px){
-
-    .login__container{
-        margin-top:50px;
-        margin-bottom:50px;
-      }  
-
-
-    .login{
-        width: 950px;
-        height: 900px;
+    .comerciante__paragrafo{
+        font-size: 15px;
+    }
+    
+    .navegacao a{
+        font-size: 16px;
     }
 
-    .login__imagem{
-        float: left;
-        width: 35%;
-        /* height: 100%; */
+    .botao__sair button a{      
+        font-size: 15px;         
+    }  
+
+    .comerciante__input label{    
+        font-size: 15px;          
     }
 
-    .login_for{
-        float: left;
-        float: right; 
-        width: 65%;   
-    } 
+    .paragrafo__acessar{
+        font-size: 15px;         
+     }
+   }     
 
-    .form__titulo{        
-        font-size: 18px;        
-        
+
+@media screen and (min-width: 990px) {
+
+    .comerciante__caixa{
+        display: flex;
+        flex-direction: row;     
+        width: 75%;   
     }
 
-    .form__subtitulo h2:after {       
-        width: 100px;
-        height: 8px; 
-              
-    }
-
-    .form__voltar button a, .form__paragrafo, .login__campos label{      
-        font-size: 17px;        
-        
+    .comerciante__imagem{         
+         width: 25%;        
     }    
+    .comerciante_for{
+        width: 75%;
+    }   
 
- }
+    .comerciante__titulo h1{
+        font-size: 22px;
+    }
+
+    .comerciante__titulo h1:after {           
+        width: 8%;
+    }
+
+    .comerciante__paragrafo{
+        font-size: 16px;
+    }
+
+    .botao__sair button a{      
+        font-size: 16px;         
+    }  
+
+    .comerciante__input label{    
+        font-size: 16px;          
+    }
+
+    .paragrafo__acessar{
+        font-size: 16px;         
+     }
+    
+}

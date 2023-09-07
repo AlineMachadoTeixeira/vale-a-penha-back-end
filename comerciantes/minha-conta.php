@@ -73,10 +73,10 @@
                                     <input id="cpf" type="number" name="cpf" placeholder="Digite seu CPF" required>
                                 </div>
 
-                                <!-- Sobrenome -->
+                                <!-- Telefone -->
                                 <div class="comerciante__input">
-                                    <label for="tel">Celular:</label>
-                                    <input id="tel" type="tel" name="tel" placeholder="(xx) xxxx-xxxx" required>
+                                    <label for="telefone">Telefone:</label>
+                                    <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required>
                                 </div>
                             </div>
 
