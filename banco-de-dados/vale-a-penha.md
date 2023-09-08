@@ -44,9 +44,9 @@ CREATE TABLE administradores(
 <!--Criando a chave-estrangeira Confirmar se está correto-->
 
 ```sql
-ALTER TABLE comerciantes
+ALTER TABLE comercios
     
-    ADD CONSTRAINT fk_comerciantes_comercios1  
+    ADD CONSTRAINT fk_comercios_comerciantes
     FOREIGN KEY (comerciante_id) REFERENCES comerciantes(id);
 
 ```
