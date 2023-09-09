@@ -97,17 +97,17 @@
                         </div>
 
                         <div class="comerciante__campos">
-                            <div class="comerciante__sobrenome">
+                            <div class="comerciante__sobrenome">                               
                                 <!-- CPF -->
                                 <div class="comerciante__input">
                                     <label for="cpf">CPF</label>
-                                    <input id="cpf" type="number" name="cpf" placeholder="Digite seu CPF" required>
+                                    <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" required autocomplete="off" maxlength="14">
                                 </div>
 
                                 <!-- Telefone -->
                                 <div class="comerciante__input">
                                     <label for="telefone">Telefone:</label>
-                                    <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required>
+                                    <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" required autocomplete="off" maxlength="14">
                                 </div>
                             </div>
 
@@ -196,9 +196,9 @@
         </div>
         <p>Vale a Penha 2023. Alguns direitos reservados &copy;</p>
     </footer>
+
     <script src="assets/js/menu-novo.js"></script>
-
-
+    <script src="assets/js/mascara-cpf-tel.js"></script>
 
 </body>
 

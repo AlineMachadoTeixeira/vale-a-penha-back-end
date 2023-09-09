@@ -70,13 +70,13 @@
                                 <!-- CPF -->
                                 <div class="comerciante__input">
                                     <label for="cpf">CPF</label>
-                                    <input id="cpf" type="number" name="cpf" placeholder="Digite seu CPF" required>
+                                    <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" required autocomplete="off" maxlength="14">
                                 </div>
 
                                 <!-- Telefone -->
                                 <div class="comerciante__input">
                                     <label for="telefone">Telefone:</label>
-                                    <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required>
+                                    <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" required autocomplete="off" maxlength="14">
                                 </div>
                             </div>
 
@@ -110,6 +110,7 @@
 
     <script src="../assets/js/contato.js"></script>
     <script src="../assets/js/clicando.js"></script>
+    <script src="../assets/js/mascara-cpf-tel.js"></script>
 
 
 
