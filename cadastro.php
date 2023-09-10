@@ -128,13 +128,13 @@
                                 <!-- Senha -->
                                 <div class="comerciante__input">
                                     <label for="senha">Senha:</label>
-                                    <input id="senha" type="password" name="senha" placeholder="Digite sua senha" onchange='confereSenha();'  required>
+                                    <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
                                 </div>
 
                                 <!-- Confirme senha: -->
                                 <div class="comerciante__input">
                                     <label for="confirmesenha">Confirme sua senha:</label>
-                                    <input id="confirmesenha" type="password" name="confirmesenha" placeholder="Confirme sua senha" onchange='confereSenha();' required>
+                                    <input id="confirmesenha" type="password" name="confirmesenha" placeholder="Confirme sua senha"  required>
                                 </div>
                             </div>
 
