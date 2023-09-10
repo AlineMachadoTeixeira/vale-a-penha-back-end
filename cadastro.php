@@ -107,7 +107,7 @@
                                 <!-- Telefone -->
                                 <div class="comerciante__input">
                                     <label for="telefone">Telefone:</label>
-                                    <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" required autocomplete="off" maxlength="14">
+                                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" required autocomplete="off" maxlength="14">
                                 </div>
                             </div>
 
@@ -128,13 +128,13 @@
                                 <!-- Senha -->
                                 <div class="comerciante__input">
                                     <label for="senha">Senha:</label>
-                                    <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                                    <input id="senha" type="password" name="senha" placeholder="Digite sua senha" onchange='confereSenha();'  required>
                                 </div>
 
                                 <!-- Confirme senha: -->
                                 <div class="comerciante__input">
                                     <label for="confirmesenha">Confirme sua senha:</label>
-                                    <input id="confirmesenha" type="password" name="confirmesenha" placeholder="Confirme sua senha" required>
+                                    <input id="confirmesenha" type="password" name="confirmesenha" placeholder="Confirme sua senha" onchange='confereSenha();' required>
                                 </div>
                             </div>
 
@@ -199,6 +199,8 @@
 
     <script src="assets/js/menu-novo.js"></script>
     <script src="assets/js/mascara-cpf-tel.js"></script>
+    <script src="assets/js/confirmacao-senha-email.js"></script>
+
 
 </body>
 

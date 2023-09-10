@@ -76,7 +76,7 @@
                                 <!-- Telefone -->
                                 <div class="comerciante__input">
                                     <label for="telefone">Telefone:</label>
-                                    <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxxx-xxxx" required autocomplete="off" maxlength="14">
+                                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" required autocomplete="off" maxlength="14">
                                 </div>
                             </div>
 
