@@ -50,7 +50,7 @@
                         Não fique de fora, divulgue conosco!
                     </p>
 
-                    <form class="comerciante__formulario" action="" method="post">
+                    <form class="comerciante__formulario" action="" method="post" id="form">
 
                         <div class="comerciante__sobrenome">
                             <!-- Nome -->
@@ -60,8 +60,8 @@
                             </div>
                             <!-- Sobrenome -->
                             <div class="comerciante__input">
-                                <label for="nome">Sobrenome:</label>
-                                <input id="nome" type="text" name="nome" placeholder="Digite seu sobrenome" required>
+                                <label for="sobrenome">Sobrenome:</label>
+                                <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
                             </div>
                         </div>
 
@@ -70,13 +70,13 @@
                                 <!-- CPF -->
                                 <div class="comerciante__input">
                                     <label for="cpf">CPF</label>
-                                    <input id="cpf" type="number" name="cpf" placeholder="Digite seu CPF" required>
+                                    <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" required autocomplete="off" maxlength="14">
                                 </div>
 
-                                <!-- Sobrenome -->
+                                <!-- Telefone -->
                                 <div class="comerciante__input">
-                                    <label for="tel">Celular:</label>
-                                    <input id="tel" type="tel" name="tel" placeholder="(xx) xxxx-xxxx" required>
+                                    <label for="telefone">Telefone:</label>
+                                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" required autocomplete="off" maxlength="14">
                                 </div>
                             </div>
 
@@ -88,7 +88,7 @@
 
                             <!-- Data de Nascimento -->
                             <div class="comerciante__input">
-                                <label for="senha">Data de Nascimento:</label>
+                                <label for="data">Data de Nascimento:</label>
                                 <input id="data" type="date" name="data" id="" placeholder="Digite sua Data de Nascimento" required>
                             </div>
 
@@ -110,6 +110,7 @@
 
     <script src="../assets/js/contato.js"></script>
     <script src="../assets/js/clicando.js"></script>
+    <script src="../assets/js/mascara-cpf-tel.js"></script>
 
 
 

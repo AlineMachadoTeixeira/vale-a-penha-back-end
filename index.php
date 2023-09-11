@@ -46,6 +46,7 @@
                     <li><a href="gastronomia.php">Gastronomia</a></li>
                     <li><a href="lazer.php">Lazer</a></li>
                     <li><a href="comercio-local.php">Comércio Local</a></li>
+                    <li><a href="comercio-teste.php">Comércio Teste  </a></li>
                     <li><a href="cultura.php">Cultura</a></li>
                     <li><a href="historia.php">História</a></li>
                     <li><a href="educacao.php">Educação</a></li>

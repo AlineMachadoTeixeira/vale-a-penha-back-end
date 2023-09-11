@@ -58,7 +58,7 @@ main{
 
 .navegacao a{
     text-decoration: none; 
-    font-size: 16px;
+    font-size: 14px;
     font-weight:600 ;       
     color: #000000c0;     
     cursor: pointer;
@@ -66,9 +66,11 @@ main{
 
 /* Para o JS do navegação */
 .navegacao a.active-link{
-    background-color:#FFF6C3;
-    padding: 10px;
-    border-radius: 40px; 
+    background-color:#FFF6C3; 
+    border:none;     
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
  }
 
  .comerciante__titulo {
@@ -138,9 +140,7 @@ main{
     color: #FFF;      
 }
 
-.comerciante__formulario{
-    /* padding-left: 10px;
-    padding-right: 10px; */
+.comerciante__formulario{    
     padding: 0 20px;
 }
 
@@ -149,7 +149,7 @@ main{
     flex-direction: column;    
     gap: 10px;
     margin-bottom: 8px;  
-    width: 100%;   
+    width: 100%;      
 }
 
 .comerciante__input textarea{
@@ -171,7 +171,7 @@ main{
     border-radius: 10px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.212);
     font-size: 14px;  
-    width: 100%;         
+    width: 100%;     
 }
 
 .comerciante__input input:hover{
@@ -271,8 +271,11 @@ main{
     margin-bottom: 0;
     margin-top: 30px;
    padding-left: 20px;
-
  }
+
+
+
+ 
 
 
 
@@ -323,8 +326,6 @@ main{
   .comerciante__foto__img {
     max-width: 100%;
   }
-  
-
 /* Fim  CSS Para a foto do cadastrar comercio  */
 
 
@@ -353,8 +354,9 @@ main{
     .comerciante__paragrafo{
         font-size: 15px;
     }
+    
     .navegacao a{
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .botao__sair button a{      
@@ -368,7 +370,8 @@ main{
     .paragrafo__acessar{
         font-size: 15px;         
      }
-}
+   }     
+
 
 @media screen and (min-width: 990px) {
 
@@ -383,10 +386,7 @@ main{
     }    
     .comerciante_for{
         width: 75%;
-    }
-    .navegacao a{        
-        font-size: 18px;        
-    }
+    }   
 
     .comerciante__titulo h1{
         font-size: 22px;
@@ -413,3 +413,5 @@ main{
      }
     
 } 
+
+
