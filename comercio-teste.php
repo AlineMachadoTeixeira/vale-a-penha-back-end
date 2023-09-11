@@ -92,50 +92,24 @@
         <section class="container">
             <article class="cards">
                 <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
-                <img id="img"  class="cards-img" src="assets/images/banner-inicio.png" alt="Comida da Padaria Requinte">
+                <img  class="cards-img redimensionar" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
                 <h3>Papelaria CopyPen</h3>
                 <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a> 
             </article>
-            
-            <!-- <article class="cards">
-                <img id="img" class="cards-img" src="assets/images/banner-inicio.png" alt="Comida da Nova Yara Panificadora">
-                <h3>FD Foto Penha</h3>
-                <p>Para todos os tipos de fotografia, 3x4, álbum de fotos, ensaio fotográfico</p>
-                <a target="_blank" href="https://www.instagram.com/fdfotopenha/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
-            </article> -->
-            <!-- <article class="cards">
-                <img id="img" class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
-                <h3>Papelaria CopyPen</h3>
-                <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
-            </article>
-            <article class="cards">
-                <img class="cards-img" src="assets/images/fotografo.jpg" alt="Comida da Nova Yara Panificadora">
-                <h3>FD Foto Penha</h3>
-                <p>Para todos os tipos de fotografia, 3x4, álbum de fotos, ensaio fotográfico</p>
-                <a target="_blank" href="https://www.instagram.com/fdfotopenha/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
-            </article>
-            <article class="cards">
-                <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
-                <h3>Papelaria CopyPen</h3>
-                <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
-            </article>
-            <article class="cards">
-                <img class="cards-img" src="assets/images/fotografo.jpg" alt="Comida da Nova Yara Panificadora">
-                <h3>FD Foto Penha</h3>
-                <p>Para todos os tipos de fotografia, 3x4, álbum de fotos, ensaio fotográfico</p>
-                <a target="_blank" href="https://www.instagram.com/fdfotopenha/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
-            </article>  -->
 
             <article class="cards">
                 <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
-                <img id="img"  class="cards-img" src="assets/images/banner-inicio.png" alt="Comida da Padaria Requinte">
+                <img  class="cards-img redimensionar" src="assets/images/fotografo.jpg" alt="Comida da Padaria Requinte">
                 <h3>Papelaria CopyPen</h3>
                 <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a> 
             </article>
+            
+            
+                      
+            
+            
         </section>
     </main>
     <footer>
@@ -171,20 +145,23 @@
 
      <script>
         
-        // function redimensionarImagem(largura, altura){
-        //     document.querySelector('#img').width = largura;
-        //     document.querySelector('#img').height = altura;
-        // }
-
-        // redimensionarImagem(300,200);
-
-
-        function redimensionarImagem(largura, altura){
-             document.getElementById('img').width = largura;
-            document.getElementById('img').height = altura;
+         function redimensionarImagem(largura, altura){
+            const img =  document.querySelectorAll('.redimensionar');
+            img.forEach(imagem => {
+                imagem.width = largura;
+                imagem.height = altura;
+            })
          }
 
-         redimensionarImagem(300,200);
+         redimensionarImagem(200,200);
+
+
+        // function redimensionarImagem(largura, altura){
+        //      document.getElementById('img').width = largura;
+        //     document.getElementById('img').height = altura;
+        //  }
+
+        //  redimensionarImagem(300,200);
 
 
     </script> 

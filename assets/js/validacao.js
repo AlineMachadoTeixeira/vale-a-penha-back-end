@@ -36,12 +36,12 @@ if (nome === ''){
   //adicionar class sucesso
 }
 
-function errorValidacao(input, message){
-    const comercianteInput = input.parentElement;
-    const small = comercianteInput.querySelector('small')
+// function errorValidacao(input, message){
+//     const comercianteInput = input.parentElement;
+//     const small = comercianteInput.querySelector('small')
 
-    small.innerText = message
+//     small.innerText = message
 
-    comercianteInput.classnome = "comerciante__input  erro"
-}
+//     comercianteInput.classnome = "comerciante__input  erro"
+// }
 
