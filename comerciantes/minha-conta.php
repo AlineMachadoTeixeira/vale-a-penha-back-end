@@ -89,7 +89,7 @@
                             <!-- Data de Nascimento -->
                             <div class="comerciante__input">
                                 <label for="data">Data de Nascimento:</label>
-                                <input id="data" type="date" name="data" id="" placeholder="Digite sua Data de Nascimento" required>
+                                <input id="data" type="date" name="data"  placeholder="Digite sua Data de Nascimento" required>
                             </div>
 
 

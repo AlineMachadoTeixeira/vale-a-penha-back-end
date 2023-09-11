@@ -1,4 +1,4 @@
-const form = document.querySelector("#form");
+const form = document.querySelector("form");
 const nome = document.querySelector("#nome");
 const sobrenome = document.querySelector("#sobrenome");
 const cpf = document.querySelector("#cpf");
@@ -28,20 +28,22 @@ function checkInputs(){
     const dataValue = data.value.trim()
 }   // Remover espaços em branco  trim()
 
-if (nome === ''){
-    //mostrar o erro 
-    // adicionar a class erro 
-    errorValidacao(nome, 'Preenchar esse campo')
-}else{
-  //adicionar class sucesso
-}
+ if (nome === ''){
+     //mostrar o erro 
+     // adicionar a class erro 
+     errorValidacao(input, 'Preenchar esse campo')
+ }else{
+       //adicionar class sucesso
+ }
 
-// function errorValidacao(input, message){
-//     const comercianteInput = input.parentElement;
-//     const small = comercianteInput.querySelector('small')
+ function errorValidacao(input, message){
+     const comercianteInput = input.parentElement;
+     const small = comercianteInput.querySelector('small')
 
-//     small.innerText = message
+     small.innerText = message
 
-//     comercianteInput.classnome = "comerciante__input  erro"
-// }
+     comercianteInput.classNome = 'comerciante__input  erro'
+ }
+
+
 

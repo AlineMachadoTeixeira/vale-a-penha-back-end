@@ -109,14 +109,6 @@
                     <p>Além disso, o bairro conta com uma série de serviços, como escolas, metro, hospitais e postos de saúde, que atendem não só os moradores da Penha, mas também de outros bairros da cidade.</p>
                 </div>
 
-                <!-- Temperatura -->
-                <!-- <div id="cont_75a30a07297347aa5c03ac660365ea73"><script type="text/javascript" async src="https://www.tempo.com/wid_loader/75a30a07297347aa5c03ac660365ea73"></script></div>  -->
-
-                <!-- <iframe scrolling="no" frameborder="0" marginwidth="0" marginheight="0" width="100" height="100" src="https://selos.climatempo.com.br/selos/MostraSelo120.php?CODCIDADE=558&SKIN=padrao"></iframe>  -->
-
-                <!-- <div id="c_446802e85341fdd9132f0c741d7a899c" class="mini"></div><script type="text/javascript" src="https://pt.eltiempo.es/widget/widget_loader/446802e85341fdd9132f0c741d7a899c"></script> -->
-
-
 
                 <section class="video">
                     <div class="video-area">

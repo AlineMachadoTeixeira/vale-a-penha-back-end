@@ -1,7 +1,7 @@
 body{
     /* background-color: #FFF6C3; */
-    background-image: url(../images/fundo.svg); 
-   background-size: cover;
+    background-image: url(../images/fundo.svg);  
+    background-size: cover;
     /* overflow: hidden; para tirar a barra de rolagem caso aparecer */
     /* overflow: hidden;  */      
 }
@@ -42,9 +42,11 @@ main{
 }
 
 .comerciante__imagem img{    
-    width: 40%;
+    width: 30%;
     margin: auto;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Navegação do MInha conta a ajuda */
@@ -82,11 +84,13 @@ main{
     display: flex;
     justify-content: space-between;    
     padding: 0 30px;   
-    position: relative;    
+    position: relative;   
+   gap: 10px;
+    
      
 }
 .comerciante__titulo h1{
-    font-size: 20px;
+    font-size: 18px;
     width: 100%;
 }
 
@@ -372,20 +376,15 @@ main{
 /* Fim  CSS Para a foto do cadastrar comercio  */
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {   
 
-    .comerciante__imagem {    
-        background-image: url(../images/tela-de-cadastro-vertical.svg);  
-        background-size: cover;
-        /* background-position: left bottom;  */
-    /* -->  é  para posicionar a imagem onde queremos. nesse cado a esquerda em baixo  */  
-       background-position: top ;         
+    .comerciante__imagem img{    
+        width: 100%;
+        /* background-color: #FFF6C3; */
+        
+        
     }
     
-    
-    .comerciante__imagem img{       
-        display: none;
-    }
 
     .comerciante__caixa{
         display: flex;
@@ -393,10 +392,14 @@ main{
     }
 
     .comerciante__imagem{         
-        width: 25%;        
+        width: 25%; 
+        display: flex;
+        align-items: center;
+        justify-content: center;       
    }    
    .comerciante_for{
        width: 75%;
+      
    }
 
     .comerciante__sobrenome{
