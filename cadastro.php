@@ -64,7 +64,7 @@
             <section class="comerciante__caixa">
                 <div class="comerciante__imagem">
                     <!-- Aqui vai a imagem -->
-                    <a href="index.php"><img src="assets/images/tela-de-cadastro.svg" alt="Logo Vale a Penha"> </a> 
+                    <a href="index.php"><img src="assets/images/tela-de-cadastro.svg" alt="Logo Vale a Penha"> </a>
 
                 </div>
                 <div class="comerciante_for">
@@ -81,68 +81,117 @@
                         Não fique de fora, divulgue conosco!
                     </p>
 
-                    <form class="comerciante__formulario" action="" method="post">
+                    <form class="comerciante__formulario" action="" method="post" id="form">
 
                         <div class="comerciante__sobrenome">
-                            <!-- Nome -->
-                            <div class="comerciante__input">
+                            <!-- Nome required-->
+                            <div class="comerciante__input ">
                                 <label for="nome">Nome:</label>
-                                <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome" required>
+                                <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome">
+
+                                <!-- Mensagem de erro que vai aparecer no JS -->
+                                <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
+                                <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
+                                <small>Erro Mensagem</small>
                             </div>
+
                             <!-- Sobrenome -->
-                            <div class="comerciante__input">
-                                <label for="nome">Sobrenome:</label>
-                                <input id="nome" type="text" name="nome" placeholder="Digite seu sobrenome" required>
+                            <div class="comerciante__input ">
+                                <label for="sobrenome">Sobrenome:</label>
+                                <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
+
+                                <!-- Mensagem de erro que vai aparecer no JS -->
+                                <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
+                                <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
+                                <small>Error Mensagem</small>
                             </div>
                         </div>
 
                         <div class="comerciante__campos">
-                            <div class="comerciante__sobrenome">                               
+                            <div class="comerciante__sobrenome">
                                 <!-- CPF -->
                                 <div class="comerciante__input">
                                     <label for="cpf">CPF</label>
-                                    <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" required autocomplete="off" maxlength="14">
+                                    <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" autocomplete="off" maxlength="14">
+
+                                    <!-- Mensagem de erro que vai aparecer no JS -->
+                                    <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
+                                    <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
+                                    <small>Erro Mensagem</small>
                                 </div>
 
                                 <!-- Telefone -->
-                                <div class="comerciante__input">
+                                <div class="comerciante__input ">
                                     <label for="telefone">Telefone:</label>
-                                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" required autocomplete="off" maxlength="14">
+                                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" autocomplete="off" maxlength="14">
+
+                                    <!-- Mensagem de erro que vai aparecer no JS -->
+                                    <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
+                                    <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
+                                    <small>Erro Mensagem</small>
+
+
                                 </div>
                             </div>
 
                             <!-- E-mail -->
                             <div class="comerciante__input">
                                 <label for="email">E-mail:</label>
-                                <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                                <input id="email" type="email" name="email" placeholder="Digite seu e-mail">
+
+                                <!-- Mensagem de erro que vai aparecer no JS -->
+                                <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
+                                <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
+                                <small>Erro Mensagem</small>
                             </div>
 
                             <!-- Confirmar E-mail -->
                             <div class="comerciante__input">
                                 <label for="confimaremail">Confirmar E-mail:</label>
-                                <input id="confimaremail" type="email" name="confimaremail" placeholder="Digite seu e-mail" required>
+                                <input id="confimaremail" type="email" name="confimaremail" placeholder="Digite seu e-mail">
+
+                                <!-- Mensagem de erro que vai aparecer no JS -->
+                                <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
+                                <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
+                                <small>Erro Mensagem</small>
                             </div>
-                            
+
 
                             <div class="comerciante__sobrenome">
                                 <!-- Senha -->
                                 <div class="comerciante__input">
                                     <label for="senha">Senha:</label>
-                                    <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                                    <input id="senha" type="password" name="senha" placeholder="Digite sua senha">
+
+                                    <!-- Mensagem de erro que vai aparecer no JS -->
+                                    <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
+                                    <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
+                                    <small>Erro Mensagem</small>
                                 </div>
 
                                 <!-- Confirme senha: -->
                                 <div class="comerciante__input">
                                     <label for="confirmesenha">Confirme sua senha:</label>
-                                    <input id="confirmesenha" type="password" name="confirmesenha" placeholder="Confirme sua senha"  required>
+                                    <input id="confirmesenha" type="password" name="confirmesenha" placeholder="Confirme sua senha">
+
+                                    <!-- Mensagem de erro que vai aparecer no JS -->
+                                    <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
+                                    <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
+                                    <small>Erro Mensagem</small>
                                 </div>
                             </div>
 
                             <!-- Data de Nascimento -->
-                            <div class="comerciante__input">
-                                <label for="senha">Data de Nascimento:</label>
-                                <input id="data" type="date" name="data" id="" placeholder="Digite sua Data de Nascimento" required>
+                            <div class="comerciante__input ">
+                                <label for="data">Data de Nascimento:</label>
+                                <input id="data" type="date" name="data" id="" placeholder="Digite sua Data de Nascimento">
+
+                                <!-- Mensagem de erro que vai aparecer no JS -->
+                                <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
+                                    <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
+                                    <small>Erro Mensagem</small>
                             </div>
+
 
                             <div class="botao__enviar">
                                 <button type="submit" id="submit">Finalizar Cadastro </button>
@@ -199,7 +248,7 @@
 
     <script src="assets/js/menu-novo.js"></script>
     <script src="assets/js/mascara-cpf-tel.js"></script>
-    <script src="assets/js/confirmacao-senha-email.js"></script>
+    <script src="assets/js/validacao.js"></script>
 
 
 </body>

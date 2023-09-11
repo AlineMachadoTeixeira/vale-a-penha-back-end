@@ -50,7 +50,7 @@
                         Não fique de fora, divulgue conosco!
                     </p>
 
-                    <form class="comerciante__formulario" action="" method="post">
+                    <form class="comerciante__formulario" action="" method="post" id="form">
 
                         <div class="comerciante__sobrenome">
                             <!-- Nome -->
@@ -60,8 +60,8 @@
                             </div>
                             <!-- Sobrenome -->
                             <div class="comerciante__input">
-                                <label for="nome">Sobrenome:</label>
-                                <input id="nome" type="text" name="nome" placeholder="Digite seu sobrenome" required>
+                                <label for="sobrenome">Sobrenome:</label>
+                                <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
                             </div>
                         </div>
 
@@ -88,7 +88,7 @@
 
                             <!-- Data de Nascimento -->
                             <div class="comerciante__input">
-                                <label for="senha">Data de Nascimento:</label>
+                                <label for="data">Data de Nascimento:</label>
                                 <input id="data" type="date" name="data" id="" placeholder="Digite sua Data de Nascimento" required>
                             </div>
 
