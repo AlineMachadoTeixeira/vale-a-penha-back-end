@@ -161,7 +161,7 @@
             })
          }
 
-         redimensionarImagem(300,200);
+         redimensionarImagem(200,200);
 
 
         // function redimensionarImagem(largura, altura){

@@ -93,8 +93,10 @@ nav a:focus {
     outline: none; 
     padding: 0;    
     line-height:40px;    
-    width: 100%;     
+    width: 100%;       
 }
+
+
 
 .pesquisa__link{
     width: 40px;

@@ -85,7 +85,7 @@
 
                         <div class="comerciante__sobrenome">
                             <!-- Nome required-->
-                            <div class="comerciante__input ">
+                            <div class="comerciante__input">
                                 <label for="nome">Nome:</label>
                                 <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome">
 
