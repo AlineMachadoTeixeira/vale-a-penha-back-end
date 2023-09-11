@@ -14,9 +14,10 @@ main {
 }
 .cards-img{
     width:auto;    
-    margin: auto;    
+    /* margin: auto;     */
     object-fit: cover;      
 }
+
 
 .cards {
     border-radius: 10px 10px 0 0;

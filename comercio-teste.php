@@ -105,6 +105,14 @@
                 <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
                 <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a> 
             </article>
+
+            <article class="cards">
+                <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
+                <img  class="cards-img redimensionar" src="assets/images/banner-inicio.png" alt="Comida da Padaria Requinte">
+                <h3>Papelaria CopyPen</h3>
+                <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a> 
+            </article>
             
             
                       
@@ -153,7 +161,7 @@
             })
          }
 
-         redimensionarImagem(200,200);
+         redimensionarImagem(300,200);
 
 
         // function redimensionarImagem(largura, altura){
