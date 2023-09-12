@@ -112,7 +112,7 @@
                                 <!-- CPF -->
                                 <div class="comerciante__input">
                                     <label for="cpf">CPF</label>
-                                    <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" autocomplete="off" maxlength="14" >
+                                    <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" maxlength="14" >
 
                                     <!-- Mensagem de erro que vai aparecer no JS -->
                                     <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -123,7 +123,7 @@
                                 <!-- Telefone -->
                                 <div class="comerciante__input ">
                                     <label for="telefone">Telefone:</label>
-                                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" autocomplete="off" maxlength="14" >
+                                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx"  maxlength="14" >
 
                                     <!-- Mensagem de erro que vai aparecer no JS -->
                                     <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -137,7 +137,7 @@
                             <!-- E-mail -->
                             <div class="comerciante__input">
                                 <label for="email">E-mail:</label>
-                                <input id="email" type="email" name="email" placeholder="Digite seu e-mail"  >
+                                <input id="email" type="email" autocomplete="username" name="email" placeholder="Digite seu e-mail"  >
 
                                 <!-- Mensagem de erro que vai aparecer no JS -->
                                 <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -148,7 +148,7 @@
                             <!-- Confirmar E-mail -->
                             <div class="comerciante__input">
                                 <label for="confimaremail">Confirmar E-mail:</label>
-                                <input id="confimaremail" type="email" name="confimaremail" placeholder="Digite seu e-mail" >
+                                <input id="confimaremail" type="email" autocomplete="username" name="confimaremail" placeholder="Digite seu e-mail" >
 
                                 <!-- Mensagem de erro que vai aparecer no JS -->
                                 <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -161,7 +161,7 @@
                                 <!-- Senha -->
                                 <div class="comerciante__input">
                                     <label for="senha">Senha:</label>
-                                    <input id="senha" type="password" name="senha" placeholder="Digite sua senha" >
+                                    <input id="senha" type="password" name="senha" autocomplete="current-password" placeholder="Digite sua senha" >
 
                                     <!-- Mensagem de erro que vai aparecer no JS -->
                                     <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -172,7 +172,7 @@
                                 <!-- Confirme senha: -->
                                 <div class="comerciante__input">
                                     <label for="confirmesenha">Confirme sua senha:</label>
-                                    <input id="confirmesenha" type="password" name="confirmesenha" placeholder="Confirme sua senha" >
+                                    <input type="password" id="confirmesenha" name="confirmesenha" autocomplete="current-password" placeholder="Confirme sua senha" > 
 
                                     <!-- Mensagem de erro que vai aparecer no JS -->
                                     <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>

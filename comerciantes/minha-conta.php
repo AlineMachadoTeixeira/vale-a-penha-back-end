@@ -70,13 +70,13 @@
                                 <!-- CPF -->
                                 <div class="comerciante__input">
                                     <label for="cpf">CPF</label>
-                                    <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" required autocomplete="off" maxlength="14">
+                                    <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" required  maxlength="14">
                                 </div>
 
                                 <!-- Telefone -->
                                 <div class="comerciante__input">
                                     <label for="telefone">Telefone:</label>
-                                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" required autocomplete="off" maxlength="14">
+                                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" required  maxlength="14">
                                 </div>
                             </div>
 
