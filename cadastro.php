@@ -45,7 +45,7 @@
             <nav>
 
                 <div class="pesquisa__lupa">
-                    <input class="pesquisa__input" type="search" placeholder="Pesquisa">
+                    <input class="pesquisa__input" type="search" id="pesquisa" name="pesquisa" placeholder="Pesquisa">
                     <a class="pesquisa__link" href="">
                         <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
                     </a>
