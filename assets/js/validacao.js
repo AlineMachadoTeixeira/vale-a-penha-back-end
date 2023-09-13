@@ -26,24 +26,98 @@ function checkInputs(){
     const senhaValue = senha.value.trim()
     const confirmesenhaValue = confirmesenha.value.trim()
     const dataValue = data.value.trim()
-}   // Remover espaços em branco  trim()
+      // Remover espaços em branco  trim()
 
- if (nome === ''){
-     //mostrar o erro 
-     // adicionar a class erro 
-     errorValidacao(input, 'Preenchar esse campo')
- }else{
-       //adicionar class sucesso
- }
+    //Nome   
+    if(nomeValue === '') {
+        // mostrar erro
+        // add classe
+        erro(nome, 'Preencha esse campo')
+    } else {
+        // adicionar a classe de sucesso
+        sucesso(nome)
+    }
 
- function errorValidacao(input, message){
-     const comercianteInput = input.parentElement;
-     const small = comercianteInput.querySelector('small')
+    //Sobrenome
+    if(sobrenomeValue === '') {
+        // mostrar erro
+        // add classe
+        erro(sobrenome, 'Preencha esse campo')
+    } else {
+        // adicionar a classe de sucesso
+        sucesso(sobrenome)
+    }
+     
+    //Email
+    // if(emailValue === '') {
+    //     // mostrar erro
+    //     // add classe
+    //     erro(email, 'Preencha esse campo')
+    // } else if (!validacaoEmail(emailValue)) {
+    //     erro(email, 'Email inválido')
+    // } else {
+    //     // adicionar a classe de sucesso
+    //     sucesso(email)
+    // }
 
-     small.innerText = message
 
-     comercianteInput.classNome = 'comerciante__input  erro'
- }
+    //Senha
+    if(senhaValue === '') {
+        // mostrar erro
+        // add classe
+        erro(senha, 'Preencha esse campo')
+
+    } else if(senhaValue.length < 8) { 
+        erro(senha, 'Senha deve ter mais que 8 caracteres')
+    } else {
+        // adicionar a classe de sucesso
+        sucesso(senha)
+    }
+    
+    //Confirme Senha
+    if(confirmesenhaValue === '') {
+        // mostrar erro
+        // add classe
+        erro(confirmesenha, 'Preencha esse campo')
+
+    } else if(senhaValue !== confirmesenhaValue) { 
+        erro(confirmesenha, 'Senhas não são iguais')
+    } else {
+        // adicionar a classe de sucesso
+        sucesso(confirmesenha)
+    }
+     
+
+
+
+}   
+
+
+
+function erro(input, message) {
+    const comercianteinput = input.parentElement;
+    const small = comercianteinput.querySelector('small')
+
+    small.innerText = message
+
+    comercianteinput.className = 'comerciante__input erro'
+}
+
+function sucesso(input) {
+    const comercianteinput = input.parentElement;
+
+    comercianteinput.className = 'comerciante__input sucesso'
+}
+
+
+
+// function isEmail(email) {
+//     return /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(email)
+// }
+
+
+
+
 
 
 
