@@ -1,0 +1,81 @@
+
+
+.comerciante__input{
+    display: flex;
+    flex-direction: column;    
+    gap: 10px;
+    margin-bottom: 8px;  
+    width: 100%;   
+    position: relative;
+}
+
+.comerciante__input input{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.412);
+    font-size: 14px;  
+    width: 100%;         
+}
+
+.comerciante__input input:hover{
+    outline: 1px solid #c40008;
+}
+
+.comerciante__input input:focus-visible {
+    outline: none
+}
+
+
+.comerciante__input label{    
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000c0;
+    margin-bottom: 0px;   
+}
+
+/* Começo Icone erro e sucesso */
+  
+.comerciante__input.sucesso  input {
+    border: 2px solid #4ECA64; 
+    
+}
+
+ .comerciante__input.erro  input {
+    border: 2px solid #DB5A5A;
+}
+
+.comerciante__input.sucesso i.img__sucesso {
+    visibility: visible;
+}  
+
+.comerciante__input.erro i.img__erro {
+    visibility: visible;
+}   
+
+
+.comerciante__input.erro  small{
+    color: #DB5A5A;
+    visibility: visible;
+} 
+
+.comerciante__input i {
+    position: absolute;
+    top: 36px;
+    right: 10px;
+    visibility: hidden;
+} 
+
+.comerciante__input small{
+    position: absolute;
+    visibility: hidden;    
+    margin-top: 65px;
+    font-size: 14px; 
+    color: #DB5A5A;
+    padding-left: 10px;
+
+}
+
+/* Fim Icone erro e sucesso */
