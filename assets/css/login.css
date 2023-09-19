@@ -1,10 +1,15 @@
 body{
-    background-image: url(../images/fundo-login.svg);
-    background-size: cover;
-    
-
+    background-image: url(../images/fundo-login.svg);    
+    background-size: cover;   
     width: 100vw;
-    height: 100vh;
+    height: 100vh; 
+    background-position: center;
+    
+}
+
+.login__ama{
+    width: 22%;
+    padding: 30px;
     
 }
 
@@ -13,8 +18,8 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%; 
-    padding: 30px;
+    width: 25%; 
+    padding: 25px;
     box-sizing: border-box;
     background-color: #ffffff9a;
     border-radius: 20px;
@@ -24,18 +29,18 @@ body{
 }
 
 .login__img{  
-    width: 35%; 
+    width: 30%; 
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
 
 .comerciante__input{
     display: flex;
     flex-direction: column;    
-    gap: 10px;
+    gap: 8px;
     margin-bottom: 8px;  
     width: 100%;   
     position: relative;
@@ -123,10 +128,9 @@ body{
      width: 60%; 
      border: none;
      background-color:#c40008;         
-     padding: 10px;
+     padding: 8px;
      border-radius: 5px;
-     cursor: pointer;   
-     margin-top: 15px;
+     cursor: pointer;      
      text-decoration: none;
      font-size: 16px;
      font-weight: 700;
@@ -144,7 +148,7 @@ body{
 .paragrafo__novasenha{
     font-size: 15px;
      font-weight:600 ;
-     padding: 15px ;    
+     padding: 8px ;    
      color: #000000c0;
      text-align: center;
  }
@@ -152,34 +156,45 @@ body{
  .paragrafo__novasenha a{
      color: #c40008;
      text-decoration: none;
-     margin-left: 10px;
+     margin-left: 8px;
  }
 
- @media screen and (max-width: 1000px) {
+ @media screen and (max-width: 1200px) {
     .login_for{        
-        width: 40%;
+        width: 35%;
     }
     
   }
   
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 868px) {
     .login_for{        
         width: 55%;
+    }
+
+    .login__ama{
+        
+        width: 40%;
     }
     
   }
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 600px) {
     .login_for{       
-        width: 75%;
+        width: 85%;
     }
+
+    .login__ama{
+        
+        width: 55%;
+    }
+    
     
   }
 
   @media screen and (max-width: 350px) {
     .login_for{       
-        width: 85%;
+        width: 90%;
     }
     
   }
