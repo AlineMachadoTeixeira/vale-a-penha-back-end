@@ -1,6 +1,11 @@
 body{
     background-image: url(../images/fundo-login.svg);
     background-size: cover;
+    
+
+    width: 100vw;
+    height: 100vh;
+    
 }
 
 .login_for{
@@ -8,33 +13,24 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
-    padding: 2.5rem;
+    width: 30%; 
+    padding: 30px;
     box-sizing: border-box;
-    background-color: #fff;
-    border-radius: 0.625rem;
+    background-color: #ffffff9a;
+    border-radius: 20px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.412);
+
+   
 }
 
-
-
-/* .box .inputBox {
-  position: relative;
-} */
-/* 
-.box .inputBox input {
-  width: 100%;
-  padding: 0.625rem 0;
-  font-size: 1rem;
-  color: #fff;
-  letter-spacing: 0.062rem;
-  margin-bottom: 1.875rem;
-  border: none;
-  border-bottom: 0.065rem solid #fff;
-  outline: none;
-  background: transparent;
-} */
-
+.login__img{  
+    width: 35%; 
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
 
 .comerciante__input{
     display: flex;
@@ -115,3 +111,75 @@ body{
 }
 
 /* Fim Icone erro e sucesso */
+
+
+.botao__login {
+    display: flex;
+    justify-content: center;
+ }
+ 
+ 
+ .botao__login button{
+     width: 60%; 
+     border: none;
+     background-color:#c40008;         
+     padding: 10px;
+     border-radius: 5px;
+     cursor: pointer;   
+     margin-top: 15px;
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: 700;
+     color:  #fff;
+     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.200);
+ }
+ 
+
+ .botao__login button:hover{
+    background-color: #FFF6C3;
+    color:  #000000c0;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.412);
+ }
+
+.paragrafo__novasenha{
+    font-size: 15px;
+     font-weight:600 ;
+     padding: 15px ;    
+     color: #000000c0;
+     text-align: center;
+ }
+
+ .paragrafo__novasenha a{
+     color: #c40008;
+     text-decoration: none;
+     margin-left: 10px;
+ }
+
+ @media screen and (max-width: 1000px) {
+    .login_for{        
+        width: 40%;
+    }
+    
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .login_for{        
+        width: 55%;
+    }
+    
+  }
+
+  @media screen and (max-width: 450px) {
+    .login_for{       
+        width: 75%;
+    }
+    
+  }
+
+  @media screen and (max-width: 350px) {
+    .login_for{       
+        width: 85%;
+    }
+    
+  }

@@ -58,12 +58,12 @@
                             <small>Erro Mensagem</small>
                         </div>
 
-                        <div class="botao__enviar">
+                        <div class="botao__login">
                             <button type="submit" id="submit">Login </button>
                         </div>
 
                     </form>
-                    <p class="login__criar"> Ainda não tem uma conta? <a href="cadastro.php">Criar</a></p>
+                    <p class="paragrafo__novasenha"> Ainda não tem uma conta? <a href="cadastro.php">Criar</a></p>
 
                 </div>
             </section>
