@@ -1,9 +1,7 @@
 body{
     /* background-color: #FFF6C3; */
    background-image: url(../images/fundo.svg);
-   background-size: cover;
-    /* overflow: hidden; para tirar a barra de rolagem caso aparecer */
-    /* overflow: hidden;  */      
+   background-size: cover;       
 }
 
 main{    
@@ -11,8 +9,7 @@ main{
     justify-content: center;
     align-items: center; 
     margin: auto;
-    padding: 50px 5px; 
-       
+    padding: 50px 5px;        
 }
 
 .comerciante__caixa{    
@@ -22,7 +19,7 @@ main{
     border-radius: 20px;
     box-shadow:0px 0px 10px rgba(0, 0, 0, 0.212);
     /* overflow: hidden; tudo que tiver fora da borda vai ficar escondido */
-    overflow: hidden;
+    overflow: hidden;  
         
 }
 
@@ -65,7 +62,15 @@ main{
 }
 
 /* Para o JS do navegação */
-.navegacao a.active-link{
+/* .navegacao a.active-link{
+    background-color:#FFF6C3; 
+    border:none;     
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+ } */
+
+ .navegacao .active-link{
     background-color:#FFF6C3; 
     border:none;     
     padding: 8px 15px;

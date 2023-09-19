@@ -39,6 +39,8 @@
                             <a id="clicando" href="ajuda.php" class="active-link">Ajuda</a>
                         </li>
                     </ul>
+                    
+
                 </div>
                 <div class="comerciante_for">
                     <!-- Cadastre-se e Voltar site botão -->
@@ -52,7 +54,7 @@
                     </div>
                     <p class="comerciante__paragrafo">Caso tenha alguma dúvida, nos envie uma mensagem e aguarde a resposta em seu email. O tempo de resposta é de até 48 horas.</p>
 
-                    <form class="comerciante__formulario"  id="form" action="https://formspree.io/f/mvonybwj" method="post">
+                    <form class="comerciante__formulario" id="form" action="https://formspree.io/f/mvonybwj" method="post">
 
                         <!-- E-meil -->
                         <div class="comerciante__input">
