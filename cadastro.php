@@ -64,7 +64,7 @@
             <section class="comerciante__caixa">
                 <div class="comerciante__imagem">
                     <!-- Aqui vai a imagem -->
-                    <a href="index.php"><img src="assets/images/icone-login-vermelho.svg" alt="Logo Vale a Penha"> </a>
+                    <a href="index.php"><img src="assets/images/icone-cracha.svg" alt="Logo Vale a Penha"> </a>
 
                 </div>
                 <div class="comerciante_for">

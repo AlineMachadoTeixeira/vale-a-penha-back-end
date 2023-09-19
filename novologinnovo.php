@@ -26,16 +26,13 @@
 
 
 
-                <div class="comerciante_for">
+                <div class="login_for">
 
-                    <!-- <p class="login__img"><a  href="index.php"><img src="assets/images/icone-sao-paulo.svg" alt="Logo Vale a Penha"> </a> </p>                       -->
-
+                    <!-- <p class="login__img"><a  href="index.php"><img src="assets/images/icone-sao-paulo.svg" alt="Logo Vale a Penha"> </a> </p> -->
 
                     <p class="login__img"><a href="index.php"><img src="assets/images/icone-login-vermelho.svg" alt="Logo Vale a Penha"> </a> </p>
 
-
-
-                    <form class="comerciante__formulario" action="" method="post">
+                    <form class="login_formulario" action="" method="post">
 
                         <!-- Aqui vai a imagem -->
 
@@ -60,13 +57,6 @@
                             <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
                             <small>Erro Mensagem</small>
                         </div>
-
-
-
-
-
-
-
 
                         <div class="botao__enviar">
                             <button type="submit" id="submit">Login </button>
