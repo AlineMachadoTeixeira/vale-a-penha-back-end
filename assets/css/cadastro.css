@@ -1,96 +1,63 @@
-body{
-    /* background-color: #FFF6C3; */
-    background-image: url(../images/fundo.svg);  
+body {
+    background-image: url(../images/fundo.svg);
     background-size: cover;
-    /* overflow: hidden; para tirar a barra de rolagem caso aparecer */
-    /* overflow: hidden;  */      
 }
 
-main{    
+main {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     margin: auto;
-    padding: 50px 5px; 
-       
+    padding: 50px 5px;
 }
 
-.comerciante__caixa{    
+.comerciante__caixa {
     display: flex;
-    flex-direction: column;     
+    flex-direction: column;
     width: 90%;
     border-radius: 20px;
-    box-shadow:0px 0px 10px rgba(0, 0, 0, 0.212);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
     /* overflow: hidden; tudo que tiver fora da borda vai ficar escondido */
     overflow: hidden;
-        
 }
 
-.comerciante__imagem {    
-    background-color:rgba(300,200,120,0.6);    
-    background-size: cover;    
-    padding: 10px;    
+.comerciante__imagem {
+    background-color: rgba(300, 200, 120, 0.6);
+    background-size: cover;
+    padding: 10px;
 }
-.comerciante_for{
-    display: flex;  
-    flex-direction: column;        
-    background-color: #fff;    
+
+.comerciante_for {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
     padding-top: 30px;
     padding-right: 10px;
-    padding-left: 10px;  
+    padding-left: 10px;
     overflow-y: scroll;
 }
 
-.comerciante__imagem img{    
-    width: 50%;
+.comerciante__imagem img {
+    width: 25%;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
-/* Navegação do MInha conta a ajuda */
-.navegacao{
-    display: flex;
-    flex-direction: column;   
-    gap:20px ;
-    list-style: none;     
-    padding: 0;   
-    padding-right: 10px;   
-}
-
-.navegacao a{
-    text-decoration: none; 
-    font-size: 14px;
-    font-weight:600 ;       
-    color: #000000c0;     
-    cursor: pointer;
-}
-
-/* Para o JS do navegação */
-.navegacao a.active-link{
-    background-color:#FFF6C3; 
-    border:none;     
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
- }
-
- .comerciante__titulo {
+.comerciante__titulo {
     margin-bottom: 8px;
     margin-left: 10px;
     margin-top: 15px;
     margin-right: 10px;
     display: flex;
-    justify-content: space-between;    
-    padding: 0 30px;   
-    position: relative;   
-   gap: 10px;
-    
-     
+    justify-content: space-between;
+    padding: 0 30px;
+    position: relative;
+    gap: 10px;
 }
-.comerciante__titulo h1{
+
+.comerciante__titulo h1 {
     font-size: 18px;
     width: 100%;
 }
@@ -98,95 +65,94 @@ main{
 .comerciante__titulo h1:after {
     /* content: ''; colocar um traço em baixo da palavra cadastre-se */
     content: '';
-    display: block;    
+    display: block;
     width: 10%;
-    height: 8px; 
-    background-color:rgba(300,200,120,0.6);
+    height: 8px;
+    background-color: rgba(300, 200, 120, 0.6);
     margin: 0 auto;
     position: absolute;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 .comerciante__paragrafo {
     font-size: 14px;
-    font-weight:600 ;
-    padding: 10px ;    
+    font-weight: 600;
+    padding: 10px;
     color: #000000c0;
-    text-align: center;  
-    /* display: none;    */
-} 
+    text-align: center;
+}
 
 .botao__sair {
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
 
-.botao__sair button{
-     border:none;
-     background-color:rgba(300,200,120,0.6);   
-     padding: 8px 15px;
-     border-radius: 5px;
-     cursor: pointer;
-     color: #FFF;  
+.botao__sair button {
+    border: none;
+    background-color: rgba(300, 200, 120, 0.6);
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFF;
 }
 
 .botao__sair button:hover {
-    background-color: #c40008;   
+    background-color: #c40008;
     cursor: pointer;
 }
 
-.botao__sair button a{
-    text-decoration: none;    
+.botao__sair button a {
+    text-decoration: none;
     color: #000000;
     font-size: 14px;
-    font-weight: 700;   
+    font-weight: 700;
 }
 
-.botao__sair button a:hover{
-    color: #FFF;      
+.botao__sair button a:hover {
+    color: #FFF;
 }
 
-.comerciante__formulario{    
+.comerciante__formulario {
     padding: 0 20px;
 }
 
-.comerciante__input{
+.comerciante__input {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     gap: 10px;
-    margin-bottom: 8px;  
-    width: 100%;   
+    margin-bottom: 8px;
+    width: 100%;
     position: relative;
 }
 
-.comerciante__input textarea{
+.comerciante__input textarea {
     margin-top: 0px;
     margin-bottom: 20px;
     padding: 8px 16px;
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.212);
-    font-size: 14px;  
-    width: 100%;         
+    font-size: 14px;
+    width: 100%;
 }
 
-.comerciante__input input{
+.comerciante__input input {
     margin-top: 0px;
     margin-bottom: 20px;
     padding: 8px 16px;
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.412);
-    font-size: 14px;  
-    width: 100%;         
+    font-size: 14px;
+    width: 100%;
 }
 
-.comerciante__input input:hover{
+.comerciante__input input:hover {
     outline: 1px solid #c40008;
 }
 
-.comerciante__input textarea:hover{
-   outline: 1px solid #c40008;
+.comerciante__input textarea:hover {
+    outline: 1px solid #c40008;
 }
 
 .comerciante__input input:focus-visible {
@@ -194,130 +160,131 @@ main{
 }
 
 .comerciante__input textarea:focus-visible {
-   outline: none
+    outline: none
 }
 
-.comerciante__input label{    
+.comerciante__input label {
     font-size: 14px;
     font-weight: 600;
     color: #000000c0;
-    margin-bottom: 0px;   
+    margin-bottom: 0px;
 }
 
 .botao__enviar {
     display: flex;
     justify-content: center;
- }
- 
- 
- .botao__enviar button{
-     width: 60%; 
-     border: none;
-     background-color:rgba(300,200,120,0.6);     
-     padding: 10px;
-     border-radius: 5px;
-     cursor: pointer;   
-     margin-top: 15px;
-     text-decoration: none;
-     font-size: 16px;
-     font-weight: 700;
-     color:  #000000;
- }
- 
- .botao__enviar button a {
-     text-decoration: none;
-     font-size: 16px;
-     font-weight: 700;
-     color:  #000000; 
- }
- 
- .botao__enviar button:hover{
-     background-color: #c40008;   
- }
- 
- .botao__enviar a:hover{    
-     color: #fff;
- }
+}
 
- .paragrafo__acessar{
+
+.botao__enviar button {
+    width: 60%;
+    border: none;
+    background-color: rgba(300, 200, 120, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.botao__enviar button a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.botao__enviar button:hover {
+    background-color: #c40008;
+}
+
+.botao__enviar a:hover {
+    color: #fff;
+}
+
+.paragrafo__acessar {
     font-size: 15px;
-     font-weight:600 ;
-     padding: 15px ;    
-     color: #000000c0;
-     text-align: center;
- }
+    font-weight: 600;
+    padding: 15px;
+    color: #000000c0;
+    text-align: center;
+}
 
- .paragrafo__acessar a{
+.paragrafo__acessar a {
     color: #c40008;
-     text-decoration: none;
-     margin-left: 10px;
- }
+    text-decoration: none;
+    margin-left: 10px;
+}
 
- .comerciante__sobrenome{
-    display: flex; 
+.comerciante__sobrenome {
+    display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     justify-content: space-between;
     gap: 10px;
     margin: 0;
- }
-
- .ul__dicas{
-    font-size: 15px;            
-     color: #000000c0;
-     padding-bottom: 10px;  
-     margin-top: 0;
-     padding-top: 0;
-
- }
- .paragrafo__dicas{
-    font-size: 16px;
-    font-weight:600 ;
-    color: #c40008;
-    padding-bottom: 0;    
-    margin-bottom: 0;
-    margin-top: 30px;
-   padding-left: 20px;
- }
-
-
-  /* Começo Icone erro e sucesso */
-  
-  .comerciante__input.sucesso  input {
-    border: 2px solid #4ECA64; 
-    
 }
 
- .comerciante__input.erro  input {
+.ul__dicas {
+    font-size: 15px;
+    color: #000000c0;
+    padding-bottom: 10px;
+    margin-top: 0;
+    padding-top: 0;
+
+}
+
+.paragrafo__dicas {
+    font-size: 16px;
+    font-weight: 600;
+    color: #c40008;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+
+/* Começo Icone erro e sucesso */
+
+.comerciante__input.sucesso input {
+    border: 2px solid #4ECA64;
+
+}
+
+.comerciante__input.erro input {
     border: 2px solid #DB5A5A;
 }
 
 .comerciante__input.sucesso i.img__sucesso {
     visibility: visible;
-}  
+}
 
 .comerciante__input.erro i.img__erro {
     visibility: visible;
-}   
+}
 
 
-.comerciante__input.erro  small{
+.comerciante__input.erro small {
     color: #DB5A5A;
     visibility: visible;
-} 
+}
 
 .comerciante__input i {
     position: absolute;
     top: 36px;
     right: 10px;
     visibility: hidden;
-} 
+}
 
-.comerciante__input small{
+.comerciante__input small {
     position: absolute;
-    visibility: hidden;    
+    visibility: hidden;
     margin-top: 65px;
-    font-size: 14px; 
+    font-size: 14px;
     color: #DB5A5A;
     padding-left: 10px;
 
@@ -327,149 +294,105 @@ main{
 
 
 
-/* CSS Para a foto do cadastrar comercio  */
-
-#foto {
-    display: none;    
-  }
-
-  .foto__margem{
-    margin-bottom: 25px;
-  }
-  
-  .comerciante__foto {
-    width: 200px;
-    /* aspect-ratio: 16/9; */
-    aspect-ratio: 9/9;
-    background: rgba(300,200,120,0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #000000c0;
-    border: 2px dashed currentcolor;
-    cursor: pointer;    
-    transition: color 300ms ease-in-out, background 300ms ease-in-out;
-    outline: none;
-    overflow: hidden;
-    margin: auto;
-    font-size: 14px;
-    font-weight: bold;   
-    
-  }
-  
-  .comerciante__foto:hover {
-    color: #777;
-    background: #ccc;
-  }
-  
-  .comerciante__foto:active {    
-    border-color:#fff;
-    color: #fff;
-  }
-  
-  .comerciante__foto:focus {    
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .comerciante__foto__img {
-    max-width: 100%;
-  }
-/* Fim  CSS Para a foto do cadastrar comercio  */
 
 
-@media screen and (min-width: 768px) {   
+@media screen and (min-width: 768px) {
 
-    .comerciante__imagem img{    
+    .comerciante__imagem img {
         width: 100%;
         /* background-color: #FFF6C3; */
-        
-        
-    }
-    
 
-    .comerciante__caixa{
+
+    }
+
+
+    .comerciante__caixa {
         display: flex;
-        flex-direction: row;        
+        flex-direction: row;
     }
 
-    .comerciante__imagem{         
-        width: 25%; 
+    .comerciante__imagem {
         display: flex;
         align-items: center;
-        justify-content: center;       
-   }    
-   .comerciante_for{
-       width: 75%;
-      
-   }
+        justify-content: center;
+    }
 
-    .comerciante__sobrenome{
+    .comerciante__imagem img {
+        width: 80%;
+    }
+
+    .comerciante_for {
+        width: 75%;
+    }
+
+    .comerciante__sobrenome {
         flex-direction: row;
-     }
+    }
 
-     .comerciante__titulo h1{
+    .comerciante__titulo h1 {
         font-size: 21px;
-    }    
+    }
 
-    .comerciante__paragrafo{
+    .comerciante__paragrafo {
         font-size: 15px;
     }
-    
-    .navegacao a{
+
+    .navegacao a {
         font-size: 16px;
     }
 
-    .botao__sair button a{      
-        font-size: 15px;         
-    }  
-
-    .comerciante__input label{    
-        font-size: 15px;          
+    .botao__sair button a {
+        font-size: 15px;
     }
 
-    .paragrafo__acessar{
-        font-size: 15px;         
-     }
-   }     
+    .comerciante__input label {
+        font-size: 15px;
+    }
+
+    .paragrafo__acessar {
+        font-size: 15px;
+    }
+}
 
 
 @media screen and (min-width: 990px) {
 
-    .comerciante__caixa{
+    .comerciante__caixa {
         display: flex;
-        flex-direction: row;     
-        width: 75%;   
+        flex-direction: row;
+        width: 75%;
     }
 
-    .comerciante__imagem{         
-         width: 25%;        
-    }    
-    .comerciante_for{
-        width: 75%;
-    }   
+    .comerciante__imagem {
+        width: 25%;
+    }
 
-    .comerciante__titulo h1{
+    .comerciante_for {
+        width: 75%;
+    }
+
+    .comerciante__titulo h1 {
         font-size: 22px;
     }
 
-    .comerciante__titulo h1:after {           
+    .comerciante__titulo h1:after {
         width: 8%;
     }
 
-    .comerciante__paragrafo{
+    .comerciante__paragrafo {
         font-size: 16px;
     }
 
-    .botao__sair button a{      
-        font-size: 16px;         
-    }  
-
-    .comerciante__input label{    
-        font-size: 16px;          
+    .botao__sair button a {
+        font-size: 16px;
     }
 
-    .paragrafo__acessar{
-        font-size: 16px;         
-     }
-    
+    .comerciante__input label {
+        font-size: 16px;
+    }
+
+    .paragrafo__acessar {
+        font-size: 16px;
+    }
+
 }
