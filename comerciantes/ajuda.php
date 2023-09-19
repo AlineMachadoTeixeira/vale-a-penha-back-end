@@ -25,7 +25,7 @@
                 <div class="comerciante__imagem">
                     <!-- Aqui vai a imagem -->
                     <a href="index.php"><img src="../assets/images/logo-Vale-a-Penha.svg" alt="Logo Vale a Penha"> </a>
-                    <ul class="navegacao">
+                    <!-- <ul class="navegacao">
                         <li>
                             <a id="clicando" href="minha-conta.php">Minha Conta</a>
                         </li>
@@ -38,8 +38,26 @@
                         <li>
                             <a id="clicando" href="ajuda.php" class="active-link">Ajuda</a>
                         </li>
-                    </ul>
-                    
+                    </ul> -->
+
+                    <div class="navegacao">
+                        <div class="">
+                            <button type="submit" ><a id="clicando" href="minha-conta.php">Minha Conta</a></button>
+                        </div>
+
+                        <div class="">
+                            <button type="submit" ><a id="clicando" href="cadastrar-comercio.php">Cadastrar Comércio</a></button>
+                        </div>
+
+                        <div class="">
+                            <button type="submit" ><a id="clicando" href="">Gerenciar Comércio</a></a></button>
+                        </div>
+
+                        <div class="">
+                            <button type="submit" ><a id="clicando" href="ajuda.php" class="active-link">Ajuda</a></button>
+                        </div>
+                    </div>
+
 
                 </div>
                 <div class="comerciante_for">
