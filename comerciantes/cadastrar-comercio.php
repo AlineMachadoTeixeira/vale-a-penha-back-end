@@ -13,42 +13,44 @@
 
 <body>
 
-
-
     <div class="comerciante__container">
         <main>
             <section class="comerciante__caixa">
                 <div class="comerciante__imagem">
                     <!-- Aqui vai a imagem -->
                     <a href="index.php"><img src="../assets/images/logo-Vale-a-Penha.svg" alt="Logo Vale a Penha"> </a>
-                    <ul class="navegacao">
-                        <li>
-                            <a id="clicando" href="minha-conta.php" >Minha Conta</a>
-                        </li>
-                        <li>
-                            <a id="clicando" href="cadastrar-comercio.php" class="active-link">Cadastrar Comércio</a>
-                        </li>
-                        <li>
-                            <a id="clicando" href="">Gerenciar Comércio</a>
-                        </li>
-                        <li>
-                            <a id="clicando" href="ajuda.php">Ajuda</a>
-                        </li>
-                    </ul>
+
+                    <div class="navegacao">
+                        <div class="">
+                            <button type="submit"><a id="clicando" href="minha-conta.php">Minha Conta</a></button>
+                        </div>
+
+                        <div class="">
+                            <button type="submit" class="active-link"><a id="clicando" href="cadastrar-comercio.php">Cadastrar Comércio</a></button>
+                        </div>
+
+                        <div class="">
+                            <button type="submit"><a id="clicando" href="">Gerenciar Comércio</a></a></button>
+                        </div>
+
+                        <div class="">
+                            <button type="submit"><a id="clicando" href="ajuda.php">Ajuda</a></button>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="comerciante_for">
                     <!-- Cadastre-se e Voltar site botão -->
                     <div class="comerciante__titulo">
                         <div class="comerciante__subtitulo">
-                            <h1>Cadastrar Comercio.</h1>
+                            <h1>Cadastrar Comércio.</h1>
                         </div>
                         <div class="botao__sair">
                             <button type="submit" name="comerciantes"><a href="../index.php">Sair</a></button>
                         </div>
                     </div>
-                    <p class="comerciante__paragrafo">
-                        Não fique de fora, divulgue conosco!
-                    </p>
+
+
 
                     <form class="comerciante__formulario" action="" method="post">
 
@@ -78,18 +80,14 @@
 
                         <!-- Instagram Link -->
                         <div class="comerciante__input">
-                                <label for="nome">Instagram:</label>
-                                <input type="url" name="instagram" id="instagram" placeholder="Link do instagram" required>
-                                
-                            </div>
-                        <div class="botao__enviar">
-                            <button type="submit" id="submit">Finalizar Cadastro </button>
+                            <label for="nome">Instagram:</label>
+                            <input type="url" name="instagram" id="instagram" placeholder="Link do instagram" required>
 
                         </div>
+                        <div class="botao__enviar">
+                            <button type="submit" id="submit">Enviar</button>
 
-                        
-                       
-
+                        </div>
 
                     </form>
                     <!-- <p class="paragrafo__acessar">Já possui uma conta? <a href="login.php">Acessar</a></p> -->

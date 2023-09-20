@@ -9,14 +9,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/comerciante.css">
-
-
-
-
 </head>
 
 <body>
-
 
 
     <div class="comerciante__container">
@@ -25,36 +20,22 @@
                 <div class="comerciante__imagem">
                     <!-- Aqui vai a imagem -->
                     <a href="index.php"><img src="../assets/images/logo-Vale-a-Penha.svg" alt="Logo Vale a Penha"> </a>
-                    <!-- <ul class="navegacao">
-                        <li>
-                            <a id="clicando" href="minha-conta.php">Minha Conta</a>
-                        </li>
-                        <li>
-                            <a id="clicando" href="cadastrar-comercio.php">Cadastrar Comércio</a>
-                        </li>
-                        <li>
-                            <a id="clicando" href="">Gerenciar Comércio</a>
-                        </li>
-                        <li>
-                            <a id="clicando" href="ajuda.php" class="active-link">Ajuda</a>
-                        </li>
-                    </ul> -->
 
                     <div class="navegacao">
                         <div class="">
-                            <button type="submit" ><a id="clicando" href="minha-conta.php">Minha Conta</a></button>
+                            <button type="submit"><a id="clicando" href="minha-conta.php">Minha Conta</a></button>
                         </div>
 
                         <div class="">
-                            <button type="submit" ><a id="clicando" href="cadastrar-comercio.php">Cadastrar Comércio</a></button>
+                            <button type="submit"><a id="clicando" href="cadastrar-comercio.php">Cadastrar Comércio</a></button>
                         </div>
 
                         <div class="">
-                            <button type="submit" ><a id="clicando" href="">Gerenciar Comércio</a></a></button>
+                            <button type="submit"><a id="clicando" href="">Gerenciar Comércio</a></a></button>
                         </div>
 
                         <div class="">
-                            <button type="submit" ><a id="clicando" href="ajuda.php" class="active-link">Ajuda</a></button>
+                            <button type="submit" class="active-link"><a id="clicando" href="ajuda.php">Ajuda</a></button>
                         </div>
                     </div>
 
@@ -67,7 +48,7 @@
                             <h1>Ajuda</h1>
                         </div>
                         <div class="botao__sair">
-                            <button type="submit" name="comerciantes"><a href="../index.php">Sair</a></button>
+                            <button type="submit" id="submit"><a href="../index.php">Sair</a></button>
                         </div>
                     </div>
                     <p class="comerciante__paragrafo">Caso tenha alguma dúvida, nos envie uma mensagem e aguarde a resposta em seu email. O tempo de resposta é de até 48 horas.</p>
@@ -92,7 +73,8 @@
                         </div>
 
                     </form>
-                    <p class="paragrafo__acessar">Já possui uma conta? <a href="login.php">Acessar</a></p>
+                    <!-- <p class="paragrafo__acessar">Já possui uma conta? <a href="login.php">Acessar</a></p> -->
+
                 </div>
             </section>
         </main>

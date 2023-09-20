@@ -21,20 +21,25 @@
                 <div class="comerciante__imagem">
                     <!-- Aqui vai a imagem -->
                     <a href="index.php"><img src="../assets/images/logo-Vale-a-Penha.svg" alt="Logo Vale a Penha"> </a>
-                    <ul class="navegacao">
-                        <li>
-                            <a id="clicando" href="minha-conta.php" class="active-link">Minha Conta</a>
-                        </li>
-                        <li>
-                            <a id="clicando" href="cadastrar-comercio.php">Cadastrar Comércio</a>
-                        </li>
-                        <li>
-                            <a id="clicando" href="">Gerenciar Comércio</a>
-                        </li>
-                        <li>
-                            <a id="clicando" href="ajuda.php">Ajuda</a>
-                        </li>
-                    </ul>
+
+                    <div class="navegacao">
+                        <div class="">
+                            <button type="submit" class="active-link" ><a id="clicando" href="minha-conta.php">Minha Conta</a></button>
+                        </div>
+
+                        <div class="">
+                            <button type="submit" ><a id="clicando" href="cadastrar-comercio.php">Cadastrar Comércio</a></button>
+                        </div>
+
+                        <div class="">
+                            <button type="submit" ><a id="clicando" href="">Gerenciar Comércio</a></a></button>
+                        </div>
+
+                        <div class="">
+                            <button type="submit"  ><a id="clicando" href="ajuda.php" >Ajuda</a></button>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="comerciante_for">
                     <!-- Cadastre-se e Voltar site botão -->
@@ -46,9 +51,10 @@
                             <button type="submit" name="comerciantes"><a href="../index.php">Sair</a></button>
                         </div>
                     </div>
-                    <p class="comerciante__paragrafo">
-                        Não fique de fora, divulgue conosco!
-                    </p>
+                    <!-- <p class="comerciante__paragrafo">
+                       Não fique de fora, divulgue conosco!                        
+                    </p> -->
+                      
 
                     <form class="comerciante__formulario" action="" method="post" id="form">
 
@@ -96,12 +102,12 @@
 
 
                             <div class="botao__enviar">
-                                <button type="submit" id="submit">Finalizar Cadastro </button>
-
+                                <button type="submit" id="submit">Alterar Cadastro</button>
                             </div>
 
                     </form>
-                    <p class="paragrafo__acessar">Já possui uma conta? <a href="login.php">Acessar</a></p>
+                    <!-- <p class="paragrafo__acessar">Já possui uma conta? <a href="login.php">Acessar</a></p> -->
+                    
 
                 </div>
             </section>
