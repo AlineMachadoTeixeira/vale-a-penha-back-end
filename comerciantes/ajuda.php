@@ -13,7 +13,6 @@
 
 <body>
 
-
     <div class="comerciante__container">
         <main>
             <section class="comerciante__caixa">
@@ -80,10 +79,8 @@
         </main>
     </div>
 
-    <script src="../assets/js/contato.js"></script>
+    <!-- <script src="../assets/js/contato.js"></script> -->
     <script src="../assets/js/clicando.js"></script>
-
-
 
 </body>
 

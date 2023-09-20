@@ -7,13 +7,13 @@
     <title>Cadastrar Comercio.</title>
     <link rel="shortcut icon" href="../assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css"> 
     <link rel="stylesheet" href="../assets/css/comerciante.css">
 </head>
 
 <body>
 
-    <div class="comerciante__container">
+    <div >
         <main>
             <section class="comerciante__caixa">
                 <div class="comerciante__imagem">
@@ -80,7 +80,7 @@
 
                         <!-- Instagram Link -->
                         <div class="comerciante__input">
-                            <label for="nome">Instagram:</label>
+                            <label for="instagram">Instagram:</label>
                             <input type="url" name="instagram" id="instagram" placeholder="Link do instagram" required>
 
                         </div>
@@ -109,7 +109,7 @@
         </main>
     </div>
 
-    <script src="../assets/js/contato.js"></script>
+    <!-- <script src="../assets/js/contato.js"></script> -->
     <script src="../assets/js/clicando.js"></script>
     <script src="../assets/js/adicionar-foto-comerciante.js"></script>
 
