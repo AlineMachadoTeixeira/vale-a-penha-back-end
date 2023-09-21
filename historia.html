@@ -17,87 +17,80 @@
             background-position: center;
         }
     
-        .camada {
-            display: flex;
-            flex-direction: column;     
-            padding: 10px ;
+        .camada {                  
             background-color:#F4EBD0;     
             top:0;
             position: sticky;  
             z-index: 10;
+            margin-top: 10px;
         }
     
         .camada__um {
             display: flex;
-            flex-direction: row;
-            text-align: center;
+            flex-direction: row; 
             justify-content: center;
-            margin: auto;
-            background-color: chartreuse;
+            gap: 20px;
             
-
+            align-items: center;
+            padding: 10;
+            
+            background-color: chartreuse; 
            
-    
-    
+            
+            
+               
     
         }
     
-        .menu__camada__dois {
-            
+        .menu__camada__dois {       
+            /* display: flex;  
+            justify-content: center; 
+            align-items: center;   */
             background-color: blueviolet;
-            padding: 0;
-            height: 30px;
-    
-    
-    
+            padding: 5px 20px;        
+            
     
         }
     
-        ul {
-            
-           
+        ul {            
             list-style: none;
-            display: none;
-    
+            display: none;   
         }
 
-        
-    
         nav h3 {
             margin: 0;
             padding: 0;
         }
+
         .menu__camada__dois a{
             padding-right: 5px;
             padding-left: 5px;
             background-color: azure;
             
         }
+
         nav a {            
             color: #c40008;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9rem;
-        }
-
-        /* .camada__um .icone__menu{
-            width: 30%;
-           
-        } */
+        }            
     
-    
-        .logo__principal {
-            max-width: 70%;
+        .logo__principal__menu {
+            background-color: brown;
+            margin-left: 0;
+            width: 70%;
+            margin-top: 10px;
+            
             
            
         }
     
         .icone__menu  {
-            width: 30%;
+            width: 50%;
             background-color: aqua;
-            
-            
-        } */
+
+        } 
     
         nav a:hover,
         nav a:focus {
@@ -107,8 +100,8 @@
         .menu-aberto {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            width: auto;
+            align-items: center;           
+            width: auto; 
             gap: 10px;
         }
     
@@ -142,7 +135,7 @@
 
             <div class="camada__um">
                 <nav>
-                    <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
+                    <a href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
                     </a>
                 </nav>
                 <nav>
