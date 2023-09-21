@@ -8,13 +8,93 @@
     <title>História / Vale a Penha</title>
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/menu.css">
+    <!-- <link rel="stylesheet" href="assets/css/menu.css"> -->
     <link rel="stylesheet" href="assets/css/container.css">
     <style>
         .header {
             background-image: url(assets/images/banner-historia.png);
             background-size: cover;
             background-position: center;
+        }
+    
+        .camada {
+            display: flex;
+            flex-direction: column;     
+            padding: 10px ;
+            background-color:#F4EBD0;     
+            top:0;
+            position: sticky;  
+            z-index: 10;
+        }
+    
+        .camada__um {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            gap: 50px;
+
+           
+    
+    
+    
+        }
+    
+        .menu__camada__dois {
+            margin-bottom: 15px;
+            background-color: blueviolet;
+    
+    
+    
+    
+        }
+    
+        ul {
+            
+           
+            list-style: none;
+            display: none;
+    
+        }
+    
+        nav h3 {
+            margin: 0;
+            padding: 0;
+        }
+    
+        nav a {
+            color: #c40008;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+    
+    
+        .logo__principal {
+            max-width: 100%;
+            /* height: auto; */
+        }
+    
+        .icone__menu {
+            width: 50%;
+            background-color: aqua;
+        }
+    
+        nav a:hover,
+        nav a:focus {
+            color: #000000c0;
+        }
+    
+        .menu-aberto {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: auto;
+            gap: 10px;
+        }
+    
+        .menu-aberto a {
+            font-size: 16px;
         }
     </style>
 </head>
@@ -38,30 +118,33 @@
     <!-- Fim do Integrando a uma Página com VLibras  -->
 
     <!-- começo menu  -->
-    <div class="camada">
-        <div class="menu__camada">
-            <nav>
-                <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
+    >
+        <div class="camada">
 
-                <ul class="menu__camada__dois">
-                    <li>
-                        <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
-                        </a>
-                    </li>
-                    <li><a href="index.php">Início</a></li>
-                    <li><a href="gastronomia.php">Gastronomia</a></li>
-                    <li><a href="lazer.php">Lazer</a></li>
-                    <li><a href="comercio-local.php">Comércio Local</a></li>
-                    <li><a href="cultura.php">Cultura</a></li>
-                    <li><a href="historia.php">História</a></li>
-                    <li><a href="educacao.php">Educação</a></li>
-                    <li><a href="voce-em-foco.php">Você em Foco</a></li>
-                    <li>
-                        <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="camada__um">
+                <nav>
+                    <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
+                    </a>
+                </nav>
+                <nav>
+                    <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
+                    <ul class="menu__camada__dois">
+                        <li><a href="index.php">Início</a></li>
+                        <li><a href="gastronomia.php">Gastronomia</a></li>
+                        <li><a href="lazer.php">Lazer</a></li>
+                        <li><a href="comercio-local.php">Comércio Local</a></li>
+                        <li><a href="cultura.php">Cultura</a></li>
+                        <li><a href="historia.php">História</a></li>
+                        <li><a href="educacao.php">Educação</a></li>
+                        <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                    </ul>
+                </nav>
+                <nav>
+                    <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
+                    </a>
+                </nav>
+            </div>
+
             <nav>
 
                 <div class="pesquisa__lupa">
@@ -75,7 +158,7 @@
             </nav>
 
         </div>
-    </div>
+    
     <!-- fim menu -->
 
     <header>
