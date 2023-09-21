@@ -16,7 +16,6 @@
             background-size: cover;
             background-position: center;
         }
-
     
         .camada {
             display: flex;
@@ -26,17 +25,15 @@
             top: 0;
             position: sticky;
             z-index: 10;
-            padding: 10px;
+            padding: 20px 5px;
         }
-    
-        .camada__um {
-            display: flex;
-            flex-direction: row;            
-            justify-content: space-around;
-            align-items: center;
-            width: 80%;
+
+        .camada__um {            
+            width: 100%;
             margin: auto;     
-        }   
+        } 
+    
+          
         
         .menu__camada__dois{
             margin: 0;
@@ -56,36 +53,25 @@
     
         .menu__camada__dois a {
             padding-right: 5px;
-            padding-left: 5px; 
-            background-color: azure;
+            padding-left: 5px;             
     
         }
     
         nav a {
-            display: flex;
-            gap: 10px;
+            display: flex;            
             color: #c40008;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.8rem;          
+            
         }
     
-        .logo__principal__menu {
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 70%;        
-         
+        .logo__principal__menu {  
+            display: none;         
         }
     
         .icone__menu {            
-            background-color: aqua;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30%;
+           display: none;
     
         }
     
@@ -109,18 +95,15 @@
     
         /* Pesquisa */
         .pesquisa__lupa {
-            /* background-color: transparent; */
-            background-color: aliceblue;
+            background-color: transparent;            
             display: flex;
-            border: 2px solid #c40008;
+            border: 3px solid #c40008;
             height: 30px;
-            border-radius: 50px;
-            /* justify-content: space-between; */
+            border-radius: 50px;            
             align-items: center;
             outline: none;
             width: 60%;
-            margin: auto;
-    
+            margin: auto;    
         }
     
         .pesquisa__input {
@@ -130,29 +113,83 @@
             padding: 0;
             line-height: 40px;
             width: 100%;
+            padding-left: 10px;
+            color: #000000c0;
         }
-    
-    
-    
+
         .pesquisa__link {
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
             background-color: #c40008;
             display: flex;
             justify-content: center;
+            align-items: center;                  
+        }
+
+                /*   @media screen do menu */
+        @media screen and (min-width: 769px) {
+            .camada{
+                background-color: cadetblue;
+            }
+            nav h3 {
+                display: none;
+            }
+
+            .camada__um {
+            display: flex;
+            flex-direction: row;            
+            justify-content: space-around;
             align-items: center;
-            background-color: aqua;
+            width: 80%;
+            margin: auto;     
+            } 
+
+            .menu__camada__dois {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;             
+            }   
+            
+            .logo__principal__menu {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70%;  
+         
+            }
+
+            .login__ul{
+                display: none;
+            }
+
+            .icone__menu {               
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30%   
+            }
+        }
+
+        @media screen and (max-width: 769px) {         
+
+            .pesquisa__lupa{       
+                width: 80%;        
+            }
+
+            nav a {          
+                font-size: 1rem;  
+                
+            }
+
+
+            
         }
     
-        /* Trocar a cor do placeholder */
-        ::-webkit-input-placeholder {
-            /* color: #000000c0; */
-            /* color:  #c40008; */
-            padding-left: 10px;
-        }
+      
     
-        /* Fim  Pesquisa  */
     </style>
 </head>
 
@@ -196,6 +233,8 @@
                         <li><a href="historia.php">História</a></li>
                         <li><a href="educacao.php">Educação</a></li>
                         <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                        <li class="login__ul"><a href="login.php">Login</a></li>
+                        
                     </ul>
                 </nav>
 
@@ -208,7 +247,8 @@
             <nav>
 
                 <div class="pesquisa__lupa">
-                    <input class="pesquisa__input" type="search" placeholder="Pesquisa">
+                    <input class="pesquisa__input" type="search" id="pesquisa" name="pesquisa" placeholder="Pesquisa">
+                    
                     <a class="pesquisa__link" href="">
                         <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
                     </a>
