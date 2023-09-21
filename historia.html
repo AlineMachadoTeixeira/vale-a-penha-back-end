@@ -16,81 +16,78 @@
             background-size: cover;
             background-position: center;
         }
+
     
-        .camada {                  
-            background-color:#F4EBD0;     
-            top:0;
-            position: sticky;  
+        .camada {
+            display: flex;
+            flex-direction: column;           
+            gap: 5px;
+            background-color: #F4EBD0;
+            top: 0;
+            position: sticky;
             z-index: 10;
-            margin-top: 10px;
+            padding: 10px;
         }
     
         .camada__um {
             display: flex;
-            flex-direction: row; 
-            justify-content: center;
-            gap: 20px;
-            
+            flex-direction: row;            
+            justify-content: space-around;
             align-items: center;
-            padding: 10;
-            
-            background-color: chartreuse; 
-           
-            
-            
-               
-    
+            width: 80%;
+            margin: auto;     
+        }   
+        
+        .menu__camada__dois{
+            margin: 0;
+            padding: 0;            
         }
-    
-        .menu__camada__dois {       
-            /* display: flex;  
-            justify-content: center; 
-            align-items: center;   */
-            background-color: blueviolet;
-            padding: 5px 20px;        
-            
-    
-        }
-    
-        ul {            
+      
+        ul {
+            display: flex;
             list-style: none;
-            display: none;   
+            display: none;
         }
-
+    
         nav h3 {
             margin: 0;
             padding: 0;
         }
-
-        .menu__camada__dois a{
+    
+        .menu__camada__dois a {
             padding-right: 5px;
-            padding-left: 5px;
+            padding-left: 5px; 
             background-color: azure;
-            
+    
         }
-
-        nav a {            
+    
+        nav a {
+            display: flex;
+            gap: 10px;
             color: #c40008;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
-        }            
-    
-        .logo__principal__menu {
-            background-color: brown;
-            margin-left: 0;
-            width: 70%;
-            margin-top: 10px;
-            
-            
-           
+            font-size: 0.8rem;
         }
     
-        .icone__menu  {
-            width: 50%;
+        .logo__principal__menu {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70%;        
+         
+        }
+    
+        .icone__menu {            
             background-color: aqua;
-
-        } 
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30%;
+    
+        }
     
         nav a:hover,
         nav a:focus {
@@ -100,14 +97,62 @@
         .menu-aberto {
             display: flex;
             flex-direction: column;
-            align-items: center;           
-            width: auto; 
+            align-items: center;
+            width: auto;
             gap: 10px;
         }
     
         .menu-aberto a {
             font-size: 16px;
         }
+    
+    
+        /* Pesquisa */
+        .pesquisa__lupa {
+            /* background-color: transparent; */
+            background-color: aliceblue;
+            display: flex;
+            border: 2px solid #c40008;
+            height: 30px;
+            border-radius: 50px;
+            /* justify-content: space-between; */
+            align-items: center;
+            outline: none;
+            width: 60%;
+            margin: auto;
+    
+        }
+    
+        .pesquisa__input {
+            border: none;
+            background-color: transparent;
+            outline: none;
+            padding: 0;
+            line-height: 40px;
+            width: 100%;
+        }
+    
+    
+    
+        .pesquisa__link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #c40008;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+    
+        /* Trocar a cor do placeholder */
+        ::-webkit-input-placeholder {
+            /* color: #000000c0; */
+            /* color:  #c40008; */
+            padding-left: 10px;
+        }
+    
+        /* Fim  Pesquisa  */
     </style>
 </head>
 
@@ -135,7 +180,9 @@
 
             <div class="camada__um">
                 <nav>
-                    <a href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
+                    <!-- <a href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
+                    </a> -->
+                    <a  href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg" alt="Ícone login">
                     </a>
                 </nav>
                 <nav>
@@ -151,6 +198,7 @@
                         <li><a href="voce-em-foco.php">Você em Foco</a></li>
                     </ul>
                 </nav>
+
                 <nav>
                     <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
                     </a>
