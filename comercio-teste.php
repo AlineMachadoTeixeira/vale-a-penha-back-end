@@ -161,23 +161,31 @@
 
      <script>
         
-         function redimensionarImagem(largura, altura){
-            const img =  document.querySelectorAll('.redimensionar');
-            img.forEach(imagem => {
-                imagem.width = largura;
-                imagem.height = altura;
-            })
-         }
-
-         redimensionarImagem(200,200);
-
-
-        // function redimensionarImagem(largura, altura){
-        //      document.getElementById('img').width = largura;
-        //     document.getElementById('img').height = altura;
+        //  function redimensionarImagem(largura, altura){
+        //     const img =  document.querySelectorAll('.redimensionar');
+        //     img.forEach(imagem => {
+        //         imagem.width = largura;
+        //         imagem.height = altura;
+        //     })
         //  }
 
-        //  redimensionarImagem(300,200);
+        //  redimensionarImagem(200,200);
+
+
+        function redimensionarImagem(porcentagemLargura, porcentagemAltura){
+     const img = document.querySelectorAll('.redimensionar');
+     img.forEach(imagem => {
+         const larguraOriginal = imagem.naturalWidth;
+         const alturaOriginal = imagem.naturalHeight;
+
+         const novaLargura = (larguraOriginal * porcentagemLargura) / 100;
+         const novaAltura = (alturaOriginal * porcentagemAltura) / 100;
+
+         imagem.width = novaLargura;
+         imagem.height = novaAltura;
+     })
+ }
+
 
 
     </script> 
