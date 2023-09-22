@@ -18,27 +18,28 @@
         }
     
         .camada {
-            display: flex;
+            /* display: flex;
             flex-direction: column;           
-            gap: 5px;
+            gap: 5px; */
             background-color: #F4EBD0;
             top: 0;
             position: sticky;
             z-index: 10;
             padding: 20px 5px;
+            width: 100%;
         }
 
-        .camada__um {            
+        /* .camada__um {            
             width: 100%;
             margin: auto;     
-        } 
+        }  */
     
           
         
-        .menu__camada__dois{
+        /* .menu__camada__dois{
             margin: 0;
             padding: 0;            
-        }
+        } */
       
         ul {
             display: flex;
@@ -51,11 +52,11 @@
             padding: 0;
         }
     
-        .menu__camada__dois a {
+        /* .menu__camada__dois a {
             padding-right: 5px;
             padding-left: 5px;             
     
-        }
+        } */
     
         nav a {
             display: flex;            
@@ -102,7 +103,7 @@
             border-radius: 50px;            
             align-items: center;
             outline: none;
-            width: 40%;
+            /* width: 100%; */
             margin: auto;    
         }
     
@@ -127,6 +128,8 @@
             align-items: center;                  
         }
 
+        
+
                 /*   @media screen do menu */
         @media screen and (min-width: 769px) {
             .camada{
@@ -136,23 +139,28 @@
                 display: none;
             }
 
+            .pesquisa__espaco{
+            width: 80%;
+        }
+
             
 
             .camada__um {
-            display: flex;
-            flex-direction: row;            
-            justify-content: space-between;
-            align-items: center;
-            width: 95%;
-            margin: auto;     
+                display: flex;
+                
+                 flex-direction: row;             
+                justify-content: space-between;
+                align-items: center; 
+                 width: 95%; 
+                margin: auto;      
             } 
             
             /* Navegação (Inicio, lazer e etc ) */
             .menu__camada__dois {                    
-                margin: auto;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                margin: auto; 
+                /* display: flex; */
+                /* align-items: center;
+                justify-content: center; */
                 width: 100%;  
                 gap: 20px;        
             }   
@@ -175,6 +183,10 @@
                 align-items: center;
                 justify-content: center;
                 width: 30%   
+            }
+
+            .pesquisa__lupa {
+                width: 100%;
             }
         }
 
@@ -215,7 +227,7 @@
 
     <!-- começo menu  -->
     
-        <div class="camada">
+        <!-- <div class="camada">
 
             <div class="camada__um">
                 <nav>
@@ -256,6 +268,58 @@
 
 
                 </div>
+            </nav>
+
+        </div> -->
+
+
+
+        <div class="camada">
+
+            <div class="camada__um">
+                <nav>
+                    
+                    <a  href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg" alt="Ícone login">
+                    </a>
+                </nav>
+                <nav class="pesquisa__espaco">
+
+                    <div class="pesquisa__lupa">
+                        <input class="pesquisa__input" type="search" id="pesquisa" name="pesquisa" placeholder="Pesquisa">
+                        
+                        <a class="pesquisa__link" href="">
+                            <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
+                        </a>
+    
+    
+                    </div>
+                    
+                </nav>
+
+                <nav>
+                    <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
+                    </a>
+                </nav>
+            </div>
+
+            <nav>
+
+                
+
+
+                <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
+                    <ul class="menu__camada__dois">
+                        <li><a href="index.php">Início</a></li>
+                        <li><a href="gastronomia.php">Gastronomia</a></li>
+                        <li><a href="lazer.php">Lazer</a></li>
+                        <li><a href="comercio-local.php">Comércio Local</a></li>
+                        <li><a href="cultura.php">Cultura</a></li>
+                        <li><a href="historia.php">História</a></li>
+                        <li><a href="educacao.php">Educação</a></li>
+                        <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                        <li class="login__ul"><a href="login.php">Login</a></li>
+                        
+                    </ul>
             </nav>
 
         </div>
