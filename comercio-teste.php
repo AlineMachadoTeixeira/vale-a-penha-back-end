@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/menu.css">
-    <link rel="stylesheet" href="assets/css/comercio-local.css"> 
+    <link rel="stylesheet" href="assets/css/comercio-local.css">
     <!-- <link rel="stylesheet" href="assets/css/cards.css"> -->
     <style>
         .header {
@@ -92,40 +92,40 @@
         <section class="container">
             <article class="cards">
                 <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
-                <img  class="cards-img redimensionar" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
+                <img class="cards-img redimensionar" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
                 <h3>Papelaria CopyPen</h3>
                 <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a> 
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
             </article>
 
             <article class="cards">
                 <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
-                <img  class="cards-img redimensionar" src="assets/images/fotografo.jpg" alt="Comida da Padaria Requinte">
+                <img class="cards-img redimensionar" src="assets/images/fotografo.jpg" alt="Comida da Padaria Requinte">
                 <h3>Papelaria CopyPen</h3>
                 <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a> 
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
             </article>
 
             <article class="cards">
                 <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
-                <img  class="cards-img redimensionar" src="assets/images/banner-inicio.png" alt="Comida da Padaria Requinte">
+                <img class="cards-img redimensionar" src="assets/images/banner-inicio.png" alt="Comida da Padaria Requinte">
                 <h3>Papelaria CopyPen</h3>
                 <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a> 
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
             </article>
 
             <article class="cards">
                 <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
-                <img  class="cards-img redimensionar" src="assets/images/banner-educacao.png" alt="Comida da Padaria Requinte">
+                <img class="cards-img redimensionar" src="assets/images/banner-educacao.png" alt="Comida da Padaria Requinte">
                 <h3>Papelaria CopyPen</h3>
                 <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a> 
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
             </article>
-            
-            
-                      
-            
-            
+
+
+
+
+
         </section>
     </main>
     <footer>
@@ -159,37 +159,33 @@
     <script src="assets/js/menu-novo.js"></script>
 
 
-     <script>
-        
-        //  function redimensionarImagem(largura, altura){
-        //     const img =  document.querySelectorAll('.redimensionar');
+    <script>
+         function redimensionarImagem(largura, altura){
+             const img =  document.querySelectorAll('.redimensionar');
+             img.forEach(imagem => {
+                 imagem.width = largura;
+                 imagem.height = altura;
+            })
+         }
+
+         redimensionarImagem(200,200);
+
+
+        // function redimensionarImagem(porcentagemLargura, porcentagemAltura) {
+        //     const img = document.querySelectorAll('.redimensionar');
         //     img.forEach(imagem => {
-        //         imagem.width = largura;
-        //         imagem.height = altura;
+        //         const larguraOriginal = imagem.naturalWidth;
+        //         const alturaOriginal = imagem.naturalHeight;
+
+        //         const novaLargura = (larguraOriginal * porcentagemLargura) / 100;
+        //         const novaAltura = (alturaOriginal * porcentagemAltura) / 100;
+
+        //         imagem.width = novaLargura;
+        //         imagem.height = novaAltura;
         //     })
-        //  }
-
-        //  redimensionarImagem(200,200);
-
-
-        function redimensionarImagem(porcentagemLargura, porcentagemAltura){
-     const img = document.querySelectorAll('.redimensionar');
-     img.forEach(imagem => {
-         const larguraOriginal = imagem.naturalWidth;
-         const alturaOriginal = imagem.naturalHeight;
-
-         const novaLargura = (larguraOriginal * porcentagemLargura) / 100;
-         const novaAltura = (alturaOriginal * porcentagemAltura) / 100;
-
-         imagem.width = novaLargura;
-         imagem.height = novaAltura;
-     })
- }
-
-
-
-    </script> 
+        // }
+        // redimensionarImagem(50, 50);
+    </script>
 </body>
 
 </html>
-
