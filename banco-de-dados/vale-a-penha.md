@@ -25,8 +25,8 @@ CREATE TABLE comerciantes(
 CREATE TABLE comercios(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     imagem VARCHAR(100) NOT NULL,
-    nome_comercio VARCHAR(45) NOT NULL,
-    descricao VARCHAR(100) NOT NULL,
+    nome_comercio VARCHAR(20) NOT NULL,
+    descricao VARCHAR(50) NOT NULL,
     link_instagram VARCHAR(100) NOT NULL,
     comerciante_id INT NULL       
 ); 
