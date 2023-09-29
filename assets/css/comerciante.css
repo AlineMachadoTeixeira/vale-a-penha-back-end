@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+body {   
+  color: #000000c0;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, a{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* SEtinha que volta ao topo */
+ .back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #c40008;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+} 
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0; 
+} 
+
+.back-to-top:hover {
+  transform: scale(1.20);    
+  transition: .5s;
+} 
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+} 
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  transition: all ease-in-out 0.5s;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 0 15px;  
+  background-color:#F4EBD0;  
+  overflow-y: auto;
+}
+
+/* Borda da imagem redonda  */
+#header .comerciante__logo img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #c40008;
+  border-radius: 100%;  
+}
+
+.comerciante {
+  margin-left: 300px;
+  
+}
+
+@media (max-width: 1199px) {
+  #header {
+    left: -300px;
+  }
+  .comerciante {
+    margin-left: 0;
+  }
+  .container,
+  .container-fluid {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.nav-menu {
+  padding: 30px 0 0 0;
+}
+
+.nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+} 
+
+.nav-menu ul li {
+  position: relative;
+  white-space: nowrap;  
+}
+
+
+.nav-menu a,
+.nav-menu a:focus {
+  display: flex;
+  align-items: center;
+  color: #000000c0;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: 600;  
+}
+
+/* Icones do  #header */
+.nav-menu a i,
+.nav-menu a:focus i {
+  font-size: 24px;
+  padding-right: 8px;
+  color: #000000c0;  
+}
+
+/* Quando clicar nas letras no  #header */
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover>a {
+  text-decoration: none;
+  color: #c40008;
+  font-weight: 600;
+}
+
+/* Quando clicar nos icones  no  #header */
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover>a i {
+  color: #c40008;
+}
+
+/* Bolinha de navegação para celular e tela pequenas */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;  
+  background-color: #c40008;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* Trasisão de quando fecha e abre a menu de navegação no celular */
+.mobile-nav-active {
+  overflow: hidden;
+  
+}
+
+.mobile-nav-active #header {
+  left: 0;
+}
+
+.mobile-nav-toggle:hover{
+  transform: scale(1.15);    
+    transition: .5s;
+
+}
+
+section {
+  padding: 40px 10px;
+  overflow: hidden;  
+}
+
+/* Fundo texto */
+.section-title {
+  padding-bottom: 30px;  
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: #000000c0;
+}
+
+.section-title h2::after {
+  content: '';
+  display: block;
+  width: 10%;
+  height: 8px;
+  background-color: #c40008;  
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.comerciante__paragrafo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000c0;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+}
+
+/* Dicas do Cadastrar Comércio */
+.ul__dicas {
+  font-size: 15px;
+  color: #000000c0;
+  padding-bottom: 10px;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.paragrafo__dicas {
+  font-size: 16px;
+  font-weight: 600;
+  color: #c40008;
+  margin-bottom: 0;
+  margin-top: 20px;  
+}
+
+/* Formulario*/
+.container {   
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
+  border-radius: 20px;
+  padding: 20px;  
+}
+
+.comerciante__formulario {
+  padding: 0 20px;
+}
+
+.comerciante__input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 8px;
+  width: 100%;
+  position: relative;
+}
+
+.comerciante__input textarea {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.212);
+  font-size: 16px;
+  width: 100%;
+}
+
+.comerciante__input input {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.412);
+  font-size: 16px;
+  width: 100%;
+}
+
+.comerciante__input input:hover {
+  outline: 1px solid #c40008;
+}
+
+.comerciante__input textarea:hover {
+  outline: 1px solid #c40008;
+}
+
+.comerciante__input input:focus-visible {
+  outline: none
+}
+
+.comerciante__input textarea:focus-visible {
+  outline: none
+}
+
+.comerciante__input label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000c0;
+  margin-bottom: 0px;
+}
+
+.botao__enviar {
+  display: flex;
+  justify-content: center;
+}
+
+.botao__enviar button {
+  width: 60%;
+  border: none;  
+  background-color: #c40008;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;  
+}
+
+.botao__enviar button:hover{
+  background-color: rgba(300, 200, 120, 0.6);
+  color: #000000c0;
+}
+
+/* Rodapé comerciante */
+.comerciante__rodape {
+  padding: 15px;
+  color: #fff;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 9999;
+  background-color: #c40008
+}
+
+.comerciante__rodape .comerciante__rodape__p {
+  text-align: center;
+}
+
+.comerciante__rodape {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #eaebf0;
+}
+
+@media (max-width: 1199px) {
+  .comerciante__rodape {
+    position: static;
+    width: auto;
+    padding-right: 20px 15px;
+  }
+}
+
+/* CSS Para a foto do cadastrar comercio  */
+#foto {
+  display: none;
+}
+
+.foto__margem {
+  margin-bottom: 25px;
+}
+
+.comerciante__foto {
+  width: 200px;
+  /* aspect-ratio: 16/9; */
+  aspect-ratio: 9/9;
+  background-color:#F4EBD0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000000c0;
+  border: 2px dashed currentcolor;
+  cursor: pointer;
+  transition: color 300ms ease-in-out, background 300ms ease-in-out;
+  outline: none;
+  overflow: hidden;
+  margin: auto;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.comerciante__foto:hover {
+  color: #777;
+  background: #ccc;
+}
+
+.comerciante__foto:active {
+  border-color: #fff;
+  color: #fff;
+}
+
+.comerciante__foto:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.comerciante__foto__img {
+  max-width: 100%;
+}
+
+/* Fim  CSS Para a foto do cadastrar comercio  */
