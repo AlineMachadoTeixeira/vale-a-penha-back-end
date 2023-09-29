@@ -37,7 +37,7 @@ main {
     font-size: 1.1rem;
     margin-left: 10px;
     margin: 0;
-    padding: 10px;    
+    padding: 10px;       
 }
 
 .cards p {    
@@ -45,8 +45,7 @@ main {
     margin: 0; 
     padding: 0px 10px;
     width: 100%;
-    height: 25vh;
-    
+    height: 32vh;    
 }
 
 .cards a {
@@ -85,6 +84,7 @@ main {
         width: 30px;
 
     }
+    
 }
 @media screen and (max-width: 600px) {
     .container {
@@ -95,9 +95,7 @@ main {
     }
 
     .cards p {  
-        font-size:0.8rem ;  
-      
-        
+        font-size:0.8rem ;     
         
     }
 }

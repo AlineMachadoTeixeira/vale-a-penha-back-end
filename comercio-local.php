@@ -9,7 +9,8 @@
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/menu.css">
-    <link rel="stylesheet" href="assets/css/cards.css">
+    <link rel="stylesheet" href="assets/css/comercio-local.css">
+    <!-- <link rel="stylesheet" href="assets/css/cards.css"> -->
     <style>
         .header {
             background-image: url(assets/images/banner-comercio-local.png);
@@ -90,41 +91,42 @@
         <p class="descricao_cadastro">Quer destacar o seu negócio no nosso Bairro? Alcance moradores e visitantes interessados em seus produtos e serviços. Clique <a href="cadastro.php">Aqui</a> e faça seu cadastro .</p>
         <section class="container">
             <article class="cards">
-                <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
+                <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
+                <img class="cards-img redimensionar" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
+                <h3>Papel Copy Pen0000 0000 0000 0</h3>                
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam reiciendis explicabo ipsa mollitia, at esse molestiae vel dolorem quo officiis earum minus unde porro obcaecati quibusdam nobis odit dignissimos dolor, voluptatem consequatur? Tempora, labore!</p>
+                
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
+            </article>
+
+            <article class="cards">
+                <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
+                <img class="cards-img redimensionar" src="assets/images/fotografo.jpg" alt="Comida da Padaria Requinte">
                 <h3>Papelaria CopyPen</h3>
                 <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
                 <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
             </article>
+
             <article class="cards">
-                <img class="cards-img" src="assets/images/fotografo.jpg" alt="Comida da Nova Yara Panificadora">
-                <h3>FD Foto Penha</h3>
-                <p>Para todos os tipos de fotografia, 3x4, álbum de fotos, ensaio fotográfico</p>
-                <a target="_blank" href="https://www.instagram.com/fdfotopenha/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
-            </article>
-            <article class="cards">
-                <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
+                <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
+                <img class="cards-img redimensionar" src="assets/images/banner-inicio.png" alt="Comida da Padaria Requinte">
                 <h3>Papelaria CopyPen</h3>
                 <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
                 <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
             </article>
+
             <article class="cards">
-                <img class="cards-img" src="assets/images/fotografo.jpg" alt="Comida da Nova Yara Panificadora">
-                <h3>FD Foto Penha</h3>
-                <p>Para todos os tipos de fotografia, 3x4, álbum de fotos, ensaio fotográfico</p>
-                <a target="_blank" href="https://www.instagram.com/fdfotopenha/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
-            </article>
-            <article class="cards">
-                <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
+                <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
+                <img class="cards-img redimensionar" src="assets/images/banner-educacao.png" alt="Comida da Padaria Requinte">
                 <h3>Papelaria CopyPen</h3>
                 <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
                 <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
             </article>
-            <article class="cards">
-                <img class="cards-img" src="assets/images/fotografo.jpg" alt="Comida da Nova Yara Panificadora">
-                <h3>FD Foto Penha</h3>
-                <p>Para todos os tipos de fotografia, 3x4, álbum de fotos, ensaio fotográfico</p>
-                <a target="_blank" href="https://www.instagram.com/fdfotopenha/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
-            </article>
+
+
+
+
+
         </section>
     </main>
     <footer>
@@ -156,6 +158,20 @@
         <p>Vale a Penha 2023. Alguns direitos reservados &copy;</p>
     </footer>
     <script src="assets/js/menu-novo.js"></script>
+
+
+    <script>
+          function redimensionarImagem(largura, altura){
+              const img =  document.querySelectorAll('.redimensionar');
+              img.forEach(imagem => {
+              imagem.width = largura;
+                 imagem.height = altura;
+             })
+          }
+
+          redimensionarImagem(200,200);
+
+    </script>
 </body>
 
 </html>

@@ -33,47 +33,51 @@
 
     <!-- começo menu  -->
     <div class="camada">
-        <div class="menu__camada">
-            <nav>
-                <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
-
-                <ul class="menu__camada__dois">
-                    <li>
-                        <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
-                        </a>
-                    </li>
-                    <li><a href="index.php">Início</a></li>
-                    <li><a href="gastronomia.php">Gastronomia</a></li>
-                    <li><a href="lazer.php">Lazer</a></li>
-                    <li><a href="comercio-local.php">Comércio Local</a></li>
-                    <li><a href="comercio-teste.php">Comércio Teste  </a></li>
-                    <li><a href="cultura.php">Cultura</a></li>
-                    <li><a href="historia.php">História</a></li>
-                    <li><a href="educacao.php">Educação</a></li>
-                    <li><a href="voce-em-foco.php">Você em Foco</a></li>
-                    <li>
-                        <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
-                        </a>
-                    </li>
-                </ul>
+        
+        <div class="camada__um">
+            <nav>    
+                <a href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg"
+                        alt="Ícone login">
+                </a>
             </nav>
-            <nav>
-
+            <nav class="pesquisa__espaco">    
                 <div class="pesquisa__lupa">
-                    <input class="pesquisa__input" type="search" placeholder="Pesquisa">
+                    <input class="pesquisa__input" type="search" id="pesquisa" name="pesquisa" placeholder="Pesquisa">
+    
                     <a class="pesquisa__link" href="">
                         <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
-                    </a>
-
-
-                </div>
+                    </a>    
+                </div>    
             </nav>
-
+    
+            <nav>
+                <a class="icone__menu__login" href="login.php"><img class="icone__menu"
+                        src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
+                </a>
+            </nav>
         </div>
+    
+        <nav>    
+            <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
+            <ul class="menu__camada__dois">
+                <li><a href="index.php">Início</a></li>
+                <li><a href="gastronomia.php">Gastronomia</a></li>
+                <li><a href="lazer.php">Lazer</a></li>
+                <li><a href="comercio-local.php">Comércio Local</a></li>
+                <li><a href="cultura.php">Cultura</a></li>
+                <li><a href="historia.php">História</a></li>
+                <li><a href="educacao.php">Educação</a></li>
+                <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                <li class="login__ul"><a href="login.php">Login</a></li>
+    
+            </ul>
+        </nav>
+    
     </div>
-    <!-- fim menu -->
 
+<!-- fim menu -->
 
+<body>    
     <header>
         <div class="header">
             <img src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale A Penha">
@@ -116,14 +120,14 @@
                     </div>
                 </section>
             </section>
-            
-            
+
+
             <section class="inicio__menu">
                 <h3> Na região da Penha você encontra <span>tudo que precisa</span>.</h3>
 
                 <div class="inicio__caixa">
                     <article class="inicio__section">
-                        <a href="gastronomia.html">                         
+                        <a href="gastronomia.html">
 
                             <figure class="inicio__caixa__figure">
                                 <img class="inicio__img" src="assets/images/inicio-gastronomia.png" alt="imagem de frutas e legumes ">
@@ -132,9 +136,9 @@
                         </a>
                     </article>
 
-                     <article class="inicio__section"> 
-                        <a href="lazer.html">              
-                            
+                    <article class="inicio__section">
+                        <a href="lazer.html">
+
                             <figure class="inicio__caixa__figure">
                                 <img class="inicio__img" src="assets/images/inicio-lazer.png" alt="menina andando de bicicleta">
                                 <figcaption class="inicio__caixa__legenda">Lazer</figcaption>
@@ -144,17 +148,17 @@
 
                     <article class="inicio__section">
                         <a href="comercio-local.html">
-                            
+
                             <figure class="inicio__caixa__figure">
                                 <img class="inicio__img" src="assets/images/inicio-comercio.png" alt=" sacolas de compras">
                                 <figcaption class="inicio__caixa__legenda">Comércio Local</figcaption>
-                            </figure>                           
+                            </figure>
                         </a>
                     </article>
 
                     <article class="inicio__section">
-                        <a href="educação.html">                               
-                            
+                        <a href="educação.html">
+
                             <figure class="inicio__caixa__figure">
                                 <img class="inicio__img" src="assets/images/inicio-educacao.png" alt="sala de aula">
                                 <figcaption class="inicio__caixa__legenda">Educação</figcaption>
@@ -163,7 +167,7 @@
                     </article>
 
                     <article class="inicio__section">
-                        <a href="cultura.html">                            
+                        <a href="cultura.html">
 
                             <figure class="inicio__caixa__figure">
                                 <img class="inicio__img" src="assets/images/inicio-cultura.png" alt="arte de confetes">
@@ -174,19 +178,19 @@
 
                     <article class="inicio__section">
                         <a href="historia.html">
-                            
+
                             <figure class="inicio__caixa__figure">
                                 <img class="inicio__img" src="assets/images/inicio-historia.png" alt="igreja matriz de nossa Senhora da Penha foto antiga">
                                 <figcaption class="inicio__caixa__legenda">História</figcaption>
                             </figure>
-                         </a>
-                            
-                    </article> 
+                        </a>
+
+                    </article>
                 </div>
 
             </section>
 
-            
+
             <article class="inicio__mapa">
 
                 <iframe class="inicio__mapa__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12216.285669617992!2d-46.554524587318525!3d-23.52380233446841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e51b4d72683%3A0x5a7009ad0acffd39!2sPenha%20de%20Fran%C3%A7a%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1683919195226!5m2!1spt-BR!2sbr" width="1000" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
