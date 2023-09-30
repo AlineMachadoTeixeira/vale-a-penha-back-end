@@ -16,15 +16,16 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
-  <!--  Estilo externo -->  
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Estilo para foto  -->
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <!--  Estilo externo -->    
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> <!-- Estilo para foto  -->  
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <!-- Estilo para bolinha menu fechado -->
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> <!-- Icone do header  -->  
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> 
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet"> <!-- Icone do header  -->  
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet"> 
 
   <!-- CSS estilo interno -->
   <link rel="stylesheet" href="../assets/css/comerciante.css">
+  <link rel="shortcut icon" href="../assets/images/logo-marmotazona.png" type="image/x-icon">
  
 </head>
 
@@ -37,7 +38,7 @@
     <div>
   
       <div class="comerciante__logo">
-        <img src="assets/images/logo-vale-a-penha-quadrado.svg" alt="">
+        <img src="../assets/images/logo-vale-a-penha-quadrado.svg" alt="">
   
       </div>
       <!-- Achei esses icones nesse site https://boxicons.com/?query= -->     

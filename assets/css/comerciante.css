@@ -2,7 +2,7 @@
 body {   
   color: #000000c0;
   font-size: 15px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;  
 }
 
 h1, h2, h3, h4, h5, h6, p, label, a{
@@ -50,7 +50,9 @@ h1, h2, h3, h4, h5, h6, p, label, a{
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;  
-  background-color:#F4EBD0;  
+  /* background-color:#F4EBD0;   */
+  background-image: url(../images/fundo-cadastro.svg);
+  background-size: cover;
   overflow-y: auto;
 }
 
@@ -237,6 +239,7 @@ section {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.212);
   border-radius: 20px;
   padding: 20px;  
+  background-color: #fff;
 }
 
 .comerciante__formulario {
@@ -323,15 +326,15 @@ section {
 
 /* Rodapé comerciante */
 .comerciante__rodape {
-  padding: 15px;
-  color: #fff;
+  padding: 15px;  
   font-size: 14px;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 300px;
-  z-index: 9999;
-  background-color: #c40008
+  z-index: 9999;  
+  background-color:#F4EBD0; 
+  color: aqua;
 }
 
 .comerciante__rodape .comerciante__rodape__p {
@@ -341,8 +344,9 @@ section {
 .comerciante__rodape {
   padding-top: 5px;
   text-align: center;
-  font-size: 13px;
-  color: #eaebf0;
+  font-size: 13px;  
+  color: #000000c0;
+  font-weight: 600;
 }
 
 @media (max-width: 1199px) {

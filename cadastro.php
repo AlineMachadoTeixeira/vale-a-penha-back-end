@@ -208,14 +208,7 @@
 
     <!-- Teste apagar -->
 
-    <a href="comerciantes/minha-conta.php">Minha conta</a>
-    <a href="comerciantes/cadastrar-comercio.php">Cadastrar Comércio</a>
-    <a href="comerciantes/ajuda.php">Ajuda</a>
-
-
-
-
-
+    <a href="comerciante/comerciante.php">Minha conta</a>
 
     <footer>
         <div class="container-footer">
