@@ -47,19 +47,55 @@ function checkInputs(){
         // adicionar a classe de sucesso
         sucesso(sobrenome)
     }
-     
-    //Email
-    // if(emailValue === '') {
-    //     // mostrar erro
-    //     // add classe
-    //     erro(email, 'Preencha esse campo')
-    // } else if (!validacaoEmail(emailValue)) {
-    //     erro(email, 'Email inválido')
-    // } else {
-    //     // adicionar a classe de sucesso
-    //     sucesso(email)
-    // }
 
+    //CPF
+    if (cpfValue === '') {
+        // mostrar erro
+        // add classe
+        erro(cpf, 'Preencha esse campo')
+        //}else if (!validarCPF(cpfValue)) { erro(cpf, 'Email inválido')
+    } else {
+        // adicionar a classe de sucesso
+        sucesso(cpf)
+    }
+
+    //Telefone
+    if(telefoneValue === '') {
+        // mostrar erro
+        // add classe
+        erro(telefone, 'Preencha esse campo')
+    } else {
+        // adicionar a classe de sucesso
+        sucesso(telefone)
+    }
+
+    //Email
+    if (emailValue === '') {
+        // mostrar erro
+        // add classe
+        erro(email, 'Preencha esse campo')
+    } else if (!validarEmail(emailValue)) {
+        erro(email, 'Email inválido')
+    } else {
+        // adicionar a classe de sucesso
+        sucesso(email)
+    }
+
+      
+    //Confirme Email
+    if(confimaremailValue === '') {
+        // mostrar erro
+        // add classe
+        erro(confimaremail, 'Preencha esse campo')
+
+    } else if(emailValue !== confimaremailValue) { 
+        erro(confimaremail, 'Senhas não são iguais')
+    } else {
+        // adicionar a classe de sucesso
+        sucesso(confimaremail)
+    }  
+
+    
 
     //Senha
     if(senhaValue === '') {
@@ -86,13 +122,19 @@ function checkInputs(){
         // adicionar a classe de sucesso
         sucesso(confirmesenha)
     }
-     
 
-
-
+    dataValue
+    //Data Nascimento
+    if (dataValue === '') {
+        // mostrar erro
+        // add classe
+        erro(data, 'Preencha esse campo')
+    
+    } else {
+        // adicionar a classe de sucesso
+        sucesso(data)
+    }
 }   
-
-
 
 function erro(input, message) {
     const comercianteinput = input.parentElement;
@@ -109,11 +151,19 @@ function sucesso(input) {
     comercianteinput.className = 'comerciante__input sucesso'
 }
 
+// Função para validar email
+function validarEmail(email){
+    const emailValidaçao = new RegExp(
+        //usuario12@gamil.com.br
+        /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,}$/
+    );
+    if(emailValidaçao.test(email)){
+        return true
+    }
+    return false;
+}
 
 
-// function isEmail(email) {
-//     return /^(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/.test(email)
-// }
 
 
 
