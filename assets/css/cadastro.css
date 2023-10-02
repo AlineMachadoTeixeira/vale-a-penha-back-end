@@ -1,8 +1,12 @@
 body {
-    /* background-image: url(../images/fundo.svg); */
-    background-image: url(../images/fundo-cadastro.svg);
+    background-image: url(../images/fundo.svg); 
+    
     background-size: cover;
 }
+
+h1, h2, h3, h4, h5, h6, p, label, a{
+    font-family: 'Montserrat', sans-serif;
+  }
 
 main {
     display: flex;
@@ -23,8 +27,10 @@ main {
 }
 
 .comerciante__imagem {
-    background-color: rgba(300, 200, 120, 0.6);
+    /* background-color: rgba(300, 200, 120, 0.6); */
+    background-image: url(../images/banner-inicio.png);
     background-size: cover;
+    background-position: center;
     padding: 10px;
 }
 
@@ -39,14 +45,18 @@ main {
 }
 
 .comerciante__imagem img {
-    width: 25%;
+    width: 30%;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 15px auto;   
 }
 
+
+
 .comerciante__titulo {
+    font-size: 15px;
     margin-bottom: 8px;
     margin-left: 10px;
     margin-top: 15px;
@@ -59,7 +69,7 @@ main {
 }
 
 .comerciante__titulo h1 {
-    font-size: 18px;
+    font-size: 22px;
     width: 100%;
 }
 
@@ -69,10 +79,11 @@ main {
     display: block;
     width: 10%;
     height: 8px;
-    background-color: rgba(300, 200, 120, 0.6);
+    background-color:#c40008;
     margin: 0 auto;
     position: absolute;
     border-radius: 10px;
+    
 }
 
 .comerciante__paragrafo {
@@ -90,27 +101,27 @@ main {
 
 .botao__sair button {
     border: none;
-    background-color: rgba(300, 200, 120, 0.6);
-    padding: 8px 15px;
+    background-color: #c40008;
+    padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
     color: #FFF;
 }
 
 .botao__sair button:hover {
-    background-color: #c40008;
+    background-color: rgba(300, 200, 120, 0.6);
     cursor: pointer;
 }
 
 .botao__sair button a {
     text-decoration: none;
-    color: #000000;
+    color: #FFFFFF;
     font-size: 14px;
     font-weight: 700;
 }
 
 .botao__sair button a:hover {
-    color: #FFF;
+    color: #000000c0;
 }
 
 .comerciante__formulario {
@@ -301,12 +312,10 @@ main {
 
 @media screen and (min-width: 768px) {
 
-    .comerciante__imagem img {
+    /* .comerciante__imagem img {
         width: 100%;
-        /* background-color: #FFF6C3; */
-
-
-    }
+        
+    } */
 
 
     .comerciante__caixa {
@@ -322,7 +331,8 @@ main {
 
     .comerciante__imagem img {
         width: 80%;
-    }
+        
+    }    
 
     .comerciante_for {
         width: 75%;
@@ -375,7 +385,7 @@ main {
     }
 
     .comerciante__titulo h1 {
-        font-size: 22px;
+        font-size: 32px;
     }
 
     .comerciante__titulo h1:after {

@@ -93,8 +93,10 @@
             <article class="cards">
                 <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
                 <img class="cards-img redimensionar" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
-                <h3>Papel Copy Pen0000 0000 0000 0</h3>                
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam reiciendis explicabo ipsa mollitia, at esse molestiae vel dolorem quo officiis earum minus unde porro obcaecati quibusdam nobis odit dignissimos dolor, voluptatem consequatur? Tempora, labore!</p>
+                <div class="cards__conteudo" >
+                    <h3>Papel Copy Pen0000 0000 0000 0</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam reiciendis explicabo ipsa mollitia, at esse molestiae vel dolorem quo officiis earum minus unde porro obcaecati quibusdam nobis odit dignissimos dolor, voluptatem consequatur? Tempora, labore!</p>
+                </div>
                 
                 <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
             </article>
@@ -102,31 +104,36 @@
             <article class="cards">
                 <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
                 <img class="cards-img redimensionar" src="assets/images/fotografo.jpg" alt="Comida da Padaria Requinte">
-                <h3>Papelaria CopyPen</h3>
-                <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
+                <div class="cards__conteudo">
+                    <h3>Papelaria CopyPen   Instagran</h3>
+                    <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
+                </div>
                 <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
+               
             </article>
 
             <article class="cards">
                 <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
                 <img class="cards-img redimensionar" src="assets/images/banner-inicio.png" alt="Comida da Padaria Requinte">
-                <h3>Papelaria CopyPen</h3>
-                <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
+                <div class="cards__conteudo" >
+                    <div>
+                        <h3>Papelaria CopyPen</h3>
+                        <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
+                    </div>
+                    <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
+                </div>
+                
             </article>
 
             <article class="cards">
                 <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
                 <img class="cards-img redimensionar" src="assets/images/banner-educacao.png" alt="Comida da Padaria Requinte">
-                <h3>Papelaria CopyPen</h3>
-                <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
+                
+                    <h3>Papelaria CopyPen</h3>
+                    <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
+                
                 <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
             </article>
-
-
-
-
-
         </section>
     </main>
     <footer>
