@@ -90,50 +90,29 @@
         <p class="descricao">Na Penha temos muitos comércios locais que vale a pena conhecer.</p>
         <p class="descricao_cadastro">Quer destacar o seu negócio no nosso Bairro? Alcance moradores e visitantes interessados em seus produtos e serviços. Clique <a href="cadastro.php">Aqui</a> e faça seu cadastro .</p>
         <section class="container">
-            <article class="cards">
-                <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
+            <article class="cards">                
                 <img class="cards-img redimensionar" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
-                <div class="cards__conteudo" >
+                
                     <h3>Papel Copy Pen0000 0000 0000 0</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam reiciendis explicabo ipsa mollitia, at esse molestiae vel dolorem quo officiis earum minus unde porro obcaecati quibusdam nobis odit dignissimos dolor, voluptatem consequatur? Tempora, labore!</p>
-                </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam reiciendis explicabo ipsa mollitia, at esse molestiae vel dolorem quo officiis earum minus unde porro obcaecati quibusdam nobis odit dignissimos dolor, voluptatem consequatur? Tempora, labore!</p>        
                 
                 <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
             </article>
 
-            <article class="cards">
-                <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
-                <img class="cards-img redimensionar" src="assets/images/fotografo.jpg" alt="Comida da Padaria Requinte">
-                <div class="cards__conteudo">
-                    <h3>Papelaria CopyPen   Instagran</h3>
-                    <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                </div>
+            <article class="cards">                
+                <img class="cards-img redimensionar" src="assets/images/banner-comercio-local.png" alt="Comida da Padaria Requinte">
+                
+                    <h3>Papel Copy Pen0000 0000 0000 0</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur </p>        
+                
                 <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
+            </article>
+
+            
                
-            </article>
+            
 
-            <article class="cards">
-                <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
-                <img class="cards-img redimensionar" src="assets/images/banner-inicio.png" alt="Comida da Padaria Requinte">
-                <div class="cards__conteudo" >
-                    <div>
-                        <h3>Papelaria CopyPen</h3>
-                        <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                    </div>
-                    <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
-                </div>
-                
-            </article>
-
-            <article class="cards">
-                <!-- <img class="cards-img" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte"> -->
-                <img class="cards-img redimensionar" src="assets/images/banner-educacao.png" alt="Comida da Padaria Requinte">
-                
-                    <h3>Papelaria CopyPen</h3>
-                    <p>Papelaria de bairro com preços acessíveis a população e um ótimo atendimento</p>
-                
-                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
-            </article>
+            
         </section>
     </main>
     <footer>
