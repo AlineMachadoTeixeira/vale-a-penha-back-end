@@ -65,7 +65,7 @@
                 <div class="comerciante__imagem">
                     <!-- Aqui vai a imagem -->
                     <!-- <a href="index.php"><img src="assets/images/logo-vale-a-penha-quadrado.svg" alt="Logo Vale a Penha"> </a> -->
-                    <a href="index.php"><img src="assets/images/logo-Vale-a-Penha.svg" alt="Logo Vale a Penha"> </a>
+                    <a href="index.php"><img src="assets/images/logo-vale-a-penha-quadrado.svg" alt="Logo Vale a Penha"> </a>
 
                 </div>
                 <div class="comerciante_for">

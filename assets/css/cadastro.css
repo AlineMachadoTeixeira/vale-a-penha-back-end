@@ -28,7 +28,7 @@ main {
 
 .comerciante__imagem {
     /* background-color: rgba(300, 200, 120, 0.6); */
-    background-image: url(../images/banner-inicio.png);
+    background-image: url(../images/comerciantes-vermelho.svg);
     background-size: cover;
     background-position: center;
     padding: 10px;
@@ -50,10 +50,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15px auto;   
+    margin: 15px auto;  
+    border: 8px solid #c40008; 
+    border-radius: 100%;    
 }
-
-
 
 .comerciante__titulo {
     font-size: 15px;
@@ -82,8 +82,7 @@ main {
     background-color:#c40008;
     margin: 0 auto;
     position: absolute;
-    border-radius: 10px;
-    
+    border-radius: 10px;    
 }
 
 .comerciante__paragrafo {
@@ -182,18 +181,16 @@ main {
     margin-bottom: 0px;
 }
 
-
-
 .botao__enviar {
     display: flex;
     justify-content: center;
 }
 
-
 .botao__enviar button {
     width: 60%;
     border: none;
-    background-color: rgba(300, 200, 120, 0.6);
+    background-color: #c40008;
+    /* background-color: rgba(300, 200, 120, 0.6); */
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
@@ -201,23 +198,29 @@ main {
     text-decoration: none;
     font-size: 16px;
     font-weight: 700;
-    color: #000000;
+    color: #FFF;
 }
 
 .botao__enviar button a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 700;
-    color: #000000;
+    /* text-decoration: none; */
+    /* font-size: 16px;
+    font-weight: 700; */
+    
 }
 
-.botao__enviar button:hover {
+.botao__enviar button:hover{
+    background-color: rgba(300, 200, 120, 0.6);
+    color: #000000c0;
+
+}
+
+/* .botao__enviar button:hover {
     background-color: #c40008;
 }
 
 .botao__enviar a:hover {
     color: #fff;
-}
+} */
 
 .paragrafo__acessar {
     font-size: 15px;
@@ -248,7 +251,6 @@ main {
     padding-bottom: 10px;
     margin-top: 0;
     padding-top: 0;
-
 }
 
 .paragrafo__dicas {
@@ -312,12 +314,6 @@ main {
 
 @media screen and (min-width: 768px) {
 
-    /* .comerciante__imagem img {
-        width: 100%;
-        
-    } */
-
-
     .comerciante__caixa {
         display: flex;
         flex-direction: row;
@@ -330,7 +326,7 @@ main {
     }
 
     .comerciante__imagem img {
-        width: 80%;
+        width: 60%;
         
     }    
 

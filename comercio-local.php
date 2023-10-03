@@ -88,7 +88,7 @@
     </header>
     <main>
         <p class="descricao">Na Penha temos muitos comércios locais que vale a pena conhecer.</p>
-        <p class="descricao_cadastro">Quer destacar o seu negócio no nosso Bairro? Alcance moradores e visitantes interessados em seus produtos e serviços. Clique <a href="cadastro.php">Aqui</a> e faça seu cadastro .</p>
+        <p class="descricao__dois">Quer destacar o seu negócio no nosso Bairro? Alcance moradores e visitantes interessados em seus produtos e serviços. Clique <a href="cadastro.php">Aqui</a> e faça seu cadastro .</p>
         <section class="container">
             <article class="cards">                
                 <img class="cards-img redimensionar" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">

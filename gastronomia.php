@@ -9,7 +9,8 @@
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/menu.css">
-    <link rel="stylesheet" href="assets/css/cards.css">
+    <!-- <link rel="stylesheet" href="assets/css/cards.css"> -->
+    <link rel="stylesheet" href="assets/css/comercio-local.css">
     <style>
         .header {
             background-image: url(assets/images/banner-gastronomia.png);
@@ -93,8 +94,8 @@
         <p class="descricao">A região da Penha tem diversas opções para uma boa alimentação que vale a pena conhecer: padaria, bares e restaurantes. Confira aqui algumas sugestões.</p>
 
         <article class="container">
-            <section class="cards">
-                <img class="cards-img" src="assets/images/padaria-requinte.jpg" alt="Comida da Padaria Requinte">
+            <section class="cards ">
+                <img class="cards-img redimensionar" src="assets/images/padaria-requinte.jpg" alt="Comida da Padaria Requinte">
                 <h3>Padaria Requinte</h3>
                 <p>Padaria antiga que serve café da manhã, lanches, pizzas, frango assado e pães há quatro gerações.</p>
                 <a target="_blank" href="https://www.instagram.com/requinte/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
@@ -102,21 +103,21 @@
             </section>
 
             <section class="cards">
-                <img class="cards-img" src="assets/images/yara-panificadora.jpg" alt="Comida da Nova Yara Panificadora">
+                <img class="cards-img redimensionar" src="assets/images/yara-panificadora.jpg" alt="Comida da Nova Yara Panificadora">
                 <h3>Nova Yara Panificadora</h3>
                 <p>Panificadora tradicional que serve café da manhã e pratos executivos em um ambiente descontraído.</p>
                 <a class="gastromonia__botao" href="https://www.instagram.com/padarianovayara/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
             </section>
 
             <section class="cards">
-                <img class="cards-img" src="assets/images/panelao.jpg" alt="Comida do Panelão do Norte">
+                <img class="cards-img redimensionar" src="assets/images/panelao.jpg" alt="Comida do Panelão do Norte">
                 <h3>Panelão do Norte</h3>
                 <p>Restaurante com tema nordestino e música sertaneja, que serve pratos e especialidades regionais.</p>
                 <a target="_blank" href="https://www.instagram.com/panelaopenha/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
 
             </section>
             <section class="cards">
-                <img class="cards-img" src="assets/images/tiquatirao.jpg" alt="Comida do Tiquatirão Frutos Do Mar">
+                <img class="cards-img redimensionar" src="assets/images/tiquatirao.jpg" alt="Comida do Tiquatirão Frutos Do Mar">
                 <h3>Tiquatirão Frutos Do Mar</h3>
                 <p>Restaurante em forma de navio que serve camarão, caranguejo, mexilhão, polvo e peixe assado.</p>
                 <a target="_blank" href="https://www.instagram.com/tiquatiraorestaurante/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
@@ -124,7 +125,7 @@
             </section>
 
             <section class="cards">
-                <img class="cards-img" src="assets/images/dunas.jpg" alt="Comida do Dunas Bar">
+                <img class="cards-img redimensionar" src="assets/images/dunas.jpg" alt="Comida do Dunas Bar">
                 <h3>Dunas Bar </h3>
                 <p>Bar inspirado no Egito com petiscos e coquetéis no estilo do Oriente Médio, além de música e dança à noite.</p>
                 <a target="_blank" href="https://www.instagram.com/dunasbar_/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
@@ -132,7 +133,7 @@
             </section>
 
             <section class="cards">
-                <img class="cards-img" src="assets/images/bar-jao.jpg" alt="Comida do Bar do Jão">
+                <img class="cards-img redimensionar" src="assets/images/bar-jao.jpg" alt="Comida do Bar do Jão">
                 <h3>Bar do Jão </h3>
                 <p>O Bar do Jão conta com um ambiente aconchegante e descontraído. oi eleito tetracampeão do Concurso Comida di Buteco em 2017, 2018, 2019 e 2021.</p>
                 <a target="_blank" href="https://www.instagram.com/bardojaoetradicao/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
@@ -172,6 +173,19 @@
         <p>Vale a Penha 2023. Alguns direitos reservados &copy;</p>
     </footer>
     <script src="assets/js/menu-novo.js"></script>
+
+    <script>
+          function redimensionarImagem(largura, altura){
+              const img =  document.querySelectorAll('.redimensionar');
+              img.forEach(imagem => {
+              imagem.width = largura;
+                 imagem.height = altura;
+             })
+          }
+
+          redimensionarImagem(200,200);
+
+    </script>
 
 
 
