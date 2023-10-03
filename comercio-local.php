@@ -100,7 +100,45 @@
             </article>
 
             <article class="cards">                
-                <img class="cards-img redimensionar" src="assets/images/banner-comercio-local.png" alt="Comida da Padaria Requinte">
+                <img class="cards-img redimensionar" src="assets/images/basilica-de-nossa-senhora-da-penha.jpg" alt="Comida da Padaria Requinte">
+                
+                    <h3>Papel Copy Pen0000 0000 0000 0</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur </p>        
+                
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
+            </article>
+
+
+            <article class="cards">                
+                <img class="cards-img redimensionar" src="assets/images/basilica-de-nossa-senhora-da-penha.jpg" alt="Comida da Padaria Requinte">
+                
+                    <h3>Papel Copy Pen0000 0000 0000 0</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur </p>        
+                
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
+            </article>
+
+
+            <article class="cards">                
+                <img class="cards-img redimensionar" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
+                
+                    <h3>Papel Copy Pen0000 0000 0000 0</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam reiciendis explicabo ipsa mollitia, at esse molestiae vel dolorem quo officiis earum minus unde porro obcaecati quibusdam nobis odit dignissimos dolor, voluptatem consequatur? Tempora, labore!</p>        
+                
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
+            </article>
+
+            <article class="cards">                
+                <img class="cards-img redimensionar" src="assets/images/lapis-de-cor.jpg" alt="Comida da Padaria Requinte">
+                
+                    <h3>Papel Copy Pen0000 0000 0000 0</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ullam reiciendis explicabo ipsa mollitia, at esse molestiae vel dolorem quo officiis earum minus unde porro obcaecati quibusdam nobis odit dignissimos dolor, voluptatem consequatur? Tempora, labore!</p>        
+                
+                <a target="_blank" href="https://www.instagram.com/papelariacopypen/"><img src="assets/images/instagram.svg" alt="logo instagram"></a>
+            </article>
+
+            <article class="cards">                
+                <img class="cards-img redimensionar" src="assets/images/basilica-de-nossa-senhora-da-penha.jpg" alt="Comida da Padaria Requinte">
                 
                     <h3>Papel Copy Pen0000 0000 0000 0</h3>
                     <p>Lorem ipsum dolor sit amet consectetur </p>        
