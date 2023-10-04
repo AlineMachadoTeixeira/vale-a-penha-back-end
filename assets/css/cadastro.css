@@ -28,7 +28,8 @@ main {
 
 .comerciante__imagem {
     /* background-color: rgba(300, 200, 120, 0.6); */
-    background-image: url(../images/comerciantes-vermelho.svg);
+    /* background-image: url(../images/comerciantes-vermelho.svg); */
+    background-image: url(../images/fundo-cadastro.svg);
     background-size: cover;
     background-position: center;
     padding: 10px;
