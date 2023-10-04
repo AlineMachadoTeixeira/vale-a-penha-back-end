@@ -14,7 +14,7 @@ CREATE TABLE comerciantes(
     cpf VARCHAR(14) NOT NULL,
     telefone VARCHAR(14) NOT NULL,
     email VARCHAR(45) NOT NULL,
-    data_de_nascimento DATE(15) NOT NULL,
+    data_de_nascimento DATE(10) NOT NULL,
     status ENUM('ativo', 'inativo') DEFAULT 'inativo' NULL,
     senha VARCHAR(100) NOT NULL   
 ); 
@@ -25,8 +25,8 @@ CREATE TABLE comerciantes(
 CREATE TABLE comercios(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     imagem VARCHAR(100) NOT NULL,
-    nome_comercio VARCHAR(20) NOT NULL,
-    descricao VARCHAR(50) NOT NULL,
+    nome_comercio VARCHAR(30) NOT NULL,
+    descricao VARCHAR(60) NOT NULL,
     link_instagram VARCHAR(100) NOT NULL,
     comerciante_id INT NULL       
 ); 
