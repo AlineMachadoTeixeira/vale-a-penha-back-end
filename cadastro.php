@@ -1,3 +1,56 @@
+<?php
+if(isset($_POST['cadastro'])){
+
+    // require_once "src/funcoes-alunos.php"; (Falta Fazer)
+
+    //Nome
+     $nome = filter_input(
+	 	INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+
+    //Sobrenome
+     $sobrenome = filter_input(
+	 	INPUT_POST, "sobrenome", FILTER_SANITIZE_SPECIAL_CHARS);
+
+    //CPF
+     $cpf = filter_input(
+	 	INPUT_POST, "cpf", FILTER_SANITIZE_SPECIAL_CHARS);  
+
+    //Telefone
+     $telefone = filter_input(
+	 	INPUT_POST, "telefone",  FILTER_SANITIZE_SPECIAL_CHARS);		
+
+    //E-mail
+     $email = filter_input(
+         INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+
+    //Confirmar E-mail
+     $confimaremail = filter_input(
+         INPUT_POST, "confimaremail", FILTER_SANITIZE_EMAIL);
+
+    //Senha
+     $senha = password_hash($senha, PASSWORD_DEFAULT);
+
+
+    //Confirme sua senha
+    $confirmesenha = password_hash($confirmesenha, PASSWORD_DEFAULT);
+
+
+
+    //Data de Nascimento     
+    $data = filter_var($data, FILTER_SANITIZE_SPECIAL_CHARS);
+
+
+    
+
+
+    //voltar para pagina login assim que finaliza o aluno
+	// header("location:login.php");
+
+
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -195,7 +248,7 @@
 
 
                             <div class="botao__enviar">
-                                <button type="submit" id="submit">Finalizar Cadastro </button>
+                                <button type="submit" id="submit" name="cadastro">Finalizar Cadastro </button>
 
                             </div>
 
