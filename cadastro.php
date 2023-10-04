@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['cadastro'])){
 
-    // require_once "src/funcoes-alunos.php"; (Falta Fazer)
+    // require_once "src/funcoes-alunos.php"; (Falta Fazer as funcões)
 
     //Nome
      $nome = filter_input(
@@ -30,24 +30,15 @@ if(isset($_POST['cadastro'])){
     //Senha
      $senha = password_hash($senha, PASSWORD_DEFAULT);
 
-
     //Confirme sua senha
     $confirmesenha = password_hash($confirmesenha, PASSWORD_DEFAULT);
 
-
-
     //Data de Nascimento     
-    $data = filter_var($data, FILTER_SANITIZE_SPECIAL_CHARS);
-
-
-    
+    $data = filter_var($data, FILTER_SANITIZE_SPECIAL_CHARS);    
 
 
     //voltar para pagina login assim que finaliza o aluno
 	// header("location:login.php");
-
-
-
 }
 ?>
 

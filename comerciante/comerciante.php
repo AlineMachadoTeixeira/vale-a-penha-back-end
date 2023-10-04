@@ -1,3 +1,59 @@
+<?php
+// === Minha Conta ===
+if(isset($_POST['alterar'])){  
+
+  // require_once "src/funcoes-alunos.php"; (Falta Fazer as funcões)
+
+  //Nome
+   $nome = filter_input(
+   INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+
+  //Sobrenome
+   $sobrenome = filter_input(
+   INPUT_POST, "sobrenome", FILTER_SANITIZE_SPECIAL_CHARS);
+
+  //CPF
+   $cpf = filter_input(
+   INPUT_POST, "cpf", FILTER_SANITIZE_SPECIAL_CHARS);  
+
+  //Telefone
+   $telefone = filter_input(
+   INPUT_POST, "telefone",  FILTER_SANITIZE_SPECIAL_CHARS);		
+
+  //E-mail
+   $email = filter_input(
+       INPUT_POST, "email", FILTER_SANITIZE_EMAIL);    
+
+  //Data de Nascimento     
+  $data = filter_var($data, FILTER_SANITIZE_SPECIAL_CHARS); 
+
+ 
+}// === FIM Minha Conta ===
+
+
+//=== Cadastrar Comércio e Gerenciar Comércio===
+if(isset($_POST['enviar'])){
+
+  //Foto Comércio
+  $foto = filter_input(
+    INPUT_POST, "foto", FILTER_SANITIZE_SPECIAL_CHARS);
+  
+  //Nome Comércio  
+  $titulo = filter_input(
+      INPUT_POST, "titulo", FILTER_SANITIZE_SPECIAL_CHARS); 
+      
+  //Descrição  
+  $descricao = filter_input(
+  INPUT_POST, "descricao", FILTER_SANITIZE_SPECIAL_CHARS);     
+
+  //Link Instagran 
+  $instagram = filter_input(
+    INPUT_POST, "instagram", FILTER_SANITIZE_URL);    
+}//=== FIM Cadastrar Comércio e Gerenciar Comércio===
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -124,7 +180,7 @@
   
   
             <div class="botao__enviar">
-              <button type="submit" id="submit">Alterar Cadastro</button>
+              <button type="submit" id="submit" name="alterar">Alterar Cadastro</button>
             </div>
   
         </form>
@@ -176,7 +232,7 @@
   
           </div>
           <div class="botao__enviar">
-            <button type="submit" id="submit">Enviar</button>
+            <button type="submit" id="submit" name="enviar">Enviar</button>
   
           </div>
   
@@ -224,7 +280,7 @@
             </label>
           </div>
           <div class="botao__enviar">
-            <button type="submit" id="submit">Enviar</button>
+            <button type="submit" id="submit" name="enviar" >Enviar</button>
             <p id="status"></p>
           </div>
   
@@ -276,7 +332,7 @@
   
           </div>
           <div class="botao__enviar">
-            <button type="submit" id="submit">Enviar</button>
+            <button type="submit" id="submit" name="enviar">Enviar</button>
   
           </div>  
         </form>
