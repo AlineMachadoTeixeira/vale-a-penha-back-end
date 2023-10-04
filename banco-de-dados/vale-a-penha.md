@@ -14,8 +14,8 @@ CREATE TABLE comerciantes(
     cpf VARCHAR(14) NOT NULL,
     telefone VARCHAR(14) NOT NULL,
     email VARCHAR(45) NOT NULL,
-    data_de_nascimento DATE(10) NOT NULL,
-    status ENUM('ativo', 'inativo') DEFAULT 'inativo' NULL,
+    data_de_nascimento DATE NOT NULL,
+    status ENUM('ativo', 'inativo') NULL DEFAULT 'inativo',
     senha VARCHAR(100) NOT NULL   
 ); 
 ```
