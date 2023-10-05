@@ -9,25 +9,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/login.css">
-
-
-
-
 </head>
 
 <body>
     <div class="login__container">
-
         <main>
-
             <section class="login__caixa">
             <img class="login__ama" src="assets/images/logo-amarelo-branco.svg" alt="">
 
-
-
-                <div class="login_for">
-
-                    <!-- <p class="login__img"><a  href="index.php"><img src="assets/images/icone-sao-paulo.svg" alt="Logo Vale a Penha"> </a> </p> -->
+                <div class="login_for">                    
 
                     <p class="login__img"><a href="index.php"><img src="assets/images/icone-login-vermelho.svg" alt="Logo Vale a Penha"> </a> </p>
 
@@ -68,11 +58,6 @@
             </section>
         </main>
     </div>
-
-    
-
-
-
 </body>
 
 </html

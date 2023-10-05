@@ -1,44 +1,62 @@
 <?php
-if(isset($_POST['cadastro'])){
+if (isset($_POST['cadastro'])) {
 
     // require_once "src/funcoes-alunos.php"; (Falta Fazer as funcões)
 
     //Nome
-     $nome = filter_input(
-	 	INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);
+    $nome = filter_input(
+        INPUT_POST,
+        "nome",
+        FILTER_SANITIZE_SPECIAL_CHARS
+    );
 
     //Sobrenome
-     $sobrenome = filter_input(
-	 	INPUT_POST, "sobrenome", FILTER_SANITIZE_SPECIAL_CHARS);
+    $sobrenome = filter_input(
+        INPUT_POST,
+        "sobrenome",
+        FILTER_SANITIZE_SPECIAL_CHARS
+    );
 
     //CPF
-     $cpf = filter_input(
-	 	INPUT_POST, "cpf", FILTER_SANITIZE_SPECIAL_CHARS);  
+    $cpf = filter_input(
+        INPUT_POST,
+        "cpf",
+        FILTER_SANITIZE_SPECIAL_CHARS
+    );
 
     //Telefone
-     $telefone = filter_input(
-	 	INPUT_POST, "telefone",  FILTER_SANITIZE_SPECIAL_CHARS);		
+    $telefone = filter_input(
+        INPUT_POST,
+        "telefone",
+        FILTER_SANITIZE_SPECIAL_CHARS
+    );
 
     //E-mail
-     $email = filter_input(
-         INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
+    $email = filter_input(
+        INPUT_POST,
+        "email",
+        FILTER_SANITIZE_EMAIL
+    );
 
     //Confirmar E-mail
-     $confimaremail = filter_input(
-         INPUT_POST, "confimaremail", FILTER_SANITIZE_EMAIL);
+    $confimaremail = filter_input(
+        INPUT_POST,
+        "confimaremail",
+        FILTER_SANITIZE_EMAIL
+    );
 
     //Senha
-     $senha = password_hash($senha, PASSWORD_DEFAULT);
+    $senha = password_hash($senha, PASSWORD_DEFAULT);
 
     //Confirme sua senha
     $confirmesenha = password_hash($confirmesenha, PASSWORD_DEFAULT);
 
     //Data de Nascimento     
-    $data = filter_var($data, FILTER_SANITIZE_SPECIAL_CHARS);    
+    $data = filter_var($data, FILTER_SANITIZE_SPECIAL_CHARS);
 
 
     //voltar para pagina login assim que finaliza o aluno
-	// header("location:login.php");
+    // header("location:login.php");
 }
 ?>
 
@@ -51,8 +69,6 @@ if(isset($_POST['cadastro'])){
     <title>Cadastro</title>
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/cadastro.css">
@@ -60,45 +76,44 @@ if(isset($_POST['cadastro'])){
 </head>
 
 <body>
-
     <!-- começo menu  -->
     <div class="camada">
-        <div class="menu__camada">
-            <nav>
-                <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
 
-                <ul class="menu__camada__dois">
-                    <li>
-                        <a href="index.php"><img class="logo__principal" src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale a Penha">
-                        </a>
-                    </li>
-                    <li><a href="index.php">Início</a></li>
-                    <li><a href="gastronomia.php">Gastronomia</a></li>
-                    <li><a href="lazer.php">Lazer</a></li>
-                    <li><a href="comercio-local.php">Comércio Local</a></li>
-                    <li><a href="cultura.php">Cultura</a></li>
-                    <li><a href="historia.php">História</a></li>
-                    <li><a href="educacao.php">Educação</a></li>
-                    <li><a href="voce-em-foco.php">Você em Foco</a></li>
-                    <li>
-                        <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
-                        </a>
-                    </li>
-                </ul>
+        <div class="camada__um">
+            <nav>
+                <a href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg" alt="Ícone login">
+                </a>
             </nav>
-            <nav>
-
+            <nav class="pesquisa__espaco">
                 <div class="pesquisa__lupa">
                     <input class="pesquisa__input" type="search" id="pesquisa" name="pesquisa" placeholder="Pesquisa">
+
                     <a class="pesquisa__link" href="">
                         <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
                     </a>
-
-
                 </div>
             </nav>
 
+            <nav>
+                <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
+                </a>
+            </nav>
         </div>
+
+        <nav>
+            <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
+            <ul class="menu__camada__dois">
+                <li><a href="index.php">Início</a></li>
+                <li><a href="gastronomia.php">Gastronomia</a></li>
+                <li><a href="lazer.php">Lazer</a></li>
+                <li><a href="comercio-local.php">Comércio Local</a></li>
+                <li><a href="cultura.php">Cultura</a></li>
+                <li><a href="historia.php">História</a></li>
+                <li><a href="educacao.php">Educação</a></li>
+                <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                <li class="login__ul"><a href="login.php">Login</a></li>
+            </ul>
+        </nav>
     </div>
     <!-- fim menu -->
 
@@ -132,7 +147,7 @@ if(isset($_POST['cadastro'])){
                             <!-- Nome required-->
                             <div class="comerciante__input">
                                 <label for="nome">Nome:</label>
-                                <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome" >
+                                <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome">
 
                                 <!-- Mensagem de erro que vai aparecer no JS -->
                                 <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -143,7 +158,7 @@ if(isset($_POST['cadastro'])){
                             <!-- Sobrenome -->
                             <div class="comerciante__input ">
                                 <label for="sobrenome">Sobrenome:</label>
-                                <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome" >
+                                <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
 
                                 <!-- Mensagem de erro que vai aparecer no JS -->
                                 <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -157,7 +172,7 @@ if(isset($_POST['cadastro'])){
                                 <!-- CPF -->
                                 <div class="comerciante__input">
                                     <label for="cpf">CPF</label>
-                                    <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" maxlength="14" >
+                                    <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" maxlength="14">
 
                                     <!-- Mensagem de erro que vai aparecer no JS -->
                                     <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -168,7 +183,7 @@ if(isset($_POST['cadastro'])){
                                 <!-- Telefone -->
                                 <div class="comerciante__input ">
                                     <label for="telefone">Telefone:</label>
-                                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx"  maxlength="14" >
+                                    <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="14">
 
                                     <!-- Mensagem de erro que vai aparecer no JS -->
                                     <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -182,7 +197,7 @@ if(isset($_POST['cadastro'])){
                             <!-- E-mail -->
                             <div class="comerciante__input">
                                 <label for="email">E-mail:</label>
-                                <input id="email" type="email" autocomplete="username" name="email" placeholder="Digite seu e-mail"  >
+                                <input id="email" type="email" autocomplete="username" name="email" placeholder="Digite seu e-mail">
 
                                 <!-- Mensagem de erro que vai aparecer no JS -->
                                 <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -193,7 +208,7 @@ if(isset($_POST['cadastro'])){
                             <!-- Confirmar E-mail -->
                             <div class="comerciante__input">
                                 <label for="confimaremail">Confirmar E-mail:</label>
-                                <input id="confimaremail" type="email" autocomplete="username" name="confimaremail" placeholder="Digite seu e-mail" >
+                                <input id="confimaremail" type="email" autocomplete="username" name="confimaremail" placeholder="Digite seu e-mail">
 
                                 <!-- Mensagem de erro que vai aparecer no JS -->
                                 <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -206,7 +221,7 @@ if(isset($_POST['cadastro'])){
                                 <!-- Senha -->
                                 <div class="comerciante__input">
                                     <label for="senha">Senha:</label>
-                                    <input id="senha" type="password" name="senha" autocomplete="current-password" placeholder="Digite sua senha" >
+                                    <input id="senha" type="password" name="senha" autocomplete="current-password" placeholder="Digite sua senha">
 
                                     <!-- Mensagem de erro que vai aparecer no JS -->
                                     <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -217,7 +232,7 @@ if(isset($_POST['cadastro'])){
                                 <!-- Confirme senha: -->
                                 <div class="comerciante__input">
                                     <label for="confirmesenha">Confirme sua senha:</label>
-                                    <input type="password" id="confirmesenha" name="confirmesenha" autocomplete="current-password" placeholder="Confirme sua senha" > 
+                                    <input type="password" id="confirmesenha" name="confirmesenha" autocomplete="current-password" placeholder="Confirme sua senha">
 
                                     <!-- Mensagem de erro que vai aparecer no JS -->
                                     <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -229,12 +244,12 @@ if(isset($_POST['cadastro'])){
                             <!-- Data de Nascimento -->
                             <div class="comerciante__input ">
                                 <label for="data">Data de Nascimento:</label>
-                                <input id="data" type="date" name="data"  placeholder="Digite sua Data de Nascimento" >
+                                <input id="data" type="date" name="data" placeholder="Digite sua Data de Nascimento">
 
                                 <!-- Mensagem de erro que vai aparecer no JS -->
                                 <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
-                                    <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
-                                    <small>Erro Mensagem</small>
+                                <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
+                                <small>Erro Mensagem</small>
                             </div>
 
 
@@ -285,9 +300,9 @@ if(isset($_POST['cadastro'])){
         <p>Vale a Penha 2023. Alguns direitos reservados &copy;</p>
     </footer>
 
-    <script src="assets/js/menu-novo.js"></script> 
-    <script src="assets/js/mascara-cpf-tel.js"></script> 
-    <script src="assets/js/validacao.js"></script> 
+    <script src="assets/js/menu-novo.js"></script>
+    <script src="assets/js/mascara-cpf-tel.js"></script>
+    <script src="assets/js/validacao.js"></script>
 
 
 </body>

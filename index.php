@@ -33,31 +33,29 @@
 
     <!-- começo menu  -->
     <div class="camada">
-        
+
         <div class="camada__um">
-            <nav>    
-                <a href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg"
-                        alt="Ícone login">
+            <nav>
+                <a href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg" alt="Ícone login">
                 </a>
             </nav>
-            <nav class="pesquisa__espaco">    
+            <nav class="pesquisa__espaco">
                 <div class="pesquisa__lupa">
                     <input class="pesquisa__input" type="search" id="pesquisa" name="pesquisa" placeholder="Pesquisa">
-    
+
                     <a class="pesquisa__link" href="">
                         <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
-                    </a>    
-                </div>    
+                    </a>
+                </div>
             </nav>
-    
+
             <nav>
-                <a class="icone__menu__login" href="login.php"><img class="icone__menu"
-                        src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
+                <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
                 </a>
             </nav>
         </div>
-    
-        <nav>    
+
+        <nav>
             <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
             <ul class="menu__camada__dois">
                 <li><a href="index.php">Início</a></li>
@@ -69,200 +67,198 @@
                 <li><a href="educacao.php">Educação</a></li>
                 <li><a href="voce-em-foco.php">Você em Foco</a></li>
                 <li class="login__ul"><a href="login.php">Login</a></li>
-    
             </ul>
         </nav>
-    
     </div>
 
-<!-- fim menu -->
+    <!-- fim menu -->
 
-<body>    
-    <header>
-        <div class="header">
-            <img src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale A Penha">
-            <h1>Conhecer o nosso bairro!</h1>
-            <h2>Início</h2>
-        </div>
-    </header>
+    <body>
+        <header>
+            <div class="header">
+                <img src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale A Penha">
+                <h1>Conhecer o nosso bairro!</h1>
+                <h2>Início</h2>
+            </div>
+        </header>
 
-    <main>
-        <div id="conteiner__inicio">
-            <section class="inicio__numeros">
-                <div>
-                    <h3>08</h3>
-                    <p> de setembro é a data de <br> aniversário do bairro</p>
-                </div>
-                <div>
-                    <h3>+ 128</h3>
-                    <p>mil penhenses <br> de acordo com o último senso</p>
-                </div>
-                <div>
-                    <h3>33</h3>
-                    <p>subdistritos <br> que fazem parte do bairro</p>
-                </div>
-                <div>
-                    <h3>1986</h3>
-                    <p>foi o ano da chegada <br> do metro no bairro da Penha</p>
-                </div>
-            </section>
-            <section class="inicio__historia">
-                <div>
-                    <h3>A Penha</h3>
-                    <p>A Penha é um bairro bastante diversificado, com uma forte presença comercial, industrial e religiosa.</p>
-                    <p>Além disso, o bairro conta com uma série de serviços, como escolas, metro, hospitais e postos de saúde, que atendem não só os moradores da Penha, mas também de outros bairros da cidade.</p>
-                </div>
-
-
-                <section class="video">
-                    <div class="video-area">
-                        <iframe class="inicio__historia__video" width="560" height="315" src="https://www.youtube.com/embed/Xc6W4eH-ZTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <main>
+            <div id="conteiner__inicio">
+                <section class="inicio__numeros">
+                    <div>
+                        <h3>08</h3>
+                        <p> de setembro é a data de <br> aniversário do bairro</p>
+                    </div>
+                    <div>
+                        <h3>+ 128</h3>
+                        <p>mil penhenses <br> de acordo com o último senso</p>
+                    </div>
+                    <div>
+                        <h3>33</h3>
+                        <p>subdistritos <br> que fazem parte do bairro</p>
+                    </div>
+                    <div>
+                        <h3>1986</h3>
+                        <p>foi o ano da chegada <br> do metro no bairro da Penha</p>
                     </div>
                 </section>
-            </section>
+                <section class="inicio__historia">
+                    <div>
+                        <h3>A Penha</h3>
+                        <p>A Penha é um bairro bastante diversificado, com uma forte presença comercial, industrial e religiosa.</p>
+                        <p>Além disso, o bairro conta com uma série de serviços, como escolas, metro, hospitais e postos de saúde, que atendem não só os moradores da Penha, mas também de outros bairros da cidade.</p>
+                    </div>
 
 
-            <section class="inicio__menu">
-                <h3> Na região da Penha você encontra <span>tudo que precisa</span>.</h3>
-
-                <div class="inicio__caixa">
-                    <article class="inicio__section">
-                        <a href="gastronomia.html">
-
-                            <figure class="inicio__caixa__figure">
-                                <img class="inicio__img" src="assets/images/inicio-gastronomia.png" alt="imagem de frutas e legumes ">
-                                <figcaption class="inicio__caixa__legenda">Gastronomia</figcaption>
-                            </figure>
-                        </a>
-                    </article>
-
-                    <article class="inicio__section">
-                        <a href="lazer.html">
-
-                            <figure class="inicio__caixa__figure">
-                                <img class="inicio__img" src="assets/images/inicio-lazer.png" alt="menina andando de bicicleta">
-                                <figcaption class="inicio__caixa__legenda">Lazer</figcaption>
-                            </figure>
-                        </a>
-                    </article>
-
-                    <article class="inicio__section">
-                        <a href="comercio-local.html">
-
-                            <figure class="inicio__caixa__figure">
-                                <img class="inicio__img" src="assets/images/inicio-comercio.png" alt=" sacolas de compras">
-                                <figcaption class="inicio__caixa__legenda">Comércio Local</figcaption>
-                            </figure>
-                        </a>
-                    </article>
-
-                    <article class="inicio__section">
-                        <a href="educação.html">
-
-                            <figure class="inicio__caixa__figure">
-                                <img class="inicio__img" src="assets/images/inicio-educacao.png" alt="sala de aula">
-                                <figcaption class="inicio__caixa__legenda">Educação</figcaption>
-                            </figure>
-                        </a>
-                    </article>
-
-                    <article class="inicio__section">
-                        <a href="cultura.html">
-
-                            <figure class="inicio__caixa__figure">
-                                <img class="inicio__img" src="assets/images/inicio-cultura.png" alt="arte de confetes">
-                                <figcaption class="inicio__caixa__legenda">Cultura</figcaption>
-                            </figure>
-                        </a>
-                    </article>
-
-                    <article class="inicio__section">
-                        <a href="historia.html">
-
-                            <figure class="inicio__caixa__figure">
-                                <img class="inicio__img" src="assets/images/inicio-historia.png" alt="igreja matriz de nossa Senhora da Penha foto antiga">
-                                <figcaption class="inicio__caixa__legenda">História</figcaption>
-                            </figure>
-                        </a>
-
-                    </article>
-                </div>
-
-            </section>
+                    <section class="video">
+                        <div class="video-area">
+                            <iframe class="inicio__historia__video" width="560" height="315" src="https://www.youtube.com/embed/Xc6W4eH-ZTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </section>
+                </section>
 
 
-            <article class="inicio__mapa">
+                <section class="inicio__menu">
+                    <h3> Na região da Penha você encontra <span>tudo que precisa</span>.</h3>
 
-                <iframe class="inicio__mapa__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12216.285669617992!2d-46.554524587318525!3d-23.52380233446841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e51b4d72683%3A0x5a7009ad0acffd39!2sPenha%20de%20Fran%C3%A7a%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1683919195226!5m2!1spt-BR!2sbr" width="1000" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="inicio__caixa">
+                        <article class="inicio__section">
+                            <a href="gastronomia.html">
 
-                <div>
-                    <h3>Localização</h3>
-                    <p>O bairro da Penha está em uma localização privilegiada de São Paulo, na região leste da cidade.</p>
-                    <p>O bairro é cortado por importantes vias, como a Avenida Radial Leste, que é uma das principais artérias da cidade, a Avenida Celso Garcia, que liga o bairro ao centro da cidade, além de estar próximo da marginal tietê e ter acesso rápido ao Aeroporto Internacional de Guarulhos.</p>
-                    <p> O bairro é atendido por diversas linhas de ônibus e pela Linha 3-Vermelha do Metrô.</p>
-                </div>
-            </article>
+                                <figure class="inicio__caixa__figure">
+                                    <img class="inicio__img" src="assets/images/inicio-gastronomia.png" alt="imagem de frutas e legumes ">
+                                    <figcaption class="inicio__caixa__legenda">Gastronomia</figcaption>
+                                </figure>
+                            </a>
+                        </article>
 
-            <!-- Falta Fotos -->
-            <section class="devs">
-                <h3>Devs</h3>
+                        <article class="inicio__section">
+                            <a href="lazer.html">
 
-                <div class="devs__conteudo">
-                    <article class="devs_section">
-                        <img src="assets/images/andre.jpg" alt="">
-                        <p>André</p>
-                    </article>
-                    <article class="devs_section">
-                        <img src="assets/images/aline.png" alt="">
-                        <p>Aline</p>
-                    </article>
-                    <article class="devs_section">
-                        <img src="assets/images/jhon.png" alt="">
-                        <p>Jhon</p>
-                    </article>
-                    <article class="devs_section">
-                        <img src="assets/images/eliel.png" alt="">
-                        <p>Eliel</p>
-                    </article>
-                    <article class="devs_section">
-                        <img src="assets/images/leandro.png" alt="">
-                        <p>Leandro</p>
-                    </article>
-                    <article class="devs_section">
-                        <img src="assets/images/logo-marmotazona.png" alt="">
-                        <p>Marmotas!</p>
-                    </article>
-                </div>
-            </section>
-        </div>
-    </main>
-    <footer>
-        <div class="container-footer">
-            <img id="logo-footer" src="assets/images/logo-Vale-a-Penha.svg" alt="logo vale a penha">
-            <section class="footer-nav">
-                <a href="index.php">Início</a>
-                <a href="gastronomia.php">Gastronomia</a>
-                <a href="comercio-local.php">Comércio&nbsp;Local</a>
-                <a href="lazer.php">Lazer</a>
-                <a href="cultura.php">Cultura</a>
-                <a href="educação.php">Educação</a>
-                <a href="historia.php">História</a>
-                <a href="voce-em-foco.php">Você&nbsp;em&nbsp;Foco</a>
-            </section>
-            <section class="footer-emojis">
-                <div class="emojis">
-                    <img src="assets/images/mano-do-ceu.svg" alt="emoji mano do ceu">
-                    <img src="assets/images/demoro.svg" alt="emoji demoro">
-                    <img src="assets/images/pode-cre.svg" alt="emoji pode cre">
-                    <img src="assets/images/ta-osso.svg" alt="emoji ta osso">
-                    <img src="assets/images/e-nois.svg" alt="emoji é nois">
-                    <img src="assets/images/deu-ruim.svg" alt="emoji deu ruim">
-                    <img src="assets/images/deu-bom.svg" alt="emoji deu bom">
-                    <img src="assets/images/igrejinha.svg" alt="emoji igrejinha">
-                </div>
-            </section>
-        </div>
-        <p>Vale a Penha 2023. Alguns direitos reservados &copy;</p>
-    </footer>
-    <script src="assets/js/menu-novo.js"></script>
-</body>
+                                <figure class="inicio__caixa__figure">
+                                    <img class="inicio__img" src="assets/images/inicio-lazer.png" alt="menina andando de bicicleta">
+                                    <figcaption class="inicio__caixa__legenda">Lazer</figcaption>
+                                </figure>
+                            </a>
+                        </article>
+
+                        <article class="inicio__section">
+                            <a href="comercio-local.html">
+
+                                <figure class="inicio__caixa__figure">
+                                    <img class="inicio__img" src="assets/images/inicio-comercio.png" alt=" sacolas de compras">
+                                    <figcaption class="inicio__caixa__legenda">Comércio Local</figcaption>
+                                </figure>
+                            </a>
+                        </article>
+
+                        <article class="inicio__section">
+                            <a href="educação.html">
+
+                                <figure class="inicio__caixa__figure">
+                                    <img class="inicio__img" src="assets/images/inicio-educacao.png" alt="sala de aula">
+                                    <figcaption class="inicio__caixa__legenda">Educação</figcaption>
+                                </figure>
+                            </a>
+                        </article>
+
+                        <article class="inicio__section">
+                            <a href="cultura.html">
+
+                                <figure class="inicio__caixa__figure">
+                                    <img class="inicio__img" src="assets/images/inicio-cultura.png" alt="arte de confetes">
+                                    <figcaption class="inicio__caixa__legenda">Cultura</figcaption>
+                                </figure>
+                            </a>
+                        </article>
+
+                        <article class="inicio__section">
+                            <a href="historia.html">
+
+                                <figure class="inicio__caixa__figure">
+                                    <img class="inicio__img" src="assets/images/inicio-historia.png" alt="igreja matriz de nossa Senhora da Penha foto antiga">
+                                    <figcaption class="inicio__caixa__legenda">História</figcaption>
+                                </figure>
+                            </a>
+
+                        </article>
+                    </div>
+
+                </section>
+
+
+                <article class="inicio__mapa">
+
+                    <iframe class="inicio__mapa__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12216.285669617992!2d-46.554524587318525!3d-23.52380233446841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5e51b4d72683%3A0x5a7009ad0acffd39!2sPenha%20de%20Fran%C3%A7a%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1683919195226!5m2!1spt-BR!2sbr" width="1000" height="" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <div>
+                        <h3>Localização</h3>
+                        <p>O bairro da Penha está em uma localização privilegiada de São Paulo, na região leste da cidade.</p>
+                        <p>O bairro é cortado por importantes vias, como a Avenida Radial Leste, que é uma das principais artérias da cidade, a Avenida Celso Garcia, que liga o bairro ao centro da cidade, além de estar próximo da marginal tietê e ter acesso rápido ao Aeroporto Internacional de Guarulhos.</p>
+                        <p> O bairro é atendido por diversas linhas de ônibus e pela Linha 3-Vermelha do Metrô.</p>
+                    </div>
+                </article>
+
+                <!-- Falta Fotos -->
+                <section class="devs">
+                    <h3>Devs</h3>
+
+                    <div class="devs__conteudo">
+                        <article class="devs_section">
+                            <img src="assets/images/andre.jpg" alt="">
+                            <p>André</p>
+                        </article>
+                        <article class="devs_section">
+                            <img src="assets/images/aline.png" alt="">
+                            <p>Aline</p>
+                        </article>
+                        <article class="devs_section">
+                            <img src="assets/images/jhon.png" alt="">
+                            <p>Jhon</p>
+                        </article>
+                        <article class="devs_section">
+                            <img src="assets/images/eliel.png" alt="">
+                            <p>Eliel</p>
+                        </article>
+                        <article class="devs_section">
+                            <img src="assets/images/leandro.png" alt="">
+                            <p>Leandro</p>
+                        </article>
+                        <article class="devs_section">
+                            <img src="assets/images/logo-marmotazona.png" alt="">
+                            <p>Marmotas!</p>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div class="container-footer">
+                <img id="logo-footer" src="assets/images/logo-Vale-a-Penha.svg" alt="logo vale a penha">
+                <section class="footer-nav">
+                    <a href="index.php">Início</a>
+                    <a href="gastronomia.php">Gastronomia</a>
+                    <a href="comercio-local.php">Comércio&nbsp;Local</a>
+                    <a href="lazer.php">Lazer</a>
+                    <a href="cultura.php">Cultura</a>
+                    <a href="educação.php">Educação</a>
+                    <a href="historia.php">História</a>
+                    <a href="voce-em-foco.php">Você&nbsp;em&nbsp;Foco</a>
+                </section>
+                <section class="footer-emojis">
+                    <div class="emojis">
+                        <img src="assets/images/mano-do-ceu.svg" alt="emoji mano do ceu">
+                        <img src="assets/images/demoro.svg" alt="emoji demoro">
+                        <img src="assets/images/pode-cre.svg" alt="emoji pode cre">
+                        <img src="assets/images/ta-osso.svg" alt="emoji ta osso">
+                        <img src="assets/images/e-nois.svg" alt="emoji é nois">
+                        <img src="assets/images/deu-ruim.svg" alt="emoji deu ruim">
+                        <img src="assets/images/deu-bom.svg" alt="emoji deu bom">
+                        <img src="assets/images/igrejinha.svg" alt="emoji igrejinha">
+                    </div>
+                </section>
+            </div>
+            <p>Vale a Penha 2023. Alguns direitos reservados &copy;</p>
+        </footer>
+        <script src="assets/js/menu-novo.js"></script>
+    </body>
