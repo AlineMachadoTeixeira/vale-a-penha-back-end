@@ -1,8 +1,7 @@
 <?php
+
+// require_once "src/funcoes-alunos.php"; (Falta Fazer as funcões)
 if (isset($_POST['cadastro'])) {
-
-    // require_once "src/funcoes-alunos.php"; (Falta Fazer as funcões)
-
     //Nome
     $nome = filter_input(
         INPUT_POST,
