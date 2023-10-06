@@ -240,11 +240,12 @@ span{
     width: 25vw;
     min-width: 65px;
 }
-.devs_section img {   
+.devs__conteudo img {   
     border-radius: 100%; 
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    width: 40%;
-    margin: auto;       
+    width: 35%;
+    margin: auto;  
+     
 }
 
 .devs_section{
@@ -285,6 +286,11 @@ span{
     .inicio__caixa__legenda {           
         padding: 7px;        
      }
+
+     .devs__conteudo img {         
+        width: 50%;        
+         
+    }
    
 }
 
