@@ -303,7 +303,7 @@ if(isset($_POST['enviar'])){
   
   
           <!-- FOTO comercio-->
-          <div class="comerciante__input  foto__margem">
+          <div class="comerciante__input   foto__margem">
             <label class="comerciante__foto" for="foto" tabIndex="0">
               <input type="file" name="foto" id="foto">
               <span class="comerciante__foto__image">Imagem</span>
@@ -355,6 +355,7 @@ if(isset($_POST['enviar'])){
   
   
   <script src="../assets/js/comerciante.js"></script>
+  <!-- <script src="../assets/js/adicionar-foto-comerciante.js"></script> -->
 
 </body>
 

@@ -10,9 +10,7 @@ const confirmesenha = document.querySelector("#confirmesenha");
 const data = document.querySelector("#data");
 
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault()
-
+form.addEventListener('submit', (e) => {   
     checkInputs()
 })
 
@@ -162,6 +160,7 @@ function validarEmail(email){
     }
     return false;
 }
+
 
 
 

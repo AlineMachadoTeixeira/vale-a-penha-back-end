@@ -1,6 +1,6 @@
 <?php 
 
-$dataNascimento = "07-10-2023#>";
+$dataNascimento = "07-10-2023";
 
 // Aplicar FILTER_SANITIZE_SPECIAL_CHARS na variável
 $dataNascimento = filter_var($dataNascimento, FILTER_SANITIZE_SPECIAL_CHARS);

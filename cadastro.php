@@ -4,10 +4,10 @@
 if (isset($_POST['cadastro'])) {
     //Nome
     $nome = filter_input(
-        INPUT_POST,
-        "nome",
-        FILTER_SANITIZE_SPECIAL_CHARS
-    );
+            INPUT_POST,
+            "nome",
+            FILTER_SANITIZE_SPECIAL_CHARS
+        );
 
     //Sobrenome
     $sobrenome = filter_input(
@@ -44,18 +44,22 @@ if (isset($_POST['cadastro'])) {
         FILTER_SANITIZE_EMAIL
     );
 
+
     //Senha
-    $senha = password_hash($senha, PASSWORD_DEFAULT);
+    $senha = password_hash("senha", PASSWORD_DEFAULT);
 
     //Confirme sua senha
-    $confirmesenha = password_hash($confirmesenha, PASSWORD_DEFAULT);
+    $confirmesenha = password_hash("confirmesenha", PASSWORD_DEFAULT);
 
     //Data de Nascimento     
-    $data = filter_var($data, FILTER_SANITIZE_SPECIAL_CHARS);
+    $data = filter_input(INPUT_POST, "data", FILTER_SANITIZE_SPECIAL_CHARS);
 
+   
 
     //voltar para pagina login assim que finaliza o aluno
-    // header("location:login.php");
+    var_dump($nome, $sobrenome, $cpf, $telefone, $email, $confimaremail, $senha, $confirmesenha, $data);
+   
+    header("location:login.php");
 }
 ?>
 
