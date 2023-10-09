@@ -9,12 +9,19 @@ const senha = document.querySelector("#senha");
 const confirmesenha = document.querySelector("#confirmesenha");
 const data = document.querySelector("#data");
 
+// form.addEventListener('submit', (e) => {   
 
-form.addEventListener('submit', (e) => {   
-    checkInputs()
+//     checkInputs(e)
+// })
+//Tinha um (e) como o de cima, mas eu tirei, poís não estava mudando para tela login como é correto.  
+form.addEventListener('submit', () => {   
+
+    checkInputs(e)
 })
 
-function checkInputs(){
+function checkInputs(e){
+    e.preventDefault();
+
     const nomeValue = nome.value.trim()
     const sobrenomeValue = sobrenome.value.trim()
     const cpfValue = cpf.value.trim()
@@ -45,23 +52,25 @@ function checkInputs(){
         // adicionar a classe de sucesso
         sucesso(sobrenome)
     }
-
-    //CPF
+   
     if (cpfValue === '') {
         // mostrar erro
         // add classe
         erro(cpf, 'Preencha esse campo')
-        //}else if (!validarCPF(cpfValue)) { erro(cpf, 'Email inválido')
+    } else if (!formataNumeroCPF(cpfValue)) {
+        erro(cpf, 'digite apenas numeros')
     } else {
         // adicionar a classe de sucesso
         sucesso(cpf)
     }
+  
 
-    //Telefone
-    if(telefoneValue === '') {
+    if (telefoneValue === '') {
         // mostrar erro
         // add classe
         erro(telefone, 'Preencha esse campo')
+    } else if (!formataNumero(telefoneValue)) {
+        erro(telefone, 'digite apenas numeros')
     } else {
         // adicionar a classe de sucesso
         sucesso(telefone)
@@ -121,13 +130,25 @@ function checkInputs(){
         sucesso(confirmesenha)
     }
 
-    dataValue
+    
     //Data Nascimento
+    // if (dataValue === '') {
+    //     // mostrar erro
+    //     // add classe
+    //     erro(data, 'Preencha esse campo')
+    
+    // } else {
+    //     // adicionar a classe de sucesso
+    //     sucesso(data)
+    // }
+
+
     if (dataValue === '') {
         // mostrar erro
         // add classe
         erro(data, 'Preencha esse campo')
-    
+    } else if (!formatarMaiorIdade(dataValue)) {
+        erro(data, 'Você é menor de idade')
     } else {
         // adicionar a classe de sucesso
         sucesso(data)
@@ -161,6 +182,41 @@ function validarEmail(email){
     return false;
 }
 
+
+
+//Função para aceitar apenas numeros
+function formataNumero(string) {
+    const regexNumerosEParenteses = /^[0-9()-]+$/;
+    return regexNumerosEParenteses.test(string);
+}
+
+function formataNumeroCPF(string) {
+    const regexNumerosPontosETraços = /^[0-9.-]+$/;
+    return regexNumerosPontosETraços.test(string);
+}
+
+//Função para maior de idade 
+function formatarMaiorIdade(dataNascimento) {
+    // Verifique se a data de nascimento foi fornecida e é uma string
+    if (typeof dataNascimento !== 'string') {
+        return false;
+    }
+
+    // Converta a string da data de nascimento em um objeto Date
+    const dataNascimentoObj = new Date(dataNascimento);
+
+    // Verifique se a conversão da data é válida
+    if (isNaN(dataNascimentoObj.getTime())) {
+        return false;
+    }
+
+    // Calcule a data atual menos 18 anos (idade de maioridade)
+    const dataMaioridade = new Date();
+    dataMaioridade.setFullYear(dataMaioridade.getFullYear() - 18);
+
+    // Compare a data de nascimento com a data de maioridade
+    return dataNascimentoObj <= dataMaioridade;
+}
 
 
 
