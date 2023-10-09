@@ -130,19 +130,8 @@ function checkInputs(e){
         sucesso(confirmesenha)
     }
 
-    
-    //Data Nascimento
-    // if (dataValue === '') {
-    //     // mostrar erro
-    //     // add classe
-    //     erro(data, 'Preencha esse campo')
-    
-    // } else {
-    //     // adicionar a classe de sucesso
-    //     sucesso(data)
-    // }
-
-
+   
+    //Data
     if (dataValue === '') {
         // mostrar erro
         // add classe
