@@ -123,7 +123,8 @@ main {
         row-gap: 10vw;
     }
     .cards {
-        width: 60vw;          
+        width: 60vw;   
+        background-color: #c40008;       
     }
 }
 
