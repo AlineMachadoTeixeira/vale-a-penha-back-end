@@ -9,11 +9,7 @@ const senha = document.querySelector("#senha");
 const confirmesenha = document.querySelector("#confirmesenha");
 const data = document.querySelector("#data");
 
-// form.addEventListener('submit', (e) => {   
-
-//     checkInputs(e)
-// })
-//Tinha um (e) como o de cima, mas eu tirei, poís não estava mudando para tela login como é correto.  
+ 
 form.addEventListener('submit', (e) => {
     if (!checkInputs()) {
         e.preventDefault(); // Impede o envio do formulário se as validações falharem
@@ -39,6 +35,7 @@ function checkInputs(){
         // mostrar erro
         // add classe
         erro(nome, 'Preencha esse campo')
+        return false;
     } else {
         // adicionar a classe de sucesso
         sucesso(nome)
@@ -60,32 +57,34 @@ function checkInputs(){
         // mostrar erro
         // add classe
         erro(cpf, 'Preencha esse campo')
-    } else if (!formataNumeroCPF(cpfValue)) {
-        erro(cpf, 'digite apenas numeros')
         return false;
+    
     } else {
         // adicionar a classe de sucesso
         sucesso(cpf)
     }
-  
 
+    //Telefone
     if (telefoneValue === '') {
         // mostrar erro
         // add classe
         erro(telefone, 'Preencha esse campo')
-    } else if (!formataNumero(telefoneValue)) {
-        erro(telefone, 'digite apenas numeros')
         return false;
+    
     } else {
         // adicionar a classe de sucesso
         sucesso(telefone)
     }
+
+   
+
 
     //Email
     if (emailValue === '') {
         // mostrar erro
         // add classe
         erro(email, 'Preencha esse campo')
+        return false;
     } else if (!validarEmail(emailValue)) {
         erro(email, 'Email inválido')
         return false;
@@ -100,6 +99,7 @@ function checkInputs(){
         // mostrar erro
         // add classe
         erro(confimaremail, 'Preencha esse campo')
+        return false;
 
     } else if(emailValue !== confimaremailValue) { 
         erro(confimaremail, 'Senhas não são iguais')
@@ -116,6 +116,7 @@ function checkInputs(){
         // mostrar erro
         // add classe
         erro(senha, 'Preencha esse campo')
+        return false;
 
     } else if(senhaValue.length < 8) { 
         erro(senha, 'Senha deve ter mais que 8 caracteres')
@@ -130,6 +131,7 @@ function checkInputs(){
         // mostrar erro
         // add classe
         erro(confirmesenha, 'Preencha esse campo')
+        return false;
 
     } else if(senhaValue !== confirmesenhaValue) { 
         erro(confirmesenha, 'Senhas não são iguais')
@@ -145,6 +147,7 @@ function checkInputs(){
         // mostrar erro
         // add classe
         erro(data, 'Preencha esse campo')
+        return false;
     } else if (!formatarMaiorIdade(dataValue)) {
         erro(data, 'Você é menor de idade')
         return false;
@@ -153,8 +156,10 @@ function checkInputs(){
         sucesso(data)
     }
 
-    return false;
+    return true;
 }   
+
+  
 
 function erro(input, message) {
     const comercianteinput = input.parentElement;
@@ -185,17 +190,6 @@ function validarEmail(email){
 
 
 
-//Função para aceitar apenas numeros
-function formataNumero(string) {
-    const regexNumerosEParenteses = /^[0-9()-]+$/;
-    return regexNumerosEParenteses.test(string);
-}
-
-function formataNumeroCPF(string) {
-    const regexNumerosPontosETraços = /^[0-9.-]+$/;
-    return regexNumerosPontosETraços.test(string);
-}
-
 //Função para maior de idade 
 function formatarMaiorIdade(dataNascimento) {
     // Verifique se a data de nascimento foi fornecida e é uma string
@@ -222,7 +216,29 @@ function formatarMaiorIdade(dataNascimento) {
 
 
 
+// Adicionar um ouvinte de evento para a entrada de teclado
+telefone.addEventListener("keydown", function (event) {
+    // Obter o código da tecla pressionada
+    const key = event.key;
+    
 
+    // Verificar se a tecla pressionada é um número ou teclas especiais (como Backspace, Delete, setas, etc.)
+    if (!/^\d$/.test(key) && !["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Home", "End"].includes(key)) {
+        event.preventDefault(); // Impedir a entrada de caracteres não numéricos
+    }
+});
+
+// Adicionar um ouvinte de evento para a entrada de teclado
+cpf.addEventListener("keydown", function (event) {
+    // Obter o código da tecla pressionada
+    const key = event.key;
+    
+
+    // Verificar se a tecla pressionada é um número ou teclas especiais (como Backspace, Delete, setas, etc.)
+    if (!/^\d$/.test(key) && !["Backspace", "Delete", "ArrowLeft", "ArrowRight", "Home", "End"].includes(key)) {
+        event.preventDefault(); // Impedir a entrada de caracteres não numéricos
+    }
+});
 
 
 
