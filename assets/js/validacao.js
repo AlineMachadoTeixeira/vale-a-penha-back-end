@@ -14,13 +14,14 @@ const data = document.querySelector("#data");
 //     checkInputs(e)
 // })
 //Tinha um (e) como o de cima, mas eu tirei, poís não estava mudando para tela login como é correto.  
-form.addEventListener('submit', () => {   
+form.addEventListener('submit', (e) => {
+    if (!checkInputs()) {
+        e.preventDefault(); // Impede o envio do formulário se as validações falharem
+    }
+});
 
-    checkInputs(e)
-})
-
-function checkInputs(e){
-    e.preventDefault();
+function checkInputs(){
+    //e.preventDefault();
 
     const nomeValue = nome.value.trim()
     const sobrenomeValue = sobrenome.value.trim()
@@ -48,10 +49,12 @@ function checkInputs(e){
         // mostrar erro
         // add classe
         erro(sobrenome, 'Preencha esse campo')
+        return false;
     } else {
         // adicionar a classe de sucesso
         sucesso(sobrenome)
     }
+
    
     if (cpfValue === '') {
         // mostrar erro
@@ -59,6 +62,7 @@ function checkInputs(e){
         erro(cpf, 'Preencha esse campo')
     } else if (!formataNumeroCPF(cpfValue)) {
         erro(cpf, 'digite apenas numeros')
+        return false;
     } else {
         // adicionar a classe de sucesso
         sucesso(cpf)
@@ -71,6 +75,7 @@ function checkInputs(e){
         erro(telefone, 'Preencha esse campo')
     } else if (!formataNumero(telefoneValue)) {
         erro(telefone, 'digite apenas numeros')
+        return false;
     } else {
         // adicionar a classe de sucesso
         sucesso(telefone)
@@ -83,6 +88,7 @@ function checkInputs(e){
         erro(email, 'Preencha esse campo')
     } else if (!validarEmail(emailValue)) {
         erro(email, 'Email inválido')
+        return false;
     } else {
         // adicionar a classe de sucesso
         sucesso(email)
@@ -97,6 +103,7 @@ function checkInputs(e){
 
     } else if(emailValue !== confimaremailValue) { 
         erro(confimaremail, 'Senhas não são iguais')
+        return false;
     } else {
         // adicionar a classe de sucesso
         sucesso(confimaremail)
@@ -112,6 +119,7 @@ function checkInputs(e){
 
     } else if(senhaValue.length < 8) { 
         erro(senha, 'Senha deve ter mais que 8 caracteres')
+        return false;
     } else {
         // adicionar a classe de sucesso
         sucesso(senha)
@@ -125,6 +133,7 @@ function checkInputs(e){
 
     } else if(senhaValue !== confirmesenhaValue) { 
         erro(confirmesenha, 'Senhas não são iguais')
+        return false;
     } else {
         // adicionar a classe de sucesso
         sucesso(confirmesenha)
@@ -138,10 +147,13 @@ function checkInputs(e){
         erro(data, 'Preencha esse campo')
     } else if (!formatarMaiorIdade(dataValue)) {
         erro(data, 'Você é menor de idade')
+        return false;
     } else {
         // adicionar a classe de sucesso
         sucesso(data)
     }
+
+    return false;
 }   
 
 function erro(input, message) {
