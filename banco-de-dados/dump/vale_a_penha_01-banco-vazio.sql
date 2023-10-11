@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04/10/2023 às 14:09
+-- Tempo de geração: 11/10/2023 às 13:53
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -31,8 +31,8 @@ USE `vale_a_penha`;
 
 CREATE TABLE `administradores` (
   `id` int(11) NOT NULL,
-  `email` varchar(45) NOT NULL,
-  `senha` varchar(100) NOT NULL
+  `email` varchar(100) NOT NULL,
+  `senha` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -43,14 +43,14 @@ CREATE TABLE `administradores` (
 
 CREATE TABLE `comerciantes` (
   `id` int(11) NOT NULL,
-  `nome` varchar(20) NOT NULL,
+  `nome` varchar(100) NOT NULL,
   `sobrenome` varchar(150) NOT NULL,
   `cpf` varchar(14) NOT NULL,
   `telefone` varchar(14) NOT NULL,
-  `email` varchar(45) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `data_de_nascimento` date NOT NULL,
   `status` enum('ativo','inativo') DEFAULT 'inativo',
-  `senha` varchar(100) NOT NULL
+  `senha` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -61,10 +61,10 @@ CREATE TABLE `comerciantes` (
 
 CREATE TABLE `comercios` (
   `id` int(11) NOT NULL,
-  `imagem` varchar(100) NOT NULL,
+  `imagem` varchar(250) NOT NULL,
   `nome_comercio` varchar(30) NOT NULL,
   `descricao` varchar(60) NOT NULL,
-  `link_instagram` varchar(100) NOT NULL,
+  `link_instagram` varchar(200) NOT NULL,
   `comerciante_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -121,7 +121,7 @@ ALTER TABLE `comercios`
 -- Restrições para tabelas `comercios`
 --
 ALTER TABLE `comercios`
-  ADD CONSTRAINT `fk_comercios_comerciantes` FOREIGN KEY (`comerciante_id`) REFERENCES `comerciantes` (`id`);
+  ADD CONSTRAINT `fk_comercios_comerciantes` FOREIGN KEY (`comerciante_id`) REFERENCES `comerciantes` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

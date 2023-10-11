@@ -196,8 +196,8 @@ if (isset($_POST['enviar'])) {
 
             <!-- Data de Nascimento -->
             <div class="comerciante__input">
-              <label for="data">Data de Nascimento:</label>
-              <input id="data" type="date" name="data" placeholder="Digite sua Data de Nascimento" required>
+              <label for="data_de_nascimento">Data de Nascimento:</label>
+              <input id="data_de_nascimento" type="date" name="data_de_nascimento" placeholder="Digite sua Data de Nascimento" required>
             </div>
 
 
