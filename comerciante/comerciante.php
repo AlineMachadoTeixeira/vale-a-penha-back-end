@@ -1,5 +1,82 @@
 <?php
 
+//Acho que é parecido com o inserir alunos
+
+require_once "../src/funcoes-comerciantes.php";
+require_once "../src/funcoes-utilitarias.php";
+
+$listaDeComerciantes = lerComerciantes($conexao);
+
+//  $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+//  $comerciante = lerUmComerciante($conexao, $id);
+
+
+
+
+
+if (isset($_POST['alterar'])) {
+   
+
+   //Nome
+   $nome = filter_input(
+       INPUT_POST,
+       "nome",
+       FILTER_SANITIZE_SPECIAL_CHARS
+   );
+
+   //Sobrenome
+   $sobrenome = filter_input(
+       INPUT_POST,
+       "sobrenome",
+       FILTER_SANITIZE_SPECIAL_CHARS
+   );
+
+   //CPF
+   $cpf = filter_input(
+       INPUT_POST,
+       "cpf",
+       FILTER_SANITIZE_SPECIAL_CHARS
+   );
+
+   //Telefone
+   $telefone = filter_input(
+       INPUT_POST,
+       "telefone",
+       FILTER_SANITIZE_SPECIAL_CHARS
+   );
+
+   //E-mail
+   $email = filter_input(
+       INPUT_POST,
+       "email",
+       FILTER_SANITIZE_EMAIL
+   );        
+
+   //Data de Nascimento     
+   $data_de_nascimento = filter_input(
+       INPUT_POST,
+       "data_de_nascimento",
+       FILTER_SANITIZE_SPECIAL_CHARS
+   );
+
+   //Senha
+   $senha = password_hash("senha", PASSWORD_DEFAULT);  
+   
+   //Inserir o cadastro no banco INSERT 
+    atualizarComerciante(
+       $conexao,
+       $id,
+       $nome,
+       $sobrenome,
+       $cpf,
+       $telefone,
+       $email,
+       formatarDataParaBanco($data_de_nascimento)
+  
+    );     
+   //voltar para pagina login assim que finaliza o cadastro
+   //header("location:login.php");
+}
 ?>
 
 
@@ -89,11 +166,11 @@
             <div class="comerciante__input">
               <label for="nome">Nome:</label>
               <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome" required>
-            </div>
+            </div> <!-- Precisa fazer value="<=$aluno['segunda']?>" logo depois do  name="nome" antes placeholder=  -->
             <!-- Sobrenome -->
             <div class="comerciante__input">
               <label for="sobrenome">Sobrenome:</label>
-              <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome" required>
+              <input id="sobrenome" type="text" name="sobrenome"   placeholder="Digite seu sobrenome" required>
             </div>
           </div>
 
