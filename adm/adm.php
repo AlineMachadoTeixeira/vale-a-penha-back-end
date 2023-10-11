@@ -1,3 +1,10 @@
+<?php
+require_once "../src/funcoes-comerciantes.php";
+//require_once "src/funcoes-utilitarias.php";
+
+$listaDeComerciantes = lerComerciantes($conexao);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -76,57 +83,28 @@
             <th> Status</th>
           </tr>
 
+          <?php 
+            foreach ($listaDeComerciantes  as $dadosComerciantes ){       
+           ?>
+
           <tr>
-            <td>01</td>
-            <td>Fulano</td>
-            <td>38394912826</td>
-            <td>(11) 99999-9999</td>
-            <td>fulano@gmail.com</td>
-            <td>99/99/9999</td>
-            <td>https://www.instagram.com/papelariacopypen/</td>
+            <td><?=$dadosComerciantes["id"]?></td>
+            <td><?=$dadosComerciantes["nome"]?></td>
+            <td><?=$dadosComerciantes["cpf"]?></td>
+            <td><?=$dadosComerciantes["telefone"]?></td>
+            <td><?=$dadosComerciantes["email"]?></td>
+            <td><?=$dadosComerciantes["data_de_nascimento"]?></td> <!-- Nacimento -->
+            <td>https://www.instagram.com/papelariacopypen/</td>            
             <td>Papel Copy</td>
             <td>Visualizar</td>
             <td>Ativo ou Inativo</td>
           </tr>
 
-          <tr>
-            <td>01</td>
-            <td>Fulano</td>
-            <td>38394912826</td>
-            <td>(11) 99999-9999</td>
-            <td>fulano@gmail.com</td>
-            <td>99/99/9999</td>
-            <td>https://www.instagram.com/papelariacopypen/</td>
-            <td>Papel Copy</td>
-            <td>Visualizar</td>
-            <td>Ativo ou Inativo</td>
-          </tr>  
+          <?php       
+            }
+          ?> 
 
-          <tr>
-            <td>01</td>
-            <td>Fulano</td>
-            <td>38394912826</td>
-            <td>(11) 99999-9999</td>
-            <td>fulano@gmail.com</td>
-            <td>99/99/9999</td>
-            <td>https://www.instagram.com/papelariacopypen/</td>
-            <td>Papel Copy</td>
-            <td>Visualizar</td>
-            <td>Ativo ou Inativo</td>
-          </tr>
-
-          <tr>
-            <td>01</td>
-            <td>Fulano</td>
-            <td>38394912826</td>
-            <td>(11) 99999-9999</td>
-            <td>fulano@gmail.com</td>
-            <td>99/99/9999</td>
-            <td>https://www.instagram.com/papelariacopypen/</td>
-            <td>Papel Copy</td>
-            <td>Visualizar</td>
-            <td>Ativo ou Inativo</td>
-          </tr>
+          
         </table>
 
     </section>
