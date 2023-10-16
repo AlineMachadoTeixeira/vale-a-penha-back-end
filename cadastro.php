@@ -5,8 +5,7 @@
  require_once "src/funcoes-utilitarias.php";
 
 
-if (isset($_POST['cadastro'])) {
-    
+if (isset($_POST['cadastro'])) {    
 
     //Nome
     $nome = filter_input(

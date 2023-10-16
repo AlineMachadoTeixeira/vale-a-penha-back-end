@@ -63,17 +63,17 @@ if (isset($_POST['alterar'])) {
    $senha = password_hash("senha", PASSWORD_DEFAULT);  
    
    //Inserir o cadastro no banco INSERT 
-    atualizarComerciante(
-       $conexao,
-       $id,
-       $nome,
-       $sobrenome,
-       $cpf,
-       $telefone,
-       $email,
-       formatarDataParaBanco($data_de_nascimento)
+    // atualizarComerciante(
+    //    $conexao,
+    //    $id,
+    //    $nome,
+    //    $sobrenome,
+    //    $cpf,
+    //    $telefone,
+    //    $email,
+    //    formatarDataParaBanco($data_de_nascimento)
   
-    );     
+    // );     
    //voltar para pagina login assim que finaliza o cadastro
    //header("location:login.php");
 }
