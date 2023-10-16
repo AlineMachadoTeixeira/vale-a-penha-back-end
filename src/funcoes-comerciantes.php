@@ -74,8 +74,8 @@ require_once "conecta.php";
  } //Fim Cadastar/Inserir Comerciantes 
 
 
- // Ler apenas um comerciante da página minha conta ///// Esse deu erro
- function lerUmComerciante(PDO $conexao, int $id,):array{
+ // Ler apenas um comerciante da página minha conta ///// Esse deu erro  Eu acho que precisa refazer na parte comercinate minha conta
+ function lerUmComerciante(PDO $conexao, int $id):array{
     $sql = "SELECT * FROM comerciantes WHERE id = :id";
     try {
         $consulta = $conexao->prepare($sql);
