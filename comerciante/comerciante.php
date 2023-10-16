@@ -7,8 +7,8 @@ require_once "../src/funcoes-utilitarias.php";
 
 $listaDeComerciantes = lerComerciantes($conexao);
 
- // $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-  //$comerciante = lerUmComerciante($conexao, $id);
+ //$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+ //$comerciante = lerUmComerciante($conexao, $id);
 
 
 
