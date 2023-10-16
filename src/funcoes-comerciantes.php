@@ -62,7 +62,9 @@ require_once "conecta.php";
         $consulta->bindValue(":email", $email, PDO::PARAM_STR);
         $consulta->bindValue(":data_de_nascimento", $data_de_nascimento, PDO::PARAM_STR);
         $consulta->bindValue(":senha", $senha, PDO::PARAM_STR);
+
         $consulta->execute();
+        
     }catch (Exception $erro){
         die ("Erro ao cadastrar/inserir comerciante:" . $erro->getMessage());
     }
