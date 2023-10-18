@@ -15,7 +15,8 @@ CREATE TABLE comerciantes(
     telefone VARCHAR(14) NOT NULL,
     email VARCHAR(100) NOT NULL,
     data_de_nascimento DATE NOT NULL,    
-    senha VARCHAR(250) NOT NULL   
+    senha VARCHAR(250) NOT NULL  
+    tipo ENUM('admin', 'comerciante') NULL DEFAULT 'comerciante', 
 ); 
 ```
 
@@ -36,6 +37,7 @@ CREATE TABLE comercios(
 ```sql
 CREATE TABLE administradores(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
     senha VARCHAR(250) NOT NULL           
 ); 
