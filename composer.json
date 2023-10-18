@@ -1,0 +1,10 @@
+{
+    "name" : "aline/vale-a-penha-back-end",
+    "description" : "Exemplo de projeto integrador Vale a Penha ",
+    "autoload" : {
+        "psr-4" : {
+            "ValeaPenha\\" : "src/"           
+
+        }
+    }
+}
