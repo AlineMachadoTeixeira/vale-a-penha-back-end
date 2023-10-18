@@ -16,7 +16,7 @@ CREATE TABLE comerciantes(
     email VARCHAR(100) NOT NULL,
     data_de_nascimento DATE NOT NULL,    
     senha VARCHAR(250) NOT NULL  
-    tipo ENUM('admin', ) NULL DEFAULT 'comerciante', 
+     
 ); 
 ```
 
@@ -29,6 +29,7 @@ CREATE TABLE comercios(
     descricao VARCHAR(60) NOT NULL,
     link_instagram VARCHAR(200) NOT NULL,
     status ENUM('ativo', 'inativo') NULL DEFAULT 'inativo',
+    tipo ENUM('comerciante') NULL DEFAULT 'comerciante',   
     comerciante_id INT NULL       
 ); 
 ```
@@ -39,6 +40,7 @@ CREATE TABLE administradores(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
+    tipo ENUM('admin') NULL DEFAULT 'admin',
     senha VARCHAR(250) NOT NULL           
 ); 
 ```

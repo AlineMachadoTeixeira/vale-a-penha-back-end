@@ -137,6 +137,14 @@ main {
     position: relative;
 }
 
+.data__nascimento{
+    background-color: aqua;
+}
+
+.data__nascimento input::placeholder{
+    background-color: aqua;
+}
+
 .comerciante__input textarea {
     margin-top: 0px;
     margin-bottom: 20px;

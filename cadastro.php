@@ -1,77 +1,4 @@
-<?php
- //Acho que é parecido com o inserir alunos
 
- require_once "src/funcoes-comerciantes.php";
- require_once "src/funcoes-utilitarias.php";
-
-
-if (isset($_POST['cadastro'])) {    
-
-    //Nome
-    $nome = filter_input(
-        INPUT_POST,
-        "nome",
-        FILTER_SANITIZE_SPECIAL_CHARS
-    );
-
-    //Sobrenome
-    $sobrenome = filter_input(
-        INPUT_POST,
-        "sobrenome",
-        FILTER_SANITIZE_SPECIAL_CHARS
-    );
-
-    //CPF
-    $cpf = filter_input(
-        INPUT_POST,
-        "cpf",
-        FILTER_SANITIZE_SPECIAL_CHARS
-    );
-
-    //Telefone
-    $telefone = filter_input(
-        INPUT_POST,
-        "telefone",
-        FILTER_SANITIZE_SPECIAL_CHARS
-    );
-
-    //E-mail
-    $email = filter_input(
-        INPUT_POST,
-        "email",
-        FILTER_SANITIZE_EMAIL
-    );        
-
-    //Data de Nascimento     
-    $data_de_nascimento = filter_input(
-        INPUT_POST,
-        "data_de_nascimento",
-        FILTER_SANITIZE_SPECIAL_CHARS
-    );
-
-    //Senha
-    $senha = password_hash("senha", PASSWORD_DEFAULT);  
-    
-    //Inserir o cadastro no banco INSERT 
-    cadastarComerciante(
-        $conexao,
-        $nome,
-        $sobrenome,
-        $cpf,
-        $telefone,
-        $email,
-        formatarDataParaBanco($data_de_nascimento),
-        $senha
-    );
-    
-   
-
-    
-    // var_dump($nome, $sobrenome, $cpf, $telefone, $email, $confimaremail, $senha, $confirmesenha, $data);
-    //voltar para pagina login assim que finaliza o cadastro
-    header("location:login.php");
-}
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -255,9 +182,9 @@ if (isset($_POST['cadastro'])) {
                             </div>
 
                             <!-- Data de Nascimento -->
-                            <div class="comerciante__input ">
+                            <div class="comerciante__input data__nascimento">
                                 <label for="data_de_nascimento">Data de Nascimento:</label>
-                                <input id="data_de_nascimento" type="date" name="data_de_nascimento" placeholder="Digite sua Data de Nascimento">
+                                <input id="data_de_nascimento" type="date" name="data_de_nascimento" placeholder="">
 
                                 <!-- Mensagem de erro que vai aparecer no JS -->
                                 <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>

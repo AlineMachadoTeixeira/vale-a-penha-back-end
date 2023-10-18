@@ -1,83 +1,4 @@
-<?php
 
-//Acho que é parecido com o inserir alunos
-
-require_once "../src/funcoes-comerciantes.php";
-require_once "../src/funcoes-utilitarias.php";
-
-$listaDeComerciantes = lerComerciantes($conexao);
-
- //$id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
- //$comerciante = lerUmComerciante($conexao, $id);
-
-
-
-
-
-if (isset($_POST['alterar'])) {
-   
-
-   //Nome
-   $nome = filter_input(
-       INPUT_POST,
-       "nome",
-       FILTER_SANITIZE_SPECIAL_CHARS
-   );
-
-   //Sobrenome
-   $sobrenome = filter_input(
-       INPUT_POST,
-       "sobrenome",
-       FILTER_SANITIZE_SPECIAL_CHARS
-   );
-
-   //CPF
-   $cpf = filter_input(
-       INPUT_POST,
-       "cpf",
-       FILTER_SANITIZE_SPECIAL_CHARS
-   );
-
-   //Telefone
-   $telefone = filter_input(
-       INPUT_POST,
-       "telefone",
-       FILTER_SANITIZE_SPECIAL_CHARS
-   );
-
-   //E-mail
-   $email = filter_input(
-       INPUT_POST,
-       "email",
-       FILTER_SANITIZE_EMAIL
-   );        
-
-   //Data de Nascimento     
-   $data_de_nascimento = filter_input(
-       INPUT_POST,
-       "data_de_nascimento",
-       FILTER_SANITIZE_SPECIAL_CHARS
-   );
-
-   //Senha
-   $senha = password_hash("senha", PASSWORD_DEFAULT);  
-   
-   //Inserir o cadastro no banco INSERT 
-    // atualizarComerciante(
-    //    $conexao,
-    //    $id,
-    //    $nome,
-    //    $sobrenome,
-    //    $cpf,
-    //    $telefone,
-    //    $email,
-    //    formatarDataParaBanco($data_de_nascimento)
-  
-    // );     
-   //voltar para pagina login assim que finaliza o cadastro
-   //header("location:login.php");
-}
-?>
 
 
 <!DOCTYPE html>
@@ -267,8 +188,8 @@ if (isset($_POST['alterar'])) {
 
           <li>É permitido um anúncio por usuário/CPF. </li>
           <li>Limite de 1 foto.</li>
-          <li>Tamanho: 500 x 500 maximo e com boa resolução </li>
-          <li>Caso sua imagem seja maior link para redimencionar: <a href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>          
+          <li>Tamanho: 500 x 500(máximo) e com boa resolução. </li>
+          <li>Caso sua imagem seja maior, use o link para redimencionar: <a href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>          
           <li>Título de até 15 caracteres</li>
           <li>Descrição com até 30 caracteres.</li>
         </ul>

@@ -1,9 +1,4 @@
-<?php
-require_once "../src/funcoes-comerciantes.php";
-//require_once "src/funcoes-utilitarias.php";
 
-$listaDeComerciantes = lerComerciantes($conexao);
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -83,26 +78,21 @@ $listaDeComerciantes = lerComerciantes($conexao);
             <th> Status</th>
           </tr>
 
-          <?php 
-            foreach ($listaDeComerciantes  as $dadosComerciantes ){       
-           ?>
+          
 
           <tr>
-            <td><?=$dadosComerciantes["id"]?></td>
-            <td><?=$dadosComerciantes["nome"]?></td>
-            <td><?=$dadosComerciantes["cpf"]?></td>
-            <td><?=$dadosComerciantes["telefone"]?></td>
-            <td><?=$dadosComerciantes["email"]?></td>
-            <td><?=$dadosComerciantes["data_de_nascimento"]?></td> <!-- Nacimento -->
+            <td>1</td>
+            <td>Fulano</td>
+            <td>12312312359</td>
+            <td>11977388397</td>
+            <td>a@gmail</td>
+            <td>20/20/2020</td> 
             <td>https://www.instagram.com/papelariacopypen/</td>            
             <td>Papel Copy</td>
             <td>Visualizar</td>
             <td>Ativo ou Inativo</td>
           </tr>
 
-          <?php       
-            }
-          ?> 
 
           
         </table>
