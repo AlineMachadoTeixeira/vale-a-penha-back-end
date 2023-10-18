@@ -182,13 +182,13 @@
                             </div>
 
                             <!-- Data de Nascimento -->
-                            <div class="comerciante__input data__nascimento">
+                            <div class="comerciante__input ">
                                 <label for="data_de_nascimento">Data de Nascimento:</label>
                                 <input id="data_de_nascimento" type="date" name="data_de_nascimento" placeholder="">
 
                                 <!-- Mensagem de erro que vai aparecer no JS -->
                                 <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
-                                <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i>
+                                <!-- <i class="img__erro"><img src="assets/images/icone-erro.svg" alt="icone erro"></i> -->
                                 <small>Erro Mensagem</small>
                             </div>
 
