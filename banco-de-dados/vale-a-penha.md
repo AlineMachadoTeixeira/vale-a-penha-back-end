@@ -16,7 +16,7 @@ CREATE TABLE comerciantes(
     email VARCHAR(100) NOT NULL,
     data_de_nascimento DATE NOT NULL,    
     senha VARCHAR(250) NOT NULL  
-    tipo ENUM('admin', 'comerciante') NULL DEFAULT 'comerciante', 
+    tipo ENUM('admin', ) NULL DEFAULT 'comerciante', 
 ); 
 ```
 
