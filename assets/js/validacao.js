@@ -7,17 +7,17 @@ const email = document.querySelector("#email");
 const confimaremail = document.querySelector("#confimaremail");
 const senha = document.querySelector("#senha");
 const confirmesenha = document.querySelector("#confirmesenha");
-const data = document.querySelector("#data");
+const data = document.querySelector("#data_de_nascimento");
 
  
 form.addEventListener('submit', (e) => {
-    if (!checkInputs()) {
+    if (!checkInputs(e)) {
         e.preventDefault(); // Impede o envio do formulário se as validações falharem
     }
 });
 
-function checkInputs(){
-    //e.preventDefault();
+function checkInputs(e){
+    e.preventDefault();
 
     const nomeValue = nome.value.trim()
     const sobrenomeValue = sobrenome.value.trim()
