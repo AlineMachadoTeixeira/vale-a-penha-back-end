@@ -2,7 +2,7 @@
 namespace ValeaPenha;
 use PDO, Exception;
 
-class Cadastro{ 
+class Usuario{ 
     private int $id;
     private string $nome;
     private string $sobrenome;

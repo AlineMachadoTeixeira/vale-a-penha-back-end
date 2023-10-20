@@ -7,7 +7,7 @@ CREATE DATABASE vale_a_penha CHARACTER SET utf8mb4;
 
 <!-- Criar tabela COMERCIANTES  -->
 ```sql
-CREATE TABLE cadastros(
+CREATE TABLE usuarios(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     sobrenome VARCHAR(150) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE comerciantes (
     descricao VARCHAR(60) NOT NULL,
     link_instagram VARCHAR(200) NOT NULL,
     status ENUM('ativo', 'inativo') NULL DEFAULT 'inativo',
-    cadastro_id INT NULL       
+    usuario_id INT NULL       
 ); 
 ```
 
@@ -47,8 +47,8 @@ CREATE TABLE administradores(
 ```sql
 ALTER TABLE comerciantes
 
-    ADD CONSTRAINT fk_comerciantes_cadastros
-    FOREIGN KEY (cadastro_id) REFERENCES cadastros(id) ON DELETE CASCADE;  
+    ADD CONSTRAINT fk_comerciantes_usuarios
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id) ON DELETE CASCADE;  
     
 ```
 
