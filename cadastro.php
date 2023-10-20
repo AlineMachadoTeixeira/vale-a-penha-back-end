@@ -1,4 +1,8 @@
+<?php
+require_once "vendor/autoload.php";
+use ValeaPenha\Usuario;
 
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
