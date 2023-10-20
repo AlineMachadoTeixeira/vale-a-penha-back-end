@@ -118,7 +118,7 @@ function checkInputs(e){
         erro(senha, 'Preencha esse campo')
         return false;
 
-    } else if(senhaValue.length < 8) { 
+    } else if(senhaValue.length < 3) { 
         erro(senha, 'Senha deve ter mais que 8 caracteres')
         return false;
     } else {
