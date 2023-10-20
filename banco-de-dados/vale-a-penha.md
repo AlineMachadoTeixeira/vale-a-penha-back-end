@@ -14,7 +14,7 @@ CREATE TABLE cadastros(
     cpf VARCHAR(14) NOT NULL,
     telefone VARCHAR(14) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    data_de_nascimento DATE NOT NULL,
+    data DATE NOT NULL,
     tipo ENUM('admin','comerciante') NULL DEFAULT 'comerciante',
     senha VARCHAR(250) NOT NULL      
 ); 
