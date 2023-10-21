@@ -44,6 +44,17 @@ class Usuario{
 
     } // INSERT-Inserir Usuarios no formulario Cadastre-se
 
+    /* Função para data de nacimento */
+    public function formatarDataParaBanco (string $data) :string {    
+        return date('Y-m-d', strtotime($data));
+}
+
+    /* Função para Codificar a senha */
+    public function codificaSenha(string $senha):string {
+        return password_hash($senha, PASSWORD_DEFAULT);
+       }
+
+
     
 
 

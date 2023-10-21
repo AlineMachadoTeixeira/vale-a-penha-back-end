@@ -2,6 +2,21 @@
 require_once "vendor/autoload.php";
 use ValeaPenha\Usuario;
 
+if(isset($_POST['inserir'])){
+	$usuario = new Usuario;
+    $usuario->setNome($_POST['nome']);
+    $usuario->setSobrenome($_POST['sobrenome']);
+    $usuario->setCpf($_POST['cpf']);
+    $usuario->setTelefone($_POST['telefone']);
+    $usuario->setEmail($_POST['email']);
+    $usuario->setData($usuario->formatarDataParaBanco($_POST["data"]));    
+    $usuario->setTipo($_POST['tipo']);
+    $usuario->setSenha($usuario->codificaSenha($_POST["senha"]));	   
+
+	$usuario->inserirUsuario();
+	//header("location:categorias.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -187,8 +202,8 @@ use ValeaPenha\Usuario;
 
                             <!-- Data de Nascimento -->
                             <div class="comerciante__input ">
-                                <label for="data_de_nascimento">Data de Nascimento:</label>
-                                <input id="data_de_nascimento" type="date" name="data_de_nascimento" placeholder="">
+                                <label for="data">Data de Nascimento:</label>
+                                <input id="data" type="date" name="data" placeholder="">
 
                                 <!-- Mensagem de erro que vai aparecer no JS -->
                                 <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -198,7 +213,7 @@ use ValeaPenha\Usuario;
 
 
                             <div class="botao__enviar">
-                                <button type="submit" id="submit" name="cadastro">Finalizar Cadastro </button>
+                                <button type="submit" id="submit" name="inserir">Finalizar Cadastro </button>
 
                             </div>
 
@@ -246,7 +261,7 @@ use ValeaPenha\Usuario;
 
     <script src="assets/js/menu-novo.js"></script>
     <script src="assets/js/mascara-cpf-tel.js"></script>
-    <script src="assets/js/validacao.js"></script>
+    <!-- <script src="assets/js/validacao.js"></script> -->
 
 
 </body>

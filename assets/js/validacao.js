@@ -7,7 +7,7 @@ const email = document.querySelector("#email");
 const confimaremail = document.querySelector("#confimaremail");
 const senha = document.querySelector("#senha");
 const confirmesenha = document.querySelector("#confirmesenha");
-const data = document.querySelector("#data_de_nascimento");
+const data = document.querySelector("#data");
 
  
 form.addEventListener('submit', (e) => {
