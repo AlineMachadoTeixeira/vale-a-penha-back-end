@@ -23,6 +23,7 @@ td {
   border: 1px solid #ffffff;
   text-align: left; 
   padding: 10px;
+  font-size: 20px;
 }
 
 th {
@@ -33,6 +34,9 @@ th {
   font-size: 15px;
   border: 1px solid #ffffff;
   text-align: center;
+  font-size: 20px;
+
+
 }
 
 tr:nth-child(even) {
@@ -43,7 +47,45 @@ tr:nth-child(odd) {
   background-color: #fff6c3b7;  
 }
 
+/* Icones do  Tabela Atualizar excluir */
+.adm__botao{
+  font-size: 32px;
+  font-weight: bold;
+  padding-right: 8px;
+  color: #000000c0;   
+  margin:  10px;
+  text-align: center;   
+}
+.adm__botao:hover{
+  color: #c40008;
+}
 
 
+
+
+
+
+
+
+
+
+/* .Aprovado{
+  
+  color: green;
+  font-weight: 600;
+}
+
+.Reprovado{
+  
+  color: #e60000;
+  font-weight: 600;
+}
+
+.Recuperação{
+  
+  color: orange;
+  font-weight: 600;
+
+}  */
 
  
