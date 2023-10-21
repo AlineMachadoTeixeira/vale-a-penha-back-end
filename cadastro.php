@@ -10,7 +10,7 @@ if(isset($_POST['inserir'])){
     $usuario->setTelefone($_POST['telefone']);
     $usuario->setEmail($_POST['email']);
     $usuario->setData($usuario->formatarDataParaBanco($_POST["data"]));    
-    $usuario->setTipo($_POST['tipo']);
+    //$usuario->setTipo($_POST['tipo']);
     $usuario->setSenha($usuario->codificaSenha($_POST["senha"]));	   
 
 	$usuario->inserirUsuario();

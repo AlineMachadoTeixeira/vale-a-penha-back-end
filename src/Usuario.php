@@ -9,32 +9,33 @@ class Usuario{
     private string $cpf;
     private string $telefone;
     private string $email;
-    private string $data;
-    private string $tipo;
-    private string $senha;    
+    private string $data;    
+    private string $senha;  
+    private string $tipo;  
     private PDO $conexao;
 
 
     //Conectando o banco 
     public function __construct(){
-        $this->conexao = Banco::conecta();        
-    }  
+        $this->conexao = Banco::conecta();    
+            
+    }     
+    
 
-    //INSERT-Inserir Usuarios no formulario Cadastre-se
+    //INSERT-Inserir Usuarios no formulario Cadastre-se  //tipo
     public function inserirUsuario():void{
-        $sql ="INSERT INTO cadastros(nome, sobrenome, cpf, telefone, email, data, tipo, senha)";
+        $sql ="INSERT INTO usuarios(nome, sobrenome, cpf, telefone, email, data, senha)";
 
         try{
             $consulta = $this->conexao->prepare($sql);
             $consulta->bindValue(":nome", $this->nome, PDO::PARAM_STR);
             $consulta->bindValue(":sobrenome", $this->sobrenome, PDO::PARAM_STR);
-            $consulta->bindValue(":sobrenome", $this->sobrenome, PDO::PARAM_STR);
             $consulta->bindValue(":cpf", $this->cpf, PDO::PARAM_STR);
             $consulta->bindValue(":telefone", $this->telefone, PDO::PARAM_STR);
             $consulta->bindValue(":email", $this->email, PDO::PARAM_STR);
-            $consulta->bindValue(":data", $this->data, PDO::PARAM_STR);
-            $consulta->bindValue(":tipo", $this->tipo, PDO::PARAM_STR);
-            $consulta->bindValue(":senha", $this->senha, PDO::PARAM_STR);            
+            $consulta->bindValue(":data", $this->data, PDO::PARAM_STR);            
+            $consulta->bindValue(":senha", $this->senha, PDO::PARAM_STR);  
+            //$consulta->bindValue(":tipo", $this->tipo, PDO::PARAM_STR);          
 
             $consulta->execute();
             

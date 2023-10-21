@@ -14,9 +14,9 @@ CREATE TABLE usuarios(
     cpf VARCHAR(14) NOT NULL,
     telefone VARCHAR(14) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    data DATE NOT NULL,
-    tipo ENUM('admin','comerciante') NULL DEFAULT 'comerciante',
-    senha VARCHAR(250) NOT NULL      
+    data DATE NOT NULL,    
+    senha VARCHAR(250) NOT NULL,
+    tipo ENUM('admin','comerciante') NULL DEFAULT 'comerciante'      
 ); 
 ```
 
