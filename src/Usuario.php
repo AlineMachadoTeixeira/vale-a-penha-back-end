@@ -24,7 +24,8 @@ class Usuario{
 
     //INSERT-Inserir Usuarios no formulario Cadastre-se  //tipo
     public function inserirUsuario():void{
-        $sql ="INSERT INTO usuarios(nome, sobrenome, cpf, telefone, email, data, senha)";
+        $sql ="INSERT INTO usuarios(nome, sobrenome, cpf, telefone, email, data, senha)
+              VALUES(:nome, :sobrenome, :cpf, :telefone, :email, :data, :senha)"; 
 
         try{
             $consulta = $this->conexao->prepare($sql);
