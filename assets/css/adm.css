@@ -34,7 +34,7 @@ th {
   font-size: 15px;
   border: 1px solid #ffffff;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
 
 
 }
@@ -44,7 +44,9 @@ tr:nth-child(even) {
 }
 
 tr:nth-child(odd) {  
-  background-color: #fff6c3b7;  
+  /* background-color: #fff6c3b7;   */
+  background-color: #D9D9D9; 
+  
 }
 
 /* Icones do  Tabela Atualizar excluir */

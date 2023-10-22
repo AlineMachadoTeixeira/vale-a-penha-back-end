@@ -19,42 +19,59 @@ class Usuario{
     public function __construct(){
         $this->conexao = Banco::conecta();    
             
-    }     
-    
+    }
+
 
     //INSERT-Inserir Usuarios no formulario Cadastre-se  //tipo
-    public function inserirUsuario():void{
-        $sql ="INSERT INTO usuarios(nome, sobrenome, cpf, telefone, email, data, senha)
-              VALUES(:nome, :sobrenome, :cpf, :telefone, :email, :data, :senha)"; 
+    public function inserirUsuario(): void {
+        $sql = "INSERT INTO usuarios(nome, sobrenome, cpf, telefone, email, data, senha)
+              VALUES(:nome, :sobrenome, :cpf, :telefone, :email, :data, :senha)";
 
-        try{
+        try {
             $consulta = $this->conexao->prepare($sql);
             $consulta->bindValue(":nome", $this->nome, PDO::PARAM_STR);
             $consulta->bindValue(":sobrenome", $this->sobrenome, PDO::PARAM_STR);
             $consulta->bindValue(":cpf", $this->cpf, PDO::PARAM_STR);
             $consulta->bindValue(":telefone", $this->telefone, PDO::PARAM_STR);
             $consulta->bindValue(":email", $this->email, PDO::PARAM_STR);
-            $consulta->bindValue(":data", $this->data, PDO::PARAM_STR);            
-            $consulta->bindValue(":senha", $this->senha, PDO::PARAM_STR);  
+            $consulta->bindValue(":data", $this->data, PDO::PARAM_STR);
+            $consulta->bindValue(":senha", $this->senha, PDO::PARAM_STR);
             //$consulta->bindValue(":tipo", $this->tipo, PDO::PARAM_STR);          
 
             $consulta->execute();
-            
-           }catch (Exception $erro){
-            die ("Erro ao cadastrar usuário:" . $erro->getMessage());
-           }
-
+        } catch (Exception $erro) {
+            die("Erro ao cadastrar usuário:" . $erro->getMessage());
+        }
     } // INSERT-Inserir Usuarios no formulario Cadastre-se
 
     /* Função para data de nacimento */
-    public function formatarDataParaBanco (string $data) :string {    
+    public function formatarDataParaBanco(string $data): string {
         return date('Y-m-d', strtotime($data));
-}
+    }
 
     /* Função para Codificar a senha */
-    public function codificaSenha(string $senha):string {
+    public function codificaSenha(string $senha): string{
         return password_hash($senha, PASSWORD_DEFAULT);
-       }
+    }
+
+    //Listar usuario na página adm 
+    public function listarUsuarios(): array {
+        $sql = "SELECT * FROM usuarios ORDER BY tipo";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->execute();
+            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+        } catch (Exception $erro) {
+            die("Erro ao listar usuários:" . $erro->getMessage());
+        }
+
+        return $resultado;
+    }//Listar usuario na página adm
+
+
+
+
 
 
     

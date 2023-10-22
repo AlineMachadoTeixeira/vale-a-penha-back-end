@@ -1,3 +1,11 @@
+<?php
+use ValeaPenha\Usuario;
+require_once "../vendor/autoload.php";
+
+$usuario = new Usuario;
+$listaDeUsuarios = $usuario->listarUsuarios();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -56,7 +64,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Controle de Usuarios</h2>
+          <h2>Controle de Usuários</h2>
         </div>
 
         <table>
@@ -72,56 +80,44 @@
             <th>Publicação</th>
             <th>Atualizar</th>
             <th>Excluir</th>
-
             <th>Status</th>
           </tr>
 
-          <!-- <th>Autorização</th>
-            <th>Atualizar</th>
-            <th>Excluir</th> -->
-
-
-
+          <?php foreach($listaDeUsuarios as $itemUsuario){?>
           <tr>
-            <td>1</td>
-            <td>Fulano</td>
-            <td>12312312359</td>
-            <td>11977388397</td>
-            <td>a@gmail</td>
-
-            <td>Admin</td>
-            <!-- <td>Autorização</td>
-            <td>Atualizar</td> -->            
+            <td><?=$itemUsuario["id"]?></td>
+            <td><?=$itemUsuario["nome"]?></td>
+            <td><?=$itemUsuario["cpf"]?></td>
+            <td><?=$itemUsuario["telefone"]?></td>
+            <td><?=$itemUsuario["email"]?></td>
+            <td><?=$itemUsuario["tipo"]?></td>
 
             <td class="adm__botao">
               <a href="#minhaconta" class="nav-link scrollto active"><i class="bi bi-camera"></i>
-                </a>
+              </a>
             </td>
 
             <td class="adm__botao">
               <a href="#minhaconta" class="nav-link scrollto active"><i class="bi bi-pencil"></i>
-                </a>
+              </a>
             </td>
-            
 
             <td class="adm__botao">
               <a href="#minhaconta" class="nav-link scrollto active"><i class="bi bi-trash"></i>
-                </a>
-            </td>    
-             
+              </a>
+            </td>
 
-            <td>Inativo</td>
+            <td>Inativo</td> <!-- Falta fazer o php para puxa status -->
 
-            
+          </tr>
+
+          <?php } ?>
           <!-- Do professor -->
-            <!-- <td class="text-center">
+          <!-- <td class="text-center">
               <a class="btn btn-warning" href="usuario-atualiza.php?id=<?= $itemUsuario["id"] ?>">
                 <i class="bi bi-pencil"></i> Autorização
               </a>
             </td> -->
-
-
-
         </table>
 
     </section>
