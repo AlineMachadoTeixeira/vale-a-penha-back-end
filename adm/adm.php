@@ -91,19 +91,22 @@ $listaDeUsuarios = $usuario->listarUsuarios();
             <td><?=$itemUsuario["telefone"]?></td>
             <td><?=$itemUsuario["email"]?></td>
             <td><?=$itemUsuario["tipo"]?></td>
-
+            
+            <!-- Publicação -->
             <td class="adm__botao">
               <a href="#minhaconta" class="nav-link scrollto active"><i class="bi bi-camera"></i>
               </a>
             </td>
 
+            <!-- Atualizar -->
             <td class="adm__botao">
-              <a href="#minhaconta" class="nav-link scrollto active"><i class="bi bi-pencil"></i>
+              <a href="adm-atualizar.php?id=<?=$itemUsuario["id"]?>" class="nav-link scrollto active"><i class="bi bi-pencil"></i>
               </a>
             </td>
 
+            <!-- Excluir -->
             <td class="adm__botao">
-              <a href="#minhaconta" class="nav-link scrollto active"><i class="bi bi-trash"></i>
+              <a href="" class="nav-link scrollto active"><i class="bi bi-trash"></i>
               </a>
             </td>
 
@@ -112,12 +115,7 @@ $listaDeUsuarios = $usuario->listarUsuarios();
           </tr>
 
           <?php } ?>
-          <!-- Do professor -->
-          <!-- <td class="text-center">
-              <a class="btn btn-warning" href="usuario-atualiza.php?id=<?= $itemUsuario["id"] ?>">
-                <i class="bi bi-pencil"></i> Autorização
-              </a>
-            </td> -->
+          
         </table>
 
     </section>

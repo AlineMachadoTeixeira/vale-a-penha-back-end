@@ -54,6 +54,21 @@ class Usuario{
         return password_hash($senha, PASSWORD_DEFAULT);
     }
 
+    /* Função para Verificar a senha */
+    public function verificarSenha(string $senhaFormulario, string $senhaBanco): string {
+        
+        if (password_verify($senhaFormulario, $senhaBanco)) {
+            
+            return $senhaBanco;
+            
+        } else {            
+            return $this->codificaSenha($senhaFormulario);
+        }
+    }
+     
+
+
+
     //Listar usuario na página adm 
     public function listarUsuarios(): array {
         $sql = "SELECT * FROM usuarios ORDER BY tipo";
@@ -67,7 +82,60 @@ class Usuario{
         }
 
         return $resultado;
-    }//Listar usuario na página adm
+    } //Listar usuario na página adm
+
+   //Listar Um usuario na página adm
+   public function listarUmUsuario():array {
+    $sql = "SELECT * FROM usuarios WHERE id = :id";
+
+    try{
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->bindValue(":id", $this->id, PDO::PARAM_INT);
+
+        $consulta->execute();
+
+        $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+
+    }catch (Exception $erro){
+     die ("Erro ao carregar dados" . $erro->getMessage());
+    }
+
+    return $resultado;
+   } //Fim Listar Um usuario na página adm
+
+
+    //Atualizar usuario na pagina adm-atualizar
+    public function atualizarUsuarios(): void {
+        $sql = "UPDATE usuarios SET
+            nome = :nome, 
+            sobrenome = :sobrenome, 
+            cpf = :cpf, 
+            telefone = :telefone,
+            email = :email,
+            data = :data,
+            senha = :senha, 
+            telefone = :tipo 
+            WHERE id = :id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindValue(":id", $this->id, PDO::PARAM_INT);
+            $consulta->bindValue(":nome", $this->nome, PDO::PARAM_STR);
+            $consulta->bindValue(":sobrenome", $this->sobrenome, PDO::PARAM_STR);
+            $consulta->bindValue(":cpf", $this->cpf, PDO::PARAM_STR);
+            $consulta->bindValue(":telefone", $this->telefone, PDO::PARAM_STR);           
+            $consulta->bindValue(":email", $this->email, PDO::PARAM_STR);
+            $consulta->bindValue(":data", $this->data, PDO::PARAM_STR);
+            $consulta->bindValue(":senha", $this->senha, PDO::PARAM_STR);
+            $consulta->bindValue(":tipo", $this->tipo, PDO::PARAM_STR);            
+
+            $consulta->execute();            
+
+        } catch (Exception $erro) {
+            die("Erro ao atualizar usuário" . $erro->getMessage());
+        }
+   } //Fim do atualizar usuario na pagina adm-atualizar
+
 
 
 
