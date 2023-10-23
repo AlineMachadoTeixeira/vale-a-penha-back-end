@@ -8,6 +8,9 @@ $sessao->verificaAcesso();
 
 $usuario = new Usuario;
 $listaDeUsuarios = $usuario->listarUsuarios();
+
+/* Se o parâmetro "sair" existeir (algo que acontece quando o usuário clica no link "SAIR"), então faça o logout do sistema */
+if (isset($_GET['sair'])) $sessao->logout();
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +58,7 @@ $listaDeUsuarios = $usuario->listarUsuarios();
           </li>
 
 
-          <li><a href="#sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
+          <li><a href="?sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
           </li>
       </nav>
     </div>

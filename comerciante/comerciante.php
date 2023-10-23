@@ -12,6 +12,9 @@ $usuario = new Usuario;
 $usuario->setId($_SESSION['id']);
 $dados = $usuario->listarUmUsuario();
 
+/* Se o parâmetro "sair" existeir (algo que acontece quando o usuário clica no link "SAIR"), então faça o logout do sistema */
+if (isset($_GET['sair'])) $sessao->logout();
+
 ?>
 
 
@@ -75,7 +78,7 @@ $dados = $usuario->listarUmUsuario();
                 Comércio</span></a>
           </li>
 
-          <li><a href="#sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
+          <li><a href="?sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
           </li>
       </nav>
     </div>
