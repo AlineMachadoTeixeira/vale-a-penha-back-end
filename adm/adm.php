@@ -1,6 +1,10 @@
 <?php
 use ValeaPenha\Usuario;
+use ValeaPenha\ControleDeAcesso;
 require_once "../vendor/autoload.php";
+
+$sessao = new ControleDeAcesso;
+$sessao->verificaAcesso();
 
 $usuario = new Usuario;
 $listaDeUsuarios = $usuario->listarUsuarios();

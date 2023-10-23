@@ -1,3 +1,10 @@
+<?php
+
+use ValeaPenha\Usuario;
+use ValeaPenha\ControleDeAcesso;
+require_once "vendor/autoload.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -48,10 +55,53 @@
                         </div>
 
                         <div class="botao__login">
-                            <button type="submit" id="submit">Login </button>
+                            <button type="submit" id="submit" name="login">Login </button>
                         </div>
 
                     </form>
+
+                    <?php
+                    if(isset($_POST['login'])){
+                        //Verificar se os campos foram preenchidos
+                        if( empty($_POST['email']) || empty($_POST['senha']) ){
+                            header("location:login.php?campos_obrigatorios"); //?campos_obrigatorios
+                        }else{
+                            //Capturar o e-mail
+                            $usuario = new Usuario;
+                            $usuario->setEmail($_POST['email']);
+                    
+                            //Buscar o usuário/e-mail no Banco de Dados 
+                            $dados = $usuario->buscar(); // $dados = $usuario foi o nome que usamos na usuario.php		
+                    
+                            //Se não existir o usuário/e-mail, continuará em login.php
+                            if(!$dados) { //ou pode fazer assim if($dados === false)
+                                header("location:login.php?dados_incorretos"); //?dados_incorretos
+                            }else{
+                                // Se existir:
+                                // - Verificar a senha
+                                if(password_verify($_POST['senha'], $dados['senha'])){
+                                    // - Está correta? Iniciar o processo de login
+                                    $sessao = new ControleDeAcesso;
+                                    $sessao->login($dados['id'], $dados['nome'], $dados['tipo']);
+                                    if($dados['tipo'] === 'admin'){
+                                        header("location:adm/adm.php");
+                                    }else{
+                                        header("location:comerciante/comerciante.php");
+                                    }
+
+                                }else{
+                                    // - Não está? Continuará em login.php
+                                    header("location:login.php?dados_incorretos"); // ?dados_incorretos             
+                    
+                                }		
+                                
+                            }             
+                            
+                            
+                        }
+                    }                 
+                    
+                    ?>
                     <p class="paragrafo__novasenha"> Ainda não tem uma conta? <a href="cadastro.php">Criar</a></p>
 
                 </div>

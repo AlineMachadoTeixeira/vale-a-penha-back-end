@@ -49,6 +49,26 @@ class Usuario{
         return date('Y-m-d', strtotime($data));
     }
 
+    /* Método para buscar no banco um usuário através do email */
+   public function buscar():array | bool { 
+    
+    $sql = "SELECT * FROM  usuarios WHERE email = :email";
+
+    try {
+        $consulta = $this->conexao->prepare($sql);
+        $consulta->bindValue(":email", $this->email, PDO::PARAM_STR);
+        $consulta->execute();
+        $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+
+    }catch (Exception $erro){
+     die ("Erro ao buscar usuario" . $erro->getMessage());
+    }
+
+     return $resultado;
+
+    
+   }
+
     /* Função para Codificar a senha */
     public function codificaSenha(string $senha): string{
         return password_hash($senha, PASSWORD_DEFAULT);

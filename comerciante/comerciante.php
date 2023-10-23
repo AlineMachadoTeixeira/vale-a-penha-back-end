@@ -1,4 +1,18 @@
+<?php
+require_once "../vendor/autoload.php";
 
+use ValeaPenha\ControleDeAcesso;
+use ValeaPenha\Usuario;
+
+$sessao = new ControleDeAcesso;
+$sessao->verificaAcesso();
+
+$usuario = new Usuario;
+
+$usuario->setId($_SESSION['id']);
+$dados = $usuario->listarUmUsuario();
+
+?>
 
 
 <!DOCTYPE html>
@@ -86,12 +100,13 @@
             <!-- Nome -->
             <div class="comerciante__input">
               <label for="nome">Nome:</label>
-              <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome" required>
-            </div> <!-- Precisa fazer value="<=$aluno['segunda']?>" logo depois do  name="nome" antes placeholder=  -->
+              <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome" value="<?= $dados['nome'] ?>" required>
+            </div>
+
             <!-- Sobrenome -->
             <div class="comerciante__input">
               <label for="sobrenome">Sobrenome:</label>
-              <input id="sobrenome" type="text" name="sobrenome"   placeholder="Digite seu sobrenome" required>
+              <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome" value="<?= $dados['sobrenome'] ?>" required>
             </div>
           </div>
 
@@ -100,28 +115,33 @@
               <!-- CPF -->
               <div class="comerciante__input">
                 <label for="cpf">CPF</label>
-                <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" required maxlength="14">
+                <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" required maxlength="14" value="<?= $dados['cpf'] ?>">
               </div>
 
               <!-- Telefone -->
               <div class="comerciante__input">
                 <label for="telefone">Telefone:</label>
-                <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" required maxlength="14">
+                <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" required maxlength="14" value="<?= $dados['telefone'] ?>">
               </div>
             </div>
 
             <!-- E-mail -->
             <div class="comerciante__input">
               <label for="email">E-mail:</label>
-              <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+              <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required value="<?= $dados['email'] ?>">
+            </div>
+
+            <!-- Senha -->
+            <div class="comerciante__input">
+              <label for="senha">Senha:</label>
+              <input id="senha" type="password" name="senha" autocomplete="current-password" value="" placeholder="Preencha apenas se for alterar">
             </div>
 
             <!-- Data de Nascimento -->
             <div class="comerciante__input">
               <label for="data">Data de Nascimento:</label>
-              <input id="data" type="date" name="data" placeholder="Digite sua Data de Nascimento" required>
-            </div>
-
+              <input id="data" type="date" name="data" placeholder="Digite sua Data de Nascimento" required value="<?= $dados['data'] ?>">
+            </div>     
 
 
 
@@ -150,7 +170,7 @@
 
           <!-- FOTO comercio-->
           <div class="file-wrapper">
-            <input type="file" name="upload-img" accept="image/*" />
+            <input type="file" class="comerciante__foto__image" name="upload-img" accept="image/*" />
             <div class="close-btn">x</div>
           </div>
 
@@ -188,8 +208,8 @@
 
           <li>É permitido um anúncio por usuário/CPF. </li>
           <li>Limite de 1 foto.</li>
-          <li>Tamanho: 500 x 500(máximo) e com boa resolução. </li>
-          <li>Caso sua imagem seja maior, use o link para redimencionar: <a href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>          
+          <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
+          <li>Caso sua imagem seja maior, use o link para redimencionar: <a href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
           <li>Título de até 15 caracteres</li>
           <li>Descrição com até 30 caracteres.</li>
         </ul>
@@ -297,51 +317,8 @@
 
 
 
-  <script src="../assets/js/comerciante.js"></script>
-  
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-  <script>
-    $('input[name="upload-img"]').on('change', function() {
-      var fileInput = this;
-      var file = fileInput.files[0];
-
-      if (file) {
-        var img = new Image();
-        img.src = window.URL.createObjectURL(file);
-
-        img.onload = function() {
-          if (img.width <= 500 && img.height <= 500) {
-            readURL(fileInput, $('.file-wrapper'));
-          } else {
-            alert('Por favor, selecione uma imagem com no máximo 500x500 pixels.');
-            // Limpar o input de arquivo
-            $(fileInput).val('');
-          }
-        };
-      }
-    });
-
-    $('.close-btn').on('click', function() { //Unset the image
-      let file = $('input[name="upload-img"]');
-      $('.file-wrapper').css('background-image', 'unset');
-      $('.file-wrapper').removeClass('file-set');
-      file.replaceWith(file = file.clone(true));
-    });
-
-    // FILE
-    function readURL(input, obj) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
-        reader.onload = function(e) {
-          obj.css('background-image', 'url(' + e.target.result + ')');
-          obj.addClass('file-set');
-        }
-        reader.readAsDataURL(input.files[0]);
-      }
-    };
-  </script>
+  <script src="../assets/js/comerciante.js"></script>
 
 
 </body>
