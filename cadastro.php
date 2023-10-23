@@ -261,7 +261,7 @@ if(isset($_POST['inserir'])){
 
     <script src="assets/js/menu-novo.js"></script>
     <script src="assets/js/mascara-cpf-tel.js"></script>
-    <!-- <script src="assets/js/validacao.js"></script> -->
+    <script src="assets/js/validacao.js"></script>
 
 
 </body>

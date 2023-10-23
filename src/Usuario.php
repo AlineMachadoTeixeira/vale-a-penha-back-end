@@ -114,7 +114,7 @@ class Usuario{
             email = :email,
             data = :data,
             senha = :senha, 
-            telefone = :tipo 
+            tipo = :tipo 
             WHERE id = :id";
 
         try {

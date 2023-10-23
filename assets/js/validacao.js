@@ -11,13 +11,13 @@ const data = document.querySelector("#data");
 
  
 form.addEventListener('submit', (e) => {
-    if (!checkInputs(e)) {
+    if (!checkInputs()) {
         e.preventDefault(); // Impede o envio do formulário se as validações falharem
     }
 });
 
-function checkInputs(e){
-    e.preventDefault();
+function checkInputs(){
+    //e.preventDefault();
 
     const nomeValue = nome.value.trim()
     const sobrenomeValue = sobrenome.value.trim()
