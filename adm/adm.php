@@ -1,6 +1,8 @@
 <?php
+
 use ValeaPenha\Usuario;
 use ValeaPenha\ControleDeAcesso;
+
 require_once "../vendor/autoload.php";
 
 $sessao = new ControleDeAcesso;
@@ -9,8 +11,25 @@ $sessao->verificaAcesso();
 $usuario = new Usuario;
 $listaDeUsuarios = $usuario->listarUsuarios();
 
-/* Se o parâmetro "sair" existeir (algo que acontece quando o usuário clica no link "SAIR"), então faça o logout do sistema */
-if (isset($_GET['sair'])) $sessao->logout();
+
+
+/* Se o parâmetro "sair" */
+if (isset($_GET['sair'])){$sessao->logout();
+}
+
+
+
+if(isset($_POST['salvar_tipo'])){
+  $usuario->setId($_GET['id']);
+  $dados = $usuario->listarUmUsuario(); 		
+
+   $usuario->setTipo($_POST['tipo']);
+	
+
+	$usuario->atualizarTipoUsuario();
+	header("location:adm.php");	
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +64,6 @@ if (isset($_GET['sair'])) $sessao->logout();
 
   <header id="header">
     <div>
-
       <div class="comerciante__logo">
         <img src="../assets/images/logo-vale-a-penha-quadrado.svg" alt="">
       </div>
@@ -56,7 +74,6 @@ if (isset($_GET['sair'])) $sessao->logout();
           <li><a href="#minhaconta" class="nav-link scrollto active"><i class='bx bx-notepad'></i>
               <span>Tabela</span></a>
           </li>
-
 
           <li><a href="?sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
           </li>
@@ -90,39 +107,58 @@ if (isset($_GET['sair'])) $sessao->logout();
             <th>Status</th>
           </tr>
 
-          <?php foreach($listaDeUsuarios as $itemUsuario){?>
-          <tr>
-            <td><?=$itemUsuario["id"]?></td>
-            <td><?=$itemUsuario["nome"]?></td>
-            <td><?=$itemUsuario["cpf"]?></td>
-            <td><?=$itemUsuario["telefone"]?></td>
-            <td><?=$itemUsuario["email"]?></td>
-            <td><?=$itemUsuario["tipo"]?></td>
-            
-            <!-- Publicação -->
-            <td class="adm__botao">
-              <a href="#minhaconta" class="nav-link scrollto active"><i class="bi bi-camera"></i>
-              </a>
-            </td>
+          <?php foreach ($listaDeUsuarios as $itemUsuario) { ?>
+            <tr>
+              <td><?= $itemUsuario["id"] ?></td>
+              <td><?= $itemUsuario["nome"] ?></td>
+              <td><?= $itemUsuario["cpf"] ?></td>
+              <td><?= $itemUsuario["telefone"] ?></td>
+              <td><?= $itemUsuario["email"] ?></td>
+              <!-- <td><= $itemUsuario["tipo"] ?></td> -->
+              <td class="comerciante__input" name="tipo" id="tipo" required>
+                 <form action="" method="post" >
+                <label for="sobrenome"></label>
+                <div class="atualiza__tipo">
+                  <select class="comerciante__option" name="tipo" id="tipo" required>
+                    <option value=""></option>
 
-            <!-- Atualizar -->
-            <td class="adm__botao">
-              <a href="adm-atualizar.php?id=<?=$itemUsuario["id"]?>" class="nav-link scrollto active"><i class="bi bi-pencil"></i>
-              </a>
-            </td>
+                    <option <?php if ($itemUsuario["tipo"] === "admin") echo " selected "; ?> value="admin">Administrador</option>
 
-            <!-- Excluir -->
-            <td class="adm__botao">
-              <a href="" class="nav-link scrollto active"><i class="bi bi-trash"></i>
-              </a>
-            </td>
+                    <option <?php if ($itemUsuario["tipo"] === "comerciante") echo " selected "; ?> value="comerciante">Comerciante</option>
 
-            <td>Inativo</td> <!-- Falta fazer o php para puxa status -->
+                  </select>
 
-          </tr>
+                  <button type="submit" name="salvar_tipo"><i class='bi bi-check'></i></button>
+                </div>
+                </form>
+
+
+              </td>
+
+              <!-- Publicação -->
+              <td class="adm__botao">
+                <a href="#minhaconta" class="nav-link scrollto active"><i class="bi bi-camera"></i>
+                </a>
+              </td>
+
+              <!-- Atualizar -->
+              <td class="adm__botao">
+                <a href="adm-atualizar.php?id=<?= $itemUsuario["id"] ?>" class="nav-link scrollto active"><i class="bi bi-pencil"></i>
+                </a>
+              </td>
+
+              <!-- Excluir -->
+              <td class="adm__botao">
+                <a href="" class="nav-link scrollto active"><i class="bi bi-trash"></i>
+                </a>
+              </td>
+
+              <td>Inativo</td> <!-- Falta fazer o php para puxa status -->
+
+            </tr>
 
           <?php } ?>
-          
+
         </table>
 
     </section>

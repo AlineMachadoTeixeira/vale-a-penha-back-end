@@ -51,7 +51,7 @@ class Usuario{
 
     /* Método para buscar no banco um usuário através do email */
    public function buscar():array | bool { 
-    
+
     $sql = "SELECT * FROM  usuarios WHERE email = :email";
 
     try {
@@ -156,6 +156,24 @@ class Usuario{
         }
    } //Fim do atualizar usuario na pagina adm-atualizar
 
+
+     //Atualizar usuario na pagina adm-Tipo
+     public function atualizarTipoUsuario(): void {
+        $sql = "UPDATE usuarios SET             
+            tipo = :tipo 
+            WHERE id = :id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            
+            $consulta->bindValue(":tipo", $this->tipo, PDO::PARAM_STR);            
+
+            $consulta->execute();            
+
+        } catch (Exception $erro) {
+            die("Erro ao atualizar o tipo de ussuario" . $erro->getMessage());
+        }
+   } //Fim do atualizar usuario na pagina adm-Tipo
 
 
 
