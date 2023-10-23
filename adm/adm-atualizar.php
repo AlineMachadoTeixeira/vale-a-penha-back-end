@@ -346,18 +346,7 @@ if(isset($_POST['atualizar'])){
 
             </div>
         </section>
-
-
-
-
-
-
-
     </main>
-
-
-
-
 
     <script src="../assets/js/comerciante.js"></script>
 
