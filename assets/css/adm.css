@@ -50,15 +50,19 @@ tr:nth-child(odd) {
 }
 
 /* Icones do  Tabela Atualizar excluir */
-.adm__botao{
+.adm__botao a{
+  display: flex;
+  justify-content: center;
   font-size: 32px;
   font-weight: bold;
   padding-right: 8px;
   color: #000000c0;   
-  margin:  10px;
+  /* margin:  10px; */
   text-align: center;   
 }
-.adm__botao:hover{
+.adm__botao a:hover{
+  transform: scale(1.30);     
+  transition: 0,5s;
   color: #c40008;
 }
 
@@ -99,9 +103,12 @@ td .comerciante__input select:hover {
 }
 
 .atualiza__tipo button:hover{
+  /* transform: scale(1.50);     
+  transition: 0,5s;   */
   color: #FFFFFF;
   background-color: #c40008; 
   border: none;
+  
 }
 
 

@@ -72,7 +72,7 @@ if(isset($_POST['salvar_tipo'])){
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li><a href="#minhaconta" class="nav-link scrollto active"><i class='bx bx-notepad'></i>
-              <span>Tabela</span></a>
+              <span>Tabela Usuários</span></a>
           </li>
 
           <li><a href="?sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
@@ -148,8 +148,8 @@ if(isset($_POST['salvar_tipo'])){
               </td>
 
               <!-- Excluir -->
-              <td class="adm__botao">
-                <a href="" class="nav-link scrollto active"><i class="bi bi-trash"></i>
+              <td class="adm__botao  ">
+                <a class="excluir" href="adm-excluir.php?id=<?= $itemUsuario["id"] ?>" class="nav-link scrollto active"><i class="bi bi-trash"></i>
                 </a>
               </td>
 
@@ -175,6 +175,7 @@ if(isset($_POST['salvar_tipo'])){
 
 
   <script src="../assets/js/comerciante.js"></script>
+  <script src="../assets/js/confirma-exclusao.js"></script>
 
 </body>
 
