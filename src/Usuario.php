@@ -133,8 +133,8 @@ class Usuario{
             telefone = :telefone,
             email = :email,
             data = :data,
-            senha = :senha, 
-            tipo = :tipo 
+            senha = :senha 
+            
             WHERE id = :id";
 
         try {
@@ -147,7 +147,7 @@ class Usuario{
             $consulta->bindValue(":email", $this->email, PDO::PARAM_STR);
             $consulta->bindValue(":data", $this->data, PDO::PARAM_STR);
             $consulta->bindValue(":senha", $this->senha, PDO::PARAM_STR);
-            $consulta->bindValue(":tipo", $this->tipo, PDO::PARAM_STR);            
+            //$consulta->bindValue(":tipo", $this->tipo, PDO::PARAM_STR);            
 
             $consulta->execute();            
 

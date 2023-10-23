@@ -15,6 +15,35 @@ $dados = $usuario->listarUmUsuario();
 /* Se o parâmetro "sair" existeir (algo que acontece quando o usuário clica no link "SAIR"), então faça o logout do sistema */
 if (isset($_GET['sair'])) $sessao->logout();
 
+/* Script para atualização da Minha conta  */
+if(isset($_POST['alterar_Cadastro'])){	
+	$usuario->setNome($_POST['nome']);
+
+	$usuario->setSobrenome($_POST['sobrenome']);
+
+	$usuario->setCpf($_POST['cpf']);
+
+    $usuario->setTelefone($_POST['telefone']);
+
+    $usuario->setEmail($_POST['email']);
+
+    $usuario->setData($usuario->formatarDataParaBanco($_POST["data"]));     
+	
+	//SENHA
+	if(empty($_POST['senha'])){
+		
+		$usuario->setSenha($dados['senha']);
+	}else{
+		
+		$usuario->setSenha(
+			$usuario->verificarSenha($_POST['senha'], $dados['senha'])
+		);
+	}
+
+	$usuario->atualizarUsuarios();
+	header("location:comerciante.php");	
+}
+
 ?>
 
 
@@ -149,7 +178,7 @@ if (isset($_GET['sair'])) $sessao->logout();
 
 
             <div class="botao__enviar">
-              <button type="submit" id="submit" name="alterar">Alterar Cadastro</button>
+              <button type="submit" id="submit" name="alterar_Cadastro">Alterar Cadastro</button>
             </div>
 
         </form>
@@ -322,6 +351,7 @@ if (isset($_GET['sair'])) $sessao->logout();
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="../assets/js/comerciante.js"></script>
+  <script src="../assets/js/mascara-cpf-tel.js"></script>
 
 
 </body>
