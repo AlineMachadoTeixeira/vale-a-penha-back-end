@@ -11,11 +11,10 @@ class Comerciante{
     private string $status;
     private string $usuario_id;
     private PDO $conexao;
-
+    
     //Conectando o banco 
     public function __construct(){
-        $this->conexao = Banco::conecta();    
-            
+        $this->conexao = Banco::conecta();                
     }
 
      //Inserir comercio na pagina comerciante - Cadastrar Comércio
@@ -28,9 +27,10 @@ class Comerciante{
             $consulta->bindValue(":imagem", $this->imagem, PDO::PARAM_STR);
             $consulta->bindValue(":nome_comercio", $this->nome_comercio, PDO::PARAM_STR);
             $consulta->bindValue(":descricao", $this->descricao, PDO::PARAM_STR);
-            $consulta->bindValue(":link_instagram", $this->descricao, PDO::PARAM_STR);                     
+            $consulta->bindValue(":link_instagram", $this->link_instagram, PDO::PARAM_STR);              
 
             $consulta->execute();
+
         } catch (Exception $erro) {
             die("Erro ao cadastrar comercio:" . $erro->getMessage());
         }

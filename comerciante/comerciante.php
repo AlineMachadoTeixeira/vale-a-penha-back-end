@@ -50,7 +50,6 @@ if(isset($_POST['alterar_Cadastro'])){
 if(isset($_POST['cadastrar_comercio'])){
     $comercio = new Comerciante;
 
-    
     $comercio->setImagem($_POST['imagem']);
     $comercio->setNomeComercio($_POST['nome_comercio']);
     $comercio->setDescricao($_POST['descricao']);
@@ -59,7 +58,7 @@ if(isset($_POST['cadastrar_comercio'])){
 	  $comercio->inserirComercio();
 	  // header("location:login.php");
 
-  // Falta fazer uma aparecer uma caixa de comercio cadastrado aguarde 
+  // Falta fazer aparecer uma caixa no comercio. Falando comercio cadastrado. Aguarde! 
 }
 
 
