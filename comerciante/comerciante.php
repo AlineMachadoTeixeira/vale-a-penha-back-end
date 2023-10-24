@@ -10,13 +10,13 @@ $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
 
 $usuario = new Usuario;
-$listaDeUsuarios = $usuario->listarUsuarios();
 
 $usuario->setId($_SESSION['id']);
 $dados = $usuario->listarUmUsuario();
 
-/* Se o parâmetro "sair" existeir (algo que acontece quando o usuário clica no link "SAIR"), então faça o logout do sistema */
+/* Se o parâmetro para "sair" existeir  */
 if (isset($_GET['sair'])) $sessao->logout();
+
 
 /* Script para atualização da Minha conta  */
 if(isset($_POST['alterar_Cadastro'])){	
@@ -52,7 +52,7 @@ $comercio = new Comerciante;
 /* Script para inserir/cadastrar comercio na  Cadastrar Comércio */
 if(isset($_POST['cadastrar_comercio'])){    
 
-    $comercio->setImagem($_POST['imagem']);
+    $comercio->setImagem($_FILES['imagem']);
 
     $comercio->setNomeComercio($_POST['nome_comercio']);
 
@@ -222,7 +222,7 @@ if(isset($_POST['cadastrar_comercio'])){
 
         </div>
 
-        <form class="comerciante__formulario" action="" method="post">
+        <form class="comerciante__formulario" action="" method="post" enctype="multipart/form-data">
 
 
           <!-- FOTO comercio-->

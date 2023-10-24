@@ -27,7 +27,8 @@ class Comerciante{
             $consulta->bindValue(":imagem", $this->imagem, PDO::PARAM_STR);
             $consulta->bindValue(":nome_comercio", $this->nome_comercio, PDO::PARAM_STR);
             $consulta->bindValue(":descricao", $this->descricao, PDO::PARAM_STR);
-            $consulta->bindValue(":link_instagram", $this->link_instagram, PDO::PARAM_STR);              
+            $consulta->bindValue(":link_instagram", $this->link_instagram, PDO::PARAM_STR); 
+            $consulta->bindValue(":usuario_id", $this->link_instagram, PDO::PARAM_INT);             
 
             $consulta->execute();
 
