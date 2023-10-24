@@ -17,52 +17,6 @@ class Comerciante{
         $this->conexao = Banco::conecta();                
     }
 
-     //Inserir comercio na pagina comerciante - Cadastrar Comércio
-     public function inserirComercio(): void {
-        $sql = "INSERT INTO comerciantes(imagem, nome_comercio, descricao, link_instagram, usuario_id)
-              VALUES(:imagem, :nome_comercio, :descricao, :link_instagram, :usuario_id)";
-
-        try {
-            $consulta = $this->conexao->prepare($sql);
-            $consulta->bindValue(":imagem", $this->imagem, PDO::PARAM_STR);
-            $consulta->bindValue(":nome_comercio", $this->nome_comercio, PDO::PARAM_STR);
-            $consulta->bindValue(":descricao", $this->descricao, PDO::PARAM_STR);
-            $consulta->bindValue(":link_instagram", $this->link_instagram, PDO::PARAM_STR); 
-            $consulta->bindValue(":usuario_id", $this->link_instagram, PDO::PARAM_INT);             
-
-            $consulta->execute();
-
-        } catch (Exception $erro) {
-            die("Erro ao cadastrar comercio:" . $erro->getMessage());
-        }
-    } //FIM Inserir comercio na pagina comerciante - Cadastrar Comércio
-
-
-    public function listarComerciante():array {
-        /// Fiz assim por causa do id usuario talvez não vai ser necessario
-        $sql = "SELECT 
-                    comerciantes.id,
-                    comerciantes.imagem,
-                    comerciantes.nome_comercio,
-                    comerciantes.descricao,
-                    comerciantes.link_instagram,
-                    comerciantes.status,
-                    usuarios.nome AS Nome Usuario,  
-                    
-                FROM comerciantes INNER JOIN usuarios
-                ON comerciantes.usuario_id = usuarios.id";
-
-        
-        try {
-            $consulta = $this->conexao->prepare($sql);
-            $consulta->execute();
-            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
-        } catch (Exception $erro) {
-            die("Erro ao listar comerciantes:" . $erro->getMessage());
-        }
-        
-        return $resultado;
-    }
 
 
 

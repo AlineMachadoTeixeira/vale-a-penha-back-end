@@ -50,23 +50,7 @@ if(isset($_POST['alterar_Cadastro'])){
 $comercio = new Comerciante;
 
 /* Script para inserir/cadastrar comercio na  Cadastrar Comércio */
-if(isset($_POST['cadastrar_comercio'])){    
 
-    $comercio->setImagem($_FILES['imagem']);
-
-    $comercio->setNomeComercio($_POST['nome_comercio']);
-
-    $comercio->setDescricao($_POST['descricao']);
-
-    $comercio->setLinkInstagram($_POST['link_instagram']);  
-    
-    $comercio->setUsuarioId($_POST ['usuario_id']);
-
-	  $comercio->inserirComercio();
-	  // header("location:login.php");
-
-  // Falta fazer aparecer uma caixa no comercio. Falando comercio cadastrado. Aguarde! 
-}
 
 
 ?>
@@ -222,14 +206,16 @@ if(isset($_POST['cadastrar_comercio'])){
 
         </div>
 
-        <form class="comerciante__formulario" action="" method="post" enctype="multipart/form-data">
+        <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
 
 
           <!-- FOTO comercio-->
           <div class="file-wrapper">
-            <input type="file" class="comerciante__foto__image" name="upload-img" accept="image/*" />
+            <input type="file" class="comerciante__foto__image" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
             <div class="close-btn">x</div>
           </div>
+
+          
 
 
           <!-- Nome comercio  -->
@@ -320,15 +306,12 @@ if(isset($_POST['cadastrar_comercio'])){
 
         </div>
 
-        <form class="comerciante__formulario" action="" method="post">
-
+        <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
 
           <!-- FOTO comercio-->
-          <div class="comerciante__input">
-            <div class="file-wrapper">
-              <input type="file" name="upload-img" accept="image/*" />
-              <div class="close-btn">x</div>
-            </div>
+          <div class="file-wrapper">
+            <input type="file" class="comerciante__foto__image" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
+            <div class="close-btn">x</div>
           </div>
 
           <!-- Nome comercio  -->

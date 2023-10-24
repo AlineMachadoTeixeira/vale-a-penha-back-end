@@ -91,37 +91,7 @@
 
 // JS para Foto no cadastrar comércio
 
-// const inputFile = document.querySelector("#foto");
-// const imageProduto = document.querySelector(".comerciante__foto__image");
-// const imageProdutoTxt = "Escolha a imagem";
-// imageProduto.innerHTML = imageProdutoTxt;
-
-// inputFile.addEventListener("change", function (e) {
-//   const inputTarget = e.target;
-//   const file = inputTarget.files[0];
-
-//   if (file) {
-//     const reader = new FileReader();
-
-//     reader.addEventListener("load", function (e) {
-//       const readerTarget = e.target;
-
-//       const img = document.createElement("img");
-//       img.src = readerTarget.result;
-//       img.classList.add("picture__img");
-
-//       imageProduto.innerHTML = "";
-//       imageProduto.appendChild(img);
-//     });
-
-//     reader.readAsDataURL(file);
-//   } else {
-//     pictureImage.innerHTML = pictureImageTxt;
-//   }
-// });
-
-
-$('input[name="upload-img"]').on('change', function() {
+$('input[name="imagem"]').on('change', function() {
   var fileInput = this;
   var file = fileInput.files[0];
 
@@ -142,7 +112,7 @@ $('input[name="upload-img"]').on('change', function() {
 });
 
 $('.close-btn').on('click', function() { //Unset the image
-  let file = $('input[name="upload-img"]');
+  let file = $('input[name="imagem"]');
   $('.file-wrapper').css('background-image', 'unset');
   $('.file-wrapper').removeClass('file-set');
   file.replaceWith(file = file.clone(true));
