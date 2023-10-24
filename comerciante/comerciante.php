@@ -5,10 +5,12 @@ use ValeaPenha\ControleDeAcesso;
 use ValeaPenha\Usuario;
 use ValeaPenha\Comerciante;
 
+
 $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
 
 $usuario = new Usuario;
+$listaDeUsuarios = $usuario->listarUsuarios();
 
 $usuario->setId($_SESSION['id']);
 $dados = $usuario->listarUmUsuario();
@@ -45,15 +47,20 @@ if(isset($_POST['alterar_Cadastro'])){
 	header("location:comerciante.php");	
 }
 
+$comercio = new Comerciante;
 
 /* Script para inserir/cadastrar comercio na  Cadastrar Comércio */
-if(isset($_POST['cadastrar_comercio'])){
-    $comercio = new Comerciante;
+if(isset($_POST['cadastrar_comercio'])){    
 
     $comercio->setImagem($_POST['imagem']);
+
     $comercio->setNomeComercio($_POST['nome_comercio']);
+
     $comercio->setDescricao($_POST['descricao']);
-    $comercio->setLinkInstagram($_POST['link_instagram']);       
+
+    $comercio->setLinkInstagram($_POST['link_instagram']);  
+    
+    $comercio->setUsuarioId($_POST ['usuario_id']);
 
 	  $comercio->inserirComercio();
 	  // header("location:login.php");
