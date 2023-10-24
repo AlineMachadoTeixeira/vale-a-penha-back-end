@@ -3,6 +3,7 @@ require_once "../vendor/autoload.php";
 
 use ValeaPenha\ControleDeAcesso;
 use ValeaPenha\Usuario;
+use ValeaPenha\Comerciante;
 
 $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
@@ -43,6 +44,24 @@ if(isset($_POST['alterar_Cadastro'])){
 	$usuario->atualizarUsuarios();
 	header("location:comerciante.php");	
 }
+
+
+/* Script para inserir/cadastrar comercio na  Cadastrar Comércio */
+if(isset($_POST['cadastrar_comercio'])){
+    $comercio = new Comerciante;
+
+    
+    $comercio->setImagem($_POST['imagem']);
+    $comercio->setNomeComercio($_POST['nome_comercio']);
+    $comercio->setDescricao($_POST['descricao']);
+    $comercio->setLinkInstagram($_POST['link_instagram']);       
+
+	  $comercio->inserirComercio();
+	  // header("location:login.php");
+
+  // Falta fazer uma aparecer uma caixa de comercio cadastrado aguarde 
+}
+
 
 ?>
 
@@ -210,14 +229,14 @@ if(isset($_POST['alterar_Cadastro'])){
           <!-- Nome comercio  -->
           <div class="comerciante__input">
             <label class="titulo" for="titulo">Nome Comércio:
-              <textarea rows="1" cols="33" name="titulo" id="titulo" required maxlength="25"> </textarea>
+              <textarea rows="1" cols="33" name="titulo" id="titulo" required maxlength="40"> </textarea>
             </label>
           </div>
 
           <!-- Descrição  -->
           <div class="comerciante__input">
             <label for="descricao">Descrição:
-              <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="35"></textarea>
+              <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="70"></textarea>
             </label>
           </div>
 
@@ -228,7 +247,7 @@ if(isset($_POST['alterar_Cadastro'])){
 
           </div>
           <div class="botao__enviar">
-            <button type="submit" id="submit" name="enviar">Enviar</button>
+            <button type="submit" id="submit" name="cadastrar_comercio">Enviar</button>
 
           </div>
 
