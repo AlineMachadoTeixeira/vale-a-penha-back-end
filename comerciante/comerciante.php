@@ -246,7 +246,7 @@ if(isset ($_POST["cadastrar_comercio"])){
           <!-- Descrição  -->
           <div class="comerciante__input">
             <label for="descricao">Descrição:
-              <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="70"></textarea>
+              <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="80"></textarea>
             </label>
           </div>
 
