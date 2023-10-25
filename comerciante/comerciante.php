@@ -47,10 +47,28 @@ if(isset($_POST['alterar_Cadastro'])){
 	header("location:comerciante.php");	
 }
 
-$comercio = new Comerciante;
 
-/* Script para inserir/cadastrar comercio na  Cadastrar Comércio */
 
+/* Script para inserir/cadastrar - comercio na  Cadastrar Comércio */
+if(isset ($_POST["cadastrar_comercio"])){
+	$comercio = new Comerciante;
+	$comercio->setNomeComercio($_POST["nome_comercio"]);
+  $comercio->setDescricao($_POST["descricao"]);
+  $comercio->setLinkInstagram($_POST["link_instagram"]);  
+	
+	//ID do usuário para o comerciante
+	$comercio->usuario->setId($_SESSION["id"]);		
+	
+	$imagem = $_FILES["imagem"];
+	
+	$comercio->upload($imagem);
+	
+	$comercio->setImagem($imagem["name"]);   // precisa ser NAME 
+	
+	$comercio->inserirComercio();
+	//header("location:noticias.php");
+
+}
 
 
 ?>
