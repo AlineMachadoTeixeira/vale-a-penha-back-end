@@ -238,8 +238,8 @@ if(isset ($_POST["cadastrar_comercio"])){
 
           <!-- Nome comercio  -->
           <div class="comerciante__input">
-            <label class="titulo" for="titulo">Nome Comércio:
-              <textarea rows="1" cols="33" name="titulo" id="titulo" required maxlength="40"> </textarea>
+            <label class="titulo" for="nome_comercio">Nome Comércio:
+              <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"> </textarea>
             </label>
           </div>
 
@@ -252,8 +252,8 @@ if(isset ($_POST["cadastrar_comercio"])){
 
           <!-- Instagram Link -->
           <div class="comerciante__input">
-            <label for="instagram">Instagram:</label>
-            <input type="url" name="instagram" id="instagram" placeholder="Link do instagram" required>
+            <label for="link_instagram">Instagram:</label>
+            <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" required>
 
           </div>
           <div class="botao__enviar">
@@ -334,8 +334,8 @@ if(isset ($_POST["cadastrar_comercio"])){
 
           <!-- Nome comercio  -->
           <div class="comerciante__input">
-            <label class="titulo" for="titulo">Nome Comércio:
-              <textarea rows="1" cols="33" name="titulo" id="titulo" required> </textarea>
+            <label class="titulo" for="nome_comercio">Nome Comércio:
+              <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required> </textarea>
             </label>
           </div>
 
@@ -348,8 +348,8 @@ if(isset ($_POST["cadastrar_comercio"])){
 
           <!-- Instagram Link -->
           <div class="comerciante__input">
-            <label for="instagram">Instagram:</label>
-            <input type="url" name="instagram" id="instagram" placeholder="Link do instagram" required>
+            <label for="link_instagram">Instagram:</label>
+            <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" required>
 
           </div>
           <div class="botao__enviar">

@@ -22,7 +22,7 @@ class Comerciante{
 
     //INSERT-Inserir Comerciante na pagina comerciante -- Cadastrar Comércio
     public function inserirComercio(): void {
-        $sql = "INSERT INTO  comerciantes (imagem, nome_comercio, descricao, link_instagram,  usuario_id, ) 
+        $sql = "INSERT INTO  comerciantes (imagem, nome_comercio, descricao, link_instagram,  usuario_id) 
                  VALUES (:imagem, :nome_comercio, :descricao, :link_instagram,  :usuario_id)";
 
         try {
@@ -72,7 +72,7 @@ class Comerciante{
         $temporario = $arquivo["tmp_name"];
 
         //Definindo a pasta de destino das imagens no site 
-        $pastaFinal = "../assets/imagens/".$nome;
+        $pastaFinal = "../imagens/".$nome;
 
         //Movemos/enviamos da área temporária para a final/destino
         move_uploaded_file($temporario, $pastaFinal);
