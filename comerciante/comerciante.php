@@ -19,54 +19,54 @@ if (isset($_GET['sair'])) $sessao->logout();
 
 
 /* Script para atualização da Minha conta  */
-if(isset($_POST['alterar_Cadastro'])){	
-	$usuario->setNome($_POST['nome']);
+if (isset($_POST['alterar_Cadastro'])) {
+  $usuario->setNome($_POST['nome']);
 
-	$usuario->setSobrenome($_POST['sobrenome']);
+  $usuario->setSobrenome($_POST['sobrenome']);
 
-	$usuario->setCpf($_POST['cpf']);
+  $usuario->setCpf($_POST['cpf']);
 
-    $usuario->setTelefone($_POST['telefone']);
+  $usuario->setTelefone($_POST['telefone']);
 
-    $usuario->setEmail($_POST['email']);
+  $usuario->setEmail($_POST['email']);
 
-    $usuario->setData($usuario->formatarDataParaBanco($_POST["data"]));     
-	
-	//SENHA
-	if(empty($_POST['senha'])){
-		
-		$usuario->setSenha($dados['senha']);
-	}else{
-		
-		$usuario->setSenha(
-			$usuario->verificarSenha($_POST['senha'], $dados['senha'])
-		);
-	}
+  $usuario->setData($usuario->formatarDataParaBanco($_POST["data"]));
 
-	$usuario->atualizarUsuarios();
-	header("location:comerciante.php");	
+  //SENHA
+  if (empty($_POST['senha'])) {
+
+    $usuario->setSenha($dados['senha']);
+  } else {
+
+    $usuario->setSenha(
+      $usuario->verificarSenha($_POST['senha'], $dados['senha'])
+    );
+  }
+
+  $usuario->atualizarUsuarios();
+  header("location:comerciante.php");
 }
 
 
 
 /* Script para inserir/cadastrar - comercio na  Cadastrar Comércio */
-if(isset ($_POST["cadastrar_comercio"])){
-	$comercio = new Comerciante;
-	$comercio->setNomeComercio($_POST["nome_comercio"]);
+if (isset($_POST["cadastrar_comercio"])) {
+  $comercio = new Comerciante;
+  $comercio->setNomeComercio($_POST["nome_comercio"]);
   $comercio->setDescricao($_POST["descricao"]);
-  $comercio->setLinkInstagram($_POST["link_instagram"]);  
-	
-	//ID do usuário para o comerciante
-	$comercio->usuario->setId($_SESSION["id"]);		
-	
-	$imagem = $_FILES["imagem"];
-	
-	$comercio->upload($imagem);
-	
-	$comercio->setImagem($imagem["name"]);   // precisa ser NAME 
-	
-	$comercio->inserirComercio();
-	//header("location:noticias.php");
+  $comercio->setLinkInstagram($_POST["link_instagram"]);
+
+  //ID do usuário para o comerciante
+  $comercio->usuario->setId($_SESSION["id"]);
+
+  $imagem = $_FILES["imagem"];
+
+  $comercio->upload($imagem);
+
+  $comercio->setImagem($imagem["name"]);   // precisa ser NAME 
+
+  $comercio->inserirComercio();
+  //header("location:noticias.php");
 
 }
 
@@ -130,6 +130,7 @@ if(isset ($_POST["cadastrar_comercio"])){
           <li><a href="#ajuda" class="nav-link scrollto"><i class="bx bx-help-circle"></i> <span>Ajuda</span></a>
           </li>
 
+          
           <li><a href="#gerenciarcomercio" class="nav-link scrollto"><i class="bx bx-copy-alt"></i> <span>Gerenciar
                 Comércio</span></a>
           </li>
@@ -200,7 +201,7 @@ if(isset ($_POST["cadastrar_comercio"])){
             <div class="comerciante__input">
               <label for="data">Data de Nascimento:</label>
               <input id="data" type="date" name="data" placeholder="Digite sua Data de Nascimento" required value="<?= $dados['data'] ?>">
-            </div>     
+            </div>
 
 
 
@@ -233,7 +234,7 @@ if(isset ($_POST["cadastrar_comercio"])){
             <div class="close-btn">x</div>
           </div>
 
-          
+
 
 
           <!-- Nome comercio  -->
@@ -359,6 +360,7 @@ if(isset ($_POST["cadastrar_comercio"])){
         </form>
 
       </div>
+
     </section><!-- Fim Gerenciar Comércio -->
 
   </main>

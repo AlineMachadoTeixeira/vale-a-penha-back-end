@@ -2,8 +2,11 @@
 
 use ValeaPenha\Usuario;
 use ValeaPenha\ControleDeAcesso;
+use ValeaPenha\Comerciante;
 
 require_once "../vendor/autoload.php";
+
+$comercio = new Comerciante;
 
 $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
@@ -19,16 +22,15 @@ if (isset($_GET['sair'])){$sessao->logout();
 
 
 
-if(isset($_POST['salvar_tipo'])){
-  $usuario->setId($_GET['id']);
-  $dados = $usuario->listarUmUsuario(); 		
-
-   $usuario->setTipo($_POST['tipo']);
+/* Script para Mudar o tipo do usuario  Não funcionou */
+// if(isset($_POST['salvar_tipo'])){
+     		
+//    $usuario->setTipo($_POST['tipo']);
 	
 
-	$usuario->atualizarTipoUsuario();
-	header("location:adm.php");	
-}
+// 	$usuario->atualizarTipoUsuario();
+// 	header("location:adm.php");	
+// }
 
 ?>
 
@@ -100,9 +102,9 @@ if(isset($_POST['salvar_tipo'])){
             <th>Telefone</th>
             <th>E-mail</th>
             <th>Tipo</th>
-            <!-- <th colspan="3">Botões</th> -->
-            <th>Publicação</th>
+            <!-- <th colspan="3">Botões</th>  -->
             <th>Atualizar</th>
+            <th>Publicação</th>            
             <th>Excluir</th>
             <th>Status</th>
           </tr>
@@ -114,38 +116,43 @@ if(isset($_POST['salvar_tipo'])){
               <td><?= $itemUsuario["cpf"] ?></td>
               <td><?= $itemUsuario["telefone"] ?></td>
               <td><?= $itemUsuario["email"] ?></td>
-              <!-- <td><= $itemUsuario["tipo"] ?></td> -->
-              <td class="comerciante__input" name="tipo" id="tipo" required>
+              <td><?= $itemUsuario["tipo"] ?></td>
+
+              <!-- <td class="comerciante__input" name="tipo" id="tipo" required>
                  <form action="" method="post" >
                 <label for="sobrenome"></label>
                 <div class="atualiza__tipo">
                   <select class="comerciante__option" name="tipo" id="tipo" required>
                     <option value=""></option>
 
-                    <option <?php if ($itemUsuario["tipo"] === "admin") echo " selected "; ?> value="admin">Administrador</option>
+                    <option <php if ($itemUsuario["tipo"] === "admin") echo " selected "; ?> value="admin">Administrador</option>
 
-                    <option <?php if ($itemUsuario["tipo"] === "comerciante") echo " selected "; ?> value="comerciante">Comerciante</option>
+                    <option <php if ($itemUsuario["tipo"] === "comerciante") echo " selected "; ?> value="comerciante">Comerciante</option>
 
                   </select>
 
-                  <button type="submit" name="salvar_tipo"><i class='bi bi-check'></i></button>
+                  <button type="submit" name="salvar_tipo"> <a href="adm-atualiza-tipo.php?id=<= $itemUsuario["id"] ?>"></a><i class='bi bi-check'></i></button>
+                  <a href=""></a>
                 </div>
                 </form>
 
 
-              </td>
-
-              <!-- Publicação -->
-              <td class="adm__botao">
-                <a href="#minhaconta" class="nav-link scrollto active"><i class="bi bi-camera"></i>
-                </a>
-              </td>
+              </td> -->
 
               <!-- Atualizar -->
               <td class="adm__botao">
                 <a href="adm-atualizar.php?id=<?= $itemUsuario["id"] ?>" class="nav-link scrollto active"><i class="bi bi-pencil"></i>
                 </a>
               </td>
+
+
+              <!-- Publicação -->
+              <td class="adm__botao">
+                <a href="adm-publicacao.php" class="nav-link scrollto active"><i class="bi bi-camera"></i>
+                </a>
+              </td>
+
+              
 
               <!-- Excluir -->
               <td class="adm__botao  ">
