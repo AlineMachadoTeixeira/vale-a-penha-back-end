@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 25/10/2023 às 15:11
+-- Tempo de geração: 26/10/2023 às 15:25
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -74,8 +74,7 @@ INSERT INTO `usuarios` (`id`, `nome`, `sobrenome`, `cpf`, `telefone`, `email`, `
 (2, 'Pamela', 'Copy', '789.789.789-78', '(11)99888-8888', 'pamela@gmail.com', '1985-09-20', '$2y$10$F3VnAk5bArrIcOZ38Gnk3OgudPbnMLRFL7zyjBwzKcBE3MjKNExGG', 'comerciante'),
 (3, 'Bruno', 'Bueno', '456.456.456-45', '11666666666', 'bueno@gmail.com', '1984-08-20', '$2y$10$RrpBtKfTdsHL8zK.X6SfF.gvrc8hrlSZCAuDcHfH.ou/9VrNPj7Xq', 'admin'),
 (4, 'Luiz', 'Paes', '789.789.789-78', '(11)33333-3333', 'luiz@gmail.com', '1985-09-23', '$2y$10$aktk50q1lzfcC7wH5lX10uawbPf.ndXAEt9OU8HkuzNOCcHo9.YmG', 'comerciante'),
-(5, 'Flora', 'Flores', '741.741.741-74', '(11)96666-6666', 'flora@gmail.com', '2001-01-01', '$2y$10$jEGNIaKUZogkjZKzje7C3OZFnh45x09jevhPgiRosTzoN7AS5SvB6', 'comerciante'),
-(7, 'Leleco', 'Lelequinho', '000.333.444-55', '(11)99999-9999', 'le@gmail.com', '1986-10-29', '$2y$10$o.RjDjY5gr0Ao1P9MOEN5O5ZUWek360/E7nExng8r.z9mN7YigK5e', 'comerciante');
+(5, 'Flora', 'Flores', '741.741.741-74', '(11)96666-6666', 'flora@gmail.com', '2001-01-01', '$2y$10$jEGNIaKUZogkjZKzje7C3OZFnh45x09jevhPgiRosTzoN7AS5SvB6', 'comerciante');
 
 --
 -- Índices para tabelas despejadas
