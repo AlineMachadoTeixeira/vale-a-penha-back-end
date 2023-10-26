@@ -6,13 +6,14 @@ use ValeaPenha\Comerciante;
 
 require_once "../vendor/autoload.php";
 
-$comercio = new Comerciante;
-
 $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
 
 $usuario = new Usuario;
 $listaDeUsuarios = $usuario->listarUsuarios();
+
+$comercio = new Comerciante;
+$listarDeComercio = $comercio->listarComercio();
 
 
 
@@ -73,8 +74,11 @@ if (isset($_GET['sair'])){$sessao->logout();
       <!-- Achei esses icones nesse site https://boxicons.com/?query= -->
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="#minhaconta" class="nav-link scrollto active"><i class='bx bx-notepad'></i>
-              <span>Tabela Usuários</span></a>
+          <li><a href="#controleusuarios" class="nav-link scrollto active"><i class='bx bx-notepad'></i>
+              <span>Controle de Usuários</span></a>
+          </li>
+
+          <li><a href="#controlecomercio" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Controle de Comércio</span></a>
           </li>
 
           <li><a href="?sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
@@ -85,8 +89,8 @@ if (isset($_GET['sair'])){$sessao->logout();
 
   <main class="comerciante">
 
-    <!-- ======= Tabela ======= -->
-    <section id="minhaconta" class="minhaconta">
+    <!-- ======= Tabela Controle de suarios======= -->
+    <section id="controleusuarios" class="controleusuarios">
       <div class="container">
 
         <div class="section-title">
@@ -145,14 +149,12 @@ if (isset($_GET['sair'])){$sessao->logout();
                 </a>
               </td>
 
+              <!-- Publicação -->          
 
-              <!-- Publicação -->
-              <td class="adm__botao">
-                <a href="adm-publicacao.php" class="nav-link scrollto active"><i class="bi bi-camera"></i>
-                </a>
-              </td>
-
-              
+                <td class="adm__botao">
+                  <a href="adm-publicacao.php?id=<?=$itemUsuario["id"]?>" class="nav-link scrollto active"><i class="bi bi-camera"></i>
+                  </a>
+                </td>                
 
               <!-- Excluir -->
               <td class="adm__botao  ">
@@ -170,7 +172,9 @@ if (isset($_GET['sair'])){$sessao->logout();
 
     </section>
 
-  </main>
+
+
+    
 
   <!-- ======= Rodapé======= -->
   <footer class="comerciante__rodape">

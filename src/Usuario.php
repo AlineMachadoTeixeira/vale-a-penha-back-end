@@ -14,11 +14,14 @@ class Usuario{
     private string $tipo;  
     private PDO $conexao;
 
+    //public Comerciante $comercio;
+
 
     //Conectando o banco 
     public function __construct(){
-        $this->conexao = Banco::conecta();    
-            
+        //$this->comercio = new Comerciante;
+        $this->conexao = Banco::conecta(); 
+        
     }
 
 

@@ -78,9 +78,25 @@ class Comerciante{
         move_uploaded_file($temporario, $pastaFinal);
     }
 
-    
+    //Listar o comercio na pagina adm na parte da camera 
+    public function listarComercio():array {
+        $sql = "SELECT * FROM comerciantes ";  //ORDER BY nome não coloquei
 
+        try{
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->execute();
+            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+
+        }catch (Exception $erro){
+         die ("Erro ao listar comercio:" . $erro->getMessage());
+        }
+
+        return $resultado;
+
+
+    }// Fim Lista/Ler Categoria
     
+   
 
 
 
