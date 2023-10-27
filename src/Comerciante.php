@@ -103,6 +103,7 @@ class Comerciante{
 
         try{
             $consulta = $this->conexao->prepare($sql);
+            //$consulta->bindValue(":id", $this->getId() , PDO::PARAM_INT);
             $consulta->bindValue(":id", $this->id = PDO::PARAM_INT);
             $consulta->execute();
             $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
