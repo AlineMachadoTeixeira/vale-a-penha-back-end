@@ -163,8 +163,7 @@ if (isset($_GET['sair'])){$sessao->logout();
                 </a>
               </td>
 
-              <td><?=$itemUsuario["status"]?></td> <!-- Falta fazer o php para puxa status -->
-
+              <td><?=$itemUsuario["status"]?></td> <
             </tr>
 
           <?php } ?>

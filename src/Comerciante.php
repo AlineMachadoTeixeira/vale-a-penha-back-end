@@ -119,6 +119,26 @@ class Comerciante{
     
         return $resultado;
     }
+
+
+    //Atualizar usuario na pagina Status
+    public function atualizarStatus(): void {
+        $sql = "UPDATE comerciantes SET             
+            status = :status 
+            WHERE id = :id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            
+            $consulta->bindValue(":id", $this->id, PDO::PARAM_INT);
+            $consulta->bindValue(":status", $this->status, PDO::PARAM_STR);            
+
+            $consulta->execute();            
+
+        } catch (Exception $erro) {
+            die("Erro ao atualizar o Status do comercio" . $erro->getMessage());
+        }
+   } //Fim do atualizar Status
     
 
     

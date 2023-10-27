@@ -9,6 +9,17 @@ $comercio->setId($_GET['id']);
 $dados = $comercio->listarUmComercio();
 
 
+/* Script para atualização status de inativo para ativo */
+if (isset($_POST['publicar'])) {
+    $comercio->setStatus($_POST['status']);
+
+    $comercio->atualizarStatus();
+    // header("location:comerciante.php");
+}
+
+
+
+
 
 
 ?>
@@ -224,6 +235,26 @@ $dados = $comercio->listarUmComercio();
             gap: 20px;
             width: 100%;
         }
+
+        .comerciante__input select {
+            margin-top: 0px;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.412);
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .comerciante__input select:hover {
+            outline: 1px solid #c40008;
+        }
+
+        .comerciante__input select:focus-visible {
+            outline: none
+        }
+
         
 
         
@@ -382,6 +413,22 @@ $dados = $comercio->listarUmComercio();
 
                     </div>
 
+                    <!-- Status -->
+                    <div class="comerciante__input" name="tipo" id="tipo" required>
+                            <label for="sobrenome">Status:</label>
+                            <select class="comerciante__option" name="status" id="status" required>
+                                <option value=""></option>
+
+                                <option <?php if($dados["status"] === "ativo" ) echo " selected ";?>  value="ativo">Publicar</option>
+
+                                <option <?php if($dados["status"] === "inativo" ) echo " selected ";?>  value="inativo">Não Publicado</option>
+                                
+                            </select>
+
+                            
+                        </div>
+
+
                     <div class="botao__enviar__adm">
                         <div class="botao__enviar">
                             <button type="submit" id="submit" name="publicar">Publicar</button>                        
@@ -395,6 +442,9 @@ $dados = $comercio->listarUmComercio();
                         </div>
 
                     </div>
+
+
+                    
                     
 
                 </form>
