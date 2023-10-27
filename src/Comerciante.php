@@ -99,12 +99,12 @@ class Comerciante{
 
     //Listar o comercio na pagina adm na parte da camera 
     public function listarUmComercio():array {
-        $sql = "SELECT * FROM comerciantes WHERE id = :id";  //ORDER BY nome não coloquei
+        $sql = "SELECT * FROM comerciantes WHERE usuario_id = :id";  //ORDER BY nome não coloquei
 
         try{
             $consulta = $this->conexao->prepare($sql);
-            //$consulta->bindValue(":id", $this->getId() , PDO::PARAM_INT);
-            $consulta->bindValue(":id", $this->id = PDO::PARAM_INT);
+            $consulta->bindValue(":id", $this->getId() , PDO::PARAM_INT);
+            //$consulta->bindValue(":id", $this->id = PDO::PARAM_INT);
             $consulta->execute();
             $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
 
