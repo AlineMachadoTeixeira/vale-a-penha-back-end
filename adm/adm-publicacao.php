@@ -353,7 +353,8 @@ $dados = $comercio->listarUmComercio();
 
                     <!-- FOTO comercio-->
                     <div class="file-wrapper">
-                        <input type="file" class="comerciante__foto__image" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
+                        <p class="comerciante__foto__image"><img src="../imagens/<?=$dados['imagem']?>" alt=""></p>
+                        <input hidden value="<?=$dados['imagem']?>"type="file"  name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
                         <div class="close-btn">x</div>
                     </div>
 
@@ -363,21 +364,21 @@ $dados = $comercio->listarUmComercio();
                     <!-- Nome comercio  -->
                     <div class="comerciante__input">
                         <label class="titulo" for="nome_comercio">Nome Comércio:
-                            <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"><?=$dados[$nome_comercio]?></textarea>
+                            <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"><?=$dados['nome_comercio']?></textarea>
                         </label>
                     </div>
 
                     <!-- Descrição  -->
                     <div class="comerciante__input">
                         <label for="descricao">Descrição:
-                            <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="80"></textarea>
+                            <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="80"><?=$dados['descricao']?></textarea>
                         </label>
                     </div>
 
                     <!-- Instagram Link -->
                     <div class="comerciante__input">
                         <label for="link_instagram">Instagram:</label>
-                        <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" required>
+                        <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?=$dados['link_instagram']?>">
 
                     </div>
 
