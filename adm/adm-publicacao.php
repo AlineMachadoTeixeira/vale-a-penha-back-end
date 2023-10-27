@@ -1,3 +1,17 @@
+<?php
+use ValeaPenha\Comerciante;
+require_once "../vendor/autoload.php";
+
+$comercio = new Comerciante;
+
+
+$comercio->setId($_GET['id']);
+$dados = $comercio->listarUmComercio();
+
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -349,7 +363,7 @@
                     <!-- Nome comercio  -->
                     <div class="comerciante__input">
                         <label class="titulo" for="nome_comercio">Nome Comércio:
-                            <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"> </textarea>
+                            <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"><?=$dados[$nome_comercio]?></textarea>
                         </label>
                     </div>
 

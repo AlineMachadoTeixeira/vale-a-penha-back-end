@@ -95,6 +95,26 @@ class Comerciante{
 
 
     }// Fim Lista/Ler Categoria
+
+
+    //Listar o comercio na pagina adm na parte da camera 
+    public function listarUmComercio():array {
+        $sql = "SELECT * FROM comerciantes WHERE id = :id";  //ORDER BY nome não coloquei
+
+        try{
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindValue(":id", $this->id = PDO::PARAM_INT);
+            $consulta->execute();
+            $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+
+        }catch (Exception $erro){
+         die ("Erro ao listar um comercio:" . $erro->getMessage());
+        }
+
+        return $resultado;
+
+
+    }// Fim Lista/Ler Categoria
     
    
 
