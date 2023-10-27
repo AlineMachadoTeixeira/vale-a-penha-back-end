@@ -238,7 +238,7 @@ $dados = $comercio->listarUmComercio();
         }
 
         .file-wrapper:after {
-            content: '+';
+            /* content: '+';  tira o mais */
             position: absolute;
             top: 0;
             bottom: 0;
@@ -251,11 +251,11 @@ $dados = $comercio->listarUmComercio();
             max-height: 85px;
             font-size: 70px;
             font-weight: bolder;
-            color: #c40008;
+            /* color: #c40008; */
         }
 
         .file-wrapper:before {
-            content: 'UPLOAD';
+            /* content: 'UPLOAD';   tira a palavra */
             display: block;
             position: absolute;
             left: 0;

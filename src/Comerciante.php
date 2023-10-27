@@ -98,28 +98,71 @@ class Comerciante{
 
 
     //Listar o comercio na pagina adm na parte da camera 
-    public function listarUmComercio():array {
-        $sql = "SELECT * FROM comerciantes WHERE usuario_id = :id";  //ORDER BY nome não coloquei
-
-        try{
+    public function listarUmComercio(): array {
+        $sql = "SELECT * FROM comerciantes WHERE usuario_id = :id"; 
+    
+        try {
             $consulta = $this->conexao->prepare($sql);
-            $consulta->bindValue(":id", $this->getId() , PDO::PARAM_INT);
-            //$consulta->bindValue(":id", $this->id = PDO::PARAM_INT);
+            $consulta->bindValue(":id", $this->getId(), PDO::PARAM_INT);
             $consulta->execute();
             $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
-
-        }catch (Exception $erro){
-         die ("Erro ao listar um comercio:" . $erro->getMessage());
+    
+            if (!$resultado) {
+                // Se o resultado estiver vazio, exiba um alerta
+                echo "<script>alert('Nenhum resultado encontrado.');</script>";
+                
+            }
+    
+        } catch (Exception $erro) {
+            die("Erro ao listar um comercio:" . $erro->getMessage());
         }
-
+    
         return $resultado;
+    }
+    
+
+    
 
 
-    }// Fim Lista/Ler Categoria
+
+     public function listar(): array {
+        $sql = "SELECT 
+                    usuarios.id,
+                    usuarios.nome, 
+                    usuarios.cpf, 
+                    usuarios.telefone,
+                    usuarios.email,
+                    usuarios.tipo,
+                    comerciantes.status
+                FROM comerciantes
+                INNER JOIN usuarios ON comerciantes.usuario_id = usuarios.id
+                ORDER BY tipo";
+    
+        try {
+            $consulta = $this->conexao->prepare($sql);
+    
+            // Não é necessário vincular o parâmetro :usuario_id, pois não está sendo utilizado na consulta SQL
+    
+            $consulta->execute();
+            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    
+        } catch (Exception $erro) {
+            die("Erro ao listar comercio:" . $erro->getMessage());
+        }
+    
+        return $resultado;      
+    }
+    
+    
+    
+    
+    
     
    
 
 
+
+    
 
 
 
