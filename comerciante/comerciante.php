@@ -19,10 +19,6 @@ if (isset($_GET['sair'])) $sessao->logout();
 
 /* Script para puxar o comercio cadastrado no gerenciar comercio */
 
-// $comercio = new Comerciante;
-
-// $comercio->setId($_GET['id']);
-// $dados = $comercio->listarUmComercioGerenciar();
 
 
 /* Script para atualização da Minha conta  */
@@ -73,36 +69,24 @@ if (isset($_POST["cadastrar_comercio"])) {
   $comercio->setImagem($imagem["name"]);   // precisa ser NAME 
 
   $comercio->inserirComercio();
-  //header("location:noticias.php");
+  header("location:comerciante.php");
 
 }
 
-
-/* Script para Atualizar - Comercio  */
-if (isset($_POST["atualizarComercio"])) {
-  $comercio = new Comerciante;
-  $comercio->setNomeComercio($_POST["nome_comercio"]);
-  $comercio->setDescricao($_POST["descricao"]);
-  $comercio->setLinkInstagram($_POST["link_instagram"]);
+$comercio = new Comerciante;
+//$comercio->setId($_GET['id']);
+//$dados = $comercio->listarUmComercioGerenciar();
 
 
+/* GPT DEu e deu erro  */
+// if (isset($_GET['id'])) {
+//     $id = intval($_GET['id']); // Converte para inteiro se necessário
+//     $comercio->setId($id);
+//     $dados = $comercio->listarUmComercioGerenciar();
+//     // Restante do seu código que usa $dados...
+// } 
 
 
-
-  /* Lógica/Algoritmo para atualizar a foto (se necessário) */
-
-  /* Se o campo imagem estiver vazio, então significa que o usuario NÃO QUER TROCAR DE IMAGEM. Portanto vamos mater a imgem existente.  */
-  if (empty($_FILES["imagem"]["name"])) {
-    $noticia->setImagem($_POST["imagem-existente"]);
-  } else {
-    /* Caso contrário, vamos pegar a referência (nome/extensão) da nova imagem, fazer o ipload do novo arquivo e enviar a referência para o objeto usando setter.*/
-    $noticia->upload($_FILES["imagem"]);
-    $noticia->setImagem($_FILES["imagem"]["name"]);
-  }
-
-  $noticia->atualizarComercio();
-  //header("location:noticias.php");
-}
 
 
 ?>
@@ -268,9 +252,6 @@ if (isset($_POST["atualizarComercio"])) {
             <div class="close-btn">x</div>
           </div>
 
-
-
-
           <!-- Nome comercio  -->
           <div class="comerciante__input">
             <label class="titulo" for="nome_comercio">Nome Comércio:
@@ -293,7 +274,6 @@ if (isset($_POST["atualizarComercio"])) {
           </div>
           <div class="botao__enviar">
             <button type="submit" id="submit" name="cadastrar_comercio">Enviar</button>
-
           </div>
 
         </form>
@@ -356,7 +336,6 @@ if (isset($_POST["atualizarComercio"])) {
 
         <div class="section-title">
           <h2>Gerenciar Comércio</h2>
-
         </div>
 
         <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
@@ -367,9 +346,6 @@ if (isset($_POST["atualizarComercio"])) {
             <input hidden value="<?= $dados['imagem'] ?>" type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
             <div class="close-btn">x</div>
           </div>
-
-
-
 
           <!-- Nome comercio  -->
           <div class="comerciante__input">
@@ -389,14 +365,15 @@ if (isset($_POST["atualizarComercio"])) {
           <div class="comerciante__input">
             <label for="link_instagram">Instagram:</label>
             <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?= $dados['link_instagram'] ?>">
+          </div>   
 
+          <div class="botao__enviar__adm">
+            <div class="botao__enviar">
+              <button type="submit" id="submit" name="atualizarComercio">Atualizar Comercio</button>
+            </div>
           </div>
-          <div class="botao__enviar">
-            <button type="submit" id="submit" name="atualizarComercio">Enviar</button>
 
-          </div>
         </form>
-
       </div>
 
     </section><!-- Fim Gerenciar Comércio -->
