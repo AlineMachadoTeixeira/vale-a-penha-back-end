@@ -121,6 +121,28 @@ class Comerciante{
     }
 
 
+
+    //Listar o comercio na pagina comerciante na parte gerenciar comercio
+    public function listarUmComercioGerenciar(): array {
+        $sql = "SELECT * FROM comerciantes WHERE usuario_id = :id"; 
+    
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindValue(":id", $this->id, PDO::PARAM_INT);
+
+            $consulta->execute();
+
+            $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+        
+        } catch (Exception $erro) {
+            die("Erro ao listar um comercio:" . $erro->getMessage());
+        }
+    
+        return $resultado;
+    }
+
+
+
     //Atualizar usuario na pagina Status
     public function atualizarStatus(): void {
         $sql = "UPDATE comerciantes SET             
@@ -139,6 +161,34 @@ class Comerciante{
             die("Erro ao atualizar o Status do comercio" . $erro->getMessage());
         }
    } //Fim do atualizar Status
+
+
+   //Atualizar Comercio
+     //Atualizar usuario na pagina adm-atualizar
+     public function atualizarComercio(): void {
+        $sql = "UPDATE comerciantes SET
+            imagem = :imagem, 
+            nome_comercio = :nome_comercio, 
+            descricao = :descricao, 
+            link_instagram = :link_instagram
+            
+            
+            WHERE id = :id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindValue(":id", $this->id, PDO::PARAM_INT);
+            $consulta->bindValue(":imagem", $this->imagem, PDO::PARAM_STR);
+            $consulta->bindValue(":nome_comercio", $this->nome_comercio, PDO::PARAM_STR);
+            $consulta->bindValue(":link_instagram", $this->link_instagram, PDO::PARAM_STR);
+                      
+
+            $consulta->execute();            
+
+        } catch (Exception $erro) {
+            die("Erro ao atualizar usuário" . $erro->getMessage());
+        }
+   } //Fim do atualizar usuario na pagina adm-atualizar
     
 
     

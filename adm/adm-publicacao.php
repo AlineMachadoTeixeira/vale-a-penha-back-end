@@ -419,9 +419,9 @@ if (isset($_POST['publicar'])) {
                             <select class="comerciante__option" name="status" id="status" required>
                                 <option value=""></option>
 
-                                <option <?php if($dados["status"] === "ativo" ) echo " selected ";?>  value="ativo">Publicar</option>
+                                <option <?php if($dados["status"] === "ativo" ) echo " selected ";?>  value="ativo">Ativo</option>
 
-                                <option <?php if($dados["status"] === "inativo" ) echo " selected ";?>  value="inativo">Não Publicado</option>
+                                <option <?php if($dados["status"] === "inativo" ) echo " selected ";?>  value="inativo">Inativo</option>
                                 
                             </select>
 
@@ -435,11 +435,11 @@ if (isset($_POST['publicar'])) {
 
                         </div>
 
-                        <div class="botao__enviar">                     
+                        <!-- <div class="botao__enviar">                     
 
                             <button type="submit" id="submit" name="voltar_adm">Voltar</button>
 
-                        </div>
+                        </div> -->
 
                     </div>
 

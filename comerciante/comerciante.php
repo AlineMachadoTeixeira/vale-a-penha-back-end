@@ -17,6 +17,13 @@ $dados = $usuario->listarUmUsuario();
 /* Se o parâmetro para "sair" existeir  */
 if (isset($_GET['sair'])) $sessao->logout();
 
+/* Script para puxar o comercio cadastrado no gerenciar comercio */
+
+// $comercio = new Comerciante;
+
+// $comercio->setId($_GET['id']);
+// $dados = $comercio->listarUmComercioGerenciar();
+
 
 /* Script para atualização da Minha conta  */
 if (isset($_POST['alterar_Cadastro'])) {
@@ -68,6 +75,33 @@ if (isset($_POST["cadastrar_comercio"])) {
   $comercio->inserirComercio();
   //header("location:noticias.php");
 
+}
+
+
+/* Script para Atualizar - Comercio  */
+if (isset($_POST["atualizarComercio"])) {
+  $comercio = new Comerciante;
+  $comercio->setNomeComercio($_POST["nome_comercio"]);
+  $comercio->setDescricao($_POST["descricao"]);
+  $comercio->setLinkInstagram($_POST["link_instagram"]);
+
+
+
+
+
+  /* Lógica/Algoritmo para atualizar a foto (se necessário) */
+
+  /* Se o campo imagem estiver vazio, então significa que o usuario NÃO QUER TROCAR DE IMAGEM. Portanto vamos mater a imgem existente.  */
+  if (empty($_FILES["imagem"]["name"])) {
+    $noticia->setImagem($_POST["imagem-existente"]);
+  } else {
+    /* Caso contrário, vamos pegar a referência (nome/extensão) da nova imagem, fazer o ipload do novo arquivo e enviar a referência para o objeto usando setter.*/
+    $noticia->upload($_FILES["imagem"]);
+    $noticia->setImagem($_FILES["imagem"]["name"]);
+  }
+
+  $noticia->atualizarComercio();
+  //header("location:noticias.php");
 }
 
 
@@ -130,7 +164,7 @@ if (isset($_POST["cadastrar_comercio"])) {
           <li><a href="#ajuda" class="nav-link scrollto"><i class="bx bx-help-circle"></i> <span>Ajuda</span></a>
           </li>
 
-          
+
           <li><a href="#gerenciarcomercio" class="nav-link scrollto"><i class="bx bx-copy-alt"></i> <span>Gerenciar
                 Comércio</span></a>
           </li>
@@ -329,32 +363,36 @@ if (isset($_POST["cadastrar_comercio"])) {
 
           <!-- FOTO comercio-->
           <div class="file-wrapper">
-            <input type="file" class="comerciante__foto__image" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
+            <p class="comerciante__foto__image"><img src="../imagens/<?= $dados['imagem'] ?>" alt=""></p>
+            <input hidden value="<?= $dados['imagem'] ?>" type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
             <div class="close-btn">x</div>
           </div>
+
+
+
 
           <!-- Nome comercio  -->
           <div class="comerciante__input">
             <label class="titulo" for="nome_comercio">Nome Comércio:
-              <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required> </textarea>
+              <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"><?= $dados['nome_comercio'] ?></textarea>
             </label>
           </div>
 
           <!-- Descrição  -->
           <div class="comerciante__input">
             <label for="descricao">Descrição:
-              <textarea rows="5" cols="33" name="descricao" id="descricao" required></textarea>
+              <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="80"><?= $dados['descricao'] ?></textarea>
             </label>
           </div>
 
           <!-- Instagram Link -->
           <div class="comerciante__input">
             <label for="link_instagram">Instagram:</label>
-            <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" required>
+            <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?= $dados['link_instagram'] ?>">
 
           </div>
           <div class="botao__enviar">
-            <button type="submit" id="submit" name="enviar">Enviar</button>
+            <button type="submit" id="submit" name="atualizarComercio">Enviar</button>
 
           </div>
         </form>
