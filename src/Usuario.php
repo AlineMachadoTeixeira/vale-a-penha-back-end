@@ -27,21 +27,32 @@ class Usuario{
 
     //INSERT-Inserir Usuarios no formulario Cadastre-se  //tipo
     public function inserirUsuario(): void {
-        $sql = "INSERT INTO usuarios(nome, sobrenome, cpf, telefone, email, data, senha)
+        $sqlUsuario = "INSERT INTO usuarios(nome, sobrenome, cpf, telefone, email, data, senha)
               VALUES(:nome, :sobrenome, :cpf, :telefone, :email, :data, :senha)";
 
+        $sqlComercio = "INSERT INTO  comerciantes (usuario_id) 
+        VALUES (:usuario_id)";
+
         try {
-            $consulta = $this->conexao->prepare($sql);
-            $consulta->bindValue(":nome", $this->nome, PDO::PARAM_STR);
-            $consulta->bindValue(":sobrenome", $this->sobrenome, PDO::PARAM_STR);
-            $consulta->bindValue(":cpf", $this->cpf, PDO::PARAM_STR);
-            $consulta->bindValue(":telefone", $this->telefone, PDO::PARAM_STR);
-            $consulta->bindValue(":email", $this->email, PDO::PARAM_STR);
-            $consulta->bindValue(":data", $this->data, PDO::PARAM_STR);
-            $consulta->bindValue(":senha", $this->senha, PDO::PARAM_STR);
+            $consultaUsuario = $this->conexao->prepare($sqlUsuario);
+            $consultaUsuario->bindValue(":nome", $this->nome, PDO::PARAM_STR);
+            $consultaUsuario->bindValue(":sobrenome", $this->sobrenome, PDO::PARAM_STR);
+            $consultaUsuario->bindValue(":cpf", $this->cpf, PDO::PARAM_STR);
+            $consultaUsuario->bindValue(":telefone", $this->telefone, PDO::PARAM_STR);
+            $consultaUsuario->bindValue(":email", $this->email, PDO::PARAM_STR);
+            $consultaUsuario->bindValue(":data", $this->data, PDO::PARAM_STR);
+            $consultaUsuario->bindValue(":senha", $this->senha, PDO::PARAM_STR);
             //$consulta->bindValue(":tipo", $this->tipo, PDO::PARAM_STR);          
 
-            $consulta->execute();
+            $consultaUsuario->execute();
+
+
+            $idUsuario = $this->conexao->lastInsertId();
+            $consultaComercio = $this->conexao->prepare($sqlComercio);
+            $consultaComercio->bindValue(":usuario_id", $idUsuario, PDO::PARAM_INT);
+
+            $consultaComercio->execute();
+
         } catch (Exception $erro) {
             die("Erro ao cadastrar usuário:" . $erro->getMessage());
         }

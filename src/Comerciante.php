@@ -245,7 +245,7 @@ class Comerciante{
     
             // Não é necessário vincular o parâmetro :usuario_id, pois não está sendo utilizado na consulta SQL
             $consulta->bindValue(":usuario_id", $this->usuario->getId(), PDO::PARAM_INT);
-            $consulta->bindValue(":situacao");
+            $consulta->bindValue(":situacao","ativo", PDO::PARAM_STR);
             $consulta->execute();
             $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
     

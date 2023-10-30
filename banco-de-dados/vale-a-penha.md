@@ -24,10 +24,10 @@ CREATE TABLE usuarios(
 ```sql
 CREATE TABLE comerciantes (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    imagem VARCHAR(250) NOT NULL,
-    nome_comercio VARCHAR(30) NOT NULL,
-    descricao VARCHAR(60) NOT NULL,
-    link_instagram VARCHAR(200) NOT NULL,
+    imagem VARCHAR(250)  NULL,
+    nome_comercio VARCHAR(30)  NULL,
+    descricao VARCHAR(60) NULL,
+    link_instagram VARCHAR(200)  NULL,
     status ENUM('ativo', 'inativo') NULL DEFAULT 'inativo',
     usuario_id INT NULL       
 ); 
