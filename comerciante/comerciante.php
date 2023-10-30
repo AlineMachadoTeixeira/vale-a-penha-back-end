@@ -73,6 +73,7 @@ if (isset($_POST["cadastrar_comercio"])) {
 
 }
 
+
 $comercio = new Comerciante;
 $comercio->setId($_SESSION['id']);
 $dadosComercios = $comercio->listarUmComercioGerenciar();
@@ -341,7 +342,7 @@ $dadosComercios = $comercio->listarUmComercioGerenciar();
               <input value="<?= $dadosComercios['imagem'] ?>" type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
               <div class="close-btn">x</div>
             </div>
-          <?php } ?>
+          <?php } else { ?>
 
           <!-- 2º FOTO comercio-->
           <div class="file-wrapper">
@@ -350,6 +351,8 @@ $dadosComercios = $comercio->listarUmComercioGerenciar();
             <div class="close-btn">x</div>
           </div>
 
+          <?php } ?>
+
           <?php if (!empty ($dadosComercios['nome_comercio'])){ ?>
             <!-- 1º Nome comercio  -->
             <div class="comerciante__input">
@@ -357,7 +360,7 @@ $dadosComercios = $comercio->listarUmComercioGerenciar();
                 <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"><?= $dadosComercios['nome_comercio'] ?></textarea>
               </label>
             </div>
-          <?php } ?>
+            <?php } else { ?>
 
           <!-- 2° Nome comercio  -->
           <div class="comerciante__input">
@@ -366,6 +369,8 @@ $dadosComercios = $comercio->listarUmComercioGerenciar();
             </label>
           </div>
 
+          <?php } ?>
+
           <?php if (!empty ($dadosComercios['descricao'])){ ?>
             <!-- 1º Descrição  -->
             <div class="comerciante__input">
@@ -373,7 +378,7 @@ $dadosComercios = $comercio->listarUmComercioGerenciar();
                 <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="80"><?= $dadosComercios['descricao'] ?></textarea>
               </label>
             </div>
-          <?php } ?>
+            <?php } else { ?>
 
           <!-- 2º Descrição  -->
           <div class="comerciante__input">
@@ -382,19 +387,23 @@ $dadosComercios = $comercio->listarUmComercioGerenciar();
             </label>
           </div>
 
+          <?php } ?>
+
           <?php if (!empty ($dadosComercios['link_instagram'])){ ?>
             <!-- 1º Instagram Link -->
             <div class="comerciante__input">
               <label for="link_instagram">Instagram:</label>
               <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?=$dadosComercios['link_instagram'] ?>">
             </div> 
-          <?php } ?> 
+            <?php } else { ?>
           
           <!-- 2º Instagram Link -->
           <div class="comerciante__input">
             <label for="link_instagram">Instagram:</label>
-            <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?=$dadosComercios['link_instagram'] ?>">
+            <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram">
           </div> 
+
+          <?php } ?>
 
           <div class="botao__enviar__adm">
             <div class="botao__enviar">
