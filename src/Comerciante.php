@@ -128,7 +128,7 @@ class Comerciante{
     
         try {
             $consulta = $this->conexao->prepare($sql);
-            $consulta->bindValue(":id", $this->id, PDO::PARAM_INT);
+            $consulta->bindValue(":id", $this->usuario->getId(), PDO::PARAM_INT);
 
             $consulta->execute();
 
@@ -203,6 +203,7 @@ class Comerciante{
                     usuarios.telefone,
                     usuarios.email,
                     usuarios.tipo,
+                    comerciantes.usuario_id,
                     COALESCE(comerciantes.status, 's/comercio') as status
                 FROM comerciantes
                 RIGHT JOIN usuarios ON comerciantes.usuario_id = usuarios.id
@@ -215,6 +216,38 @@ class Comerciante{
     
             $consulta->execute();
             $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    
+        } catch (Exception $erro) {
+            die("Erro ao listar comercio:" . $erro->getMessage());
+        }
+    
+        return $resultado;      
+    }
+
+
+
+     public function listarUm(): array {
+        $sql = "SELECT 
+                    usuarios.id,
+                    usuarios.nome, 
+                    usuarios.cpf, 
+                    usuarios.telefone,
+                    usuarios.email,
+                    usuarios.tipo,
+                    COALESCE(comerciantes.status, 's/comercio') as situacao
+                FROM comerciantes
+                RIGHT JOIN usuarios ON comerciantes.usuario_id = usuarios.id
+                WHERE comerciantes.usuario_id = :usuario_id AND situacao = :situacao
+                ORDER BY tipo";
+    
+        try {
+            $consulta = $this->conexao->prepare($sql);
+    
+            // Não é necessário vincular o parâmetro :usuario_id, pois não está sendo utilizado na consulta SQL
+            $consulta->bindValue(":usuario_id", $this->usuario->getId(), PDO::PARAM_INT);
+            $consulta->bindValue(":situacao");
+            $consulta->execute();
+            $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
     
         } catch (Exception $erro) {
             die("Erro ao listar comercio:" . $erro->getMessage());

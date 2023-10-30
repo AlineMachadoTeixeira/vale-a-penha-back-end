@@ -12,6 +12,8 @@ $sessao->verificaAcesso();
 $comercio = new Comerciante;
 $listarTodos = $comercio->listar();
 
+var_dump($listarTodos);
+
 
 /* Se o parâmetro "sair" */
 if (isset($_GET['sair'])){$sessao->logout();
