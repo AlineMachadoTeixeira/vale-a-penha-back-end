@@ -29,20 +29,10 @@ CREATE TABLE comerciantes (
     descricao VARCHAR(60) NULL,
     link_instagram VARCHAR(200)  NULL,
     status ENUM('ativo', 'inativo') NULL DEFAULT 'inativo',
-    usuario_id INT NULL       
+    usuario_id INT NULL 
+         
 ); 
 ```
-
-<!-- Criar tabela ADMINISTRADORES  -->
-```sql
-CREATE TABLE administradores(
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,    
-    senha VARCHAR(250) NOT NULL           
-); 
-```
-
 <!--Criando a chave-estrangeira Confirmar se está correto com a opção on Delete Cascade-->
 ```sql
 ALTER TABLE comerciantes
@@ -57,3 +47,13 @@ ALTER TABLE comerciantes
 
 <!-- ADD CONSTRAINT fk_comercios_comerciantes
     FOREIGN KEY (comerciante_id) REFERENCES comerciantes(id) ON DELETE CASCADE; -->
+
+
+<!-- ```sql
+CREATE TABLE administradores(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,    
+    senha VARCHAR(250) NOT NULL           
+); 
+``` -->
