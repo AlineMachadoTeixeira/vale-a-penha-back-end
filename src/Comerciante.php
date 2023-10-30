@@ -147,12 +147,12 @@ class Comerciante{
     public function atualizarStatus(): void {
         $sql = "UPDATE comerciantes SET             
             status = :status 
-            WHERE id = :id";
+            WHERE usuario_id = :usuario_id";
 
         try {
             $consulta = $this->conexao->prepare($sql);
             
-            $consulta->bindValue(":id", $this->id, PDO::PARAM_INT);
+            $consulta->bindValue(":usuario_id", $this->id, PDO::PARAM_INT);
             $consulta->bindValue(":status", $this->status, PDO::PARAM_STR);            
 
             $consulta->execute();            
@@ -203,9 +203,9 @@ class Comerciante{
                     usuarios.telefone,
                     usuarios.email,
                     usuarios.tipo,
-                    comerciantes.status
+                    COALESCE(comerciantes.status, 's/comercio') as status
                 FROM comerciantes
-                INNER JOIN usuarios ON comerciantes.usuario_id = usuarios.id
+                RIGHT JOIN usuarios ON comerciantes.usuario_id = usuarios.id
                 ORDER BY tipo";
     
         try {

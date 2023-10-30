@@ -9,13 +9,15 @@ $comercio->setId($_GET['id']);
 $dados = $comercio->listarUmComercio();
 
 
-/* Script para atualização status de inativo para ativo */
-if (isset($_POST['publicar'])) {
-    $comercio->setStatus($_POST['status']);
-
-    $comercio->atualizarStatus();
-    // header("location:comerciante.php");
-}
+/* Script para Mudar o tipo do usuario  Não funcionou */
+if(isset($_POST['publicar'])){   
+    $comercio->usuario->setId($_GET['id']); 
+  
+    $comercio->setStatus($_POST['status']);	
+  
+      $comercio->atualizarStatus();
+       header("location:adm.php");	
+  }
 
 
 
@@ -395,21 +397,21 @@ if (isset($_POST['publicar'])) {
                     <!-- Nome comercio  -->
                     <div class="comerciante__input">
                         <label class="titulo" for="nome_comercio">Nome Comércio:
-                            <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"><?=$dados['nome_comercio']?></textarea>
+                            <textarea rows="1" cols="33" disabled name="nome_comercio" id="nome_comercio" required maxlength="40"><?=$dados['nome_comercio']?></textarea>
                         </label>
                     </div>
 
                     <!-- Descrição  -->
                     <div class="comerciante__input">
                         <label for="descricao">Descrição:
-                            <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="80"><?=$dados['descricao']?></textarea>
+                            <textarea rows="5" cols="33" disabled name="descricao" id="descricao" required maxlength="80"><?=$dados['descricao']?></textarea>
                         </label>
                     </div>
 
                     <!-- Instagram Link -->
                     <div class="comerciante__input">
                         <label for="link_instagram">Instagram:</label>
-                        <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?=$dados['link_instagram']?>">
+                        <input type="url"  disabled name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?=$dados['link_instagram']?>">
 
                     </div>
 

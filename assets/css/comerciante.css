@@ -435,3 +435,9 @@ input[type="file"]{
   opacity: 0.8;
 }
 .file-set > input{pointer-events: none;}
+
+
+/* Sumir o comercio assim que cadastrar */
+.cadastrarcomercio {
+  display: none;
+}

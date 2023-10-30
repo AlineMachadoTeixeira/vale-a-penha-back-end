@@ -9,12 +9,8 @@ require_once "../vendor/autoload.php";
 $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
 
-$usuario = new Usuario;
-$listaDeUsuarios = $usuario->listarUsuarios();
-
 $comercio = new Comerciante;
-$listarDeComercio = $comercio->listarComercio();
-
+$listarTodos = $comercio->listar();
 
 
 /* Se o parâmetro "sair" */
@@ -23,15 +19,7 @@ if (isset($_GET['sair'])){$sessao->logout();
 
 
 
-/* Script para Mudar o tipo do usuario  Não funcionou */
-// if(isset($_POST['salvar_tipo'])){
-     		
-//    $usuario->setTipo($_POST['tipo']);
-	
 
-// 	$usuario->atualizarTipoUsuario();
-// 	header("location:adm.php");	
-// }
 
 ?>
 
@@ -113,7 +101,7 @@ if (isset($_GET['sair'])){$sessao->logout();
             <th>Status</th>
           </tr>
 
-          <?php foreach ($listaDeUsuarios as $itemUsuario) { ?>
+          <?php foreach ($listarTodos as $itemUsuario) { ?>
             <tr>
               <td><?= $itemUsuario["id"] ?></td>
               <td><?= $itemUsuario["nome"] ?></td>
@@ -162,7 +150,7 @@ if (isset($_GET['sair'])){$sessao->logout();
                 </a>
               </td>
 
-              <td>Inativo</td> <!-- Falta fazer o php para puxa status -->
+              <td><?= $itemUsuario["status"] ?></td> <!-- Falta fazer o php para puxa status -->
 
             </tr>
 

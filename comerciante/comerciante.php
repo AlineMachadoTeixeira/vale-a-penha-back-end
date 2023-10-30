@@ -74,17 +74,11 @@ if (isset($_POST["cadastrar_comercio"])) {
 }
 
 $comercio = new Comerciante;
-//$comercio->setId($_GET['id']);
-//$dados = $comercio->listarUmComercioGerenciar();
+$comercio->setId($_SESSION['id']);
+$dadosComercios = $comercio->listarUmComercioGerenciar();
 
 
-/* GPT DEu e deu erro  */
-// if (isset($_GET['id'])) {
-//     $id = intval($_GET['id']); // Converte para inteiro se necessário
-//     $comercio->setId($id);
-//     $dados = $comercio->listarUmComercioGerenciar();
-//     // Restante do seu código que usa $dados...
-// } 
+
 
 
 
@@ -235,7 +229,7 @@ $comercio = new Comerciante;
 
 
     <!-- ======= Cadastrar Comércio ======= -->
-    <section id="cadastrarcomercio" class="cadastrarcomercio">
+    <section id="cadastrarcomercio" class="">
       <div class="container">
 
         <div class="section-title">
@@ -273,7 +267,7 @@ $comercio = new Comerciante;
 
           </div>
           <div class="botao__enviar">
-            <button type="submit" id="submit" name="cadastrar_comercio">Enviar</button>
+            <button type="submit" id="cadastrar_comercio" name="cadastrar_comercio">Enviar</button>
           </div>
 
         </form>
@@ -340,32 +334,67 @@ $comercio = new Comerciante;
 
         <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
 
-          <!-- FOTO comercio-->
+         <?php if (!empty ($dadosComercios['imagem'])){ ?>
+            <!-- 1º FOTO comercio-->
+            <div class="file-wrapper">
+              <p class="comerciante__foto__image"><img src="../imagens/<?= $dadosComercios['imagem'] ?>" alt=""></p>
+              <input value="<?= $dadosComercios['imagem'] ?>" type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
+              <div class="close-btn">x</div>
+            </div>
+          <?php } ?>
+
+          <!-- 2º FOTO comercio-->
           <div class="file-wrapper">
-            <p class="comerciante__foto__image"><img src="../imagens/<?= $dados['imagem'] ?>" alt=""></p>
-            <input hidden value="<?= $dados['imagem'] ?>" type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
+            <p class="comerciante__foto__image"><img src="" alt=""></p>
+            <input  type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
             <div class="close-btn">x</div>
           </div>
 
-          <!-- Nome comercio  -->
+          <?php if (!empty ($dadosComercios['nome_comercio'])){ ?>
+            <!-- 1º Nome comercio  -->
+            <div class="comerciante__input">
+              <label class="titulo" for="nome_comercio">Nome Comércio:
+                <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"><?= $dadosComercios['nome_comercio'] ?></textarea>
+              </label>
+            </div>
+          <?php } ?>
+
+          <!-- 2° Nome comercio  -->
           <div class="comerciante__input">
             <label class="titulo" for="nome_comercio">Nome Comércio:
-              <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"><?= $dados['nome_comercio'] ?></textarea>
+              <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"></textarea>
             </label>
           </div>
 
-          <!-- Descrição  -->
+          <?php if (!empty ($dadosComercios['descricao'])){ ?>
+            <!-- 1º Descrição  -->
+            <div class="comerciante__input">
+              <label for="descricao">Descrição:
+                <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="80"><?= $dadosComercios['descricao'] ?></textarea>
+              </label>
+            </div>
+          <?php } ?>
+
+          <!-- 2º Descrição  -->
           <div class="comerciante__input">
             <label for="descricao">Descrição:
-              <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="80"><?= $dados['descricao'] ?></textarea>
+              <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="80"></textarea>
             </label>
           </div>
 
-          <!-- Instagram Link -->
+          <?php if (!empty ($dadosComercios['link_instagram'])){ ?>
+            <!-- 1º Instagram Link -->
+            <div class="comerciante__input">
+              <label for="link_instagram">Instagram:</label>
+              <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?=$dadosComercios['link_instagram'] ?>">
+            </div> 
+          <?php } ?> 
+          
+          <!-- 2º Instagram Link -->
           <div class="comerciante__input">
             <label for="link_instagram">Instagram:</label>
-            <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?= $dados['link_instagram'] ?>">
-          </div>   
+            <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?=$dadosComercios['link_instagram'] ?>">
+          </div> 
 
           <div class="botao__enviar__adm">
             <div class="botao__enviar">
@@ -377,7 +406,6 @@ $comercio = new Comerciante;
       </div>
 
     </section><!-- Fim Gerenciar Comércio -->
-
   </main>
 
   <!-- ======= Footer ======= -->
@@ -395,6 +423,7 @@ $comercio = new Comerciante;
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="../assets/js/comerciante.js"></script>
   <script src="../assets/js/mascara-cpf-tel.js"></script>
+  <script src="../assets/js/cadastrar-comercio.js"></script>
 
 
 </body>
