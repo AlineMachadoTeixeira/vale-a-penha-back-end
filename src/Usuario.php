@@ -118,7 +118,7 @@ class Usuario{
         return $resultado;
     } //Listar usuario na página adm
 
-   //Listar Um usuario na página adm
+  //Listar Um usuario na página adm
    public function listarUmUsuario():array {
     $sql = "SELECT * FROM usuarios WHERE id = :id";
 
@@ -131,7 +131,7 @@ class Usuario{
         $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
 
     }catch (Exception $erro){
-     die ("Erro ao carregar dados" . $erro->getMessage());
+     die (" Erro ao carregar dados" . $erro->getMessage());
     }
 
     return $resultado;

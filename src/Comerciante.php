@@ -143,27 +143,7 @@ class Comerciante{
 
 
 
-    //Atualizar usuario na pagina Status
-    public function atualizarStatus(): void {
-        $sql = "UPDATE comerciantes SET             
-            status = :status 
-            WHERE usuario_id = :usuario_id";
-
-        try {
-            $consulta = $this->conexao->prepare($sql);
-            
-            $consulta->bindValue(":usuario_id", $this->id, PDO::PARAM_INT);
-            $consulta->bindValue(":status", $this->status, PDO::PARAM_STR);            
-
-            $consulta->execute();            
-
-        } catch (Exception $erro) {
-            die("Erro ao atualizar o Status do comercio" . $erro->getMessage());
-        }
-   } //Fim do atualizar Status
-
-
-   //Atualizar Comercio
+     //Atualizar Comercio
      //Atualizar usuario na pagina adm-atualizar
      public function atualizarComercio(): void {
         $sql = "UPDATE comerciantes SET
@@ -226,35 +206,68 @@ class Comerciante{
 
 
 
-     public function listarUm(): array {
-        $sql = "SELECT 
-                    usuarios.id,
-                    usuarios.nome, 
-                    usuarios.cpf, 
-                    usuarios.telefone,
-                    usuarios.email,
-                    usuarios.tipo,
-                    COALESCE(comerciantes.status, 's/comercio') as situacao
-                FROM comerciantes
-                RIGHT JOIN usuarios ON comerciantes.usuario_id = usuarios.id
-                WHERE comerciantes.usuario_id = :usuario_id AND situacao = :situacao
-                ORDER BY tipo";
+    //  public function listarUm(): array {
+    //     $sql = "SELECT 
+    //                 usuarios.id,
+    //                 usuarios.nome, 
+    //                 usuarios.cpf, 
+    //                 usuarios.telefone,
+    //                 usuarios.email,
+    //                 usuarios.tipo,
+    //                 COALESCE(comerciantes.status, 's/comercio') as situacao
+    //             FROM comerciantes
+    //             RIGHT JOIN usuarios ON comerciantes.usuario_id = usuarios.id
+    //             WHERE comerciantes.usuario_id = :usuario_id AND situacao = :situacao
+    //             ORDER BY tipo";
     
+    //     try {
+    //         $consulta = $this->conexao->prepare($sql);    
+            
+    //         $consulta->bindValue(":usuario_id", $this->usuario->getId(), PDO::PARAM_INT);
+    //         $consulta->bindValue(":status","ativo", PDO::PARAM_STR);
+    //         $consulta->execute();
+    //         $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
+    
+    //     } catch (Exception $erro) {
+    //         die("Erro ao listar comercio:" . $erro->getMessage());
+    //     }
+    
+    //     return $resultado;      
+    // }
+
+
+
+    public function listarUm(): array {
+        
+        $sql = "SELECT * FROM comerciantes WHERE usuario_id = :id";
+
         try {
-            $consulta = $this->conexao->prepare($sql);
-    
-            // Não é necessário vincular o parâmetro :usuario_id, pois não está sendo utilizado na consulta SQL
+            $consulta = $this->conexao->prepare($sql);    
+            
             $consulta->bindValue(":usuario_id", $this->usuario->getId(), PDO::PARAM_INT);
-            $consulta->bindValue(":situacao","ativo", PDO::PARAM_STR);
+            $consulta->bindValue(":status","ativo", PDO::PARAM_STR);
             $consulta->execute();
             $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
-    
+
+            
         } catch (Exception $erro) {
             die("Erro ao listar comercio:" . $erro->getMessage());
         }
-    
-        return $resultado;      
+
+        return $resultado;  
     }
+
+
+    
+   
+
+
+    
+    
+
+
+
+    
     
     
     

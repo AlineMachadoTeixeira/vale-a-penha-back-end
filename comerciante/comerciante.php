@@ -327,8 +327,8 @@ if (isset($_POST["cadastrar_comercio"])) {
      $comercio = new Comerciante;
      $dadosComercios = $comercio->listar();
 
-    if($dadosComercios){ ?>
-    <pre> <?= var_dump($dadosComercios); ?></pre>   
+    if($dadosComercios ){ ?>
+     
     
     <section id="gerenciarcomercio" class="gerenciarcomercio">
       <div class="container">
