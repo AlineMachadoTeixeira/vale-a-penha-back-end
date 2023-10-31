@@ -325,8 +325,9 @@ if (isset($_POST["cadastrar_comercio"])) {
     <!-- ======= Gerenciar Comércio ======= -->
     <?php
     
-     
      $comercio = new Comerciante();
+     
+     
      $dadosComercios = $comercio->listarUm();
 
     if($dadosComercios ){ ?>

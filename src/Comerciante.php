@@ -259,52 +259,38 @@ class Comerciante{
 
 
     public function listarUm(): array {
-        $sql = "SELECT * FROM comerciantes WHERE usuario_id = :usuario_id AND status = :status";
-    
+        // $sql = "SELECT * FROM comerciantes WHERE usuario_id = :usuario_id AND status = :status";
+
+        $sql = "SELECT * FROM comerciantes WHERE  usuario_id = :usuario_id";    
         try {
-            $consulta = $this->conexao->prepare($sql);    
-            
+            $consulta = $this->conexao->prepare($sql); 
+
             $consulta->bindValue(":usuario_id", $this->usuario->getId(), PDO::PARAM_INT);
-            $consulta->bindValue(":status", "ativo", PDO::PARAM_STR);
+            // $consulta->bindValue(":status", "ativo", PDO::PARAM_STR);
+            
             $consulta->execute();
             $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
     
-            return $resultado;
+            
         } catch (Exception $erro) {
             die("Erro ao listar comercio:" . $erro->getMessage());
         }
+
+        return $resultado;
     }
 
-
-    
-
-    
-
-
-    
-
-
-    
-   
-
-
-    
-    
-
-
-
+      
     
     
     
     
     
-    
-    
-   
+   // public function getId(): int {
+    //     // Implemente o método getId para retornar o valor de id
+    //     return $this->id ?? 0; // Retorna 0 se $id for nulo
+    // }
+     
 
-
-
-    
 
 
 
