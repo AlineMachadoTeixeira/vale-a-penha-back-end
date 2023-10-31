@@ -323,14 +323,12 @@ if (isset($_POST["cadastrar_comercio"])) {
 
 
     <!-- ======= Gerenciar Comércio ======= -->
-    <?php
-    
+    <?php    
      $comercio = new Comerciante();     
      $comercio->usuario->setId($_SESSION['id']);
      $dadosComercios = $comercio->listarUm();
 
-    if($dadosComercios ){ ?>
-     
+    if($dadosComercios ){ ?>     
     
     <section id="gerenciarcomercio" class="gerenciarcomercio">
       <div class="container">
@@ -345,7 +343,6 @@ if (isset($_POST["cadastrar_comercio"])) {
          
 
           if ($dadosComercios !== null) { ?>
-
             
             <!-- 1º FOTO comercio-->
             <div class="file-wrapper">
