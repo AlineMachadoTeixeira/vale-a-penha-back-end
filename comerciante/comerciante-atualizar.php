@@ -229,7 +229,7 @@ if (isset($_POST['atualizar_comercio'])) {
         }
 
         .botao__enviar button {
-            width: 100%;
+            width: 80%;
             border: none;
             background-color: #c40008;
             padding: 10px;
@@ -254,7 +254,7 @@ if (isset($_POST['atualizar_comercio'])) {
             align-items: center;
             justify-content: center;
             gap: 20px;
-            width: 100%;
+            width: 80%;
         }
 
         .comerciante__input select {
@@ -287,10 +287,12 @@ if (isset($_POST['atualizar_comercio'])) {
             border: 10px solid #c40008;
             position: relative;
             margin: auto;
+            margin-top: 10px;
+        
         }
 
         .file-wrapper:after {
-            /* content: '+';  tira o mais */
+            content: '+';
             position: absolute;
             top: 0;
             bottom: 0;
@@ -303,11 +305,11 @@ if (isset($_POST['atualizar_comercio'])) {
             max-height: 85px;
             font-size: 70px;
             font-weight: bolder;
-            /* color: #c40008; */
+            color: #c40008;
         }
 
         .file-wrapper:before {
-            /* content: 'UPLOAD';   tira a palavra */
+            content: 'UPLOAD DA NOVA IMAGEM';
             display: block;
             position: absolute;
             left: 0;
@@ -316,7 +318,7 @@ if (isset($_POST['atualizar_comercio'])) {
             bottom: 35px;
             width: max-content;
             height: max-content;
-            font-size: 0.75em;
+            font-size: 10px;
             color: gray;
         }
 
@@ -382,6 +384,33 @@ if (isset($_POST['atualizar_comercio'])) {
         .sumir_foto {
             z-index: 30;
         }
+
+        .comerciante_atualizar{
+           
+            margin-top: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        .comerciante_atualizar a{  
+            font-size: 20px;
+            font-weight: bold;
+            padding-right: 8px;
+            color: #c40008;   
+            margin-left: 20px; 
+            text-align: center;  
+            text-decoration: none; 
+            padding: 10px;
+        }
+        .comerciante_atualizar a:hover{
+            transform: scale(1.30);     
+            transition: 0,5s;
+            background-color: #c40008;
+            color: #FFFFFF;
+            border-radius: 10px;
+               
+        
+        }
     </style>
 
 </head>
@@ -401,7 +430,7 @@ if (isset($_POST['atualizar_comercio'])) {
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Cadastrar Comércio</h2>
+                    <h2>Atualizar Comércio</h2>
 
                 </div>
 
@@ -421,7 +450,7 @@ if (isset($_POST['atualizar_comercio'])) {
                         <p class="comerciante__foto__image"><img src="../imagens/<?= $dadosComercios['imagem'] ?>" alt=""></p>
                         <!-- campo somente leitura, meramente informativo -->
                         <input hidden class="form-control " type="text" id="imagem-existente" name="imagem-existente" readonly value="<?= $dadosComercios['imagem'] ?>">
-                        
+
 
 
                     </div>
@@ -447,7 +476,11 @@ if (isset($_POST['atualizar_comercio'])) {
 
                     </div>
                     <div class="botao__enviar">
-                        <button type="submit" id="atualizar_comercio" name="atualizar_comercio">Enviar</button>
+                        <button type="submit" id="atualizar_comercio" name="atualizar_comercio">Atualizar</button>
+                    </div>
+
+                    <div class="comerciante_atualizar">                        
+                         <a href="comerciante.php">Voltar</a>
                     </div>
 
                 </form>

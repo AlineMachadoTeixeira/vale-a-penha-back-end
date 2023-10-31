@@ -313,8 +313,8 @@ if (isset($_POST["cadastrar_comercio"])) {
             <?php } else { ?>
 
               <div class="comerciante_atualizar">
-                <h3>Comércio ja Cadastrado</h3>
-                <p >Você pode atualizar aqui <a href="comerciante-atualizar.php" ><i class="bi bi-pencil"></i></a></p>
+                <h3>Comércio já Cadastrado!</h3>
+                <p >Você pode atualizar clicando no lápis: <a href="comerciante-atualizar.php" ><i class="bi bi-pencil"></i></a></p>
               </div>
 
 
