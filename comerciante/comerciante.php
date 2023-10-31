@@ -133,17 +133,18 @@ if (isset($_POST["cadastrar_comercio"])) {
                 Conta</span></a>
           </li>
 
-          <li><a href="#cadastrarcomercio" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Cadastrar
-                Comércio</span></a>
+          <li><a href="#gerenciarcomercio" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Cadastrar Comércio</span></a>
           </li>
+
+          <!-- <li><a href="#cadastrarcomercio" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Cadastrar <i class="bx bx-copy-alt"></i>
+                Comércio</span></a>
+          </li> -->
 
           <li><a href="#ajuda" class="nav-link scrollto"><i class="bx bx-help-circle"></i> <span>Ajuda</span></a>
           </li>
 
 
-          <li><a href="#gerenciarcomercio" class="nav-link scrollto"><i class="bx bx-copy-alt"></i> <span>Atualizar
-                Comércio</span></a>
-          </li>
+          
 
           <li><a href="?sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
           </li>
@@ -229,7 +230,7 @@ if (isset($_POST["cadastrar_comercio"])) {
 
 
 
-    <!-- ======= Gerenciar Comércio ======= -->
+    <!-- ======= Cadastrar  Comércio ======= -->
     <?php
     $comercio = new Comerciante();
     $comercio->usuario->setId($_SESSION['id']);
@@ -311,8 +312,10 @@ if (isset($_POST["cadastrar_comercio"])) {
 
             <?php } else { ?>
 
-              <h2>Comércios ja Cadastrado</h2>
-              <p>você pode atualizar: <a href="comerciante-atualizar.php">Atualizar</a></p>
+              <div class="comerciante_atualizar">
+                <h3>Comércio ja Cadastrado</h3>
+                <p >Você pode atualizar aqui <a href="comerciante-atualizar.php" ><i class="bi bi-pencil"></i></a></p>
+              </div>
 
 
             <?php } ?>

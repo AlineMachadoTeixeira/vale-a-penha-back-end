@@ -441,3 +441,19 @@ input[type="file"]{
 .cadastrarcomercio {
   display: none;
 }
+
+/* Lapiz do atualizar */
+.comerciante_atualizar a{
+  
+  font-size: 30px;
+  font-weight: bold;
+  padding-right: 8px;
+  color: #c40008;   
+  margin-left: 20px; 
+  text-align: center;   
+}
+.adm__botao a:hover{
+  transform: scale(1.30);     
+  transition: 0,5s;
+  color: #c40008;
+}
