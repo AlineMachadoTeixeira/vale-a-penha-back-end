@@ -16,6 +16,7 @@ if(isset($_POST['publicar'])){
     $comercio->setStatus($_POST['status']);	
   
       $comercio->atualizarStatus();
+      
        header("location:adm.php");	
   }
 

@@ -93,7 +93,6 @@ class Comerciante{
 
         return $resultado;
 
-
     }// Fim Lista/Ler Categoria
 
 
@@ -140,6 +139,25 @@ class Comerciante{
     
         return $resultado;
     }
+
+     //Atualizar usuario na pagina Status
+     public function atualizarStatus(): void {
+        $sql = "UPDATE comerciantes SET             
+            status = :status 
+            WHERE usuario_id = :usuario_id";
+
+        try {
+            $consulta = $this->conexao->prepare($sql);
+            
+            $consulta->bindValue(":usuario_id", $this->id, PDO::PARAM_INT);
+            $consulta->bindValue(":status", $this->status, PDO::PARAM_STR);            
+
+            $consulta->execute();            
+
+        } catch (Exception $erro) {
+            die("Erro ao atualizar o Status do comercio" . $erro->getMessage());
+        }
+   } //Fim do atualizar Status
 
 
 
@@ -261,12 +279,11 @@ class Comerciante{
     public function listarUm(): array {
         // $sql = "SELECT * FROM comerciantes WHERE usuario_id = :usuario_id AND status = :status";
 
-        $sql = "SELECT * FROM comerciantes WHERE  usuario_id = :usuario_id";    
+        $sql = "SELECT * FROM comerciantes WHERE usuario_id = :usuario_id";    
         try {
             $consulta = $this->conexao->prepare($sql); 
 
-            $consulta->bindValue(":usuario_id", $this->usuario->getId(), PDO::PARAM_INT);
-            // $consulta->bindValue(":status", "ativo", PDO::PARAM_STR);
+            $consulta->bindValue(":usuario_id", $this->usuario->getId(), PDO::PARAM_INT);           
             
             $consulta->execute();
             $resultado = $consulta->fetch(PDO::FETCH_ASSOC);
