@@ -16,7 +16,7 @@ $dados = $usuario->listarUmUsuario();
 /* Se o parâmetro para "sair" existeir  */
 if (isset($_GET['sair'])) $sessao->logout();
 
-$comercio = new Comerciante();     
+$comercio = new Comerciante();
 $comercio->usuario->setId($_SESSION['id']);
 $dadosComercios = $comercio->listarUm();
 
@@ -29,20 +29,19 @@ if (isset($_POST['atualizarComercio'])) {
     $comercio->setLinkInstagram($_POST['link_instagram']);
 
 
-    if(empty($_FILES["imagem"]["name"])) {
+    if (empty($_FILES["imagem"]["name"])) {
         $noticia->setImagem($_POST["imagem-existente"]);
-
-    }else{
-         /* Caso contrário, vamos pegar a referência (nome/extensão) da nova imagem, fazer o ipload do novo arquivo e enviar a referência para o objeto usando setter.*/
-         $noticia->upload($_FILES["imagem"]);
-         $noticia->setImagem($_FILES["imagem"]["name"]);     
+    } else {
+        /* Caso contrário, vamos pegar a referência (nome/extensão) da nova imagem, fazer o ipload do novo arquivo e enviar a referência para o objeto usando setter.*/
+        $noticia->upload($_FILES["imagem"]);
+        $noticia->setImagem($_FILES["imagem"]["name"]);
     }
-     
+
 
 
     $comercio->atualizarComercio();
-    header("location:comerciante.php");	
-  }
+    header("location:comerciante.php");
+}
 
 ?>
 <!DOCTYPE html>
@@ -243,14 +242,14 @@ if (isset($_POST['atualizarComercio'])) {
             color: #fff;
         }
 
-        
+
 
         .botao__enviar button:hover {
             background-color: rgba(300, 200, 120, 0.6);
             color: #000000c0;
         }
 
-        .botao__enviar__adm{
+        .botao__enviar__adm {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -277,9 +276,9 @@ if (isset($_POST['atualizarComercio'])) {
             outline: none
         }
 
-        
 
-        
+
+
 
         /* CSS Para a foto do cadastrar comercio  */
         .file-wrapper {
@@ -378,6 +377,11 @@ if (isset($_POST['atualizarComercio'])) {
         .file-set>input {
             pointer-events: none;
         }
+
+
+        .sumir_foto {
+            z-index: 30;
+        }
     </style>
 
 </head>
@@ -392,65 +396,75 @@ if (isset($_POST['atualizarComercio'])) {
 
 
 
-       <!-- ======= Cadastrar Comércio ======= -->
-    <section id="cadastrarcomercio" class="">
-      <div class="container">
+        <!-- ======= Cadastrar Comércio ======= -->
+        <section id="cadastrarcomercio" class="">
+            <div class="container">
 
-        <div class="section-title">
-          <h2>Cadastrar Comércio</h2>
+                <div class="section-title">
+                    <h2>Cadastrar Comércio</h2>
 
-        </div>
+                </div>
 
-        <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
+                <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
 
 
-          <!-- FOTO comercio-->
-          <div class="file-wrapper">
-          <p class="comerciante__foto__image"><img src="../imagens/<?= $dadosComercios['imagem'] ?>" alt=""></p>
-              <input value="<?= $dadosComercios['imagem'] ?>" type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
-              <div class="close-btn">x</div>
-          </div>
+                    <!-- FOTO comercio-->
+                    <div class="file-wrapper">
 
-          <!-- Nome comercio  -->
-          <div class="comerciante__input">
-            <label class="titulo" for="nome_comercio">Nome Comércio:
-              <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"> <?= $dadosComercios['nome_comercio'] ?></textarea>
-            </label>
-          </div>
+                        <input class="sumir_foto" type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
 
-          <!-- Descrição  -->
-          <div class="comerciante__input">
-            <label for="descricao">Descrição:
-              <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="100"><?= $dadosComercios['descricao'] ?></textarea>
-            </label>
-          </div>
+                        <div class="close-btn">x</div>
+                    </div>
 
-          <!-- Instagram Link -->
-          <div class="comerciante__input">
-            <label for="link_instagram">Instagram:</label>
-            <input  value="<?= $dadosComercios['link_instagram'] ?>"  type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" required>
+                    <!-- FOTO comercio existente-->
+                    <div class="file-wrapper ">
+                        <p class="comerciante__foto__image"><img src="../imagens/<?= $dadosComercios['imagem'] ?>" alt=""></p>
+                        <!-- campo somente leitura, meramente informativo -->
+                        <input class="form-control" type="text" id="imagem-existente" name="imagem-existente" readonly value="<?= $dadosComercios['imagem'] ?>">
 
-          </div>
-          <div class="botao__enviar">
-            <button type="submit" id="cadastrar_comercio" name="cadastrar_comercio">Enviar</button>
-          </div>
 
-        </form>
+                    </div>
 
-        <p class="paragrafo__dicas">Dicas</p>
+                    <!-- Nome comercio  -->
+                    <div class="comerciante__input">
+                        <label class="titulo" for="nome_comercio">Nome Comércio:
+                            <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"> <?= $dadosComercios['nome_comercio'] ?></textarea>
+                        </label>
+                    </div>
 
-        <ul class="ul__dicas">
+                    <!-- Descrição  -->
+                    <div class="comerciante__input">
+                        <label for="descricao">Descrição:
+                            <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="100"><?= $dadosComercios['descricao'] ?></textarea>
+                        </label>
+                    </div>
 
-          <li>É permitido um anúncio por usuário/CPF. </li>
-          <li>Limite de 1 foto.</li>
-          <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
-          <li>Caso sua imagem seja maior, use o link para redimencionar: <a href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
-          <li>Título de até 15 caracteres</li>
-          <li>Descrição com até 30 caracteres.</li>
-        </ul>
+                    <!-- Instagram Link -->
+                    <div class="comerciante__input">
+                        <label for="link_instagram">Instagram:</label>
+                        <input value="<?= $dadosComercios['link_instagram'] ?>" type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" required>
 
-      </div>
-    </section><!-- Fim Cadastrar Comércio -->
+                    </div>
+                    <div class="botao__enviar">
+                        <button type="submit" id="cadastrar_comercio" name="cadastrar_comercio">Enviar</button>
+                    </div>
+
+                </form>
+
+                <p class="paragrafo__dicas">Dicas</p>
+
+                <ul class="ul__dicas">
+
+                    <li>É permitido um anúncio por usuário/CPF. </li>
+                    <li>Limite de 1 foto.</li>
+                    <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
+                    <li>Caso sua imagem seja maior, use o link para redimencionar: <a href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
+                    <li>Título de até 15 caracteres</li>
+                    <li>Descrição com até 30 caracteres.</li>
+                </ul>
+
+            </div>
+        </section><!-- Fim Cadastrar Comércio -->
 
     </main>
 
