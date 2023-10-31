@@ -141,7 +141,7 @@ if (isset($_POST["cadastrar_comercio"])) {
           </li>
 
 
-          <li><a href="#gerenciarcomercio" class="nav-link scrollto"><i class="bx bx-copy-alt"></i> <span>Gerenciar
+          <li><a href="#gerenciarcomercio" class="nav-link scrollto"><i class="bx bx-copy-alt"></i> <span>Atualizar
                 Comércio</span></a>
           </li>
 
@@ -226,100 +226,7 @@ if (isset($_POST["cadastrar_comercio"])) {
     </section><!-- Fim Minha conta -->
 
 
-    <!-- ======= Cadastrar Comércio ======= -->
-    <section id="cadastrarcomercio" class="">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Cadastrar Comércio</h2>
-
-        </div>
-
-        <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
-
-
-          <!-- FOTO comercio-->
-          <div class="file-wrapper">
-            <input type="file" class="comerciante__foto__image" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
-            <div class="close-btn">x</div>
-          </div>
-
-          <!-- Nome comercio  -->
-          <div class="comerciante__input">
-            <label class="titulo" for="nome_comercio">Nome Comércio:
-              <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"> </textarea>
-            </label>
-          </div>
-
-          <!-- Descrição  -->
-          <div class="comerciante__input">
-            <label for="descricao">Descrição:
-              <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="100"></textarea>
-            </label>
-          </div>
-
-          <!-- Instagram Link -->
-          <div class="comerciante__input">
-            <label for="link_instagram">Instagram:</label>
-            <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" required>
-
-          </div>
-          <div class="botao__enviar">
-            <button type="submit" id="cadastrar_comercio" name="cadastrar_comercio">Enviar</button>
-          </div>
-
-        </form>
-
-        <p class="paragrafo__dicas">Dicas</p>
-
-        <ul class="ul__dicas">
-
-          <li>É permitido um anúncio por usuário/CPF. </li>
-          <li>Limite de 1 foto.</li>
-          <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
-          <li>Caso sua imagem seja maior, use o link para redimencionar: <a href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
-          <li>Título de até 15 caracteres</li>
-          <li>Descrição com até 30 caracteres.</li>
-        </ul>
-
-      </div>
-    </section><!-- Fim Cadastrar Comércio -->
-
-
-    <!-- ======= Ajuda ======= -->
-    <section id="ajuda" class="ajuda">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Ajuda</h2>
-          <p class="comerciante__paragrafo">Caso tenha alguma dúvida, nos envie uma mensagem e aguarde a resposta em seu
-            email. O tempo de resposta é de até 48 horas.</p>
-
-        </div>
-
-        <form class="comerciante__formulario" id="form" action="https://formspree.io/f/mvonybwj" method="post">
-
-          <!-- E-meil -->
-          <div class="comerciante__input">
-            <label for="email">Email:
-              <input type="email" name="email" id="email" placeholder="E-mail" required>
-            </label>
-          </div>
-          <!-- Mensagem Ajuda -->
-          <div class="comerciante__input">
-            <label for="mensagem">Mensagem:
-              <textarea rows="10" cols="33" name="mensagem" id="mensagem" required></textarea>
-            </label>
-          </div>
-          <div class="botao__enviar">
-            <button type="submit" id="submit" name="enviar">Enviar</button>
-            <p id="status"></p>
-          </div>
-
-        </form>
-
-      </div>
-    </section><!-- Fim Ajuda -->
+   
 
 
     <!-- ======= Gerenciar Comércio ======= -->
@@ -328,13 +235,38 @@ if (isset($_POST["cadastrar_comercio"])) {
      $comercio->usuario->setId($_SESSION['id']);
      $dadosComercios = $comercio->listarUm();
 
+
+    /* Script para atualização do comercio*/
+    if (isset($_POST['atualizarComercio'])) {
+      $comercio->setNomeComercio($_POST['nome_comercio']);
+
+      $comercio->setDescricao($_POST['descricao']);
+
+      $comercio->setLinkInstagram($_POST['link_instagram']);
+
+
+      /* Lógica/Algoritmo para atualizar a foto (se necessário) */      
+          //ID do usuário para o comerciante
+      //$comercio->usuario->setId($_SESSION["id"]);
+
+      $imagem = $_FILES["imagem"];
+
+      $comercio->upload($imagem);
+
+      $comercio->setImagem($imagem["name"]);   // precisa ser NAME       
+
+
+      $comercio->atualizarComercio();
+      header("location:comerciante.php");	
+    }
+
     if($dadosComercios ){ ?>     
     
     <section id="gerenciarcomercio" class="gerenciarcomercio">
       <div class="container">
 
         <div class="section-title">
-          <h2>Gerenciar Comércio</h2>
+          <h2>Atualizar Comércio</h2>
         </div>
 
         <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
@@ -346,9 +278,7 @@ if (isset($_POST["cadastrar_comercio"])) {
             
             <!-- 1º FOTO comercio-->
             <div class="file-wrapper">
-              <p class="comerciante__foto__image"><img src="../imagens/<?= $dadosComercios['imagem'] ?>" alt=""></p>
-              <input value="<?= $dadosComercios['imagem'] ?>" type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
-              <div class="close-btn">x</div>
+              
             </div>
 
             <!-- 1º Nome comercio  -->
@@ -361,7 +291,7 @@ if (isset($_POST["cadastrar_comercio"])) {
             <!-- 1º Descrição  -->
             <div class="comerciante__input">
               <label for="descricao">Descrição:
-                <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="80"><?= $dadosComercios['descricao'] ?></textarea>
+                <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="100"><?= $dadosComercios['descricao'] ?></textarea>
               </label>
             </div>
 
@@ -417,6 +347,46 @@ if (isset($_POST["cadastrar_comercio"])) {
    </section> <!-- Fim Gerenciar Comércio -->
     <?php 
     } ?>
+
+
+
+  
+
+
+    <!-- ======= Ajuda ======= -->
+    <section id="ajuda" class="ajuda">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Ajuda</h2>
+          <p class="comerciante__paragrafo">Caso tenha alguma dúvida, nos envie uma mensagem e aguarde a resposta em seu
+            email. O tempo de resposta é de até 48 horas.</p>
+
+        </div>
+
+        <form class="comerciante__formulario" id="form" action="https://formspree.io/f/mvonybwj" method="post">
+
+          <!-- E-meil -->
+          <div class="comerciante__input">
+            <label for="email">Email:
+              <input type="email" name="email" id="email" placeholder="E-mail" required>
+            </label>
+          </div>
+          <!-- Mensagem Ajuda -->
+          <div class="comerciante__input">
+            <label for="mensagem">Mensagem:
+              <textarea rows="10" cols="33" name="mensagem" id="mensagem" required></textarea>
+            </label>
+          </div>
+          <div class="botao__enviar">
+            <button type="submit" id="submit" name="enviar">Enviar</button>
+            <p id="status"></p>
+          </div>
+
+        </form>
+
+      </div>
+    </section><!-- Fim Ajuda -->
   </main>
 
   <!-- ======= Footer ======= -->

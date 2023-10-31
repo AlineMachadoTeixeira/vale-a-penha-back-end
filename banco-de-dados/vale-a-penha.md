@@ -26,7 +26,7 @@ CREATE TABLE comerciantes (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     imagem VARCHAR(250)  NULL,
     nome_comercio VARCHAR(30)  NULL,
-    descricao VARCHAR(60) NULL,
+    descricao VARCHAR(150) NULL,
     link_instagram VARCHAR(200)  NULL,
     status ENUM('ativo', 'inativo') NULL DEFAULT 'inativo',
     usuario_id INT NULL 

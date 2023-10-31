@@ -162,7 +162,7 @@ class Comerciante{
 
 
      //Atualizar Comercio
-     //Atualizar usuario na pagina adm-atualizar
+     //Atualizar usuario na pagina adm-atualizar e comerciante.php atualizar comercio
      public function atualizarComercio(): void {
         $sql = "UPDATE comerciantes SET
             imagem = :imagem, 
@@ -170,19 +170,20 @@ class Comerciante{
             descricao = :descricao, 
             link_instagram = :link_instagram            
             
-            WHERE id = :id";
+            WHERE usuario_id = :id";
 
         try {
             $consulta = $this->conexao->prepare($sql);
-            $consulta->bindValue(":id", $this->id, PDO::PARAM_INT);
-            $consulta->bindValue(":imagem", $this->imagem, PDO::PARAM_STR);
-            $consulta->bindValue(":nome_comercio", $this->nome_comercio, PDO::PARAM_STR);
-            $consulta->bindValue(":link_instagram", $this->link_instagram, PDO::PARAM_STR);                      
+            $consulta->bindValue(":id", $this->usuario->getId(), PDO::PARAM_INT);
+            $consulta->bindValue(":imagem", $this->getImagem(), PDO::PARAM_STR);
+            $consulta->bindValue(":nome_comercio", $this->getNomeComercio(), PDO::PARAM_STR);
+            $consulta->bindValue(":descricao", $this->getDescricao(), PDO::PARAM_STR);
+            $consulta->bindValue(":link_instagram", $this->getLinkInstagram(), PDO::PARAM_STR);                      
 
             $consulta->execute();            
 
         } catch (Exception $erro) {
-            die("Erro ao atualizar usuário" . $erro->getMessage());
+            die("Erro ao atualizar comércio" . $erro->getMessage());
         }
    } //Fim do atualizar usuario na pagina adm-atualizar    
 
@@ -238,7 +239,6 @@ class Comerciante{
         return $resultado;
     }  
 
-    
     
     
     
