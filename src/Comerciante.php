@@ -21,24 +21,24 @@ class Comerciante{
     }
 
     //INSERT-Inserir Comerciante na pagina comerciante -- Cadastrar Comércio
-    public function inserirComercio(): void {
-        $sql = "INSERT INTO  comerciantes (imagem, nome_comercio, descricao, link_instagram,  usuario_id) 
-                 VALUES (:imagem, :nome_comercio, :descricao, :link_instagram,  :usuario_id)";
+    // public function inserirComercio(): void {
+    //     $sql = "INSERT INTO  comerciantes (imagem, nome_comercio, descricao, link_instagram,  usuario_id) 
+    //              VALUES (:imagem, :nome_comercio, :descricao, :link_instagram,  :usuario_id)";
 
-        try {
-            $consulta = $this->conexao->prepare($sql);
-            $consulta->bindValue(":imagem", $this->imagem, PDO::PARAM_STR);
-            $consulta->bindValue(":nome_comercio", $this->nome_comercio, PDO::PARAM_STR);
-            $consulta->bindValue(":descricao", $this->descricao, PDO::PARAM_STR);
-            $consulta->bindValue(":link_instagram", $this->link_instagram, PDO::PARAM_STR);
+    //     try {
+    //         $consulta = $this->conexao->prepare($sql);
+    //         $consulta->bindValue(":imagem", $this->imagem, PDO::PARAM_STR);
+    //         $consulta->bindValue(":nome_comercio", $this->nome_comercio, PDO::PARAM_STR);
+    //         $consulta->bindValue(":descricao", $this->descricao, PDO::PARAM_STR);
+    //         $consulta->bindValue(":link_instagram", $this->link_instagram, PDO::PARAM_STR);
             
-            $consulta->bindValue(":usuario_id", $this->usuario->getId(), PDO::PARAM_INT);         
+    //         $consulta->bindValue(":usuario_id", $this->usuario->getId(), PDO::PARAM_INT);         
 
-            $consulta->execute();
-        } catch (Exception $erro) {
-            die("Erro ao inserir notícia:" . $erro->getMessage());
-        }
-    } 
+    //         $consulta->execute();
+    //     } catch (Exception $erro) {
+    //         die("Erro ao inserir notícia:" . $erro->getMessage());
+    //     }
+    // } 
 
     /* Método para upload de foto */ 
     public function upload(array $arquivo):void{
@@ -217,6 +217,10 @@ class Comerciante{
         return $resultado;      
     }
 
+
+
+   
+
     
 
     // Listar o comercio de cada usuario na pagina comerciante 
@@ -238,6 +242,29 @@ class Comerciante{
 
         return $resultado;
     }  
+
+
+    public function listarDestaque(): array {
+        $sql = "SELECT 
+                    imagem, nome_comercio, descricao, link_instagram,
+                    COALESCE(status, 's/comercio') as status
+                FROM comerciantes
+                WHERE status = :status
+                ORDER BY nome_comercio";
+    
+        try {
+            $consulta = $this->conexao->prepare($sql);    
+            // Não é necessário vincular o parâmetro :usuario_id, pois não está sendo utilizado na consulta SQL
+            $consulta->bindValue(":status",$this->getStatus(),PDO::PARAM_STR);
+            $consulta->execute();
+            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    
+        } catch (Exception $erro) {
+            die("Erro ao listar comercio:" . $erro->getMessage());
+        }
+    
+        return $resultado;      
+    }
 
     
     

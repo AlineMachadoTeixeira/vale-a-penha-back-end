@@ -52,7 +52,7 @@ if (isset($_POST['alterar_Cadastro'])) {
 
 
 
-/* Script para inserir/cadastrar - comercio na  Cadastrar Comércio */
+/* /* Script para inserir/cadastrar - comercio na  Cadastrar Comércio
 if (isset($_POST["cadastrar_comercio"])) {
   $comercio = new Comerciante;
   $comercio->setNomeComercio($_POST["nome_comercio"]);
@@ -71,7 +71,7 @@ if (isset($_POST["cadastrar_comercio"])) {
   $comercio->inserirComercio();
   header("location:comerciante.php");
 }
-
+ */
 
 
 
@@ -226,18 +226,18 @@ if (isset($_POST["cadastrar_comercio"])) {
     </section><!-- Fim Minha conta -->
 
 
-   
+
 
 
     <!-- ======= Gerenciar Comércio ======= -->
-    <?php    
-     $comercio = new Comerciante();     
-     $comercio->usuario->setId($_SESSION['id']);
-     $dadosComercios = $comercio->listarUm();
+    <?php
+    $comercio = new Comerciante();
+    $comercio->usuario->setId($_SESSION['id']);
+    $dadosComercios = $comercio->listarUm();
 
 
     /* Script para atualização do comercio*/
-    if (isset($_POST['atualizarComercio'])) {
+    if (isset($_POST['casdastrarComercio'])) {
       $comercio->setNomeComercio($_POST['nome_comercio']);
 
       $comercio->setDescricao($_POST['descricao']);
@@ -245,8 +245,8 @@ if (isset($_POST["cadastrar_comercio"])) {
       $comercio->setLinkInstagram($_POST['link_instagram']);
 
 
-      /* Lógica/Algoritmo para atualizar a foto (se necessário) */      
-          //ID do usuário para o comerciante
+      /* Lógica/Algoritmo para atualizar a foto (se necessário) */
+      //ID do usuário para o comerciante
       //$comercio->usuario->setId($_SESSION["id"]);
 
       $imagem = $_FILES["imagem"];
@@ -257,100 +257,80 @@ if (isset($_POST["cadastrar_comercio"])) {
 
 
       $comercio->atualizarComercio();
-      header("location:comerciante.php");	
     }
 
-    if($dadosComercios ){ ?>     
-    
-    <section id="gerenciarcomercio" class="gerenciarcomercio">
-      <div class="container">
+    if ($dadosComercios) { ?>
 
-        <div class="section-title">
-          <h2>Atualizar Comércio</h2>
-        </div>
+      <section id="gerenciarcomercio" class="gerenciarcomercio">
+        <div class="container">
 
-        <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
-
-          <?php 
-         
-
-          if ($dadosComercios !== null) { ?>
-            
-            <!-- 1º FOTO comercio-->
-            <div class="file-wrapper">
-              
-            </div>
-
-            <!-- 1º Nome comercio  -->
-            <div class="comerciante__input">
-              <label class="titulo" for="nome_comercio">Nome Comércio:
-                <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"><?= $dadosComercios['nome_comercio'] ?></textarea>
-              </label>
-            </div>
-
-            <!-- 1º Descrição  -->
-            <div class="comerciante__input">
-              <label for="descricao">Descrição:
-                <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="100"><?= $dadosComercios['descricao'] ?></textarea>
-              </label>
-            </div>
-
-            <!-- 1º Instagram Link -->
-            <div class="comerciante__input">
-              <label for="link_instagram">Instagram:</label>
-              <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?= $dadosComercios['link_instagram'] ?>">
-            </div>
-
-
-          <?php } else { ?>
-
-            <!-- 2º FOTO comercio-->
-            <div class="file-wrapper">
-              <p class="comerciante__foto__image"><img src="" alt=""></p>
-              <input type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
-              <div class="close-btn">x</div>
-            </div>
-
-            <!-- 2° Nome comercio  -->
-            <div class="comerciante__input">
-              <label class="titulo" for="nome_comercio">Nome Comércio:
-                <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"></textarea>
-              </label>
-            </div>
-
-            <!-- 2º Descrição  -->
-            <div class="comerciante__input">
-              <label for="descricao">Descrição:
-                <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="80"></textarea>
-              </label>
-            </div>
-
-            <!-- 2º Instagram Link -->
-            <div class="comerciante__input">
-              <label for="link_instagram">Instagram:</label>
-              <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram">
-            </div>
-
-          <?php } ?>
-
-
-
-          <div class="botao__enviar__adm">
-            <div class="botao__enviar">
-              <button type="submit" id="submit" name="atualizarComercio">Atualizar Comercio</button>
-            </div>
+          <div class="section-title">
+            <h2>Cadastrar Comércio</h2>
           </div>
 
-        </form>
-      </div>
+          <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
 
-   </section> <!-- Fim Gerenciar Comércio -->
-    <?php 
+            <?php
+
+
+            if ($dadosComercios['imagem'] === null) { ?>
+
+              <!-- 1º FOTO comercio-->
+              <div class="file-wrapper">
+                <p class="comerciante__foto__image"><img src="" alt=""></p>
+                <input type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
+                <div class="close-btn">x</div>
+              </div>
+
+              <!-- 1º Nome comercio  -->
+              <div class="comerciante__input">
+                <label class="titulo" for="nome_comercio">Nome Comércio:
+                  <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"></textarea>
+                </label>
+              </div>
+
+              <!-- 1º Descrição  -->
+              <div class="comerciante__input">
+                <label for="descricao">Descrição:
+                  <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="100"></textarea>
+                </label>
+              </div>
+
+              <!-- 1º Instagram Link -->
+              <div class="comerciante__input">
+                <label for="link_instagram">Instagram:</label>
+                <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" ">
+            </div>    
+            
+            <div class=" botao__enviar__adm">
+                <div class="botao__enviar">
+                  <button type="submit" id="submit" name="casdastrarComercio">Atualizar Comercio</button>
+                </div>
+              </div>
+
+
+            <?php } else { ?>
+
+              <h2>Comércios ja Cadastrado</h2>
+              <p>você pode atualizar: <a href="comerciante-atualizar.php">Atualizar</a></p>
+
+
+            <?php } ?>
+
+
+
+
+
+          </form>
+        </div>
+
+      </section> <!-- Fim Gerenciar Comércio -->
+    <?php
     } ?>
 
 
 
-  
+
 
 
     <!-- ======= Ajuda ======= -->

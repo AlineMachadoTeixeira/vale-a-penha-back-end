@@ -21,7 +21,7 @@ $comercio->usuario->setId($_SESSION['id']);
 $dadosComercios = $comercio->listarUm();
 
 
-if (isset($_POST['atualizarComercio'])) {
+if (isset($_POST['atualizar_comercio'])) {
     $comercio->setNomeComercio($_POST['nome_comercio']);
 
     $comercio->setDescricao($_POST['descricao']);
@@ -30,11 +30,11 @@ if (isset($_POST['atualizarComercio'])) {
 
 
     if (empty($_FILES["imagem"]["name"])) {
-        $noticia->setImagem($_POST["imagem-existente"]);
+        $comercio->setImagem($_POST["imagem-existente"]);
     } else {
         /* Caso contrário, vamos pegar a referência (nome/extensão) da nova imagem, fazer o ipload do novo arquivo e enviar a referência para o objeto usando setter.*/
-        $noticia->upload($_FILES["imagem"]);
-        $noticia->setImagem($_FILES["imagem"]["name"]);
+        $comercio->upload($_FILES["imagem"]);
+        $comercio->setImagem($_FILES["imagem"]["name"]);
     }
 
 
@@ -420,7 +420,8 @@ if (isset($_POST['atualizarComercio'])) {
                     <div class="file-wrapper ">
                         <p class="comerciante__foto__image"><img src="../imagens/<?= $dadosComercios['imagem'] ?>" alt=""></p>
                         <!-- campo somente leitura, meramente informativo -->
-                        <input class="form-control" type="text" id="imagem-existente" name="imagem-existente" readonly value="<?= $dadosComercios['imagem'] ?>">
+                        <input hidden class="form-control " type="text" id="imagem-existente" name="imagem-existente" readonly value="<?= $dadosComercios['imagem'] ?>">
+                        
 
 
                     </div>
@@ -446,7 +447,7 @@ if (isset($_POST['atualizarComercio'])) {
 
                     </div>
                     <div class="botao__enviar">
-                        <button type="submit" id="cadastrar_comercio" name="cadastrar_comercio">Enviar</button>
+                        <button type="submit" id="atualizar_comercio" name="atualizar_comercio">Enviar</button>
                     </div>
 
                 </form>
