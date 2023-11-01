@@ -313,6 +313,18 @@ if (isset($_POST['alterar_Cadastro'])) {
 
             <?php } ?>
 
+            <p class="paragrafo__dicas">Dicas</p>
+
+                <ul class="ul__dicas">
+
+                    <li>É permitido um anúncio por usuário/CPF. </li>
+                    <li>Limite de 1 foto.</li>
+                    <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
+                    <li>Caso sua imagem seja maior, use o link para redimencionar: <a  target="_blank" href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
+                    <li>Título de até 15 caracteres</li>
+                    <li>Descrição com até 30 caracteres.</li>
+                </ul>
+
 
 
 

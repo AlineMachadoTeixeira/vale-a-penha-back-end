@@ -146,7 +146,7 @@ $dadosComercios = $comercio->listarDestaque();
     </footer>
     <script src="assets/js/menu-novo.js"></script>
 
-    <script>
+    <!-- <script>
         function redimensionarImagem(largura, altura) {
             const img = document.querySelectorAll('.redimensionar');
             img.forEach(imagem => {
@@ -156,7 +156,7 @@ $dadosComercios = $comercio->listarDestaque();
         }
 
         redimensionarImagem(200, 200);
-    </script>
+    </script> -->
 
 
 

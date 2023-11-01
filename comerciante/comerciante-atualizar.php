@@ -484,14 +484,14 @@ if (isset($_POST['atualizar_comercio'])) {
                     <!-- Nome comercio  -->
                     <div class="comerciante__input">
                         <label class="titulo" for="nome_comercio">Nome Comércio:
-                            <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="40"> <?= $dadosComercios['nome_comercio'] ?></textarea>
+                            <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="50"> <?= $dadosComercios['nome_comercio'] ?></textarea>
                         </label>
                     </div>
 
                     <!-- Descrição  -->
                     <div class="comerciante__input">
                         <label for="descricao">Descrição:
-                            <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="100"><?= $dadosComercios['descricao'] ?></textarea>
+                            <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="150"><?= $dadosComercios['descricao'] ?></textarea>
                         </label>
                     </div>
 
@@ -535,7 +535,7 @@ if (isset($_POST['atualizar_comercio'])) {
                     <li>É permitido um anúncio por usuário/CPF. </li>
                     <li>Limite de 1 foto.</li>
                     <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
-                    <li>Caso sua imagem seja maior, use o link para redimencionar: <a href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
+                    <li>Caso sua imagem seja maior, use o link para redimencionar: <a  target="_blank" href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
                     <li>Título de até 15 caracteres</li>
                     <li>Descrição com até 30 caracteres.</li>
                 </ul>

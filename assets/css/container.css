@@ -11,7 +11,32 @@
     margin-top: 40px;
 } 
 
-.section-direita:nth-child(even) {
+/* section da educação */
+.section-educacao:nth-child(even) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.section-educacao:nth-child(odd) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/* section da educação */
+
+
+.section-esquerda {
     display: flex;
     flex-direction: row;
     align-items: center;

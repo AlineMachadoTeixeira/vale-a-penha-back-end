@@ -17,7 +17,7 @@ $usuario->setTipo($_SESSION['tipo']);
 $comercio = new Comerciante;
 $listarTodos = $comercio->listar();
 
-var_dump($listarTodos);
+//var_dump($listarTodos);
 
 
 /* Se o parâmetro "sair" */
@@ -73,8 +73,7 @@ if (isset($_GET['sair'])){$sessao->logout();
               <span>Controle de Usuários</span></a>
           </li>
 
-          <li><a href="#controlecomercio" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Controle de Comércio</span></a>
-          </li>
+          
 
           <li><a href="?sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
           </li>
@@ -117,26 +116,7 @@ if (isset($_GET['sair'])){$sessao->logout();
               <td><?= $itemUsuario["email"] ?></td>
               <td><?= $itemUsuario["tipo"] ?></td>
 
-              <!-- <td class="comerciante__input" name="tipo" id="tipo" required>
-                 <form action="" method="post" >
-                <label for="sobrenome"></label>
-                <div class="atualiza__tipo">
-                  <select class="comerciante__option" name="tipo" id="tipo" required>
-                    <option value=""></option>
-
-                    <option <php if ($itemUsuario["tipo"] === "admin") echo " selected "; ?> value="admin">Administrador</option>
-
-                    <option <php if ($itemUsuario["tipo"] === "comerciante") echo " selected "; ?> value="comerciante">Comerciante</option>
-
-                  </select>
-
-                  <button type="submit" name="salvar_tipo"> <a href="adm-atualiza-tipo.php?id=<= $itemUsuario["id"] ?>"></a><i class='bi bi-check'></i></button>
-                  <a href=""></a>
-                </div>
-                </form>
-
-
-              </td> -->
+              
 
               <!-- Atualizar -->
               <td class="adm__botao">
