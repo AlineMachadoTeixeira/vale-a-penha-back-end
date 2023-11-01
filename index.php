@@ -123,7 +123,7 @@
 
                     <div class="inicio__caixa">
                         <article class="inicio__section">
-                            <a href="gastronomia.html">
+                            <a href="gastronomia.php">
 
                                 <figure class="inicio__caixa__figure">
                                     <img class="inicio__img" src="assets/images/inicio-gastronomia.png" alt="imagem de frutas e legumes ">
@@ -143,7 +143,7 @@
                         </article>
 
                         <article class="inicio__section">
-                            <a href="comercio-local.html">
+                            <a href="comercio-local.php">
 
                                 <figure class="inicio__caixa__figure">
                                     <img class="inicio__img" src="assets/images/inicio-comercio.png" alt=" sacolas de compras">
@@ -153,7 +153,7 @@
                         </article>
 
                         <article class="inicio__section">
-                            <a href="educação.html">
+                            <a href="educação.php">
 
                                 <figure class="inicio__caixa__figure">
                                     <img class="inicio__img" src="assets/images/inicio-educacao.png" alt="sala de aula">
@@ -163,7 +163,7 @@
                         </article>
 
                         <article class="inicio__section">
-                            <a href="cultura.html">
+                            <a href="cultura.php">
 
                                 <figure class="inicio__caixa__figure">
                                     <img class="inicio__img" src="assets/images/inicio-cultura.png" alt="arte de confetes">
@@ -173,7 +173,7 @@
                         </article>
 
                         <article class="inicio__section">
-                            <a href="historia.html">
+                            <a href="historia.php">
 
                                 <figure class="inicio__caixa__figure">
                                     <img class="inicio__img" src="assets/images/inicio-historia.png" alt="igreja matriz de nossa Senhora da Penha foto antiga">
