@@ -20,27 +20,6 @@ class Comerciante{
         $this->conexao = Banco::conecta();                
     }
 
-    //INSERT-Inserir Comerciante na pagina comerciante -- Cadastrar Comércio
-    // public function inserirComercio(): void {
-    //     $sql = "INSERT INTO  comerciantes (imagem, nome_comercio, descricao, link_instagram,  usuario_id) 
-    //              VALUES (:imagem, :nome_comercio, :descricao, :link_instagram,  :usuario_id)";
-
-    //     try {
-    //         $consulta = $this->conexao->prepare($sql);
-    //         $consulta->bindValue(":imagem", $this->imagem, PDO::PARAM_STR);
-    //         $consulta->bindValue(":nome_comercio", $this->nome_comercio, PDO::PARAM_STR);
-    //         $consulta->bindValue(":descricao", $this->descricao, PDO::PARAM_STR);
-    //         $consulta->bindValue(":link_instagram", $this->link_instagram, PDO::PARAM_STR);
-            
-    //         $consulta->bindValue(":usuario_id", $this->usuario->getId(), PDO::PARAM_INT);         
-
-    //         $consulta->execute();
-    //     } catch (Exception $erro) {
-    //         die("Erro ao inserir notícia:" . $erro->getMessage());
-    //     }
-    // } 
-
-    /* Método para upload de foto */ 
     public function upload(array $arquivo):void{
 
         //Definindo os tipos válidos de foto o mesmo tipo que colocado no formulario
@@ -108,8 +87,7 @@ class Comerciante{
     
             if (!$resultado) {
                 // Se o resultado estiver vazio, exiba um alerta
-                echo "<script>alert('Nenhum resultado encontrado.');</script>";
-                
+                echo "<script>alert('Nenhum resultado encontrado.');</script>";                
             }
     
         } catch (Exception $erro) {
