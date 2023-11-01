@@ -15,6 +15,8 @@ $usuario = new Usuario;
 $usuario->setId($_SESSION['id']);
 $dados = $usuario->listarUmUsuario();
 
+$usuario->setTipo($_SESSION['tipo']);
+
 /* Se o parâmetro para "sair" existeir  */
 if (isset($_GET['sair'])) $sessao->logout();
 
@@ -218,7 +220,7 @@ if (isset($_POST["cadastrar_comercio"])) {
 
 
             <div class="botao__enviar">
-              <button type="submit" id="submit" name="alterar_Cadastro">Alterar Cadastro</button>
+              <button type="submit" id="submitAlterar" name="alterar_Cadastro">Alterar Cadastro</button>
             </div>
 
         </form>
@@ -306,7 +308,7 @@ if (isset($_POST["cadastrar_comercio"])) {
             
             <div class=" botao__enviar__adm">
                 <div class="botao__enviar">
-                  <button type="submit" id="submit" name="casdastrarComercio">Atualizar Comercio</button>
+                  <button type="submit" id="submitAtualizar" name="casdastrarComercio">Atualizar Comercio</button>
                 </div>
               </div>
 
@@ -348,12 +350,12 @@ if (isset($_POST["cadastrar_comercio"])) {
 
         </div>
 
-        <form class="comerciante__formulario" id="form" action="https://formspree.io/f/mvonybwj" method="post">
+        <form class="comerciante__formulario" id="formAjuda" action="https://formspree.io/f/mvonybwj" method="post">
 
           <!-- E-meil -->
           <div class="comerciante__input">
-            <label for="email">Email:
-              <input type="email" name="email" id="email" placeholder="E-mail" required>
+            <label for="emailAjuda">Email:
+              <input type="email" name="email" id="emailAjuda" placeholder="E-mail" required>
             </label>
           </div>
           <!-- Mensagem Ajuda -->
@@ -363,7 +365,7 @@ if (isset($_POST["cadastrar_comercio"])) {
             </label>
           </div>
           <div class="botao__enviar">
-            <button type="submit" id="submit" name="enviar">Enviar</button>
+            <button type="submit" id="submitAjuda" name="enviar">Enviar</button>
             <p id="status"></p>
           </div>
 
@@ -388,7 +390,7 @@ if (isset($_POST["cadastrar_comercio"])) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="../assets/js/comerciante.js"></script>
   <script src="../assets/js/mascara-cpf-tel.js"></script>
-  <script src="../assets/js/cadastrar-comercio.js"></script>
+  
 
 
 </body>

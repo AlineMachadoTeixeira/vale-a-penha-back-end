@@ -8,6 +8,7 @@ $sessao->verificarAcessoAdmin();
 
 
 $usuario = new Usuario;
+$usuario->setTipo($_SESSION['tipo']);
 $usuario->setId($_GET ['id']);
 $usuario->atualizarTipoUsuario();
 header("location:adm.php");

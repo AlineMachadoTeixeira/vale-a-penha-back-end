@@ -10,9 +10,11 @@ $sessao->verificaAcesso();
 $sessao->verificarAcessoComerciante();
 
 
+
 $usuario = new Usuario;
 
 $usuario->setId($_SESSION['id']);
+$usuario->setTipo($_SESSION['tipo']);
 $dados = $usuario->listarUmUsuario();
 
 /* Se o parâmetro para "sair" existeir  */

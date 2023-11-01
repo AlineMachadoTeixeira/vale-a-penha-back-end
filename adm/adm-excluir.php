@@ -6,6 +6,9 @@ $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
 $sessao->verificarAcessoAdmin();
 
+$usuario = new Usuario;
+$usuario->setTipo($_SESSION['tipo']);
+
 
 $usuario = new Usuario;
 $usuario->setId($_GET ['id']);

@@ -1,10 +1,14 @@
 <?php
+use ValeaPenha\Usuario;
 use ValeaPenha\Comerciante;
 require_once "../vendor/autoload.php";
 
 $comercio = new Comerciante;
 $sessao->verificaAcesso();
 $sessao->verificarAcessoAdmin();
+
+$usuario = new Usuario;
+$usuario->setTipo($_SESSION['tipo']);
 
 
 $comercio->setId($_GET['id']);

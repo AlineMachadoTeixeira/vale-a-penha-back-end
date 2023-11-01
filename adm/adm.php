@@ -11,6 +11,9 @@ $sessao->verificaAcesso();
 
 $sessao->verificarAcessoAdmin();
 
+$usuario = new Usuario;
+$usuario->setTipo($_SESSION['tipo']);
+
 $comercio = new Comerciante;
 $listarTodos = $comercio->listar();
 

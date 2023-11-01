@@ -8,6 +8,8 @@ $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
 $sessao->verificarAcessoAdmin();
 
+$usuario->setTipo($_SESSION['tipo']);
+
 $usuario->setId($_GET['id']);
 $dados = $usuario->listarUmUsuario();
 
