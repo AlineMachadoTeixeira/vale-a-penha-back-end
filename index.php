@@ -14,23 +14,7 @@
 
 <body>
 
-    <!-- Começo do Integrando a uma Página com VLibras  -->
-
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js">
-    </script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-
-    <!-- Fim do Integrando a uma Página com VLibras  -->
-
-
+    
     <!-- começo menu  -->
     <div class="camada">
 
@@ -133,7 +117,7 @@
                         </article>
 
                         <article class="inicio__section">
-                            <a href="lazer.html">
+                            <a href="lazer.php">
 
                                 <figure class="inicio__caixa__figure">
                                     <img class="inicio__img" src="assets/images/inicio-lazer.png" alt="menina andando de bicicleta">
@@ -153,7 +137,7 @@
                         </article>
 
                         <article class="inicio__section">
-                            <a href="educação.php">
+                            <a href="educacao.php">
 
                                 <figure class="inicio__caixa__figure">
                                     <img class="inicio__img" src="assets/images/inicio-educacao.png" alt="sala de aula">

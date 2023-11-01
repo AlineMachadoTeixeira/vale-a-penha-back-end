@@ -192,10 +192,7 @@
 
 <body>
 
-    <!-- Começo do Integrando a uma Página com VLibras  -->
-
-
-    <!-- Fim do Integrando a uma Página com VLibras  -->
+    
 
     <!-- começo menu  -->
     <div class="camada">

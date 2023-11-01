@@ -22,7 +22,7 @@ require_once "vendor/autoload.php";
     <div class="login__container">
         <main>
             <section class="login__caixa">
-            <img class="login__ama" src="assets/images/logo-amarelo-branco.svg" alt="">
+            <a href="index.php"><img class="login__ama" src="assets/images/logo-amarelo-branco.svg" alt=""></a>
 
                 <div class="login_for">                    
 
