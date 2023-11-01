@@ -54,36 +54,6 @@ if (isset($_POST['alterar_Cadastro'])) {
 }
 
 
-
-/* /* Script para inserir/cadastrar - comercio na  Cadastrar Comércio
-if (isset($_POST["cadastrar_comercio"])) {
-  $comercio = new Comerciante;
-  $comercio->setNomeComercio($_POST["nome_comercio"]);
-  $comercio->setDescricao($_POST["descricao"]);
-  $comercio->setLinkInstagram($_POST["link_instagram"]);
-
-  //ID do usuário para o comerciante
-  $comercio->usuario->setId($_SESSION["id"]);
-
-  $imagem = $_FILES["imagem"];
-
-  $comercio->upload($imagem);
-
-  $comercio->setImagem($imagem["name"]);   // precisa ser NAME 
-
-  $comercio->inserirComercio();
-  header("location:comerciante.php");
-}
- */
-
-
-
-
-
-
-
-
-
 ?>
 
 
@@ -147,7 +117,7 @@ if (isset($_POST["cadastrar_comercio"])) {
           </li>
 
 
-          
+
 
           <li><a href="?sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
           </li>
@@ -238,6 +208,7 @@ if (isset($_POST["cadastrar_comercio"])) {
     $comercio = new Comerciante();
     $comercio->usuario->setId($_SESSION['id']);
     $dadosComercios = $comercio->listarUm();
+    $dadosCategoria = $comercio->categoria->listarCategoria();
 
 
     /* Script para atualização do comercio*/
@@ -257,10 +228,13 @@ if (isset($_POST["cadastrar_comercio"])) {
 
       $comercio->upload($imagem);
 
-      $comercio->setImagem($imagem["name"]);   // precisa ser NAME       
+      $comercio->setImagem($imagem["name"]);   // precisa ser NAME  
+
+      $comercio->categoria->setId($_POST['categoria']);        
 
 
       $comercio->atualizarComercio();
+      //header("location:comerciante.php");
     }
 
     if ($dadosComercios) { ?>
@@ -304,11 +278,27 @@ if (isset($_POST["cadastrar_comercio"])) {
               <div class="comerciante__input">
                 <label for="link_instagram">Instagram:</label>
                 <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" ">
-            </div>    
+            </div> 
             
-            <div class=" botao__enviar__adm">
+            
+            <div class="comerciante__input" name="categoria" id="categoria" required>
+                        <label for="categoria">Categoria:</label>
+                        <select class="comerciante__option" name="categoria" id="categoria" required>
+                            <option value=""></option>
+                            <?php  foreach($dadosCategoria as $itemCategoria){ ?>
+
+                               <option  value="<?=$itemCategoria['id']?>"><?=$itemCategoria['nome_categoria']?></option>
+
+                            <?php  } ?>
+
+                            
+
+                        </select>
+                    </div>
+
+              <div class=" botao__enviar__adm">
                 <div class="botao__enviar">
-                  <button type="submit" id="submitAtualizar" name="casdastrarComercio">Atualizar Comercio</button>
+                  <button type="submit" id="submitAtualizar" name="casdastrarComercio">Cadastrar Comercio</button>
                 </div>
               </div>
 
@@ -317,7 +307,7 @@ if (isset($_POST["cadastrar_comercio"])) {
 
               <div class="comerciante_atualizar">
                 <h3>Comércio já Cadastrado!</h3>
-                <p >Você pode atualizar clicando no lápis: <a href="comerciante-atualizar.php" ><i class="bi bi-pencil"></i></a></p>
+                <p>Você pode atualizar clicando no lápis: <a href="comerciante-atualizar.php"><i class="bi bi-pencil"></i></a></p>
               </div>
 
 
@@ -390,7 +380,7 @@ if (isset($_POST["cadastrar_comercio"])) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="../assets/js/comerciante.js"></script>
   <script src="../assets/js/mascara-cpf-tel.js"></script>
-  
+
 
 
 </body>

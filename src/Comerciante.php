@@ -13,9 +13,11 @@ class Comerciante{
     private PDO $conexao;
 
     public Usuario $usuario;
+    public Categoria $categoria;
     
     //Conectando o banco 
     public function __construct(){
+        $this->categoria = new Categoria;
         $this->usuario = new Usuario;
         $this->conexao = Banco::conecta();                
     }
@@ -146,8 +148,8 @@ class Comerciante{
             imagem = :imagem, 
             nome_comercio = :nome_comercio, 
             descricao = :descricao, 
-            link_instagram = :link_instagram            
-            
+            link_instagram = :link_instagram,            
+            categoria_id = :categoria_id
             WHERE usuario_id = :id";
 
         try {
@@ -156,7 +158,8 @@ class Comerciante{
             $consulta->bindValue(":imagem", $this->getImagem(), PDO::PARAM_STR);
             $consulta->bindValue(":nome_comercio", $this->getNomeComercio(), PDO::PARAM_STR);
             $consulta->bindValue(":descricao", $this->getDescricao(), PDO::PARAM_STR);
-            $consulta->bindValue(":link_instagram", $this->getLinkInstagram(), PDO::PARAM_STR);                      
+            $consulta->bindValue(":link_instagram", $this->getLinkInstagram(), PDO::PARAM_STR); 
+            $consulta->bindValue(":categoria_id", $this->categoria->getId(), PDO::PARAM_INT);                     
 
             $consulta->execute();            
 
@@ -227,13 +230,14 @@ class Comerciante{
                     imagem, nome_comercio, descricao, link_instagram,
                     COALESCE(status, 's/comercio') as status
                 FROM comerciantes
-                WHERE status = :status
+                WHERE status = :status AND categoria_id = :categoria_id
                 ORDER BY nome_comercio";
     
         try {
             $consulta = $this->conexao->prepare($sql);    
             // Não é necessário vincular o parâmetro :usuario_id, pois não está sendo utilizado na consulta SQL
             $consulta->bindValue(":status",$this->getStatus(),PDO::PARAM_STR);
+            $consulta->bindValue(":categoria_id",$this->categoria->getId(),PDO::PARAM_INT);
             $consulta->execute();
             $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
     
@@ -285,7 +289,7 @@ class Comerciante{
     }    
     public function setNomeComercio(string $nome_comercio): self
     {
-        $this->nome_comercio =  $this->nome_comercio = filter_var($nome_comercio, FILTER_SANITIZE_SPECIAL_CHARS);; 
+        $this->nome_comercio =  $this->nome_comercio = filter_var($nome_comercio, FILTER_SANITIZE_SPECIAL_CHARS); 
 
         return $this;
     }

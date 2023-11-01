@@ -1,7 +1,11 @@
 <?php
 use ValeaPenha\Usuario;
 use ValeaPenha\Comerciante;
+use ValeaPenha\ControleDeAcesso;
+
 require_once "../vendor/autoload.php";
+
+$sessao = new ControleDeAcesso;
 
 $comercio = new Comerciante;
 $sessao->verificaAcesso();

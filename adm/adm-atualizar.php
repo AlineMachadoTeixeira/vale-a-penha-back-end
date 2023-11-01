@@ -330,7 +330,7 @@ if(isset($_POST['atualizar'])){
 
 
                         <div class="comerciante__input" name="tipo" id="tipo" required>
-                            <label for="sobrenome">Tipo:</label>
+                            <label for="tipo">Tipo:</label>
                             <select class="comerciante__option" name="tipo" id="tipo" required>
                                 <option value=""></option>
 

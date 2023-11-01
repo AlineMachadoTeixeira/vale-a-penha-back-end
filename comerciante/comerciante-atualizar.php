@@ -17,12 +17,14 @@ $usuario->setId($_SESSION['id']);
 $usuario->setTipo($_SESSION['tipo']);
 $dados = $usuario->listarUmUsuario();
 
+
 /* Se o parâmetro para "sair" existeir  */
 if (isset($_GET['sair'])) $sessao->logout();
 
 $comercio = new Comerciante();
 $comercio->usuario->setId($_SESSION['id']);
 $dadosComercios = $comercio->listarUm();
+$dadosCategoria = $comercio->categoria->listarCategoria();
 
 
 if (isset($_POST['atualizar_comercio'])) {
@@ -31,6 +33,8 @@ if (isset($_POST['atualizar_comercio'])) {
     $comercio->setDescricao($_POST['descricao']);
 
     $comercio->setLinkInstagram($_POST['link_instagram']);
+
+    $comercio->categoria->setId($_POST['categoria']);
 
 
     if (empty($_FILES["imagem"]["name"])) {
@@ -285,14 +289,13 @@ if (isset($_POST['atualizar_comercio'])) {
 
 
         /* CSS Para a foto do cadastrar comercio  */
-        .file-wrapper {
+        .file-wrapper, .file-antiga {
             width: 200px;
             height: 200px;
             border: 10px solid #c40008;
             position: relative;
             margin: auto;
             margin-top: 10px;
-        
         }
 
         .file-wrapper:after {
@@ -322,9 +325,27 @@ if (isset($_POST['atualizar_comercio'])) {
             bottom: 35px;
             width: max-content;
             height: max-content;
-            font-size: 10px;
+            font-size: 12px;
             color: gray;
         }
+
+        .file-antiga:before {
+            content: 'Foto Cadastrada';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: 35px;
+            width: max-content;
+            height: max-content;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            background-color: #c40008;
+            padding: 3px;
+        }
+        
 
         .file-wrapper:hover:after {
             font-size: 73px;
@@ -389,31 +410,32 @@ if (isset($_POST['atualizar_comercio'])) {
             z-index: 30;
         }
 
-        .comerciante_atualizar{
-           
+        .comerciante_atualizar {
+
             margin-top: 20px;
             text-align: center;
             font-size: 20px;
         }
-        
-        .comerciante_atualizar a{  
+
+        .comerciante_atualizar a {
             font-size: 20px;
             font-weight: bold;
             padding-right: 8px;
-            color: #c40008;   
-            margin-left: 20px; 
-            text-align: center;  
-            text-decoration: none; 
+            color: #c40008;
+            margin-left: 20px;
+            text-align: center;
+            text-decoration: none;
             padding: 10px;
         }
-        .comerciante_atualizar a:hover{
-            transform: scale(1.30);     
-            transition: 0,5s;
+
+        .comerciante_atualizar a:hover {
+            transform: scale(1.30);
+            transition: 0, 5s;
             background-color: #c40008;
             color: #FFFFFF;
             border-radius: 10px;
-               
-        
+
+
         }
     </style>
 
@@ -450,7 +472,7 @@ if (isset($_POST['atualizar_comercio'])) {
                     </div>
 
                     <!-- FOTO comercio existente-->
-                    <div class="file-wrapper ">
+                    <div class="file-antiga">
                         <p class="comerciante__foto__image"><img src="../imagens/<?= $dadosComercios['imagem'] ?>" alt=""></p>
                         <!-- campo somente leitura, meramente informativo -->
                         <input hidden class="form-control " type="text" id="imagem-existente" name="imagem-existente" readonly value="<?= $dadosComercios['imagem'] ?>">
@@ -479,12 +501,29 @@ if (isset($_POST['atualizar_comercio'])) {
                         <input value="<?= $dadosComercios['link_instagram'] ?>" type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" required>
 
                     </div>
+
+                    <div class="comerciante__input" name="categoria" id="categoria" required>
+                        <label for="categoria">Categoria:</label>
+                        <select class="comerciante__option" name="categoria" id="categoria" required>
+                            <option value=""></option>
+                            <?php  foreach($dadosCategoria as $itemCategoria){ ?>
+
+                               <option <?php if ($dadosComercios["categoria_id"] === $itemCategoria['id']) echo " selected "; ?> value="<?=$itemCategoria['id']?>"><?=$itemCategoria['nome_categoria']?></option>
+
+                            <?php  } ?>
+
+                            
+
+                        </select>
+                    </div>
+
+
                     <div class="botao__enviar">
                         <button type="submit" id="atualizar_comercio" name="atualizar_comercio">Atualizar</button>
                     </div>
 
-                    <div class="comerciante_atualizar">                        
-                         <a href="comerciante.php">Voltar</a>
+                    <div class="comerciante_atualizar">
+                        <a href="comerciante.php">Voltar</a>
                     </div>
 
                 </form>

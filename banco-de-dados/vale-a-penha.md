@@ -25,11 +25,20 @@ CREATE TABLE usuarios(
 CREATE TABLE comerciantes (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     imagem VARCHAR(250)  NULL,
-    nome_comercio VARCHAR(30)  NULL,
+    nome_comercio VARCHAR(50)  NULL,
     descricao VARCHAR(150) NULL,
     link_instagram VARCHAR(200)  NULL,
     status ENUM('ativo', 'inativo') NULL DEFAULT 'inativo',
+    categoria_id INT DEFAULT NULL,
     usuario_id INT NULL 
+         
+); 
+```
+
+```sql
+CREATE TABLE categorias(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome_categoria VARCHAR(100) NOT NULL
          
 ); 
 ```
@@ -42,18 +51,20 @@ ALTER TABLE comerciantes
     
 ```
 
+```sql
+ALTER TABLE comerciantes
+
+    ADD CONSTRAINT fk_comerciantes_categorias
+    FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE CASCADE;  
+    
+```
+
 <!-- 	ON DELETE CASCADE – Uma operação de exclusão em uma tabela referenciada se propaga (cascade = em cascata) para as chaves estrangeiras correspondentes. Ou seja, ao excluir um registro em uma tabela, um registro relacionado em outra tabela é automaticamente excluído. Por exemplo, se uma editora de uma tabela de editoras for excluída, os livros da tabela de livros relacionados com esta editora também serão excluídos automaticamente. -->
 
 
-<!-- ADD CONSTRAINT fk_comercios_comerciantes
-    FOREIGN KEY (comerciante_id) REFERENCES comerciantes(id) ON DELETE CASCADE; -->
+```sql
+INSERT INTO categorias(nome_categoria) VALUES('Gastronomia');
+INSERT INTO categorias(nome_categoria) VALUES('Varejo');
+INSERT INTO categorias(nome_categoria) VALUES('Educação');
 
-
-<!-- ```sql
-CREATE TABLE administradores(
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,    
-    senha VARCHAR(250) NOT NULL           
-); 
-``` -->
+```

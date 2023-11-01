@@ -11,7 +11,7 @@
     margin-top: 40px;
 } 
 
- .section-esquerda {
+.section-direita:nth-child(even) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -22,7 +22,7 @@
     margin-bottom: 40px;
 }
 
-.section-direita {
+.section-direita:nth-child(odd) {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;

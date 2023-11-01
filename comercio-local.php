@@ -7,6 +7,8 @@ use ValeaPenha\Comerciante;
 $comercio = new Comerciante;
 
 $comercio->setStatus("ativo");
+$comercio->categoria->setId("2");
+
 $dadosComercios = $comercio->listarDestaque();
 
 
