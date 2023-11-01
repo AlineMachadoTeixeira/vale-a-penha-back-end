@@ -120,9 +120,6 @@ $dadosComercios = $comercio->listarDestaque();
             <?php } ?>
 
         </section>
-
-
-
         
     </main>
     <footer>
