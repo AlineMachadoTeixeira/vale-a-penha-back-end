@@ -7,6 +7,8 @@ use ValeaPenha\Comerciante;
 
 $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
+$sessao->verificarAcessoComerciante();
+
 
 $usuario = new Usuario;
 

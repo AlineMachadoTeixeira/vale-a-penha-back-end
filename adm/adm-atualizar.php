@@ -6,6 +6,7 @@ $usuario =new Usuario;
 
 $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
+$sessao->verificarAcessoAdmin();
 
 $usuario->setId($_GET['id']);
 $dados = $usuario->listarUmUsuario();

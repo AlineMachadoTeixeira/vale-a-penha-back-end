@@ -4,6 +4,7 @@ use ValeaPenha\Usuario;
 require_once "../vendor/autoload.php";
 $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
+$sessao->verificarAcessoAdmin();
 
 
 $usuario = new Usuario;

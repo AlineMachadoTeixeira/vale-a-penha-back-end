@@ -3,6 +3,8 @@ use ValeaPenha\Comerciante;
 require_once "../vendor/autoload.php";
 
 $comercio = new Comerciante;
+$sessao->verificaAcesso();
+$sessao->verificarAcessoAdmin();
 
 
 $comercio->setId($_GET['id']);

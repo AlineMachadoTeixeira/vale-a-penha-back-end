@@ -9,6 +9,8 @@ require_once "../vendor/autoload.php";
 $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
 
+$sessao->verificarAcessoAdmin();
+
 $comercio = new Comerciante;
 $listarTodos = $comercio->listar();
 
