@@ -1,0 +1,212 @@
+<?php
+$pagina = basename($_SERVER['PHP_SELF']);
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/menu.css">
+
+    <?php
+
+    switch ($pagina) {
+        case "index.php":
+            $tituloPagina = "Início";
+    ?>
+            <link rel="stylesheet" href="assets/css/index.css">
+        <?php
+            break;
+
+        case "gastronomia.php":
+            $tituloPagina = "Gastronomia";
+        ?>
+            <link rel="stylesheet" href="assets/css/comercio-local.css">
+            <style>
+                .header {
+                    background-image: url(assets/images/banner-gastronomia.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            </style>
+        <?php
+            break;
+
+        case "lazer.php":
+            $tituloPagina = "Lazer";
+        ?>
+            <link rel="stylesheet" href="assets/css/container.css">
+            <style>
+                .header {
+                    background-image: url(assets/images/banner-lazer.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            </style>
+        <?php
+            break;
+        case "comercio-local.php":
+            $tituloPagina = "Comércio Local";
+        ?>
+            <link rel="stylesheet" href="assets/css/comercio-local.css">
+            <style>
+                .header {
+                    background-image: url(assets/images/banner-comercio-local.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            </style>
+        <?php
+            break;
+        case "cultura.php":
+            $tituloPagina = "Cultura";
+        ?>
+            <link rel="stylesheet" href="assets/css/container.css">
+            <style>
+                .header {
+                    background-image: url(assets/images/banner-cultural.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            </style>
+        <?php
+            break;
+        case "historia.php":
+            $tituloPagina = "História";
+        ?>
+            <link rel="stylesheet" href="assets/css/container.css">
+            <style>
+                .header {
+                    background-image: url(assets/images/banner-historia.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            </style>
+        <?php
+            break;
+        case "educacao.php":
+            $tituloPagina = "Educação";
+        ?>
+            <link rel="stylesheet" href="assets/css/container.css">
+            <style>
+                .header {
+                    background-image: url(assets/images/banner-educacao.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            </style>
+        <?php
+            break;
+
+        case "voce-em-foco.php":
+            $tituloPagina = "Você em Foco";
+        ?>
+            <link rel="stylesheet" href="assets/css/form.css">
+            <style>
+                .header {
+                    background-image: url(assets/images/banner-vc-em-foco.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            </style>
+        <?php
+
+        case "cadastro.php":
+            $tituloPagina = "Cadastro";
+        ?>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+            <link rel="stylesheet" href="assets/css/cadastro.css">
+        <?php
+            break;
+
+        case "resultados.php":
+            $tituloPagina = "Resultados";
+        ?>
+            <link rel="stylesheet" href="assets/css/comercio-local.css">
+            <style>
+                .header {
+                    background-image: url(assets/images/banner-vc-em-foco.png);
+                    background-size: cover;
+                    background-position: center;
+                }
+            </style>
+
+    <?php
+            break;
+        default:
+            $tituloPagina = "Em criação...";
+            break;
+    }
+
+    ?>
+    <title><?= $tituloPagina ?> | Vale a Penha </title>
+</head>
+
+<body>
+
+
+    <!-- começo menu  -->
+    <div class="camada">
+
+        <div class="camada__um">
+            <nav>
+                <a href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg" alt="Ícone login">
+                </a>
+            </nav>
+            <nav class="pesquisa__espaco">
+                <div class="pesquisa__lupa">
+                    <input class="pesquisa__input" type="search" id="pesquisa" name="pesquisa" placeholder="Pesquisa">
+
+                    <a class="pesquisa__link" href="">
+                        <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
+                    </a>
+                </div>
+            </nav>
+
+            <nav>
+                <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
+                </a>
+            </nav>
+        </div>
+
+        <nav>
+            <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
+            <ul class="menu__camada__dois">
+                <li><a href="index.php">Início</a></li>
+                <li><a href="gastronomia.php">Gastronomia</a></li>
+                <li><a href="lazer.php">Lazer</a></li>
+                <li><a href="comercio-local.php">Comércio Local</a></li>
+                <li><a href="cultura.php">Cultura</a></li>
+                <li><a href="historia.php">História</a></li>
+                <li><a href="educacao.php">Educação</a></li>
+                <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                <li class="login__ul"><a href="login.php">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- fim menu -->
+
+    <body>
+
+        <?php if ($pagina !== "cadastro.php") { ?>
+            <header>
+                <div class="header">
+                    <img src="assets/images/logo-Vale-a-Penha.svg" alt="logo Vale A Penha">
+                    <h1>Conhecer o nosso bairro!</h1>
+
+                    <h2><?= $tituloPagina ?></h2>
+
+                </div>
+            </header>
+        <?php } ?>
+
+        <main>

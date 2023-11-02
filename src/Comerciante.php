@@ -10,6 +10,7 @@ class Comerciante{
     private string $link_instagram;
     private string $status;
     //private string $usuario_id;
+    private string $termo;   /// Será usado na busca
     private PDO $conexao;
 
     public Usuario $usuario;
@@ -352,6 +353,18 @@ class Comerciante{
     public function setStatus(string $status): self
     {
         $this->status =  filter_var ($status, FILTER_SANITIZE_SPECIAL_CHARS); 
+
+        return $this;
+    }
+
+    //Termo
+    public function getTermo(): string
+    {
+        return $this->termo;
+    }
+    public function setTermo(string $termo): self
+    {
+        $this->termo = $this->termo = filter_var($termo, FILTER_SANITIZE_SPECIAL_CHARS);
 
         return $this;
     }
