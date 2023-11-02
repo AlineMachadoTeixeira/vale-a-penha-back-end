@@ -150,7 +150,8 @@ class Comerciante{
             nome_comercio = :nome_comercio, 
             descricao = :descricao, 
             link_instagram = :link_instagram,            
-            categoria_id = :categoria_id
+            categoria_id = :categoria_id,
+            status = :status
             WHERE usuario_id = :id";
 
         try {
@@ -160,7 +161,8 @@ class Comerciante{
             $consulta->bindValue(":nome_comercio", $this->getNomeComercio(), PDO::PARAM_STR);
             $consulta->bindValue(":descricao", $this->getDescricao(), PDO::PARAM_STR);
             $consulta->bindValue(":link_instagram", $this->getLinkInstagram(), PDO::PARAM_STR); 
-            $consulta->bindValue(":categoria_id", $this->categoria->getId(), PDO::PARAM_INT);                     
+            $consulta->bindValue(":categoria_id", $this->categoria->getId(), PDO::PARAM_INT);  
+            $consulta->bindValue(":status", "inativo", PDO::PARAM_STR);                   
 
             $consulta->execute();            
 
@@ -198,6 +200,33 @@ class Comerciante{
     
         return $resultado;      
     }
+
+    public function listarStatus(): array {
+        $sql = "SELECT 
+                    usuarios.id,
+                    usuarios.nome,                     
+                    usuarios.email,                    
+                    comerciantes.usuario_id,
+                    COALESCE(comerciantes.status, 's/comercio') as status
+                FROM comerciantes
+                RIGHT JOIN usuarios ON comerciantes.usuario_id = usuarios.id 
+                WHERE status = :status 
+                ORDER BY tipo";
+    
+        try {
+            $consulta = $this->conexao->prepare($sql);               
+            $consulta->bindValue(":status", $this->getStatus(), PDO::PARAM_STR); 
+    
+            $consulta->execute();
+            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+    
+        } catch (Exception $erro) {
+            die("Erro ao listar comercio:" . $erro->getMessage());
+        }
+    
+        return $resultado;      
+    }
+
 
 
 
@@ -252,9 +281,10 @@ class Comerciante{
 
     //BUSCAR   Não tenho esse "Termo" no banco de dados
     public function busca():array{
-        $sql = "SELECT id, nome_comercio, descricao FROM comerciantes 
+        $sql = "SELECT imagem, nome_comercio, descricao, link_instagram FROM comerciantes 
                 WHERE nome_comercio LIKE :termo
-                OR  descricao LIKE :termo ";
+                OR  descricao LIKE :termo   
+              ";
 
 
         try{

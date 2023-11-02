@@ -162,13 +162,14 @@ $pagina = basename($_SERVER['PHP_SELF']);
                 </a>
             </nav>
             <nav class="pesquisa__espaco">
-                <div class="pesquisa__lupa">
-                    <input class="pesquisa__input" type="search" id="pesquisa" name="pesquisa" placeholder="Pesquisa">
-
-                    <a class="pesquisa__link" href="">
-                        <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
-                    </a>
-                </div>
+                <form action="resultados.php" method="GET">
+                    <div class="pesquisa__lupa">
+                        <input class="pesquisa__input" type="search" id="busca" name="busca" placeholder="Pesquisa">
+                        <button class="pesquisa__link" type="submit">
+                            <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
+                        </button>
+                    </div>
+                </form>
             </nav>
 
             <nav>

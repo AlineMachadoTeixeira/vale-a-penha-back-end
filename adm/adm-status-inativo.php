@@ -15,7 +15,8 @@ $usuario = new Usuario;
 $usuario->setTipo($_SESSION['tipo']);
 
 $comercio = new Comerciante;
-$listarTodos = $comercio->listar();
+$comercio->setStatus("inativo");
+$listarTodos = $comercio->listarStatus();
 
 //var_dump($listarTodos);
 
@@ -69,11 +70,11 @@ if (isset($_GET['sair'])){$sessao->logout();
       <!-- Achei esses icones nesse site https://boxicons.com/?query= -->
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="#controleusuarios" class="nav-link scrollto active"><i class='bx bx-notepad'></i>
+          <li><a href="adm.php" class="nav-link scrollto"><i class='bx bx-notepad'></i>
               <span>Controle de Usuários</span></a>
           </li>
 
-          <li><a href="adm-status-inativo.php"  class="nav-link scrollto"><i class='bx bx-notepad'></i>
+          <li><a href="adm-status-inativo.php"  class="nav-link scrollto active"><i class='bx bx-notepad'></i>
               <span>Status Inativos</span></a>
           </li>
 
@@ -103,13 +104,11 @@ if (isset($_GET['sair'])){$sessao->logout();
 
           <tr>
             <th>Id</th>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
+            <th>Nome</th>            
             <th>E-mail</th>
-            <th>Tipo</th>
+            
             <!-- <th colspan="3">Botões</th>  -->
-            <th>Atualizar</th>
+            
             <th>Publicação</th>            
             <th>Excluir</th>
             <th>Status</th>
@@ -118,19 +117,13 @@ if (isset($_GET['sair'])){$sessao->logout();
           <?php foreach ($listarTodos as $itemUsuario) { ?>
             <tr>
               <td><?= $itemUsuario["id"] ?></td>
-              <td><?= $itemUsuario["nome"] ?></td>
-              <td><?= $itemUsuario["cpf"] ?></td>
-              <td><?= $itemUsuario["telefone"] ?></td>
+              <td><?= $itemUsuario["nome"] ?></td>              
               <td><?= $itemUsuario["email"] ?></td>
-              <td><?= $itemUsuario["tipo"] ?></td>
+              
 
               
 
-              <!-- Atualizar -->
-              <td class="adm__botao">
-                <a href="adm-atualizar.php?id=<?= $itemUsuario["id"] ?>" class="nav-link scrollto active"><i class="bi bi-pencil"></i>
-                </a>
-              </td>
+              
 
               <!-- Publicação -->          
 
