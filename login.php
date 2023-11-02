@@ -3,6 +3,18 @@
 use ValeaPenha\Usuario;
 use ValeaPenha\ControleDeAcesso;
 require_once "vendor/autoload.php";
+
+
+/* Programação das mensagens de feedback (campos obrigatórios, dados incorretos, saiu do sistema etc ) */
+if(isset($_GET["campos_obrigatorios"])){
+	$feedback = "Preenchar e-mail e senha!";
+}elseif(isset($_GET['dados_incorretos'])){
+    $feedback = "E-mail do usuário ou senha incorreto. Tente novamente!";
+}elseif (isset($_GET['logout'])){
+	$feedback = "Você saiu do sistema!";
+}elseif(isset($_GET['acesso_proibido'])){
+	$feedback = "Você deve logar primeiro!";
+}
 ?>
 
 <!DOCTYPE html>
@@ -12,10 +24,12 @@ require_once "vendor/autoload.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="shortcut icon" href="assets/images/logo-marmotazona.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/login.css">
+
 </head>
 
 <body>
@@ -24,9 +38,14 @@ require_once "vendor/autoload.php";
             <section class="login__caixa">
             <a href="index.php"><img class="login__ama" src="assets/images/logo-amarelo-branco.svg" alt=""></a>
 
+
                 <div class="login_for">                    
 
                     <p class="login__img"><a href="index.php"><img src="assets/images/icone-login-vermelho.svg" alt="Logo Vale a Penha"> </a> </p>
+
+                    <?php if(isset($feedback)){ ?>
+                     <p class="alert alert-warning text-center"><?=$feedback?></p>
+                    <?php }?>
 
                     <form  action="" method="post">
 
