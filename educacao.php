@@ -89,7 +89,7 @@ $dadosComercios = $comercio->listarDestaque();
         </div>
     </header>
     <main>
-        <p class="descricao">Na região da Penha, a variedade educacional é evidente, abrangendo redes pública e privada, com opções desde educação infantil até o ensino superior e técnico. Destaca-se, ainda, a alta adesão das crianças às creches, totalizando mais de 100 escolas na área.</p>
+        <p class="descricao">Na região da Penha, temos uma grande variedade educacional de redes públicas e privadas, com opções desde educação infantil até o ensino superior e técnico. Destaca-se, ainda, a alta adesão das crianças às creches, totalizando mais de 100 escolas na região.</p>
 
         <!-- Nossa senhora -->
         <article class="container">

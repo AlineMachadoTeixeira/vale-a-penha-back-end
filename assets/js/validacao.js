@@ -102,7 +102,7 @@ function checkInputs(){
         return false;
 
     } else if(emailValue !== confimaremailValue) { 
-        erro(confimaremail, 'Senhas não são iguais')
+        erro(confimaremail, 'Emails não são iguais')
         return false;
     } else {
         // adicionar a classe de sucesso
@@ -119,7 +119,7 @@ function checkInputs(){
         return false;
 
     } else if(senhaValue.length < 3) { 
-        erro(senha, 'Senha deve ter mais que 8 caracteres')
+        erro(senha, 'Senha deve ter mais que 3 caracteres')
         return false;
     } else {
         // adicionar a classe de sucesso
@@ -149,7 +149,7 @@ function checkInputs(){
         erro(data, 'Preencha esse campo')
         return false;
     } else if (!formatarMaiorIdade(dataValue)) {
-        erro(data, 'Você é menor de idade')
+        erro(data, 'Você precisa ter mais de 18 anos para se cadastrar')
         return false;
     } else {
         // adicionar a classe de sucesso

@@ -94,7 +94,7 @@ $dadosComercios = $comercio->listarDestaque();
 
     <main>
 
-        <p class="descricao">A região da Penha tem diversas opções para uma boa alimentação que vale a pena conhecer: padaria, bares e restaurantes. Confira aqui algumas sugestões.</p>
+        <p class="descricao">A região da Penha tem diversas opções para uma boa alimentação que vale a pena conhecer: padarias, bares e restaurantes. Confira aqui algumas sugestões.</p>
 
 
 

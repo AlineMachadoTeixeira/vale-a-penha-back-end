@@ -91,7 +91,7 @@ $dadosComercios = $comercio->listarDestaque();
     </header>
     <main>
         <p class="descricao">Na Penha temos muitos comércios locais que vale a pena conhecer.</p>
-        <p class="descricao__dois">Quer destacar o seu negócio no nosso Bairro? Alcance moradores e visitantes interessados em seus produtos e serviços. Clique <a href="cadastro.php">Aqui</a> e faça seu cadastro .</p>
+        <p class="descricao__dois">Quer destacar o seu negócio no nosso bairro? Alcance moradores e visitantes interessados em seus produtos e serviços. Clique <a href="cadastro.php">aqui</a> e faça seu cadastro .</p>
         <section class="container">
 
 
