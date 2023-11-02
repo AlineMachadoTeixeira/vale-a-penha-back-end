@@ -47,7 +47,7 @@
     margin-bottom: 40px;
 }
 
-.section-direita:nth-child(odd) {
+.section-direita {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;

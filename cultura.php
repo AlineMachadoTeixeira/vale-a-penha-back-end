@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/container.css">
+   
     <style>
         .header {
             background-image: url(assets/images/banner-cultural.png);
