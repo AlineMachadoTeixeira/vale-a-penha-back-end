@@ -248,6 +248,30 @@ class Comerciante{
         return $resultado;      
     }
 
+
+    //BUSCAR   Não tenho esse "Termo" no banco de dados
+    public function busca():array{
+        $sql = "SELECT id, nome_comercio, descricao FROM comerciantes 
+                WHERE nome_comercio LIKE :termo
+                OR  descricao LIKE :termo ";
+
+
+        try{
+            $consulta = $this->conexao->prepare($sql);
+            $consulta->bindValue(":termo", "%".$this->getTermo()."%", PDO::PARAM_STR);
+            
+            $consulta->execute();
+
+            $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
+
+        }catch (Exception $erro){
+        die ("Erro ao buscar:" . $erro->getMessage());
+        }
+
+        return $resultado;
+
+    }
+
     
     
     
