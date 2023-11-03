@@ -36,7 +36,7 @@ switch ($pagina) {
 
     case "voce-em-foco.php":
 
-    ?>
+?>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
         <script src="assets/js/contato.js"></script>
@@ -50,9 +50,17 @@ switch ($pagina) {
         <script src="assets/js/validacao.js"></script>
 <?php
         break;
-    
 }
 
 ?>
+
+
+
 </body>
+
 </html>
+
+<?php
+/* Finalizar o Output Buffere (gerenciamento de memória de saída) */
+ob_end_flush();
+?>

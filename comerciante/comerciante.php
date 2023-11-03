@@ -1,4 +1,7 @@
 <?php
+/* Output  Buffer (gerenciamento de memória de saída) */
+ob_start();
+
 require_once "../vendor/autoload.php";
 
 use ValeaPenha\ControleDeAcesso;
@@ -230,11 +233,11 @@ if (isset($_POST['alterar_Cadastro'])) {
 
       $comercio->setImagem($imagem["name"]);   // precisa ser NAME  
 
-      $comercio->categoria->setId($_POST['categoria']);        
+      $comercio->categoria->setId($_POST['categoria']);
 
 
       $comercio->atualizarComercio();
-      //header("location:comerciante.php");
+      header("location:comerciante.php");
     }
 
     if ($dadosComercios) { ?>
@@ -281,20 +284,20 @@ if (isset($_POST['alterar_Cadastro'])) {
             </div> 
             
             
-            <div class="comerciante__input" name="categoria" id="categoria" required>
-                        <label for="categoria">Categoria:</label>
-                        <select class="comerciante__option" name="categoria" id="categoria" required>
-                            <option value=""></option>
-                            <?php  foreach($dadosCategoria as $itemCategoria){ ?>
+            <div class=" comerciante__input" name="categoria" id="categoria" required>
+                <label for="categoria">Categoria:</label>
+                <select class="comerciante__option" name="categoria" id="categoria" required>
+                  <option value=""></option>
+                  <?php foreach ($dadosCategoria as $itemCategoria) { ?>
 
-                               <option  value="<?=$itemCategoria['id']?>"><?=$itemCategoria['nome_categoria']?></option>
+                    <option value="<?= $itemCategoria['id'] ?>"><?= $itemCategoria['nome_categoria'] ?></option>
 
-                            <?php  } ?>
+                  <?php  } ?>
 
-                            
 
-                        </select>
-                    </div>
+
+                </select>
+              </div>
 
               <div class=" botao__enviar__adm">
                 <div class="botao__enviar">
@@ -315,15 +318,15 @@ if (isset($_POST['alterar_Cadastro'])) {
 
             <p class="paragrafo__dicas">Dicas</p>
 
-                <ul class="ul__dicas">
+            <ul class="ul__dicas">
 
-                    <li>É permitido um anúncio por usuário/CPF. </li>
-                    <li>Limite de 1 foto.</li>
-                    <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
-                    <li>Caso sua imagem seja maior, use o link para redimencionar: <a  target="_blank" href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
-                    <li>Título de até 15 caracteres</li>
-                    <li>Descrição com até 30 caracteres.</li>
-                </ul>
+              <li>É permitido um anúncio por usuário/CPF. </li>
+              <li>Limite de 1 foto.</li>
+              <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
+              <li>Caso sua imagem seja maior, use o link para redimencionar: <a target="_blank" href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
+              <li>Título de até 15 caracteres</li>
+              <li>Descrição com até 30 caracteres.</li>
+            </ul>
 
 
 
@@ -395,6 +398,13 @@ if (isset($_POST['alterar_Cadastro'])) {
 
 
 
+
+
 </body>
 
 </html>
+
+<?php
+/* Finalizar o Output Buffere (gerenciamento de memória de saída) */
+ob_end_flush();
+?>

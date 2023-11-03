@@ -1,20 +1,23 @@
 <?php
+/* Output  Buffer (gerenciamento de memória de saída) */
+ob_start();
 require_once "vendor/autoload.php";
+
 use ValeaPenha\Usuario;
 
-if(isset($_POST['inserir'])){
-	$usuario = new Usuario;
+if (isset($_POST['inserir'])) {
+    $usuario = new Usuario;
     $usuario->setNome($_POST['nome']);
     $usuario->setSobrenome($_POST['sobrenome']);
     $usuario->setCpf($_POST['cpf']);
     $usuario->setTelefone($_POST['telefone']);
     $usuario->setEmail($_POST['email']);
-    $usuario->setData($usuario->formatarDataParaBanco($_POST["data"]));    
+    $usuario->setData($usuario->formatarDataParaBanco($_POST["data"]));
     //$usuario->setTipo($_POST['tipo']);
-    $usuario->setSenha($usuario->codificaSenha($_POST["senha"]));	   
+    $usuario->setSenha($usuario->codificaSenha($_POST["senha"]));
 
-	$usuario->inserirUsuario();
-	header("location:login.php");
+    $usuario->inserirUsuario();
+    header("location:login.php");
 }
 
 ?>
@@ -263,7 +266,14 @@ if(isset($_POST['inserir'])){
     <script src="assets/js/mascara-cpf-tel.js"></script>
     <script src="assets/js/validacao.js"></script>
 
+    
+
 
 </body>
 
 </html>
+
+<?php
+    /* Finalizar o Output Buffere (gerenciamento de memória de saída) */
+    ob_end_flush();
+    ?>

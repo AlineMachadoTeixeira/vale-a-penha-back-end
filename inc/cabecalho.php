@@ -1,4 +1,6 @@
 <?php
+/* Output  Buffer (gerenciamento de memória de saída) */
+ob_start();
 $pagina = basename($_SERVER['PHP_SELF']);
 ?>
 

@@ -1,4 +1,7 @@
 <?php
+/* Output  Buffer (gerenciamento de memória de saída) */
+ob_start();
+
 require_once "../vendor/autoload.php";
 
 use ValeaPenha\ControleDeAcesso;
@@ -289,7 +292,8 @@ if (isset($_POST['atualizar_comercio'])) {
 
 
         /* CSS Para a foto do cadastrar comercio  */
-        .file-wrapper, .file-antiga {
+        .file-wrapper,
+        .file-antiga {
             width: 200px;
             height: 200px;
             border: 10px solid #c40008;
@@ -345,7 +349,7 @@ if (isset($_POST['atualizar_comercio'])) {
             background-color: #c40008;
             padding: 3px;
         }
-        
+
 
         .file-wrapper:hover:after {
             font-size: 73px;
@@ -506,13 +510,13 @@ if (isset($_POST['atualizar_comercio'])) {
                         <label for="categoria">Categoria:</label>
                         <select class="comerciante__option" name="categoria" id="categoria" required>
                             <option value=""></option>
-                            <?php  foreach($dadosCategoria as $itemCategoria){ ?>
+                            <?php foreach ($dadosCategoria as $itemCategoria) { ?>
 
-                               <option <?php if ($dadosComercios["categoria_id"] === $itemCategoria['id']) echo " selected "; ?> value="<?=$itemCategoria['id']?>"><?=$itemCategoria['nome_categoria']?></option>
+                                <option <?php if ($dadosComercios["categoria_id"] === $itemCategoria['id']) echo " selected "; ?> value="<?= $itemCategoria['id'] ?>"><?= $itemCategoria['nome_categoria'] ?></option>
 
                             <?php  } ?>
 
-                            
+
 
                         </select>
                     </div>
@@ -535,7 +539,7 @@ if (isset($_POST['atualizar_comercio'])) {
                     <li>É permitido um anúncio por usuário/CPF. </li>
                     <li>Limite de 1 foto.</li>
                     <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
-                    <li>Caso sua imagem seja maior, use o link para redimencionar: <a  target="_blank" href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
+                    <li>Caso sua imagem seja maior, use o link para redimencionar: <a target="_blank" href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
                     <li>Título de até 15 caracteres</li>
                     <li>Descrição com até 30 caracteres.</li>
                 </ul>
@@ -557,3 +561,8 @@ if (isset($_POST['atualizar_comercio'])) {
 </body>
 
 </html>
+
+<?php
+/* Finalizar o Output Buffere (gerenciamento de memória de saída) */
+ob_end_flush();
+?>

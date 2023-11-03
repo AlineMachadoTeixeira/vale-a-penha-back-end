@@ -1,4 +1,7 @@
 <?php
+/* Output  Buffer (gerenciamento de memória de saída) */
+ob_start();
+
 use ValeaPenha\Usuario;
 use ValeaPenha\ControleDeAcesso;
 require_once "../vendor/autoload.php";
@@ -362,3 +365,8 @@ if(isset($_POST['atualizar'])){
 </body>
 
 </html>
+
+<?php 
+/* Finalizar o Output Buffere (gerenciamento de memória de saída) */
+ob_end_flush(); 
+?>

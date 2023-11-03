@@ -1,5 +1,8 @@
 <?php
 
+/* Output  Buffer (gerenciamento de memória de saída) */
+ob_start();
+
 use ValeaPenha\Usuario;
 use ValeaPenha\ControleDeAcesso;
 use ValeaPenha\Comerciante;
@@ -167,3 +170,8 @@ if (isset($_GET['sair'])){$sessao->logout();
 </body>
 
 </html>
+
+<?php 
+/* Finalizar o Output Buffere (gerenciamento de memória de saída) */
+ob_end_flush(); 
+?>
