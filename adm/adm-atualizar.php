@@ -4,8 +4,9 @@ ob_start();
 
 use ValeaPenha\Usuario;
 use ValeaPenha\ControleDeAcesso;
+
 require_once "../vendor/autoload.php";
-$usuario =new Usuario;
+$usuario = new Usuario;
 
 $sessao = new ControleDeAcesso;
 $sessao->verificaAcesso();
@@ -17,34 +18,34 @@ $usuario->setId($_GET['id']);
 $dados = $usuario->listarUmUsuario();
 
 /* Script para atualização */
-if(isset($_POST['atualizar'])){	
-	$usuario->setNome($_POST['nome']);
+if (isset($_POST['atualizar'])) {
+    $usuario->setNome($_POST['nome']);
 
-	$usuario->setSobrenome($_POST['sobrenome']);
+    $usuario->setSobrenome($_POST['sobrenome']);
 
-	$usuario->setCpf($_POST['cpf']);
+    $usuario->setCpf($_POST['cpf']);
 
     $usuario->setTelefone($_POST['telefone']);
 
     $usuario->setEmail($_POST['email']);
 
-    $usuario->setData($usuario->formatarDataParaBanco($_POST["data"])); 
+    $usuario->setData($usuario->formatarDataParaBanco($_POST["data"]));
 
     $usuario->setTipo($_POST['tipo']);
-	
-	//SENHA
-	if(empty($_POST['senha'])){
-		
-		$usuario->setSenha($dados['senha']);
-	}else{
-		
-		$usuario->setSenha(
-			$usuario->verificarSenha($_POST['senha'], $dados['senha'])
-		);
-	}
 
-	$usuario->atualizarUsuarios();
-	header("location:adm.php");	
+    //SENHA
+    if (empty($_POST['senha'])) {
+
+        $usuario->setSenha($dados['senha']);
+    } else {
+
+        $usuario->setSenha(
+            $usuario->verificarSenha($_POST['senha'], $dados['senha'])
+        );
+    }
+
+    $usuario->atualizarUsuarios();
+    header("location:adm.php");
 }
 
 ?>
@@ -265,6 +266,33 @@ if(isset($_POST['atualizar'])){
             color: #000000c0;
             font-size: 16px;
         }
+
+        .comerciante_atualizar {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .comerciante_atualizar a {
+            font-size: 20px;
+            font-weight: bold;
+            padding-right: 8px;
+            color: #c40008;
+            margin-left: 20px;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .comerciante_atualizar a:hover {
+            transform: scale(1.30);
+            transition: 0, 5s;
+            background-color: #c40008;
+            color: #FFFFFF;
+            border-radius: 10px;
+
+
+        }
     </style>
 
 </head>
@@ -277,78 +305,82 @@ if(isset($_POST['atualizar'])){
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Atualizar dados do Usuário</h2>
+                    <h2>Atualizar Tipo do Usuário</h2>
 
                 </div>
 
                 <form class="comerciante__formulario  " action="" method="post" id="form">
 
-                    <div class="comerciante__sobrenome">
-                        <!-- Nome -->
+                    <!-- <div class="comerciante__sobrenome">
+                        Nome
                         <div class="comerciante__input">
                             <label for="nome">Nome:</label>
-                            <input id="nome" type="text" name="nome" placeholder="Digite seu primeiro nome"  value="<?=$dados['nome']?>" required>
+                            <input id="nome" type="text"  name="nome" placeholder="Digite seu primeiro nome"  value="<?= $dados['nome'] ?>" required>
                         </div> 
 
-                        <!-- Sobrenome -->
+                        Sobrenome
                         <div class="comerciante__input">
                             <label for="sobrenome">Sobrenome:</label>
-                            <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome"  value="<?=$dados['sobrenome']?>" required>
+                            <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome"  value="<?= $dados['sobrenome'] ?>" required>
                         </div>
                     </div>
 
                     <div class="comerciante__campos">
                         <div class="comerciante__sobrenome">
-                            <!-- CPF -->
+                            CPF
                             <div class="comerciante__input">
                                 <label for="cpf">CPF</label>
-                                <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" required maxlength="14"  value="<?=$dados['cpf']?>" >
+                                <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" required maxlength="14"  value="<?= $dados['cpf'] ?>" >
                             </div>
 
-                            <!-- Telefone -->
+                            Telefone
                             <div class="comerciante__input">
                                 <label for="telefone">Telefone:</label>
-                                <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" required maxlength="14"  value="<?=$dados['telefone']?>" >
+                                <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" required maxlength="14"  value="<?= $dados['telefone'] ?>" >
                             </div>
                         </div>
 
-                        <!-- E-mail -->
+                        E-mail
                         <div class="comerciante__input">
                             <label for="email">E-mail:</label>
-                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required  value="<?=$dados['email']?>" >
+                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required  value="<?= $dados['email'] ?>" >
                         </div>
 
-                        <!-- Senha -->
+                        Senha
                         <div class="comerciante__input">
                             <label for="senha">Senha:</label>
                             <input id="senha" type="password" name="senha" autocomplete="current-password" value=""placeholder="Preencha apenas se for alterar">
                         </div>
 
-                        <!-- Data de Nascimento -->
+                        Data de Nascimento
                         <div class="comerciante__input">
                             <label for="data">Data de Nascimento:</label>
-                            <input id="data" type="date" name="data" placeholder="Digite sua Data de Nascimento" required value="<?=$dados['data']?>">
-                        </div>
+                            <input id="data" type="date" name="data" placeholder="Digite sua Data de Nascimento" required value="<?= $dados['data'] ?>">
+                        </div> -->
 
 
 
-                        <div class="comerciante__input" name="tipo" id="tipo" required>
-                            <label for="tipo">Tipo:</label>
-                            <select class="comerciante__option" name="tipo" id="tipo" required>
-                                <option value=""></option>
+                    <div class="comerciante__input" name="tipo" id="tipo" required>
+                        <label for="tipo">Tipo:</label>
+                        <select class="comerciante__option" name="tipo" id="tipo" required>
+                            <option value=""></option>
 
-                                <option <?php if($dados["tipo"] === "admin" ) echo " selected ";?>  value="admin">Administrador</option>
+                            <option <?php if ($dados["tipo"] === "admin") echo " selected "; ?> value="admin">Administrador</option>
 
-                                <option <?php if($dados["tipo"] === "comerciante" ) echo " selected ";?>  value="comerciante">Comerciante</option>
-                                
-                            </select>
+                            <option <?php if ($dados["tipo"] === "comerciante") echo " selected "; ?> value="comerciante">Comerciante</option>
 
-                            
-                        </div>
+                        </select>
 
-                        <div class="botao__enviar">
-                            <button type="submit" id="submit" name="atualizar">Alterar Cadastro</button>
-                        </div>
+
+                    </div>
+
+                    <div class="botao__enviar">
+                        <button type="submit" id="submit" name="atualizar">Alterar Tipo</button>
+                    </div>
+
+                    <div class="comerciante_atualizar">
+                        <a href="adm.php">Voltar</a>
+                    </div>
 
                 </form>
 
@@ -366,7 +398,7 @@ if(isset($_POST['atualizar'])){
 
 </html>
 
-<?php 
+<?php
 /* Finalizar o Output Buffere (gerenciamento de memória de saída) */
-ob_end_flush(); 
+ob_end_flush();
 ?>

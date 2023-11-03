@@ -109,9 +109,9 @@ if (isset($_GET['sair'])){$sessao->logout();
             <th>CPF</th>
             <th>Telefone</th>
             <th>E-mail</th>
-            <th>Tipo</th>
-            <!-- <th colspan="3">Botões</th>  -->
-            <th>Atualizar</th>
+            <!-- <th>Tipo</th> -->
+            <th colspan="2">Atualizar Tipo</th> 
+            <!-- <th>Atualizar Tipo</th> -->
             <th>Publicação</th>            
             <th>Excluir</th>
             <th>Status</th>
@@ -124,9 +124,7 @@ if (isset($_GET['sair'])){$sessao->logout();
               <td><?= $itemUsuario["cpf"] ?></td>
               <td><?= $itemUsuario["telefone"] ?></td>
               <td><?= $itemUsuario["email"] ?></td>
-              <td><?= $itemUsuario["tipo"] ?></td>
-
-              
+              <td><?= $itemUsuario["tipo"] ?> </td>              
 
               <!-- Atualizar -->
               <td class="adm__botao">

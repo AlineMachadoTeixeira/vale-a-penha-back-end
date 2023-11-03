@@ -135,7 +135,7 @@ $pagina = basename($_SERVER['PHP_SELF']);
             <link rel="stylesheet" href="assets/css/comercio-local.css">
             <style>
                 .header {
-                    background-image: url(assets/images/banner-vc-em-foco.png);
+                    background-image: url(assets/images/banner-pesquisa.png);
                     background-size: cover;
                     background-position: center;
                 }

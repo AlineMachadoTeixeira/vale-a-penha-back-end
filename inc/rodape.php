@@ -11,6 +11,8 @@
             <a href="educação.php">Educação</a>
             <a href="historia.php">História</a>
             <a href="voce-em-foco.php">Você&nbsp;em&nbsp;Foco</a>
+            <a href="login.php">Login</a>
+            <a href="cadastro.php">Cadastro</a>
         </section>
         <section class="footer-emojis">
             <div class="emojis">

@@ -280,7 +280,7 @@ if (isset($_POST['alterar_Cadastro'])) {
               <!-- 1º Instagram Link -->
               <div class="comerciante__input">
                 <label for="link_instagram">Instagram:</label>
-                <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" ">
+                <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" >
             </div> 
             
             
@@ -392,13 +392,9 @@ if (isset($_POST['alterar_Cadastro'])) {
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
   <script src="../assets/js/comerciante.js"></script>
   <script src="../assets/js/mascara-cpf-tel.js"></script>
-
-
-
-
 
 </body>
 

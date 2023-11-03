@@ -183,13 +183,13 @@ if (isset($_POST['publicar'])) {
             width: 100%;
         }
 
-        .comerciante__input input:hover {
+        /* .comerciante__input input:hover {
             outline: 1px solid #c40008;
-        }
+        } */
 
-        .comerciante__input textarea:hover {
+        /* .comerciante__input textarea:hover {
             outline: 1px solid #c40008;
-        }
+        } */
 
         .comerciante__input input:focus-visible {
             outline: none
