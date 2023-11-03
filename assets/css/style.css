@@ -145,6 +145,7 @@ footer a {
     .descricao {
         margin: auto 30px;       
     }
+    
 }
 @media screen and (max-width: 426px) {
     footer p,
@@ -157,6 +158,7 @@ footer a {
     .descricao {
         margin: auto 5px;
     }
+    
 }
 /* Menu */
 @media screen and (min-width: 769px) {
@@ -168,6 +170,7 @@ footer a {
         flex-direction: row;
         justify-content: space-around;
     }
+   
 }
 /* Telas Grandes */
 @media screen and (min-width: 1500px) {

@@ -74,11 +74,11 @@ if (isset($_GET['sair'])){$sessao->logout();
               <span>Controle de Usuários</span></a>
           </li>
 
-          <li><a href="adm-status-inativo.php"  class="nav-link scrollto active"><i class='bx bx-notepad'></i>
+          <li><a href="adm-status-inativo.php"  class="nav-link scrollto active"><i class='bx bx-toggle-left' ></i>
               <span>Status Inativos</span></a>
           </li>
 
-          <li><a href="adm-status-ativo.php" class="nav-link scrollto"><i class='bx bx-notepad'></i>
+          <li><a href="adm-status-ativo.php" class="nav-link scrollto"><i class='bx bx-toggle-right'></i>
               <span>Status Ativos</span></a>
           </li>
 

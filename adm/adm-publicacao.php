@@ -1,4 +1,5 @@
 <?php
+
 use ValeaPenha\Usuario;
 use ValeaPenha\Comerciante;
 use ValeaPenha\ControleDeAcesso;
@@ -20,15 +21,15 @@ $dados = $comercio->listarUmComercio();
 
 
 /* Script para Mudar o tipo do usuario  Não funcionou */
-if(isset($_POST['publicar'])){   
-    $comercio->usuario->setId($_GET['id']); 
-  
-    $comercio->setStatus($_POST['status']);	
-  
-      $comercio->atualizarStatus();
-      
-       header("location:adm.php");	
-  }
+if (isset($_POST['publicar'])) {
+    $comercio->usuario->setId($_GET['id']);
+
+    $comercio->setStatus($_POST['status']);
+
+    $comercio->atualizarStatus();
+
+    header("location:adm.php");
+}
 
 
 
@@ -75,19 +76,7 @@ if(isset($_POST['publicar'])){
             background-position: center;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        label,
-        a,
-        table,
-        td,
-        th,
-        tr {
+        h1, h2, h3, h4, h5, h6, p, label, a, table, td, th, tr {
             font-family: 'Montserrat', sans-serif;
         }
 
@@ -221,7 +210,7 @@ if(isset($_POST['publicar'])){
         }
 
         .botao__enviar button {
-            width: 100%;
+            width: 60%;
             border: none;
             background-color: #c40008;
             padding: 10px;
@@ -234,20 +223,14 @@ if(isset($_POST['publicar'])){
             color: #fff;
         }
 
-        
+
 
         .botao__enviar button:hover {
             background-color: rgba(300, 200, 120, 0.6);
             color: #000000c0;
         }
 
-        .botao__enviar__adm{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            width: 100%;
-        }
+
 
         .comerciante__input select {
             margin-top: 0px;
@@ -267,10 +250,6 @@ if(isset($_POST['publicar'])){
         .comerciante__input select:focus-visible {
             outline: none
         }
-
-        
-
-        
 
         /* CSS Para a foto do cadastrar comercio  */
         .file-wrapper {
@@ -369,6 +348,33 @@ if(isset($_POST['publicar'])){
         .file-set>input {
             pointer-events: none;
         }
+
+        .comerciante_atualizar {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .comerciante_atualizar a {
+            font-size: 20px;
+            font-weight: bold;
+            padding-right: 8px;
+            color: #c40008;
+            margin-left: 20px;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .comerciante_atualizar a:hover {
+            transform: scale(1.30);
+            transition: 0, 5s;
+            background-color: #c40008;
+            color: #FFFFFF;
+            border-radius: 10px;
+
+
+        }
     </style>
 
 </head>
@@ -397,8 +403,8 @@ if(isset($_POST['publicar'])){
 
                     <!-- FOTO comercio-->
                     <div class="file-wrapper">
-                        <p class="comerciante__foto__image"><img src="../imagens/<?=$dados['imagem']?>" alt=""></p>
-                        <input hidden value="<?=$dados['imagem']?>"type="file"  name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
+                        <p class="comerciante__foto__image"><img src="../imagens/<?= $dados['imagem'] ?>" alt=""></p>
+                        <input hidden value="<?= $dados['imagem'] ?>" type="file" name="imagem" id="imagem" accept="image/*,image/png, image/jpeg, image/gif, image/svg+xml " />
                         <div class="close-btn">x</div>
                     </div>
 
@@ -408,61 +414,48 @@ if(isset($_POST['publicar'])){
                     <!-- Nome comercio  -->
                     <div class="comerciante__input">
                         <label class="titulo" for="nome_comercio">Nome Comércio:
-                            <textarea rows="1" cols="33" disabled name="nome_comercio" id="nome_comercio" required maxlength="40"><?=$dados['nome_comercio']?></textarea>
+                            <textarea rows="1" cols="33" disabled name="nome_comercio" id="nome_comercio" required maxlength="40"><?= $dados['nome_comercio'] ?></textarea>
                         </label>
                     </div>
 
                     <!-- Descrição  -->
                     <div class="comerciante__input">
                         <label for="descricao">Descrição:
-                            <textarea rows="5" cols="33" disabled name="descricao" id="descricao" required maxlength="80"><?=$dados['descricao']?></textarea>
+                            <textarea rows="5" cols="33" disabled name="descricao" id="descricao" required maxlength="80"><?= $dados['descricao'] ?></textarea>
                         </label>
                     </div>
 
                     <!-- Instagram Link -->
                     <div class="comerciante__input">
                         <label for="link_instagram">Instagram:</label>
-                        <input type="url"  disabled name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?=$dados['link_instagram']?>">
+                        <input type="url" disabled name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?= $dados['link_instagram'] ?>">
 
                     </div>
 
                     <!-- Status -->
                     <div class="comerciante__input" name="tipo" id="tipo" required>
-                            <label for="sobrenome">Status:</label>
-                            <select class="comerciante__option" name="status" id="status" required>
-                                <option value=""></option>
+                        <label for="sobrenome">Status:</label>
+                        <select class="comerciante__option" name="status" id="status" required>
+                            <option value=""></option>
 
-                                <option <?php if($dados["status"] === "ativo" ) echo " selected ";?>  value="ativo">Ativo</option>
+                            <option <?php if ($dados["status"] === "ativo") echo " selected "; ?> value="ativo">Ativo</option>
 
-                                <option <?php if($dados["status"] === "inativo" ) echo " selected ";?>  value="inativo">Inativo</option>
-                                
-                            </select>
+                            <option <?php if ($dados["status"] === "inativo") echo " selected "; ?> value="inativo">Inativo</option>
 
-                            
-                        </div>
-
-
-                    <div class="botao__enviar__adm">
-                        <div class="botao__enviar">
-                            <button type="submit" id="submit" name="publicar">Publicar</button>                        
-
-                        </div>
-
-                        <!-- <div class="botao__enviar">                     
-
-                            <button type="submit" id="submit" name="voltar_adm">Voltar</button>
-
-                        </div> -->
+                        </select>
 
                     </div>
+                    <div class="botao__enviar">
+                        <button type="submit" id="submit" name="publicar">Alterar Status</button>
+                    </div>
 
-
-                    
-                    
+                    <div class="comerciante_atualizar">
+                        <a href="adm.php">Voltar</a>
+                    </div>
 
                 </form>
 
-                
+
 
             </div>
         </section><!-- Fim Cadastrar Comércio -->

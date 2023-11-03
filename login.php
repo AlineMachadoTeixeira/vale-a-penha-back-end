@@ -7,7 +7,7 @@ require_once "vendor/autoload.php";
 
 /* Programação das mensagens de feedback (campos obrigatórios, dados incorretos, saiu do sistema etc ) */
 if(isset($_GET["campos_obrigatorios"])){
-	$feedback = "Preenchar e-mail e senha!";
+	$feedback = "Preencher e-mail e senha!";
 }elseif(isset($_GET['dados_incorretos'])){
     $feedback = "E-mail do usuário ou senha incorreto. Tente novamente!";
 }elseif (isset($_GET['logout'])){
@@ -29,6 +29,20 @@ if(isset($_GET["campos_obrigatorios"])){
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/login.css">
+    <style>
+    .alert {
+        padding: 10px;
+        background-color: #fff6c3ae;
+        color: #000000c0;
+        text-align: center;
+        /* margin-top: 0;
+        margin-bottom: 15px; */
+        margin: 0;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+</style>
 
 </head>
 
@@ -43,8 +57,10 @@ if(isset($_GET["campos_obrigatorios"])){
 
                     <p class="login__img"><a href="index.php"><img src="assets/images/icone-login-vermelho.svg" alt="Logo Vale a Penha"> </a> </p>
 
+                    <!-- alert alert-warning text-center -->
+
                     <?php if(isset($feedback)){ ?>
-                     <p class="alert alert-warning text-center"><?=$feedback?></p>
+                     <p class="alert"><?=$feedback?></p>
                     <?php }?>
 
                     <form  action="" method="post">

@@ -13,7 +13,7 @@ final class ControleDeAcesso {
         if( !isset($_SESSION['id'])){
             
             session_destroy();
-            header("location:../login.php"); //Falta a mensagem ../login.php?acesso_proibido" proibido acesso 
+            header("location:../login.php"); 
             die(); 
         } 
     }

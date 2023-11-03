@@ -62,7 +62,7 @@ nav a:focus {
     background-color: transparent;
     display: flex;
     border: 3px solid #c40008;
-    height: 30px;
+    height: 40px;
     border-radius: 50px;
     align-items: center;
     outline: none;
@@ -75,19 +75,22 @@ nav a:focus {
 
 .pesquisa__input {
     border: none;
-    background-color: transparent;
+    border-radius: 50px;
+    background-color: transparent;       
     outline: none;
     padding: 0;
-    line-height: 40px;
+    line-height: 30px;
     width: 100%;
     padding-left: 10px;
     color: #000000c0;
+    font-size: 18px;
 }
 
 .pesquisa__link {
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
+    border: none;
     background-color: #c40008;
     display: flex;
     justify-content: center;

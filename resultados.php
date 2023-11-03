@@ -14,9 +14,10 @@ $quantidade = count($resultado);
 
 if ($quantidade > 0) {
 ?>
-   <h2 class="fs-5">Resultados: <span><?= $quantidade ?></span></h2>
-   <p class="descricao">Na Penha temos muitos comércios locais que vale a pena conhecer.</p>
-   <p class="descricao__dois">Quer destacar o seu negócio no nosso bairro? Alcance moradores e visitantes interessados em seus produtos e serviços. Clique <a href="cadastro.php">aqui</a> e faça seu cadastro .</p>
+   
+   <p class="descricao">Resultados da busca: <span class="resultado"> <?= $quantidade ?> </span></p>
+   <!-- <p class="descricao__dois">Quer destacar o seu negócio no nosso bairro? Alcance moradores e visitantes interessados em seus produtos e serviços. Clique <a href="cadastro.php">aqui</a> e faça seu cadastro .</p> -->
+   
    <section class="container">
 
 
@@ -37,7 +38,7 @@ if ($quantidade > 0) {
    
 
 <?php } else { ?>
-   <h2 class="fs-5 text-danger"> Sem Notícias</h2>
+   <p class="descricao"> Não encontramos nenhum resultado para sua busca!</p>
 <?php
 }
 ?>

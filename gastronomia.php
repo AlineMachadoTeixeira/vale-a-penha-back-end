@@ -16,6 +16,7 @@ $dadosComercios = $comercio->listarDestaque();
 ?>
 
         <p class="descricao">A região da Penha tem diversas opções para uma boa alimentação que vale a pena conhecer: padarias, bares e restaurantes. Confira aqui algumas sugestões.</p>
+        <p class="descricao__dois">Quer destacar o seu negócio no nosso bairro? Alcance moradores e visitantes interessados em seus produtos e serviços. Clique <a href="cadastro.php">aqui</a> e faça seu cadastro .</p>
 
 
 
