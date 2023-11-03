@@ -46,6 +46,7 @@ switch ($pagina) {
     case "cadastro.php":
     ?>
         <script src="assets/js/mascara-cpf-tel.js"></script>
+        <!-- <script src="../assets/js/validacao.js"></script> -->
         <script src="assets/js/validacao.js"></script>
 <?php
         break;
