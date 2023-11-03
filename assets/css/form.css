@@ -7,6 +7,11 @@ header h2 {
     background-color: #FFF6C3;    
 }
 
+.foco_você{
+    display: flex;
+    
+}
+
 .container { 
     background-size: cover;
     width: 50vw;

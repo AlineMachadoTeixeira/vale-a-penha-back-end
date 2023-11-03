@@ -62,7 +62,7 @@ nav a:focus {
     background-color: transparent;
     display: flex;
     border: 3px solid #c40008;
-    height: 40px;
+    height: 35px;
     border-radius: 50px;
     align-items: center;
     outline: none;
