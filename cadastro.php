@@ -17,7 +17,7 @@ if (isset($_POST['inserir'])) {
     $usuario->setSenha($usuario->codificaSenha($_POST["senha"]));
 
     $usuario->inserirUsuario();
-    header("location:login.php");
+    header("location:login.php?usuario_cadastrado");
 }
 
 ?>

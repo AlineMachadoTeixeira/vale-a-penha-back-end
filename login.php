@@ -14,6 +14,8 @@ if(isset($_GET["campos_obrigatorios"])){
 	$feedback = "Você saiu do sistema!";
 }elseif(isset($_GET['acesso_proibido'])){
 	$feedback = "Você deve logar primeiro!";
+}elseif(isset($_GET['usuario_cadastrado'])){
+	$feedback = "Cadastro realizado com sucesso! Faça seu login.";
 }
 ?>
 
@@ -34,9 +36,7 @@ if(isset($_GET["campos_obrigatorios"])){
         padding: 10px;
         background-color: #fff6c3ae;
         color: #000000c0;
-        text-align: center;
-        /* margin-top: 0;
-        margin-bottom: 15px; */
+        text-align: center;        
         margin: 0;
         border-radius: 20px;
         font-weight: bold;

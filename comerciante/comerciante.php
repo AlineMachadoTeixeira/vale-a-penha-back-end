@@ -4,6 +4,8 @@ ob_start();
 
 require_once "../vendor/autoload.php";
 
+
+
 use ValeaPenha\ControleDeAcesso;
 use ValeaPenha\Usuario;
 use ValeaPenha\Comerciante;
@@ -53,9 +55,21 @@ if (isset($_POST['alterar_Cadastro'])) {
   }
 
   $usuario->atualizarUsuarios();
-  header("location:comerciante.php");
+  header("location:comerciante.php?usuario_atualizado");
 }
-
+/* Programação das mensagens de feedback (campos obrigatórios, dados incorretos, saiu do sistema etc ) */
+if (isset($_GET["usuario_atualizado"])) {
+  $feedback = "Alteração realizada com sucesso!";
+  // }elseif(isset($_GET['comercio_cadastrado'])){
+  //     $feedbackCadastro = "Cadastro realizado com sucesso! Aguarde 48 horas.";
+  // }elseif (isset($_GET['logout'])){
+  // 	$feedback = "Você saiu do sistema!";
+  // }elseif(isset($_GET['acesso_proibido'])){
+  // 	$feedback = "Você deve logar primeiro!";
+  // }elseif(isset($_GET['usuario_cadastrado'])){
+  // 	$feedback = "Cadastro realizado com sucesso! Faça seu login.";
+}
+?>
 
 ?>
 
@@ -190,6 +204,12 @@ if (isset($_POST['alterar_Cadastro'])) {
               <input id="data" type="date" name="data" placeholder="Digite sua Data de Nascimento" required value="<?= $dados['data'] ?>">
             </div>
 
+            <!-- alert alert-warning text-center -->
+
+            <?php if (isset($feedback)) { ?>
+              <p class="alert"><?= $feedback ?></p>
+            <?php } ?>
+
 
 
             <div class="botao__enviar">
@@ -237,7 +257,13 @@ if (isset($_POST['alterar_Cadastro'])) {
 
 
       $comercio->atualizarComercio();
-      header("location:comerciante.php");
+      header("location:comerciante.php?comercio_cadastrado");
+    }
+
+    if (isset($_GET["comercio_cadastrado"])) {
+      $feedbackCadastro = "Cadastro realizado com sucesso! Aguarde 48 horas.";
+    } elseif (isset($_GET['comercio_atualizado'])) {
+      $feedbackCadastro = "Alteração realizada com sucesso! Aguarde 48 horas.";
     }
 
     if ($dadosComercios) { ?>
@@ -280,11 +306,11 @@ if (isset($_POST['alterar_Cadastro'])) {
               <!-- 1º Instagram Link -->
               <div class="comerciante__input">
                 <label for="link_instagram">Instagram:</label>
-                <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram" >
-            </div> 
-            
-            
-            <div class=" comerciante__input" name="categoria" id="categoria" required>
+                <input type="url" name="link_instagram" id="link_instagram" placeholder="Link do instagram">
+              </div>
+
+
+              <div class=" comerciante__input" name="categoria" id="categoria" required>
                 <label for="categoria">Categoria:</label>
                 <select class="comerciante__option" name="categoria" id="categoria" required>
                   <option value=""></option>
@@ -293,11 +319,9 @@ if (isset($_POST['alterar_Cadastro'])) {
                     <option value="<?= $itemCategoria['id'] ?>"><?= $itemCategoria['nome_categoria'] ?></option>
 
                   <?php  } ?>
-
-
-
                 </select>
               </div>
+
 
               <div class=" botao__enviar__adm">
                 <div class="botao__enviar">
@@ -308,13 +332,21 @@ if (isset($_POST['alterar_Cadastro'])) {
 
             <?php } else { ?>
 
+
+
               <div class="comerciante_atualizar">
-                <h3>Comércio já Cadastrado!</h3>
+                <h3>Comércio já cadastrado!</h3>
                 <p>Você pode atualizar clicando no lápis: <a href="comerciante-atualizar.php"><i class="bi bi-pencil"></i></a></p>
               </div>
 
 
             <?php } ?>
+
+            <!-- alert alert-warning text-center -->
+            <?php if (isset($feedbackCadastro)) { ?>
+              <p class="alert"><?= $feedbackCadastro ?></p>
+            <?php } ?>
+
 
             <p class="paragrafo__dicas">Dicas</p>
 
@@ -392,7 +424,7 @@ if (isset($_POST['alterar_Cadastro'])) {
 
 
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="../assets/js/comerciante.js"></script>
   <script src="../assets/js/mascara-cpf-tel.js"></script>
 

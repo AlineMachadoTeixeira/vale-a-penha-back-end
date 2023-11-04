@@ -51,7 +51,7 @@ if (isset($_POST['atualizar_comercio'])) {
 
 
     $comercio->atualizarComercio();
-    header("location:comerciante.php");
+    header("location:comerciante.php?comercio_atualizado");
 }
 
 ?>

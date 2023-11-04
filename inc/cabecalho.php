@@ -149,7 +149,7 @@ $pagina = basename($_SERVER['PHP_SELF']);
     }
 
     ?>
-    <title><?= $tituloPagina ?> | Vale a Penha </title>
+    <title>Vale a Penha | <?= $tituloPagina ?></title>
 </head>
 
 <body>
