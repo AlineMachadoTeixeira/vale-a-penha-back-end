@@ -60,14 +60,7 @@ if (isset($_POST['alterar_Cadastro'])) {
 /* Programação das mensagens de feedback (campos obrigatórios, dados incorretos, saiu do sistema etc ) */
 if (isset($_GET["usuario_atualizado"])) {
   $feedback = "Alteração realizada com sucesso!";
-  // }elseif(isset($_GET['comercio_cadastrado'])){
-  //     $feedbackCadastro = "Cadastro realizado com sucesso! Aguarde 48 horas.";
-  // }elseif (isset($_GET['logout'])){
-  // 	$feedback = "Você saiu do sistema!";
-  // }elseif(isset($_GET['acesso_proibido'])){
-  // 	$feedback = "Você deve logar primeiro!";
-  // }elseif(isset($_GET['usuario_cadastrado'])){
-  // 	$feedback = "Cadastro realizado com sucesso! Faça seu login.";
+  
 }
 ?>
 
@@ -299,7 +292,7 @@ if (isset($_GET["usuario_atualizado"])) {
               <!-- 1º Descrição  -->
               <div class="comerciante__input">
                 <label for="descricao">Descrição:
-                  <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="100"></textarea>
+                  <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="200"></textarea>
                 </label>
               </div>
 
@@ -356,8 +349,8 @@ if (isset($_GET["usuario_atualizado"])) {
               <li>Limite de 1 foto.</li>
               <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
               <li>Caso sua imagem seja maior, use o link para redimencionar: <a target="_blank" href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
-              <li>Título de até 15 caracteres</li>
-              <li>Descrição com até 30 caracteres.</li>
+              <li>Título de até 60 caracteres</li>
+              <li>Descrição com até 100 caracteres.</li>
             </ul>
 
 

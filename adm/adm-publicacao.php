@@ -423,7 +423,7 @@ if (isset($_POST['publicar'])) {
                     <!-- Descrição  -->
                     <div class="comerciante__input">
                         <label for="descricao">Descrição:
-                            <textarea rows="5" cols="33" disabled name="descricao" id="descricao" required maxlength="80"><?= $dados['descricao'] ?></textarea>
+                            <textarea rows="5" cols="33" disabled name="descricao" id="descricao" required maxlength="300"><?= $dados['descricao'] ?></textarea>
                         </label>
                     </div>
 
