@@ -1,7 +1,7 @@
 <?php
 require_once "inc/cabecalho.php";
-?>
-
+?>   
+            
 
 
         <p class="descricao">Um ponto amarelo no horizonte!</p>

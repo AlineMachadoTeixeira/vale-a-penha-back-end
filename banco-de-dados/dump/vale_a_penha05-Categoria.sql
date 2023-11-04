@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04/11/2023 às 14:41
+-- Tempo de geração: 04/11/2023 às 15:56
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -78,7 +78,11 @@ INSERT INTO `comerciantes` (`id`, `imagem`, `nome_comercio`, `descricao`, `link_
 (11, 'yara-panificadora.jpg', 'Nova Yara Panificadora', 'Panificadora tradicional que serve café da manhã e pratos executivos em um ambiente descontraído.', 'https://www.instagram.com/padarianovayara/', 'ativo', 1, 11),
 (12, 'panelao.jpg', 'Panelão do Norte', 'Restaurante com tema nordestino e música sertaneja, que serve pratos e especialidades regionais.', 'https://www.instagram.com/panelaopenha/', 'ativo', 1, 12),
 (13, 'tiquatirao.jpg', 'Tiquatirão Frutos Do Mar', 'Restaurante em forma de navio que serve camarão, caranguejo, mexilhão, polvo e peixe assado.', 'https://www.instagram.com/tiquatiraorestaurante/', 'ativo', 1, 13),
-(14, 'bar-jao.jpg', 'Bar do Jão', 'O Bar do Jão conta com um ambiente aconchegante e descontraído. O Bar do Jão foi eleito tetracampeão do Concurso Comida di Buteco em 2017, 2018, 2019 e 2021.', 'https://www.instagram.com/bardojaoetradicao/', 'ativo', 1, 14);
+(14, 'bar-jao.jpg', '  Bar do Jão', 'O Bar do Jão é um ambiente aconchegante e descontraído, vencedor do Concurso Comida di Buteco por quatro vezes .', 'https://www.instagram.com/bardojaoetradicao/', 'ativo', 1, 14),
+(15, 'penha-fashion.jpg', 'Penha Fashion', 'Oferece com uma variedade de roupas, calçados, acessórios e produtos de moda.', 'https://www.instagram.com/penhafashionmix10/', 'ativo', 2, 15),
+(16, 'fotografo.jpg', 'FD Foto Penha', 'Para todos os tipos de fotografia, 3x4, álbum de fotos, ensaio fotográfico.', 'https://www.instagram.com/fdfotopenha/', 'ativo', 2, 16),
+(17, 'lapis-de-cor.jpg', 'Papelaria CopyPen', 'Papelaria de bairro com preços acessíveis a população e um ótimo atendimento', 'https://www.instagram.com/papelariacopypen/', 'ativo', 2, 17),
+(18, 'bem-farmácia.jpg', 'Bem Farmácia ', 'Fornecem medicamentos, produtos de cuidados pessoais e itens básicos de saúde.', 'https://www.instagram.com/', 'ativo', 2, 18);
 
 -- --------------------------------------------------------
 
@@ -116,7 +120,11 @@ INSERT INTO `usuarios` (`id`, `nome`, `sobrenome`, `cpf`, `telefone`, `email`, `
 (11, 'Yara', 'Padaria', '452.369.872-25', '(11)55255-2252', 'yara@gmail.com', '1995-05-05', '$2y$10$vp/.6uw5pllWI7dS0DcXyulMx4/ZPEGdRdZm.Z0vecWZwwjJTwKEy', 'comerciante'),
 (12, 'Panelão', 'Norte', '523.655.258-87', '(11)44444-4444', 'panelao@gmail.com', '1996-06-06', '$2y$10$.61G72.Y.BYebQgcci9CRu8Omd.6tCPMugX6f9HommhKISEa8Ajoi', 'comerciante'),
 (13, 'Tiquatirão', 'Penha', '869.741.325-69', '(11)25358-2233', 'tiquatirao@gmail.com', '1997-07-07', '$2y$10$keo7Pnimni493EiVJkxA8Oz2c2xnKUuoZcLk0v6XK2I3gi9k3IQm2', 'comerciante'),
-(14, 'Jão', 'Bar', '123.596.582-16', '(11)21398-5624', 'jao@gmail.com', '1998-08-08', '$2y$10$7JjLUZzHCIY.UAJQM.RDiOPPyp7F8fSMYvusY/0zaKKuEnREYQlUC', 'comerciante');
+(14, 'Jão', 'Bar', '123.596.582-16', '(11)21398-5624', 'jao@gmail.com', '1998-08-08', '$2y$10$7JjLUZzHCIY.UAJQM.RDiOPPyp7F8fSMYvusY/0zaKKuEnREYQlUC', 'comerciante'),
+(15, 'Mônica ', 'Modas', '256.742.560-11', '(11)56562-5652', 'monica@gmail.com', '1999-09-09', '$2y$10$lyen7.5Uc07W.SJ5K..Qk.qBulNnmWLTafNMw777WiifqtCJP9YCO', 'comerciante'),
+(16, 'Marcos', 'Fotos', '564.175.025-16', '(11)98754-2882', 'marcos@gmail.com', '1979-10-10', '$2y$10$37s2GRifWnushn5JxBKkmexEzTCCWhIBn0oYm7KfZlOqMBIjnHTYu', 'comerciante'),
+(17, 'Pamela', 'Copy', '569.871.359-88', '(11)56874-3336', 'pamela@gmail.com', '2001-11-11', '$2y$10$O8hOb53QBXIQbsw1SxrvSu0BmDVAX5Ibwh7alTg.xEqIfEgr2FUG6', 'comerciante'),
+(18, 'Fernando', 'Bem', '569.822.122-52', '(11)65254-5585', 'fernando@gmail.com', '2002-12-12', '$2y$10$LM.KOxeCWUblGZ82q9n6m.lkPu6aZhE0y9pjJolcq9JzSKSu7SyFu', 'comerciante');
 
 --
 -- Índices para tabelas despejadas
@@ -156,13 +164,13 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de tabela `comerciantes`
 --
 ALTER TABLE `comerciantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Restrições para tabelas despejadas
