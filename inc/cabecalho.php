@@ -54,6 +54,7 @@ $sessao = new ControleDeAcesso;
             $tituloPagina = "Lazer";
         ?>
             <link rel="stylesheet" href="assets/css/container.css">
+            
             <style>
                 .header {
                     background-image: url(assets/images/banner-lazer.png);
@@ -187,12 +188,14 @@ $sessao = new ControleDeAcesso;
             <nav>
                 <?php if(isset($_SESSION["id"])){?>
 
-                    <a class="icone__menu__login" href="comerciante/comerciante.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login"></a>
+                    <a class="icone__menu__login" href="comerciante/comerciante.php"> Minha conta</a>
+
+                    <!-- <a class="icone__menu__login" href="comerciante/comerciante.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login"></a> -->
                     
                     <?php }else{    ?>
                         <div class="botao_menu_criar">
                             <div class="botao__enviar">
-                                <a href="cadastro.php">Criar conta</a>
+                                <a class="menu_criar" href="cadastro.php">Criar conta</a>
                             </div>
         
                             <div class="botao__enviar">

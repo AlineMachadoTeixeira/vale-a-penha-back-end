@@ -130,6 +130,14 @@ nav a:focus {
     color: #FFFFFF;
 }
 
+.menu_criar{
+   
+    
+    white-space: nowrap;
+    font-size: 16px;
+
+}
+
 
 /*   @media screen do menu */
 @media screen and (min-width: 769px) {
@@ -153,8 +161,7 @@ nav a:focus {
 
     .menu__camada__dois {
         margin: auto;
-        width: 90%;
-        /* gap: 20px; */
+        width: 90%;        
         margin-top: 15px;
 
     }
@@ -165,7 +172,7 @@ nav a:focus {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 80%;
+        width: 60%;
     }
 
     .login__ul {

@@ -470,7 +470,7 @@ if (isset($_POST['publicar'])) {
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../assets/js/comerciante.js"></script>
-    <!-- <script src="../assets/js/mascara-cpf-tel.js"></script> -->
+    <script src="../assets/js/foto.js"></script>
    
 
 

@@ -28,7 +28,7 @@ $dadosComercios = $comercio->listarDestaque();
 
                         <h4><?= $itemComercio['nome_comercio']?></h4>
                         <p><?= $itemComercio['descricao']?></p>
-                        <address class="sumir"><a target="_blank" href="<?= $itemComercio['link_instagram']?>">Link Instragram:</a></address>
+                        <address class="sumir"><a target="_blank" href="<?= $itemComercio['link_instagram']?>">Visite nosso instagram!</a></address>
                     </div>
 
                 </section>
