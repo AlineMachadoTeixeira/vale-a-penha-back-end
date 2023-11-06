@@ -21,7 +21,7 @@ $dadosComercios = $comercio->listarDestaque();
         <article class="container">
 
             <?php foreach ($dadosComercios as $itemComercio) { ?>
-                <section class="section-educacao">
+                <section id="<?= $itemComercio["nome_comercio"]?>" class="section-educacao">
 
                     <img class="section-img" src="imagens/<?= $itemComercio['imagem']?>" alt="">
                     <div class="section-texto">

@@ -60,8 +60,13 @@ if (isset($_POST['alterar_Cadastro'])) {
 /* Programação das mensagens de feedback (campos obrigatórios, dados incorretos, saiu do sistema etc ) */
 if (isset($_GET["usuario_atualizado"])) {
   $feedback = "Alteração realizada com sucesso!";
-  
 }
+
+
+$comercio = new Comerciante();
+$comercio->usuario->setId($_SESSION['id']);
+$dadosComercios = $comercio->listarUm();
+$dadosCategoria = $comercio->categoria->listarCategoria();
 ?>
 
 
@@ -106,7 +111,7 @@ if (isset($_GET["usuario_atualizado"])) {
     <div>
 
       <div class="comerciante__logo">
-        <img src="../assets/images/logo-vale-a-penha-quadrado.svg" alt="">
+        <a href="../index.php"><img src="../assets/images/logo-vale-a-penha-quadrado.svg" alt=""></a>
         <p class="fulano">Olá <?= $dados['nome'] ?>!</p>
 
       </div>
@@ -127,7 +132,33 @@ if (isset($_GET["usuario_atualizado"])) {
           <li><a href="#ajuda" class="nav-link scrollto"><i class="bx bx-help-circle"></i> <span>Ajuda</span></a>
           </li>
 
+          <?php        
+          
 
+          if ($dadosComercios["status"] === "ativo") {  
+
+            switch($dadosComercios["categoria_id"]){
+              case "1": $linkDoVisualizar = "gastronomia.php";        
+                break;
+              case "2": $linkDoVisualizar = "comercio-local.php";        
+                break;
+              case "3": $linkDoVisualizar = "educacao.php";        
+                break;
+              case "4": $linkDoVisualizar = "lazer.php";        
+                break;
+
+            }
+
+            ?>
+            <li>
+
+              <a href="../<?=$linkDoVisualizar?>#<?=$dadosComercios["nome_comercio"]?>" class="nav-link scrollto"><i class="bi bi-camera"></i><span>Ver minha postagem</span></a>
+            </li>
+
+          <?php } ?>
+
+          <li><a href="../index.php" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Voltar para o site</span></a>
+          </li>
 
 
           <li><a href="?sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
@@ -397,7 +428,7 @@ if (isset($_GET["usuario_atualizado"])) {
           </div>
           <div class="botao__enviar">
             <button type="submit" id="submitAjuda" name="enviar">Enviar</button>
-            
+
           </div>
 
           <p class="formspree__ajuda" id="my-form-status"></p>
@@ -426,9 +457,9 @@ if (isset($_GET["usuario_atualizado"])) {
 
 
 
-<script>
+  <script>
     var form = document.getElementById("my-form");
-    
+
     async function handleSubmit(event) {
       event.preventDefault();
       var status = document.getElementById("my-form-status");
@@ -437,7 +468,7 @@ if (isset($_GET["usuario_atualizado"])) {
         method: form.method,
         body: data,
         headers: {
-            'Accept': 'application/json'
+          'Accept': 'application/json'
         }
       }).then(response => {
         if (response.ok) {
@@ -458,7 +489,7 @@ if (isset($_GET["usuario_atualizado"])) {
       });
     }
     form.addEventListener("submit", handleSubmit)
-</script>
+  </script>
 
 </body>
 

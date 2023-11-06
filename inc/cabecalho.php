@@ -2,6 +2,14 @@
 /* Output  Buffer (gerenciamento de memória de saída) */
 ob_start();
 $pagina = basename($_SERVER['PHP_SELF']);
+
+use ValeaPenha\ControleDeAcesso;
+require_once "vendor/autoload.php";
+
+
+
+$sessao = new ControleDeAcesso;
+
 ?>
 
 
@@ -144,9 +152,9 @@ $pagina = basename($_SERVER['PHP_SELF']);
     <?php
             break;
         default:
-                header("404.php");
-                //header("Location: 404.php");
-               
+            //header("404.php");
+            //header("Location: 404.php");
+
             break;
     }
 
@@ -160,53 +168,64 @@ $pagina = basename($_SERVER['PHP_SELF']);
     <!-- começo menu  -->
     <div class="camada">
 
-<div class="camada__um">
-    <nav>
-        <a href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg" alt="Ícone login">
-        </a>
-    </nav>
-    <nav class="pesquisa__espaco">
-        <form action="resultados.php" method="GET">
-            <div class="pesquisa__lupa">
-                <input class="pesquisa__input" type="search" id="busca" name="busca" placeholder="Pesquisa">
-                <button class="pesquisa__link" type="submit">
-                    <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
-                </button>
-            </div>
-        </form>
-    </nav>
+        <div class="camada__um">
+            <nav>
+                <a href="index.php"><img class="logo__principal__menu" src="assets/images/logo-Vale-a-Penha.svg" alt="Ícone login">
+                </a>
+            </nav>
+            <nav class="pesquisa__espaco">
+                <form action="resultados.php" method="GET">
+                    <div class="pesquisa__lupa">
+                        <input class="pesquisa__input" type="search" id="busca" name="busca" placeholder="Pesquisa">
+                        <button class="pesquisa__link" type="submit">
+                            <img class="pesquisa__lupa__img" src="assets/images/lupa-branco.svg" alt="Lupa">
+                        </button>
+                    </div>
+                </form>
+            </nav>
 
-    <nav>
-       
-        <div class="botao_menu_criar">
-            <div class="botao__enviar">
-                <button type="submit" id="submitlogin" name="casdastrarComercio">Entrar</button>
-            </div>
-            <div class="botao__enviar">
-                <button type="submit" id="submitcriar" name="casdastrarComercio">Criar</button>
-            </div>
+            <nav>
+                <?php if(isset($_SESSION["id"])){?>
+
+                    <a class="icone__menu__login" href="comerciante/comerciante.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login"></a>
+                    
+                    <?php }else{    ?>
+                        <div class="botao_menu_criar">
+                            <div class="botao__enviar">
+                                <a href="cadastro.php">Criar conta</a>
+                            </div>
+        
+                            <div class="botao__enviar">
+                                <a href="login.php"><button type="submit" id="submitlogin" name="casdastrarComercio">Entrar</button></a>
+                            </div>
+        
+                        </div>
+                
+                <?php
+
+                }
+                ?>
+            </nav>
         </div>
-    </nav>
-</div>
 
-<nav>
-    <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
-    <ul class="menu__camada__dois">
-        <li><a href="index.php">Início</a></li>
-        <li><a href="gastronomia.php">Gastronomia</a></li>
-        <li><a href="lazer.php">Lazer</a></li>
-        <li><a href="comercio-local.php">Comércio local</a></li>
-        <li><a href="cultura.php">Cultura</a></li>
-        <li><a href="historia.php">História</a></li>
-        <li><a href="educacao.php">Educação</a></li>
-        <li><a href="voce-em-foco.php">Você em foco</a></li>
-        <li class="login__ul"><a href="login.php">Login</a></li>
-        <li class="login__ul"><a href="cadastro.php">Criar conta</a></li>
-    </ul>
-</nav>
-</div>
+        <nav>
+            <h3><a href="" id="botao-menu"> Menu &equiv;</a></h3>
+            <ul class="menu__camada__dois">
+                <li><a href="index.php">Início</a></li>
+                <li><a href="gastronomia.php">Gastronomia</a></li>
+                <li><a href="lazer.php">Lazer</a></li>
+                <li><a href="comercio-local.php">Comércio local</a></li>
+                <li><a href="cultura.php">Cultura</a></li>
+                <li><a href="historia.php">História</a></li>
+                <li><a href="educacao.php">Educação</a></li>
+                <li><a href="voce-em-foco.php">Você em foco</a></li>
+                <li class="login__ul"><a href="login.php">Login</a></li>
+                <li class="login__ul"><a href="cadastro.php">Criar conta</a></li>
+            </ul>
+        </nav>
+    </div>
 
-<!-- fim menu -->
+    <!-- fim menu -->
 
     <body>
 
