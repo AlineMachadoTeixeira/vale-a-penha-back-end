@@ -495,7 +495,7 @@ if (isset($_POST['atualizar_comercio'])) {
                     <!-- Descrição  -->
                     <div class="comerciante__input">
                         <label for="descricao">Descrição:
-                            <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="200"><?= $dadosComercios['descricao'] ?></textarea>
+                            <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="500"><?= $dadosComercios['descricao'] ?></textarea>
                         </label>
                     </div>
 

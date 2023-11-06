@@ -293,7 +293,7 @@ if (isset($_GET["usuario_atualizado"])) {
               <!-- 1º Descrição  -->
               <div class="comerciante__input">
                 <label for="descricao">Descrição:
-                  <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="200"></textarea>
+                  <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="400"></textarea>
                 </label>
               </div>
 
@@ -351,7 +351,7 @@ if (isset($_GET["usuario_atualizado"])) {
               <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
               <li>Caso sua imagem seja maior, use o link para redimencionar: <a target="_blank" href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
               <li>Título de até 60 caracteres</li>
-              <li>Descrição com até 100 caracteres.</li>
+              <li>Descrição com até 200 caracteres.</li>
             </ul>
 
 
@@ -381,7 +381,7 @@ if (isset($_GET["usuario_atualizado"])) {
 
         </div>
 
-        <form class="comerciante__formulario" id="formAjuda" action="https://formspree.io/f/mvonybwj" method="post">
+        <form class="comerciante__formulario" id="my-form" action="https://formspree.io/f/xbjvbzdp" method="post">
 
           <!-- E-meil -->
           <div class="comerciante__input">
@@ -397,8 +397,10 @@ if (isset($_GET["usuario_atualizado"])) {
           </div>
           <div class="botao__enviar">
             <button type="submit" id="submitAjuda" name="enviar">Enviar</button>
-            <p id="status"></p>
+            
           </div>
+
+          <p class="formspree__ajuda" id="my-form-status"></p>
 
         </form>
 
@@ -421,6 +423,42 @@ if (isset($_GET["usuario_atualizado"])) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="../assets/js/comerciante.js"></script>
   <script src="../assets/js/mascara-cpf-tel.js"></script>
+
+
+
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.classList.add("alert");
+          status.innerHTML = "Obrigado pela mensagem!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! Algo de errado não está certo."
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! Algo de errado não está certo"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
 
 </body>
 

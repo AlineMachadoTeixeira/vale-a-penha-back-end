@@ -122,7 +122,7 @@
 
 @media screen and (max-width: 650px){
 
-    .section-direita,
+    .section-direita, .section-educacao:nth-child(even),.section-educacao:nth-child(odd),
     .section-esquerda {
         flex-direction: column;     
     }

@@ -144,7 +144,7 @@ $pagina = basename($_SERVER['PHP_SELF']);
     <?php
             break;
         default:
-            $tituloPagina = "Em criação...";
+                header("404.php");
             break;
     }
 
