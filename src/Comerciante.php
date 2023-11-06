@@ -272,7 +272,7 @@ class Comerciante{
             $resultado = $consulta->fetchAll(PDO::FETCH_ASSOC);
     
         } catch (Exception $erro) {
-            die("Erro ao listar comercio:" . $erro->getMessage());
+            die("Erro ao listar Destaque:" . $erro->getMessage());
         }
     
         return $resultado;      

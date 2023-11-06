@@ -28,10 +28,6 @@ $listarTodos = $comercio->listarStatus();
 if (isset($_GET['sair'])){$sessao->logout();
 }
 
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -100,7 +96,7 @@ if (isset($_GET['sair'])){$sessao->logout();
       <div class="container">
 
         <div class="section-title">
-          <h2>Controle de Usuários</h2>
+          <h2>Usuários inativos</h2>
         </div>
 
         <table>
