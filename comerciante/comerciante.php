@@ -64,7 +64,7 @@ if (isset($_GET["usuario_atualizado"])) {
 }
 ?>
 
-?>
+
 
 
 <!DOCTYPE html>
@@ -107,6 +107,7 @@ if (isset($_GET["usuario_atualizado"])) {
 
       <div class="comerciante__logo">
         <img src="../assets/images/logo-vale-a-penha-quadrado.svg" alt="">
+        <p class="fulano">Olá <?= $dados['nome'] ?>!</p>
 
       </div>
       <!-- Achei esses icones nesse site https://boxicons.com/?query= -->

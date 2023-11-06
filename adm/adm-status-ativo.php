@@ -100,7 +100,7 @@ if (isset($_GET['sair'])){$sessao->logout();
       <div class="container">
 
         <div class="section-title">
-          <h2>Controle de Usuários</h2>
+          <h2>Usuários ativos</h2>
         </div>
 
         <table>

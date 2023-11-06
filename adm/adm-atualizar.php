@@ -293,6 +293,10 @@ if (isset($_POST['atualizar'])) {
 
 
         }
+
+        .sumir{
+            display: none;
+        }
     </style>
 
 </head>
@@ -305,7 +309,7 @@ if (isset($_POST['atualizar'])) {
             <div class="container">
 
                 <div class="section-title">
-                    <h2>Atualizar Tipo do Usuário</h2>
+                    <h2>Atualizar tipo do usuário</h2>
 
                 </div>
 
@@ -313,13 +317,13 @@ if (isset($_POST['atualizar'])) {
 
                     <div class="comerciante__sobrenome">
                         <!-- Nome -->
-                        <div class="comerciante__input">
+                        <div class="comerciante__input  sumir">
                             <label for="nome">Nome:</label>
                             <input id="nome" type="text"  name="nome" placeholder="Digite seu primeiro nome"  value="<?= $dados['nome'] ?>" required>
                         </div> 
 
                         <!-- Sobrenome -->
-                        <div class="comerciante__input">
+                        <div class="comerciante__input  sumir">
                             <label for="sobrenome">Sobrenome:</label>
                             <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu sobrenome"  value="<?= $dados['sobrenome'] ?>" required>
                         </div>
@@ -328,32 +332,32 @@ if (isset($_POST['atualizar'])) {
                     <div class="comerciante__campos">
                         <div class="comerciante__sobrenome">
                             <!-- CPF -->
-                            <div class="comerciante__input">
+                            <div class="comerciante__input  sumir">
                                 <label for="cpf">CPF</label>
                                 <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" required maxlength="14"  value="<?= $dados['cpf'] ?>" >
                             </div>
 
                             <!-- Telefone -->
-                            <div class="comerciante__input">
+                            <div class="comerciante__input  sumir">
                                 <label for="telefone">Telefone:</label>
                                 <input id="telefone" type="text" name="telefone" placeholder="(xx) xxxxx-xxxx" required maxlength="14"  value="<?= $dados['telefone'] ?>" >
                             </div>
                         </div>
 
                         <!-- E-mail -->
-                        <div class="comerciante__input">
+                        <div class="comerciante__input  sumir">
                             <label for="email">E-mail:</label>
                             <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required  value="<?= $dados['email'] ?>" >
                         </div>
 
                         <!-- Senha -->
-                        <div class="comerciante__input">
+                        <div class="comerciante__input  sumir">
                             <label for="senha">Senha:</label>
                             <input id="senha" type="password" name="senha" autocomplete="current-password" value=""placeholder="Preencha apenas se for alterar">
                         </div>
 
                         <!-- Data de Nascimento -->
-                        <div class="comerciante__input">
+                        <div class="comerciante__input  sumir">
                             <label for="data">Data de Nascimento:</label>
                             <input id="data" type="date" name="data" placeholder="Digite sua Data de Nascimento" required value="<?= $dados['data'] ?>">
                         </div>
@@ -375,11 +379,11 @@ if (isset($_POST['atualizar'])) {
                     </div>
 
                     <div class="botao__enviar ">
-                        <button type="submit" id="submit" name="atualizar">Alterar Tipo</button>
+                        <button class="" type="submit" id="submit" name="atualizar">Alterar Tipo</button>
                     </div>
 
                     <div class="comerciante_atualizar">
-                        <a href="adm.php">Voltar</a>
+                        <a  href="adm.php">Voltar</a>
                     </div>
 
                 </form>
@@ -390,6 +394,7 @@ if (isset($_POST['atualizar'])) {
     </main>
 
     <script src="../assets/js/comerciante.js"></script>
+    <script src="../assets/js/confirma-alterar.js"></script>
     
 
 

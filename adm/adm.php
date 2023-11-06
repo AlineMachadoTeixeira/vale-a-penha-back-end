@@ -65,7 +65,7 @@ if (isset($_GET['sair'])){$sessao->logout();
   <header id="header">
     <div>
       <div class="comerciante__logo">
-        <img src="../assets/images/logo-vale-a-penha-quadrado.svg" alt="">
+        <img src="../assets/images/logo-vale-a-penha-quadrado.svg" alt="">        
       </div>
 
       <!-- Achei esses icones nesse site https://boxicons.com/?query= -->
