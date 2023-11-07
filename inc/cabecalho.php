@@ -129,6 +129,7 @@ $sessao = new ControleDeAcesso;
                 }
             </style>
         <?php
+           break;
 
         case "cadastro.php":
             $tituloPagina = "Cadastro";
@@ -154,7 +155,7 @@ $sessao = new ControleDeAcesso;
             break;
         default:
             //header("404.php");
-            //header("Location: 404.php");
+            header("Location: 404.php");
 
             break;
     }
