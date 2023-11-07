@@ -193,11 +193,21 @@ $sessao = new ControleDeAcesso;
                     if ($_SESSION["tipo"] === "comerciante") { ?>
 
                         
-                        <button class="botao__minha__conta" type="submit"><a class="icone__menu__login" href="comerciante/comerciante.php"> Minha conta</a></button>
+                        <!-- <button class="botao__minha__conta" type="submit"><a class="icone__menu__login" href="comerciante/comerciante.php"> Minha conta</a></button> -->
+
+                        <div class="botao__enviar__menu__minha">
+                            <a href="comerciante/comerciante.php"><button type="submit" id="submitminha" name="">Minha conta</button></a>
+                        </div>
+
+                       
 
                     <?php } elseif ($_SESSION["tipo"] === "admin") {    ?>
 
-                        <a class="icone__menu__login gerenciar" href="adm/adm.php"> Gerenciar conta</a>
+                        <!-- <a class="icone__menu__login gerenciar" href="adm/adm.php"> Gerenciar conta</a> -->
+
+                        <div class="botao__enviar__menu__minha">
+                            <a href="adm/adm.php"><button type="submit" id="submitgerencia" name="">Gerenciar conta</button></a>
+                        </div>
                     <?php
 
                     }

@@ -135,11 +135,13 @@ nav a:focus {
     font-size: 16px; 
 }
 
-.botao__minha__conta{
+
+
+
+/* .botao__minha__conta{
     white-space: nowrap;
     border: 2px solid #c40008;
-    /* padding: 8px 20px;  */
-    /* background-color: transparent;  */
+    
     background-color: #c40008;
     color: blue;
     font-size: 18px;
@@ -151,9 +153,34 @@ nav a:focus {
 .botao__minha__conta a{
     color: #FFFFFF;
     padding: 5px 15px; 
+} */
+
+
+
+
+
+
+
+
+
+.botao__enviar__menu__minha button {
+    white-space: nowrap;
+    border: 2px solid #c40008;
+    padding: 8px 20px;
+    /* background-color: transparent;  */
+    background-color: #c40008;
+    /* color: #000000c0; */
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
 }
 
-
+.botao__enviar__menu__minha button:hover {
+    background-color: transparent;  
+    color: #000000c0; 
+}
 
 
 
@@ -264,14 +291,18 @@ nav a:focus {
        
     }
 
-    /* .camada__um {
+    .botao__enviar__menu__minha {       
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        margin: auto;
-    } */
+        justify-content: center;        
+        margin-top: 10px;  
+    }
+
+    .botao__enviar__menu__minha button {       
+        padding: 7px 12px;        
+        background-color: #c40008;   
+       
+    }
+
      
     
 }
