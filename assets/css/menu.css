@@ -138,15 +138,20 @@ nav a:focus {
 .botao__minha__conta{
     white-space: nowrap;
     border: 2px solid #c40008;
-    /* padding: 8px 20px; */
-    background-color: transparent; 
-    
+    /* padding: 8px 20px;  */
+    /* background-color: transparent;  */
+    background-color: #c40008;
+    color: blue;
     font-size: 18px;
     font-weight: bold;
     border-radius: 50px;
     cursor: pointer;
 }
 
+.botao__minha__conta a{
+    color: #FFFFFF;
+    padding: 5px 15px; 
+}
 
 
 
@@ -259,14 +264,14 @@ nav a:focus {
        
     }
 
-    .camada__um {
+    /* .camada__um {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         margin: auto;
-    }
+    } */
      
     
 }

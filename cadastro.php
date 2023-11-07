@@ -236,10 +236,7 @@ if (isset($_POST['inserir'])) {
         </main>
     </div>
 
-    <!-- Teste apagar -->
-
-    <a href="comerciante/comerciante.php">Minha conta</a>
-    <a href="adm/adm.php">ADM</a>
+    
 
     <footer>
         <div class="container-footer">
