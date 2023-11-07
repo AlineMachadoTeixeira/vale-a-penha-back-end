@@ -66,5 +66,7 @@ ALTER TABLE comerciantes
 INSERT INTO categorias(nome_categoria) VALUES('Gastronomia');
 INSERT INTO categorias(nome_categoria) VALUES('Varejo');
 INSERT INTO categorias(nome_categoria) VALUES('Educação');
+INSERT INTO categorias(nome_categoria) VALUES('Lazer');
+
 
 ```

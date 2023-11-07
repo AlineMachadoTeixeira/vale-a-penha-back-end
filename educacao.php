@@ -21,14 +21,14 @@ $dadosComercios = $comercio->listarDestaque();
         <article class="container">
 
             <?php foreach ($dadosComercios as $itemComercio) { ?>
-                <section class="section-educacao">
+                <section id="<?= $itemComercio["nome_comercio"]?>" class="section-educacao">
 
                     <img class="section-img" src="imagens/<?= $itemComercio['imagem']?>" alt="">
                     <div class="section-texto">
 
                         <h4><?= $itemComercio['nome_comercio']?></h4>
                         <p><?= $itemComercio['descricao']?></p>
-                        <address><a target="_blank" href="<?= $itemComercio['link_instagram']?>">Link Instragram:</a></address>
+                        <address><a target="_blank" href="<?= $itemComercio['link_instagram']?>">Visite nosso instagram!</a></address>
                     </div>
 
                 </section>

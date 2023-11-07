@@ -100,6 +100,10 @@
 }
 
 
+
+
+
+
 @media screen and (max-width: 1000px){
     .section-texto{        
         font-size: 1rem;       
@@ -122,7 +126,7 @@
 
 @media screen and (max-width: 650px){
 
-    .section-direita,
+    .section-direita, .section-educacao:nth-child(even),.section-educacao:nth-child(odd),
     .section-esquerda {
         flex-direction: column;     
     }

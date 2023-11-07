@@ -2,6 +2,14 @@
 /* Output  Buffer (gerenciamento de memória de saída) */
 ob_start();
 $pagina = basename($_SERVER['PHP_SELF']);
+
+use ValeaPenha\ControleDeAcesso;
+require_once "vendor/autoload.php";
+
+
+
+$sessao = new ControleDeAcesso;
+
 ?>
 
 
@@ -46,6 +54,7 @@ $pagina = basename($_SERVER['PHP_SELF']);
             $tituloPagina = "Lazer";
         ?>
             <link rel="stylesheet" href="assets/css/container.css">
+            
             <style>
                 .header {
                     background-image: url(assets/images/banner-lazer.png);
@@ -144,7 +153,9 @@ $pagina = basename($_SERVER['PHP_SELF']);
     <?php
             break;
         default:
-            $tituloPagina = "Em criação...";
+            //header("404.php");
+            //header("Location: 404.php");
+
             break;
     }
 
@@ -175,8 +186,28 @@ $pagina = basename($_SERVER['PHP_SELF']);
             </nav>
 
             <nav>
-                <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
-                </a>
+                <?php if(isset($_SESSION["id"])){?>
+
+                    <a class="icone__menu__login" href="comerciante/comerciante.php"> Minha conta</a>
+
+                    <!-- <a class="icone__menu__login" href="comerciante/comerciante.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login"></a> -->
+                    
+                    <?php }else{    ?>
+                        <div class="botao_menu_criar">
+                            <div class="botao__enviar__menu">
+                                <a class="menu_criar" href="cadastro.php">Criar conta</a>
+                            </div>
+        
+                            <div class="botao__enviar__menu">
+                                <a href="login.php"><button type="submit" id="submitlogin" name="casdastrarComercio">Entrar</button></a>
+                            </div>
+        
+                        </div>
+                
+                <?php
+
+                }
+                ?>
             </nav>
         </div>
 
@@ -186,12 +217,13 @@ $pagina = basename($_SERVER['PHP_SELF']);
                 <li><a href="index.php">Início</a></li>
                 <li><a href="gastronomia.php">Gastronomia</a></li>
                 <li><a href="lazer.php">Lazer</a></li>
-                <li><a href="comercio-local.php">Comércio Local</a></li>
+                <li><a href="comercio-local.php">Comércio local</a></li>
                 <li><a href="cultura.php">Cultura</a></li>
                 <li><a href="historia.php">História</a></li>
                 <li><a href="educacao.php">Educação</a></li>
-                <li><a href="voce-em-foco.php">Você em Foco</a></li>
+                <li><a href="voce-em-foco.php">Você em foco</a></li>
                 <li class="login__ul"><a href="login.php">Login</a></li>
+                <li class="login__ul"><a href="cadastro.php">Criar conta</a></li>
             </ul>
         </nav>
     </div>

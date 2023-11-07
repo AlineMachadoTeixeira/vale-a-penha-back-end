@@ -379,7 +379,7 @@ if (isset($_POST['atualizar'])) {
                     </div>
 
                     <div class="botao__enviar ">
-                        <button class="" type="submit" id="submit" name="atualizar">Alterar Tipo</button>
+                        <button class="alterar" type="submit" id="submit" name="atualizar">Alterar Tipo</button>
                     </div>
 
                     <div class="comerciante_atualizar">
@@ -394,7 +394,7 @@ if (isset($_POST['atualizar'])) {
     </main>
 
     <script src="../assets/js/comerciante.js"></script>
-    <script src="../assets/js/confirma-alterar.js"></script>
+    
     
 
 

@@ -1,8 +1,45 @@
 <?php
 require_once "inc/cabecalho.php";
+
+require_once "vendor/autoload.php";
+
+use ValeaPenha\Comerciante;
+
+$comercio = new Comerciante;
+
+$comercio->setStatus("ativo");
+$comercio->categoria->setId("4");
+
+$dadosComercios = $comercio->listarDestaque();
+
+
 ?>
 
         <p class="descricao">Não importa qual é o seu estilo, o bairro da Penha certamente tem aquilo que você precisa para se divertir e relaxar!</p>
+
+        <!-- Nossa senhora -->
+        <article class="container">
+
+            <?php foreach ($dadosComercios as $itemComercio) { ?>
+                <section  id="<?= $itemComercio["nome_comercio"]?>"  class="section-educacao">
+
+                    <img class="section-img" src="imagens/<?= $itemComercio['imagem']?>" alt="">
+                    <div class="section-texto">
+
+                        <h4><?= $itemComercio['nome_comercio']?></h4>
+                        <p><?= $itemComercio['descricao']?></p>
+                        <address class="sumir"><a target="_blank" href="<?= $itemComercio['link_instagram']?>">Visite nosso instagram!</a></address>
+                    </div>
+
+                </section>
+                <?php }  ?>
+
+            
+
+        </article>
+
+
+<!-- <p class="descricao">Não importa qual é o seu estilo, o bairro da Penha certamente tem aquilo que você precisa para se divertir e relaxar!</p>
         <article class="container">
             <section class="section-direita">
                 <img class="section-img" src="assets/images/parque-linear-tiquatira.jpg" alt="Pessoa correndo no Parque Linear Tiquatira">
@@ -68,7 +105,7 @@ require_once "inc/cabecalho.php";
                 </div>
             </section>
 
-        </article>
-        <?php
+        </article> -->
+<?php
 require_once "inc/rodape.php";
 ?>

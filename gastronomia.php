@@ -24,7 +24,7 @@ $dadosComercios = $comercio->listarDestaque();
 
 
             <?php foreach ($dadosComercios as $itemComercio) { ?>
-                <article class="cards">
+                <article  id="<?= $itemComercio["nome_comercio"]?>"  class="cards">
                     <img class="cards-img redimensionar" src="imagens/<?= $itemComercio["imagem"] ?>" alt="Comida da Padaria Requinte">
 
                     <h3><?= $itemComercio["nome_comercio"] ?></h3>

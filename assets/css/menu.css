@@ -101,7 +101,43 @@ nav a:focus {
     transform: scale(1.05);     
     transition: 0,5s;
     
-}    
+}   
+
+/* Estilos para os botões do menu*/
+.botao_menu_criar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.botao__enviar__menu {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.botao__enviar__menu button {
+    border: 2px solid #c40008;
+    padding: 8px 20px;
+    background-color: transparent; 
+    color: #000000c0;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.botao__enviar__menu button:hover {
+    background-color: #c40008;
+    color: #FFFFFF;
+}
+
+.menu_criar{
+   
+    
+    white-space: nowrap;
+    font-size: 16px;
+
+}
+
 
 /*   @media screen do menu */
 @media screen and (min-width: 769px) {
@@ -125,8 +161,7 @@ nav a:focus {
 
     .menu__camada__dois {
         margin: auto;
-        width: 90%;
-        /* gap: 20px; */
+        width: 90%;        
         margin-top: 15px;
 
     }
@@ -137,7 +172,7 @@ nav a:focus {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 80%;
+        width: 60%;
     }
 
     .login__ul {
@@ -156,6 +191,12 @@ nav a:focus {
         width: 90%;
 
     }
+
+    
+
+    
+
+   
 }
 
 @media screen and (max-width: 769px) {
@@ -175,6 +216,12 @@ nav a:focus {
         font-size: 1rem;
         padding: 2px 8px;
     }
+
+    .botao__enviar{
+        display: none;
+    }
 }
 
 /* css menu fim */
+
+

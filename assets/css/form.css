@@ -9,6 +9,7 @@ header h2 {
 
 .foco_você{
     display: flex;
+    flex-direction: column;
     
 }
 

@@ -60,8 +60,13 @@ if (isset($_POST['alterar_Cadastro'])) {
 /* Programação das mensagens de feedback (campos obrigatórios, dados incorretos, saiu do sistema etc ) */
 if (isset($_GET["usuario_atualizado"])) {
   $feedback = "Alteração realizada com sucesso!";
-  
 }
+
+
+$comercio = new Comerciante();
+$comercio->usuario->setId($_SESSION['id']);
+$dadosComercios = $comercio->listarUm();
+$dadosCategoria = $comercio->categoria->listarCategoria();
 ?>
 
 
@@ -106,7 +111,7 @@ if (isset($_GET["usuario_atualizado"])) {
     <div>
 
       <div class="comerciante__logo">
-        <img src="../assets/images/logo-vale-a-penha-quadrado.svg" alt="">
+        <a href="../index.php"><img src="../assets/images/logo-vale-a-penha-quadrado.svg" alt=""></a>
         <p class="fulano">Olá <?= $dados['nome'] ?>!</p>
 
       </div>
@@ -117,7 +122,7 @@ if (isset($_GET["usuario_atualizado"])) {
                 Conta</span></a>
           </li>
 
-          <li><a href="#gerenciarcomercio" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Cadastrar Comércio</span></a>
+          <li><a href="#gerenciarcomercio" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Incluir Postagem</span></a>
           </li>
 
           <!-- <li><a href="#cadastrarcomercio" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Cadastrar <i class="bx bx-copy-alt"></i>
@@ -127,7 +132,33 @@ if (isset($_GET["usuario_atualizado"])) {
           <li><a href="#ajuda" class="nav-link scrollto"><i class="bx bx-help-circle"></i> <span>Ajuda</span></a>
           </li>
 
+          <?php        
+          
 
+          if ($dadosComercios["status"] === "ativo") {  
+
+            switch($dadosComercios["categoria_id"]){
+              case "1": $linkDoVisualizar = "gastronomia.php";        
+                break;
+              case "2": $linkDoVisualizar = "comercio-local.php";        
+                break;
+              case "3": $linkDoVisualizar = "educacao.php";        
+                break;
+              case "4": $linkDoVisualizar = "lazer.php";        
+                break;
+
+            }
+
+            ?>
+            <li>
+
+              <a href="../<?=$linkDoVisualizar?>#<?=$dadosComercios["nome_comercio"]?>" class="nav-link scrollto"><i class="bi bi-camera"></i><span>Ver minha postagem</span></a>
+            </li>
+
+          <?php } ?>
+
+          <li><a href="../index.php" class="nav-link scrollto"><i class='bx bxs-left-arrow-alt'></i></i> <span>Voltar para o site</span></a>
+          </li>
 
 
           <li><a href="?sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
@@ -266,7 +297,7 @@ if (isset($_GET["usuario_atualizado"])) {
         <div class="container">
 
           <div class="section-title">
-            <h2>Cadastrar Comércio</h2>
+            <h2>Incluir postagem</h2>
           </div>
 
           <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
@@ -293,7 +324,7 @@ if (isset($_GET["usuario_atualizado"])) {
               <!-- 1º Descrição  -->
               <div class="comerciante__input">
                 <label for="descricao">Descrição:
-                  <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="200"></textarea>
+                  <textarea rows="5" cols="33" name="descricao" id="descricao" required maxlength="400"></textarea>
                 </label>
               </div>
 
@@ -329,7 +360,7 @@ if (isset($_GET["usuario_atualizado"])) {
 
 
               <div class="comerciante_atualizar">
-                <h3>Comércio já cadastrado!</h3>
+                <h3> Postagem já cadastrada!</h3>
                 <p>Você pode atualizar clicando no lápis: <a href="comerciante-atualizar.php"><i class="bi bi-pencil"></i></a></p>
               </div>
 
@@ -351,7 +382,7 @@ if (isset($_GET["usuario_atualizado"])) {
               <li>Tamanho: 300 x 300(máximo) e com boa resolução. </li>
               <li>Caso sua imagem seja maior, use o link para redimencionar: <a target="_blank" href="https://www.iloveimg.com/pt/redimensionar-imagem">redimencionar imagem </a> </li>
               <li>Título de até 60 caracteres</li>
-              <li>Descrição com até 100 caracteres.</li>
+              <li>Descrição com até 200 caracteres.</li>
             </ul>
 
 
@@ -381,7 +412,7 @@ if (isset($_GET["usuario_atualizado"])) {
 
         </div>
 
-        <form class="comerciante__formulario" id="formAjuda" action="https://formspree.io/f/mvonybwj" method="post">
+        <form class="comerciante__formulario" id="my-form" action="https://formspree.io/f/xbjvbzdp" method="post">
 
           <!-- E-meil -->
           <div class="comerciante__input">
@@ -397,8 +428,10 @@ if (isset($_GET["usuario_atualizado"])) {
           </div>
           <div class="botao__enviar">
             <button type="submit" id="submitAjuda" name="enviar">Enviar</button>
-            <p id="status"></p>
+
           </div>
+
+          <p class="formspree__ajuda" id="my-form-status"></p>
 
         </form>
 
@@ -421,6 +454,43 @@ if (isset($_GET["usuario_atualizado"])) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="../assets/js/comerciante.js"></script>
   <script src="../assets/js/mascara-cpf-tel.js"></script>
+  <script src="../assets/js/foto.js"></script>
+
+
+
+  <script>
+    var form = document.getElementById("my-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.classList.add("alert");
+          status.innerHTML = "Obrigado pela mensagem!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! Algo de errado não está certo."
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! Algo de errado não está certo"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+  </script>
 
 </body>
 

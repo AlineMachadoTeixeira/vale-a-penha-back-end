@@ -21,6 +21,9 @@ $usuario->setTipo($_SESSION['tipo']);
 $comercio->setId($_GET['id']);
 $dados = $comercio->listarUmComercio();
 
+$dadosCategoria = $comercio->categoria->listarCategoria();
+
+
 
 /* Script para Mudar o tipo do usuario  Não funcionou */
 if (isset($_POST['publicar'])) {
@@ -434,6 +437,14 @@ if (isset($_POST['publicar'])) {
 
                     </div>
 
+                    <!-- Categoria -->
+                    <!-- <div class="comerciante__input">
+                        <label for="categoria">Categoria</label>
+                        <input type="url" disabled name="categoria" id="categoria" placeholder=""  value="< = $itemCategoria['id'] ?>"> <= $itemCategoria['nome_categoria'] ?>
+
+                    </div> -->
+                    
+
                     <!-- Status -->
                     <div class="comerciante__input" name="tipo" id="tipo" required>
                         <label for="sobrenome">Status:</label>
@@ -470,7 +481,7 @@ if (isset($_POST['publicar'])) {
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../assets/js/comerciante.js"></script>
-    <script src="../assets/js/mascara-cpf-tel.js"></script>
+    <script src="../assets/js/foto.js"></script>
    
 
 
