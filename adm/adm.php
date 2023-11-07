@@ -64,8 +64,8 @@ if (isset($_GET['sair'])){$sessao->logout();
 
   <header id="header">
     <div>
-      <div class="comerciante__logo">
-        <img src="../assets/images/logo-vale-a-penha-quadrado.svg" alt="">        
+      <div class="comerciante__logo">         
+        <a href="../index.php"><img src="../assets/images/logo-vale-a-penha-quadrado.svg" alt=""></a>      
       </div>
 
       <!-- Achei esses icones nesse site https://boxicons.com/?query= -->
@@ -83,7 +83,8 @@ if (isset($_GET['sair'])){$sessao->logout();
               <span>Status Ativos</span></a>
           </li>
 
-          
+          <li><a href="../index.php" class="nav-link scrollto"><i class='bx bxs-left-arrow-alt'></i></i> <span>Voltar para o site</span></a>
+          </li>          
 
           <li><a href="?sair" class="nav-link scrollto"><i class="bx bx-run"></i> <span>Sair</span></a>
           </li>

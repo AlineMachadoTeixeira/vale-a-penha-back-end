@@ -4,6 +4,7 @@ ob_start();
 $pagina = basename($_SERVER['PHP_SELF']);
 
 use ValeaPenha\ControleDeAcesso;
+
 require_once "vendor/autoload.php";
 
 
@@ -54,7 +55,7 @@ $sessao = new ControleDeAcesso;
             $tituloPagina = "Lazer";
         ?>
             <link rel="stylesheet" href="assets/css/container.css">
-            
+
             <style>
                 .header {
                     background-image: url(assets/images/banner-lazer.png);
@@ -129,7 +130,7 @@ $sessao = new ControleDeAcesso;
                 }
             </style>
         <?php
-           break;
+            break;
 
         case "cadastro.php":
             $tituloPagina = "Cadastro";
@@ -187,28 +188,31 @@ $sessao = new ControleDeAcesso;
             </nav>
 
             <nav>
-                <?php if(isset($_SESSION["id"])){?>
-
-                    <a class="icone__menu__login" href="comerciante/comerciante.php"> Minha conta</a>
-
-                    <!-- <a class="icone__menu__login" href="comerciante/comerciante.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login"></a> -->
-                    
-                    <?php }else{    ?>
-                        <div class="botao_menu_criar">
-                            <div class="botao__enviar__menu">
-                                <a class="menu_criar" href="cadastro.php">Criar conta</a>
-                            </div>
-        
-                            <div class="botao__enviar__menu">
-                                <a href="login.php"><button type="submit" id="submitlogin" name="casdastrarComercio">Entrar</button></a>
-                            </div>
-        
-                        </div>
-                
                 <?php
+                if (isset($_SESSION["id"])) {
+                    if ($_SESSION["tipo"] === "comerciante") { ?>
 
-                }
-                ?>
+                        <a class="icone__menu__login" href="comerciante/comerciante.php"> Minha conta</a>
+
+                    <?php } elseif ($_SESSION["tipo"] === "admin") {    ?>
+
+                        <a class="icone__menu__login" href="adm/adm.php"> Gerenciar conta</a>
+                    <?php
+
+                    }
+                } else {
+                    ?>
+                    <div class="botao_menu_criar">
+                        <div class="botao__enviar__menu">
+                            <a class="menu_criar" href="cadastro.php">Criar conta</a>
+                        </div>
+
+                        <div class="botao__enviar__menu">
+                            <a href="login.php"><button type="submit" id="submitlogin" name="casdastrarComercio">Entrar</button></a>
+                        </div>
+
+                    </div>
+                <?php } ?>
             </nav>
         </div>
 
