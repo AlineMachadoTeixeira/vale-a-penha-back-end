@@ -36,12 +36,7 @@ legend{
     background-color: #FFF6C3;
     border-radius: 8px;
 }
-/* .form {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;  
-    background-color: aqua; 
-} */
+
 
 #nome,
 #email,
@@ -90,5 +85,32 @@ legend{
 .spanformulario {
     background-color: rgba(300,200,120,0.6);  
 }
+@media screen and (max-width: 900px){
 
+    .container {        
+        width: 70vw;
+        background-color:aqua;
+           
+        
+    }
+}
+@media screen and (max-width: 700px){
+
+    .container {        
+        width: 80vw;
+        background-color: #c40008;
+           
+        
+    }
+}
+
+@media screen and (max-width: 350px){
+
+    .container {        
+        width: 95vw;
+        background-color:blanchedalmond;
+           
+        
+    }
+}
 
