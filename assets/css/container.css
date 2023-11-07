@@ -133,7 +133,7 @@
 
     .section-img{
         width: 70%;
-        border-radius: 0;         
+        border-radius:0;         
     }
     .section-texto p {
         font-size: 1rem ;     
@@ -142,4 +142,15 @@
     .section-texto a {        
         font-size: 0.9rem;    
     }
+}
+
+@media screen and (max-width: 400px){
+    .section-img{
+        width: 90%;
+                
+    }
+    .section-texto p {
+        font-size: 1.2rem ;     
+    }
+
 }

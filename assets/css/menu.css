@@ -130,13 +130,26 @@ nav a:focus {
     color: #FFFFFF;
 }
 
-.menu_criar{
-   
-    
+.menu_criar{      
     white-space: nowrap;
-    font-size: 16px;
-
+    font-size: 16px; 
 }
+
+.botao__minha__conta{
+    white-space: nowrap;
+    border: 2px solid #c40008;
+    /* padding: 8px 20px; */
+    background-color: transparent; 
+    
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+
+
 
 
 
@@ -224,12 +237,37 @@ nav a:focus {
         
     }
 
-    .icone__menu__login{
+    .gerenciar{
         display: flex;
         align-items: center;
         justify-content: center;       
         margin-top: 10px;        
+        
     }
+   
+    
+    .botao__minha__conta{   
+        margin-top: 10px;   
+        margin-left: 10px;        
+        font-size: 16px;
+        padding: 0;
+    }
+    .icone__menu__login {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+       
+    }
+
+    .camada__um {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+     
     
 }
 
