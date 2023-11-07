@@ -21,6 +21,9 @@ $usuario->setTipo($_SESSION['tipo']);
 $comercio->setId($_GET['id']);
 $dados = $comercio->listarUmComercio();
 
+$dadosCategoria = $comercio->categoria->listarCategoria();
+
+
 
 /* Script para Mudar o tipo do usuario  Não funcionou */
 if (isset($_POST['publicar'])) {
@@ -433,6 +436,14 @@ if (isset($_POST['publicar'])) {
                         <input type="url" disabled name="link_instagram" id="link_instagram" placeholder="Link do instagram" value="<?= $dados['link_instagram'] ?>">
 
                     </div>
+
+                    <!-- Categoria -->
+                    <!-- <div class="comerciante__input">
+                        <label for="categoria">Categoria</label>
+                        <input type="url" disabled name="categoria" id="categoria" placeholder=""  value="< = $itemCategoria['id'] ?>"> <= $itemCategoria['nome_categoria'] ?>
+
+                    </div> -->
+                    
 
                     <!-- Status -->
                     <div class="comerciante__input" name="tipo" id="tipo" required>

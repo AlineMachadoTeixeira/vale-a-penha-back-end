@@ -194,11 +194,11 @@ $sessao = new ControleDeAcesso;
                     
                     <?php }else{    ?>
                         <div class="botao_menu_criar">
-                            <div class="botao__enviar">
+                            <div class="botao__enviar__menu">
                                 <a class="menu_criar" href="cadastro.php">Criar conta</a>
                             </div>
         
-                            <div class="botao__enviar">
+                            <div class="botao__enviar__menu">
                                 <a href="login.php"><button type="submit" id="submitlogin" name="casdastrarComercio">Entrar</button></a>
                             </div>
         

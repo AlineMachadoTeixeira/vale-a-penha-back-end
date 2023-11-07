@@ -122,7 +122,7 @@ $dadosCategoria = $comercio->categoria->listarCategoria();
                 Conta</span></a>
           </li>
 
-          <li><a href="#gerenciarcomercio" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Cadastrar Comércio</span></a>
+          <li><a href="#gerenciarcomercio" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Incluir Postagem</span></a>
           </li>
 
           <!-- <li><a href="#cadastrarcomercio" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Cadastrar <i class="bx bx-copy-alt"></i>
@@ -157,7 +157,7 @@ $dadosCategoria = $comercio->categoria->listarCategoria();
 
           <?php } ?>
 
-          <li><a href="../index.php" class="nav-link scrollto"><i class="bx bx-clipboard"></i> <span>Voltar para o site</span></a>
+          <li><a href="../index.php" class="nav-link scrollto"><i class='bx bxs-left-arrow-alt'></i></i> <span>Voltar para o site</span></a>
           </li>
 
 
@@ -297,7 +297,7 @@ $dadosCategoria = $comercio->categoria->listarCategoria();
         <div class="container">
 
           <div class="section-title">
-            <h2>Cadastrar Comércio</h2>
+            <h2>Incluir postagem</h2>
           </div>
 
           <form class="comerciante__formulario" action="" method="post" id="form-inserir" name="form-inserir" enctype="multipart/form-data">
@@ -360,7 +360,7 @@ $dadosCategoria = $comercio->categoria->listarCategoria();
 
 
               <div class="comerciante_atualizar">
-                <h3>Comércio já cadastrado!</h3>
+                <h3> Postagem já cadastrada!</h3>
                 <p>Você pode atualizar clicando no lápis: <a href="comerciante-atualizar.php"><i class="bi bi-pencil"></i></a></p>
               </div>
 

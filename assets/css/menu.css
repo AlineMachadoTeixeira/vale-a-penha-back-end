@@ -109,12 +109,12 @@ nav a:focus {
     flex-direction: row;
     align-items: center;
 }
-.botao__enviar {
+.botao__enviar__menu {
     display: inline-block;
     margin: 0 10px;
 }
 
-.botao__enviar button {
+.botao__enviar__menu button {
     border: 2px solid #c40008;
     padding: 8px 20px;
     background-color: transparent; 
@@ -125,7 +125,7 @@ nav a:focus {
     cursor: pointer;
 }
 
-.botao__enviar button:hover {
+.botao__enviar__menu button:hover {
     background-color: #c40008;
     color: #FFFFFF;
 }
