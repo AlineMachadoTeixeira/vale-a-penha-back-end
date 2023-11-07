@@ -139,6 +139,8 @@ nav a:focus {
 }
 
 
+
+
 /*   @media screen do menu */
 @media screen and (min-width: 769px) {
 
@@ -190,6 +192,7 @@ nav a:focus {
         width: 90%;
 
     }
+    
 
     
 
@@ -220,8 +223,15 @@ nav a:focus {
         display: none;
         
     }
+
+    .icone__menu__login{
+        display: flex;
+        align-items: center;
+        justify-content: center;       
+        margin-top: 10px;        
+    }
+    
 }
 
 /* css menu fim */
-
 

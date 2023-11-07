@@ -57,8 +57,16 @@ if (isset($_POST['inserir'])) {
             </nav>
 
             <nav>
-                <a class="icone__menu__login" href="login.php"><img class="icone__menu" src="assets/images/icone-login-vermelho.svg" alt="Ícone login">
-                </a>
+                <div class="botao_menu_criar">
+                    <div class="botao__enviar__menu">
+                        <a class="menu_criar" href="cadastro.php">Criar conta</a>
+                    </div>
+
+                    <div class="botao__enviar__menu">
+                        <a href="login.php"><button type="submit" id="submitlogin" name="casdastrarComercio">Entrar</button></a>
+                    </div>
+
+                </div>
             </nav>
         </div>
 
@@ -266,7 +274,7 @@ if (isset($_POST['inserir'])) {
     <script src="assets/js/mascara-cpf-tel.js"></script>
     <script src="assets/js/validacao.js"></script>
 
-    
+
 
 
 </body>
@@ -274,6 +282,6 @@ if (isset($_POST['inserir'])) {
 </html>
 
 <?php
-    /* Finalizar o Output Buffere (gerenciamento de memória de saída) */
-    ob_end_flush();
-    ?>
+/* Finalizar o Output Buffere (gerenciamento de memória de saída) */
+ob_end_flush();
+?>

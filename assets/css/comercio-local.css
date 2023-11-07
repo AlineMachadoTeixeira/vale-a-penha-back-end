@@ -136,8 +136,17 @@ main {
         row-gap: 10vw;
     }
     .cards {
-        width: 60vw;             
+        width: 65vw;  
+                
     }
 }
+
+@media screen and (max-width: 400px) {
+    
+    .cards {
+        width: 80vw;                   
+    }
+}
+
 
 
