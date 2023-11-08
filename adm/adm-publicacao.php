@@ -418,7 +418,7 @@ if (isset($_POST['publicar'])) {
 
                     <!-- Nome comercio  -->
                     <div class="comerciante__input">
-                        <label class="titulo" for="nome_comercio">Nome Comércio:
+                        <label class="titulo" for="nome_comercio">Título:
                             <textarea rows="1" cols="33" disabled name="nome_comercio" id="nome_comercio" required maxlength="40"><?= $dados['nome_comercio'] ?></textarea>
                         </label>
                     </div>

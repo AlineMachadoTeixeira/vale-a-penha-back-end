@@ -487,7 +487,7 @@ if (isset($_POST['atualizar_comercio'])) {
 
                     <!-- Nome comercio  -->
                     <div class="comerciante__input">
-                        <label class="titulo" for="nome_comercio">Nome Comércio:
+                        <label class="titulo" for="nome_comercio">Título:
                             <textarea rows="1" cols="33" name="nome_comercio" id="nome_comercio" required maxlength="50"> <?= $dadosComercios['nome_comercio'] ?></textarea>
                         </label>
                     </div>

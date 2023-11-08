@@ -36,9 +36,7 @@ $dadosComercios = $comercio->listarDestaque();
 
         </section>
 
-            <!-- Sabor da Feira
-
-            Venha conhecer a nossa incrível barraca de feira! Tenha uma experiência autêntica com nosso pastel. Você encontrará o verdadeiro sabor em cada mordida. -->
+            
 
 
         <?php
