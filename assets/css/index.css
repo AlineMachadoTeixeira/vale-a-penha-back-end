@@ -245,13 +245,31 @@ span{
     border-radius: 100%; 
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     width: 40%;
-    margin: auto;       
+    margin: auto; 
+
+    transform-style: preserve-3d;
+    transition: transform 3s;
+    
+    
+}
+
+.devs__conteudo p{
+    font-family:  cursive;
+    
 }
 
 .devs_section{
     display: flex;
     flex-direction: column;
-    align-items: center;        
+    align-items: center;  
+    
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+}
+
+.devs_section img:hover {
+    transform: rotateY(180deg);
 }
 
 @media screen and (max-width: 850px){
