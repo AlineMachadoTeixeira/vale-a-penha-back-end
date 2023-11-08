@@ -1,21 +1,23 @@
 <?php
 ob_start();
+
 use ValeaPenha\Usuario;
 use ValeaPenha\ControleDeAcesso;
+
 require_once "vendor/autoload.php";
 
 
 /* Programação das mensagens de feedback (campos obrigatórios, dados incorretos, saiu do sistema etc ) */
-if(isset($_GET["campos_obrigatorios"])){
-	$feedback = "Preencher e-mail e senha!";
-}elseif(isset($_GET['dados_incorretos'])){
+if (isset($_GET["campos_obrigatorios"])) {
+    $feedback = "Preencher e-mail e senha!";
+} elseif (isset($_GET['dados_incorretos'])) {
     $feedback = "E-mail do usuário ou senha incorreto. Tente novamente!";
-}elseif (isset($_GET['logout'])){
-	$feedback = "Você saiu do sistema!";
-}elseif(isset($_GET['acesso_proibido'])){
-	$feedback = "Você deve logar primeiro!";
-}elseif(isset($_GET['usuario_cadastrado'])){
-	$feedback = "Cadastro realizado com sucesso! Faça seu login.";
+} elseif (isset($_GET['logout'])) {
+    $feedback = "Você saiu do sistema!";
+} elseif (isset($_GET['acesso_proibido'])) {
+    $feedback = "Você deve logar primeiro!";
+} elseif (isset($_GET['usuario_cadastrado'])) {
+    $feedback = "Cadastro realizado com sucesso! Faça seu login.";
 }
 ?>
 
@@ -31,18 +33,17 @@ if(isset($_GET["campos_obrigatorios"])){
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/login.css">
+
     <style>
-    .alert {
-        padding: 10px;
-        background-color: #fff6c3ae;
-        color: #000000c0;
-        text-align: center;        
-        margin: 0;
-        border-radius: 20px;
-        font-weight: bold;
-        font-size: 16px;
-    }
-</style>
+        body {
+            background-image: url(assets/images/fundo-nao-autorizado.svg);
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            background-position: center;
+
+        }
+    </style>
 
 </head>
 
@@ -50,27 +51,23 @@ if(isset($_GET["campos_obrigatorios"])){
     <div class="login__container">
         <main>
             <section class="login__caixa">
-            <a href="index.php"><img class="login__ama" src="assets/images/logo-amarelo-branco.svg" alt=""></a>
+                <a href="index.php"><img class="login__ama" src="assets/images/logo-amarelo-branco.svg" alt=""></a>
 
 
-                <div class="login_for">                    
+                <div class="login_for">
 
                     <p class="login__img"><a href="index.php"><img src="assets/images/icone-login-vermelho.svg" alt="Logo Vale a Penha"> </a> </p>
 
-                    <!-- alert alert-warning text-center -->
 
-                    <?php if(isset($feedback)){ ?>
-                     <p class="alert"><?=$feedback?></p>
-                    <?php }?>
 
-                    <form  action="" method="post">
+                    <form action="" method="post">
 
                         <!-- Aqui vai a imagem -->
 
                         <!-- E-mail -->
                         <div class="comerciante__input">
-                            <label for="email">E-mail:</label>
-                            <input id="email" type="email" autocomplete="username" name="email" placeholder="Digite seu e-mail">
+                            <label for="emailrecuperar">E-mail:</label>
+                            <input id="emailrecuperar" type="email" autocomplete="username" name="emailrecuperar" placeholder="Digite seu e-mail">
 
                             <!-- Mensagem de erro que vai aparecer no JS -->
                             <i class="img__sucesso"><img src="assets/images/icone-sucesso.svg" alt="icone sucesso"></i>
@@ -80,7 +77,7 @@ if(isset($_GET["campos_obrigatorios"])){
 
                         <!-- Senha -->
                         <div class="comerciante__input">
-                            <label for="senha">Senha:</label>
+                            <label for="senha">Nova Senha:</label>
                             <input id="senha" type="password" name="senha" autocomplete="current-password" placeholder="Digite sua senha">
 
                             <!-- Mensagem de erro que vai aparecer no JS -->
@@ -90,56 +87,50 @@ if(isset($_GET["campos_obrigatorios"])){
                         </div>
 
                         <div class="botao__login">
-                            <button type="submit" id="submit" name="login">Login </button>
+                            <button type="submit" id="submit" name="login">Atualizar </button>
                         </div>
 
                     </form>
 
                     <?php
-                    if(isset($_POST['login'])){
+                    if (isset($_POST['login'])) {
                         //Verificar se os campos foram preenchidos
-                        if( empty($_POST['email']) || empty($_POST['senha']) ){
+                        if (empty($_POST['email']) || empty($_POST['senha'])) {
                             header("location:login.php?campos_obrigatorios"); //?campos_obrigatorios
-                        }else{
+                        } else {
                             //Capturar o e-mail
                             $usuario = new Usuario;
                             $usuario->setEmail($_POST['email']);
-                    
+
                             //Buscar o usuário/e-mail no Banco de Dados 
                             $dados = $usuario->buscar(); // $dados = $usuario foi o nome que usamos na usuario.php		
-                    
+
                             //Se não existir o usuário/e-mail, continuará em login.php
-                            if(!$dados) { //ou pode fazer assim if($dados === false)
+                            if (!$dados) { //ou pode fazer assim if($dados === false)
                                 header("location:login.php?dados_incorretos"); //?dados_incorretos
-                            }else{
+                            } else {
                                 // Se existir:
                                 // - Verificar a senha
-                                if(password_verify($_POST['senha'], $dados['senha'])){
+                                if (password_verify($_POST['senha'], $dados['senha'])) {
                                     // - Está correta? Iniciar o processo de login
                                     $sessao = new ControleDeAcesso;
                                     $sessao->login($dados['id'], $dados['nome'], $dados['tipo']);
-                                    if($dados['tipo'] === 'admin'){
+                                    if ($dados['tipo'] === 'admin') {
                                         header("location:adm/adm.php");
-                                    }else{
+                                    } else {
                                         header("location:comerciante/comerciante.php");
                                     }
-
-                                }else{
+                                } else {
                                     // - Não está? Continuará em login.php
                                     header("location:login.php?dados_incorretos"); // ?dados_incorretos             
-                    
-                                }		
-                                
-                            }             
-                            
-                            
-                        }
-                    }                 
-                    
-                    ?>
-                    <p class="paragrafo__novasenha"> Ainda não tem uma conta? <a href="cadastro.php">Criar</a></p>
 
-                    <p class="paragrafo__novasenha"><a href="recuperar-senha.php">Esqueceu Senha?</a></p>
+                                }
+                            }
+                        }
+                    }
+
+                    ?>
+
 
                 </div>
             </section>
@@ -147,9 +138,7 @@ if(isset($_GET["campos_obrigatorios"])){
     </div>
 </body>
 
-</html
-
-<?php
-/* Finalizar o Output Buffere (gerenciamento de memória de saída) */
-ob_end_flush();
-?>
+</html <?php
+        /* Finalizar o Output Buffere (gerenciamento de memória de saída) */
+        ob_end_flush();
+        ?>
