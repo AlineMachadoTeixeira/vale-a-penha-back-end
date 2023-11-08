@@ -133,34 +133,18 @@ nav a:focus {
 .menu_criar{      
     white-space: nowrap;
     font-size: 16px; 
-}
-
-
-
-
-/* .botao__minha__conta{
-    white-space: nowrap;
-    border: 2px solid #c40008;
+    color: #c40008;
     
-    background-color: #c40008;
-    color: blue;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 50px;
-    cursor: pointer;
+
 }
 
-.botao__minha__conta a{
+.menu_criar:hover{
+    padding: 8px;
+    background-color: #c40008;
+    border-radius: 50px;
     color: #FFFFFF;
-    padding: 5px 15px; 
-} */
 
-
-
-
-
-
-
+}
 
 
 .botao__enviar__menu__minha button {
