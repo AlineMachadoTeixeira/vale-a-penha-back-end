@@ -185,7 +185,7 @@ class Comerciante{
                     COALESCE(comerciantes.status, 's/comercio') as status
                 FROM comerciantes
                 RIGHT JOIN usuarios ON comerciantes.usuario_id = usuarios.id
-                ORDER BY tipo";
+                ORDER BY usuarios.id";
     
         try {
             $consulta = $this->conexao->prepare($sql);    
