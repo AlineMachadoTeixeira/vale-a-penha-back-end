@@ -139,7 +139,7 @@ if(isset($_GET["campos_obrigatorios"])){
                     ?>
                     <p class="paragrafo__novasenha"> Ainda não tem uma conta? <a href="cadastro.php">Criar</a></p>
 
-                    <p class="paragrafo__novasenha"><a href="recuperar-senha.php">Esqueceu Senha?</a></p>
+                    <!-- <p class="paragrafo__novasenha"><a href="recuperar-senha.php">Esqueceu Senha?</a></p> -->
 
                 </div>
             </section>
