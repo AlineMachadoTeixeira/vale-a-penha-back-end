@@ -10,6 +10,9 @@ abstract class Banco{
     // private static ?PDO $conexao = null;
 
 
+
+
+
     private static string $servidor = "localhost";
     private static string $usuario = "lymsajaz_penha"; 
     private static string $senha = "#123Aline";
