@@ -3,22 +3,22 @@ namespace ValeaPenha;
 use PDO, Exception;
 
 abstract class Banco{
-    // private static string $servidor = "localhost";
-    // private static string $usuario = "root";
-    // private static string $senha = "";
-    // private static string $banco = "vale_a_penha";
-    // private static ?PDO $conexao = null;
-
-
-
-
-
     private static string $servidor = "localhost";
-    private static string $usuario = "lymsajaz_penha"; 
-    private static string $senha = "#123Aline";
-    private static string $banco = "lymsajaz_penha";
-
+    private static string $usuario = "root";
+    private static string $senha = "";
+    private static string $banco = "vale_a_penha";
     private static ?PDO $conexao = null;
+
+
+
+
+
+    // private static string $servidor = "localhost";
+    // private static string $usuario = "lymsajaz_penha"; 
+    // private static string $senha = "#123Aline";
+    // private static string $banco = "lymsajaz_penha";
+
+    // private static ?PDO $conexao = null;
 
     public static function conecta():PDO {
         /* Só conecte se não houver conexão ...
