@@ -207,6 +207,8 @@ class Comerciante{
                     usuarios.nome,                     
                     usuarios.email,                    
                     comerciantes.usuario_id,
+                    comerciantes.imagem,
+
                     COALESCE(comerciantes.status, 's/comercio') as status
                 FROM comerciantes
                 RIGHT JOIN usuarios ON comerciantes.usuario_id = usuarios.id 
@@ -279,17 +281,20 @@ class Comerciante{
     }
 
 
-    //BUSCAR   Não tenho esse "Termo" no banco de dados
+    
     public function busca():array{
         $sql = "SELECT imagem, nome_comercio, descricao, link_instagram FROM comerciantes 
                 WHERE nome_comercio LIKE :termo
-                OR  descricao LIKE :termo   
+                OR  descricao LIKE :termo
+                AND status = :status
+                
               ";
 
 
         try{
             $consulta = $this->conexao->prepare($sql);
             $consulta->bindValue(":termo", "%".$this->getTermo()."%", PDO::PARAM_STR);
+            $consulta->bindValue(":status", $this->getStatus(),  PDO::PARAM_STR);
             
             $consulta->execute();
 

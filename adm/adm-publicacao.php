@@ -455,6 +455,8 @@ if (isset($_POST['publicar'])) {
 
                             <option <?php if ($dados["status"] === "inativo") echo " selected "; ?> value="inativo">Inativo</option>
 
+                            <option <?php if ($dados["status"] === "indevido") echo " selected "; ?> value="indevido">Indevido</option>
+
                         </select>
 
                     </div>

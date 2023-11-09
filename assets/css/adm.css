@@ -118,7 +118,9 @@ td .comerciante__input select:hover {
 }
 
 
-
+.azul{  
+  background-color: rgba(0, 0, 255, 0.255);
+}
 
 /* .Aprovado{
   

@@ -8,7 +8,12 @@ use ValeaPenha\Comerciante;
 $comercio = new Comerciante;
 
 $comercio->setTermo($_GET["busca"]);
+
+$comercio->setStatus("ativo");
+
+
 $resultado = $comercio->busca();
+
 
 $quantidade = count($resultado);
 

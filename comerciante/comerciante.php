@@ -360,8 +360,23 @@ $dadosCategoria = $comercio->categoria->listarCategoria();
 
 
               <div class="comerciante_atualizar">
-                <h3> Postagem já cadastrada!</h3>
-                <p>Você pode atualizar clicando no lápis: <a href="comerciante-atualizar.php"><i class="bi bi-pencil"></i></a></p>
+                
+
+                <?php if($dadosComercios["status"] === "indevido"){ 
+                  ?>
+                  <p class="indevido"> Sua postagem está indevida. <br> Você pode atualizar clicando no lápis: <a  href="comerciante-atualizar.php"><i class="bi bi-pencil"></i></a></p>
+                 <?php
+                 
+                }else{
+                  ?>
+                  <h3> Postagem já cadastrada!</h3>
+                  <p>Você pode atualizar clicando no lápis: <a href="comerciante-atualizar.php"><i class="bi bi-pencil"></i></a></p>
+
+                  <?php
+                }
+                ?>
+
+
               </div>
 
 

@@ -124,9 +124,22 @@ if (isset($_GET['sair'])){$sessao->logout();
 
               
 
-              <!-- Publicação -->          
+              <!-- Publicação -->  
 
-                <td class="adm__botao">
+              <?php
+              if (!isset($itemUsuario["imagem"])  )  {       
+                  
+                  
+                  $postagem = "preto";
+                   
+                }else{
+
+                  $postagem = "azul";
+                  
+                }
+              ?>        
+
+                <td class="adm__botao <?=$postagem?> ">
                   <a href="adm-publicacao.php?id=<?=$itemUsuario["id"]?>" class="nav-link scrollto active"><i class="bi bi-camera"></i>
                   </a>
                 </td>                
