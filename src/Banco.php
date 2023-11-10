@@ -14,12 +14,6 @@ abstract class Banco{
     // private static string $senha = "#123Aline";
     // private static string $banco = "nwetohsk_vale-a-penha";
     // private static ?PDO $conexao = null;
-
-
-
-
-
-
     
 
     public static function conecta():PDO {
