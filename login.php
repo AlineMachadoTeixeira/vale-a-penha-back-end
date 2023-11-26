@@ -101,7 +101,7 @@ if(isset($_GET["campos_obrigatorios"])){
                         if( empty($_POST['email']) || empty($_POST['senha']) ){
                             header("location:login.php?campos_obrigatorios"); //?campos_obrigatorios
                         }else{
-                            //Capturar o e-mail
+                            //Capturando o e-mail
                             $usuario = new Usuario;
                             $usuario->setEmail($_POST['email']);
                     
@@ -110,7 +110,7 @@ if(isset($_GET["campos_obrigatorios"])){
                     
                             //Se não existir o usuário/e-mail, continuará em login.php
                             if(!$dados) { //ou pode fazer assim if($dados === false)
-                                header("location:login.php?dados_incorretos"); //?dados_incorretos
+                                header("location:login.php?dados_incorretos"); //?dados_incoretos
                             }else{
                                 // Se existir:
                                 // - Verificar a senha
